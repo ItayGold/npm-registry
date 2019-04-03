@@ -1,0 +1,22 @@
+{
+  "name": "@click/ratify",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0",
+    "font-awesome": "^4.7.0"
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.",
+  "repository": {
+    "type": "git",
+    "url": "https://vm-csiltfs.clicksoftware.com/tfs/RD17/SO%20Suite/_git/npm-registry"
+  },
+  "keywords": [
+    "npm-registry"
+  ],
+  "author": "Itay Gold",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
