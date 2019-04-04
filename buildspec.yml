@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build:click
+  post_build:
+    commands:
+      - echo Deploying to s3 `date`
