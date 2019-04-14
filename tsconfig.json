@@ -20,9 +20,11 @@
     ],
     "paths": {
       "ratify": [
+        "dist/ratify",
         "dist/ratify"
       ],
       "ratify/*": [
+        "dist/ratify/*",
         "dist/ratify/*"
       ]
     }

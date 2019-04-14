@@ -1,6 +1,6 @@
 {
   "name": "npm-registry",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,8 +12,8 @@
     "build-lib": "ng build ratify",
     "npm-pack": "cd dist/ratify && npm pack",
     "npm-update-version": "cd projects/ratify && npm version patch",
-    "npm-publish": "cd dist/ratify && npm publish --verbose",
-    "package": "npm run remove && npm run build-lib && npm run npm-update-version && npm run npm-pack && npm run npm-publish"
+    "npm-publish": "cd dist/ratify && npm publish",
+    "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",
@@ -24,10 +24,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
-    "@click/ratify": "file:dist/ratify/click-ratify-0.0.1.tgz",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
-    "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -36,9 +34,9 @@
     "@angular/cli": "~7.3.3",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -51,7 +49,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.34.0",
-    "tslib": "^1.9.0",
+    "tslib": "^1.9.3",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
   }
