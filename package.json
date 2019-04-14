@@ -12,7 +12,7 @@
     "build-lib": "ng build ratify",
     "npm-pack": "cd dist/ratify && npm pack",
     "npm-update-version": "cd dist/ratify && npm version patch",
-    "npm-publish": "cd dist/ratify && npm publish",
+    "npm-publish": "cd dist/ratify && npm publish --verbose",
     "package": "npm run remove && npm run build-lib && npm run npm-update-version && npm run npm-pack && npm run npm-publish"
   },
   "dependencies": {
