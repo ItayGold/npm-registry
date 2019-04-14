@@ -12,7 +12,7 @@
     "build-lib": "ng build ratify",
     "npm-pack": "cd dist/ratify && npm pack",
     "npm-update-version": "cd dist/ratify && npm version patch",
-    "npm-publish": "cd dist/ratify && npm publish --registry http://lb-ext-npm-repo-podev-1377897472.eu-central-1.elb.amazonaws.com:4873",
+    "npm-publish": "cd dist/ratify && npm publish",
     "package": "npm run remove && npm run build-lib && npm run npm-update-version && npm run npm-pack && npm run npm-publish"
   },
   "dependencies": {
