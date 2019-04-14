@@ -11,7 +11,7 @@
     "remove": "rm -rf dist",
     "build-lib": "ng build ratify",
     "npm-pack": "cd dist/ratify && npm pack",
-    "npm-update-version": "cd dist/ratify && npm version patch",
+    "npm-update-version": "cd projects/ratify && npm version patch",
     "npm-publish": "cd dist/ratify && npm publish --verbose",
     "package": "npm run remove && npm run build-lib && npm run npm-update-version && npm run npm-pack && npm run npm-publish"
   },
@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@click/ratify": "file:dist/ratify/click-ratify-0.0.1.tgz",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
