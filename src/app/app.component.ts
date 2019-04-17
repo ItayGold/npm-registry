@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   selectedDate: Date = new Date();
   todayDate: Date = new Date();
-  todayButtonText: string = String(`Today @Clicksoftware`);
+  todayButtonText: string = String(`Today`);
 
   setDateEvent($event) {
     const date = this.formatDate($event);

@@ -123,11 +123,9 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class DatePickerComponent implements OnInit {
   @Input() selectedDate: Date;
-  @Input() todayDate: Date;
+  @Input() todayDate: Date = new Date();
   @Input() todayButtonText: string;
-
   @Output() setDateEvent = new EventEmitter<string>();
-
   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
 
   previousDate: Date = new Date(null);
@@ -175,13 +173,15 @@ export class DatePickerComponent implements OnInit {
     this.cdRef.detectChanges();
   }
 
-  public dateChange(value: Date): void {
-    value.setHours(0, 0, 0, 0);
-    if (value.getTime() !== this.previousDate.getTime()) {
-      this.previousDate = value;
-      if (this.datepicker.isOpen) {
-        this.setDateEvent.emit(value.toString());
-      }
-    }
+  public dateChange(dt: Date): void {
+    this.selectedDate = dt;
+    this.setDateEvent.emit(dt.toString());
+    // value.setHours(0, 0, 0, 0);
+    // if (value.getTime() !== this.previousDate.getTime()) {
+    //   this.previousDate = value;
+    //   if (this.datepicker.isOpen) {
+    //     this.setDateEvent.emit(value.toString());
+    //   }
+    // }
   }
 }
