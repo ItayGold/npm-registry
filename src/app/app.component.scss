@@ -1,0 +1,25 @@
+// .dp {
+//   position: relative;
+//   right: 77px;
+//   top: 5px;
+//   visibility: hidden;
+// }
+
+.icon {
+  font-size: 20px;
+  margin: 20px 10px 20px 20px;
+  color: #a7a7a7;
+  cursor: pointer;
+  &:hover {
+    color: #1174be;
+  }
+  &:focus {
+    outline: none;
+    color: #1174be;
+  }
+}
+
+.calendar-icon {
+  @extend .icon;
+  margin: 12px;
+}

@@ -25,7 +25,12 @@
     "@angular/platform-browser": "^7.2.13",
     "@angular/platform-browser-dynamic": "^7.2.13",
     "@angular/router": "^7.2.13",
+    "@click/date-picker": "file:dist/date-picker/click-date-picker-1.0.0.tgz",
+    "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
+    "date-picker": "file:dist/date-picker/date-picker-1.0.0.tgz",
+    "font-awesome": "^4.7.0",
+    "ngx-bootstrap": "~3.1.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },

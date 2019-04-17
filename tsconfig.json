@@ -26,6 +26,12 @@
       "ratify/*": [
         "dist/ratify/*",
         "dist/ratify/*"
+      ],
+      "date-picker": [
+        "dist/date-picker"
+      ],
+      "date-picker/*": [
+        "dist/date-picker/*"
       ]
     }
   }
