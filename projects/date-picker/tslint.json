@@ -1,17 +1,8 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [
-      true,
-      "attribute",
-      "click",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      "click",
-      "kebab-case"
-    ]
+    "directive-selector": [true, "attribute", "click", "camelCase"],
+    "component-selector": [true, "element", "click", "kebab-case"],
+    "no-redundant-jsdoc": false
   }
 }

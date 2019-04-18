@@ -10,6 +10,11 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
+/**
+ * Example of usage:
+ * @example
+ * <example-url>http://localhost:4200/src/app/app.component.html</example-url>
+ */
 @Component({
   selector: 'click-date-picker',
   template: `
@@ -132,6 +137,10 @@ export class DatePickerComponent implements OnInit {
   datePickerConfig: Partial<BsDatepickerConfig>;
   moduleStrings: any = {};
 
+  /**
+   * Init constructor
+   * @param cdRef
+   */
   constructor(private cdRef: ChangeDetectorRef) {
     this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
   }
@@ -142,6 +151,9 @@ export class DatePickerComponent implements OnInit {
     this.datepicker.isOpen = !this.datepicker.isOpen;
   }
 
+  /**
+   * addDatePickerUIChanges
+   */
   public addDatePickerUIChanges = function() {
     this.addUIChanges();
     const itemClicked = Array.from(
@@ -173,6 +185,10 @@ export class DatePickerComponent implements OnInit {
     this.cdRef.detectChanges();
   }
 
+  /**
+   *
+   * @param {Date} update the selected date
+   */
   public dateChange(dt: Date): void {
     this.selectedDate = dt;
     this.setDateEvent.emit(dt.toString());
