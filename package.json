@@ -15,7 +15,8 @@
     "npm-publish": "cd dist/date-picker && npm publish",
     "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
-    "compodoc": "npx compodoc -p projects/date-picker/src/tsconfig.app.json -w -s --theme=postmark"
+    "compodoc": "npx compodoc -p projects/date-picker/src/tsconfig.app.json -w -s --theme=postmark",
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "@angular/animations": "^7.2.13",
@@ -27,6 +28,7 @@
     "@angular/platform-browser-dynamic": "^7.2.13",
     "@angular/router": "^7.2.13",
     "@click/date-picker": "^1.0.5",
+    "@types/storybook__addon-info": "^4.1.1",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
@@ -42,6 +44,8 @@
     "@angular/language-service": "^7.2.13",
     "@babel/core": "^7.4.3",
     "@compodoc/compodoc": "^1.1.9",
+    "@storybook/addon-info": "^5.0.10",
+    "@storybook/addon-notes": "^5.0.10",
     "@storybook/angular": "^5.0.10",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
