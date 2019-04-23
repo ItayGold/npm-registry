@@ -12,15 +12,18 @@ import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'click-demo-date-picker',
   template: `
-    <click-date-picker
-      (setDateEvent)="setDateEvent($event)"
-      class="dp"
-      #dp
-      [selectedDate]="selectedDate"
-      [todayDate]="todayDate"
-      [todayButtonText]="todayButtonText"
-    >
-    </click-date-picker>
+    <div>
+      <h2>Date picker</h2>
+      <click-date-picker
+        (setDateEvent)="setDateEvent($event)"
+        class="dp"
+        #dp
+        [selectedDate]="selectedDate"
+        [todayDate]="todayDate"
+        [todayButtonText]="todayButtonText"
+      >
+      </click-date-picker>
+    </div>
   `,
   styles: [
     `

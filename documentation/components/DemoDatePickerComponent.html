@@ -244,15 +244,18 @@
 
             <tr>
                 <td class="col-md-3">template</td>
-                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;click-date-picker
-  (setDateEvent)&#x3D;&quot;setDateEvent($event)&quot;
-  class&#x3D;&quot;dp&quot;
-  #dp
-  [selectedDate]&#x3D;&quot;selectedDate&quot;
-  [todayDate]&#x3D;&quot;todayDate&quot;
-  [todayButtonText]&#x3D;&quot;todayButtonText&quot;
-&gt;
-&lt;/click-date-picker&gt;
+                <td class="col-md-9"><pre class="line-numbers"><code class="language-html">&lt;div&gt;
+  &lt;h2&gt;Date picker&lt;/h2&gt;
+  &lt;click-date-picker
+    (setDateEvent)&#x3D;&quot;setDateEvent($event)&quot;
+    class&#x3D;&quot;dp&quot;
+    #dp
+    [selectedDate]&#x3D;&quot;selectedDate&quot;
+    [todayDate]&#x3D;&quot;todayDate&quot;
+    [todayButtonText]&#x3D;&quot;todayButtonText&quot;
+  &gt;
+  &lt;/click-date-picker&gt;
+&lt;/div&gt;
 </code></pre></td>
             </tr>
 
@@ -340,7 +343,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:169</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:172</a></div>
                             </td>
                         </tr>
 
@@ -411,8 +414,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="179"
-                            class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:179</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:182</a></div>
                 </td>
             </tr>
 
@@ -481,8 +484,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="175"
-                            class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:175</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="178"
+                            class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:178</a></div>
                 </td>
             </tr>
 
@@ -555,7 +558,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:168</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:171</a></div>
                             </td>
                         </tr>
 
@@ -587,7 +590,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:169</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:172</a></div>
                             </td>
                         </tr>
 
@@ -619,7 +622,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:167</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:170</a></div>
                             </td>
                         </tr>
 
@@ -651,7 +654,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="162" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:162</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="165" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:165</a></div>
                             </td>
                         </tr>
 
@@ -683,7 +686,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:164</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="167" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:167</a></div>
                             </td>
                         </tr>
 
@@ -715,7 +718,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="163" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:163</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">src/app/demo/date-picker/demo-date-picker.component.ts:166</a></div>
                             </td>
                         </tr>
 
@@ -742,15 +745,18 @@ import { ChangeDetectorRef } from &#x27;@angular/core&#x27;;
 @Component({
   selector: &#x27;click-demo-date-picker&#x27;,
   template: &#x60;
-    &lt;click-date-picker
-      (setDateEvent)&#x3D;&quot;setDateEvent($event)&quot;
-      class&#x3D;&quot;dp&quot;
-      #dp
-      [selectedDate]&#x3D;&quot;selectedDate&quot;
-      [todayDate]&#x3D;&quot;todayDate&quot;
-      [todayButtonText]&#x3D;&quot;todayButtonText&quot;
-    &gt;
-    &lt;/click-date-picker&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Date picker&lt;/h2&gt;
+      &lt;click-date-picker
+        (setDateEvent)&#x3D;&quot;setDateEvent($event)&quot;
+        class&#x3D;&quot;dp&quot;
+        #dp
+        [selectedDate]&#x3D;&quot;selectedDate&quot;
+        [todayDate]&#x3D;&quot;todayDate&quot;
+        [todayButtonText]&#x3D;&quot;todayButtonText&quot;
+      &gt;
+      &lt;/click-date-picker&gt;
+    &lt;/div&gt;
   &#x60;,
   styles: [
     &#x60;
@@ -1093,7 +1099,7 @@ export class DemoDatePickerComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><click-date-picker  (setDateEvent)="setDateEvent($event)"  class="dp"  #dp  [selectedDate]="selectedDate"  [todayDate]="todayDate"  [todayButtonText]="todayButtonText"></click-date-picker></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Date picker</h2>  <click-date-picker    (setDateEvent)="setDateEvent($event)"    class="dp"    #dp    [selectedDate]="selectedDate"    [todayDate]="todayDate"    [todayButtonText]="todayButtonText"  >  </click-date-picker></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DatePickerComponent', 'selector': 'click-date-picker'},{'name': 'DemoDatePickerComponent', 'selector': 'click-demo-date-picker'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DemoDatePickerComponent'};
