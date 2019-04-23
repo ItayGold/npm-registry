@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-// import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
 /**
- * Shows all events on a given day. Example usage:
- *
+ * click/date-picker's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
  * @example
  * <example-url>http://localhost:4200/date-picker</example-url>
  */
@@ -165,7 +165,6 @@ export class DemoDatePickerComponent {
   selectedDate: Date = new Date();
   todayDate: Date = new Date();
   todayButtonText: string = String(`Today`);
-  //   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
 
   previousDate: Date = new Date(null);
   datePickerConfig: Partial<BsDatepickerConfig>;
