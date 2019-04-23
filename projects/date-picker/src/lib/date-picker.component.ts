@@ -14,6 +14,18 @@ import { ChangeDetectorRef } from '@angular/core';
   selector: 'click-date-picker',
   template: `
     <div>
+      <div>
+        <span
+          ><i
+            role="button"
+            [id]="['123']"
+            class="calendar-icon fa fa-calendar"
+            (click)="click()"
+            (keypress)="click()"
+          ></i
+        ></span>
+      </div>
+
       <input
         type="text"
         #dp="bsDatepicker"
