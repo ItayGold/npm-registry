@@ -76,6 +76,7 @@ import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 // import { DatePickerPageComponent } from &#x27;./pages/date-picker-page/date-picker-page.component&#x27;;
 
 const routes: Routes &#x3D; [
+  { path: &#x27;&#x27;, redirectTo: &#x27;/date-picker&#x27;, pathMatch: &#x27;full&#x27; },
   {
     path: &#x27;date-picker&#x27;,
     loadChildren: &#x27;./demo/date-picker/date-picker.module#DatePickerModule&#x27;,

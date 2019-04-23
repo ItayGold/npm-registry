@@ -1,42 +1,26 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  Input,
-  Output,
-  EventEmitter,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
+// import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
+/**
+ * Shows all events on a given day. Example usage:
+ *
+ * @example
+ * <example-url>http://localhost:4200/date-picker</example-url>
+ */
 @Component({
-  selector: 'click-date-picker',
+  selector: 'click-demo-date-picker',
   template: `
-    <div>
-      <h1>Date picker</h1>
-      <div>
-        <span
-          ><i
-            role="button"
-            [id]="['123']"
-            class="calendar-icon fa fa-calendar"
-            (click)="click()"
-            (keypress)="click()"
-          ></i
-        ></span>
-      </div>
-
-      <input
-        type="text"
-        #dp="bsDatepicker"
-        bsDatepicker
-        [bsValue]="selectedDate"
-        [bsConfig]="datePickerConfig"
-        (onShown)="addDatePickerUIChanges()"
-        (bsValueChange)="dateChange($event)"
-      />
-    </div>
+    <click-date-picker
+      (setDateEvent)="setDateEvent($event)"
+      class="dp"
+      #dp
+      [selectedDate]="selectedDate"
+      [todayDate]="todayDate"
+      [todayButtonText]="todayButtonText"
+    >
+    </click-date-picker>
   `,
   styles: [
     `
@@ -174,12 +158,11 @@ import { ChangeDetectorRef } from '@angular/core';
     `,
   ],
 })
-export class DatePickerComponent implements OnInit {
-  @Input() selectedDate: Date;
-  @Input() todayDate: Date = new Date();
-  @Input() todayButtonText: string;
-  @Output() setDateEvent = new EventEmitter<string>();
-  @ViewChild('dp') datepicker: BsDaterangepickerDirective;
+export class DemoDatePickerComponent {
+  selectedDate: Date = new Date();
+  todayDate: Date = new Date();
+  todayButtonText: string = String(`Today`);
+  //   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
 
   previousDate: Date = new Date(null);
   datePickerConfig: Partial<BsDatepickerConfig>;
@@ -189,55 +172,23 @@ export class DatePickerComponent implements OnInit {
     this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
   }
 
-  ngOnInit() {}
-
-  public click() {
-    this.datepicker.isOpen = !this.datepicker.isOpen;
+  setDateEvent($event: Date): void {
+    const date = this.formatDate($event);
   }
 
-  /**
-   * addDatePickerUIChanges
-   */
-  public addDatePickerUIChanges = function() {
-    this.addUIChanges();
-    const itemClicked = Array.from(
-      document.querySelectorAll('.next , .previous, .current')
-    );
-    itemClicked.forEach(e => {
-      e.addEventListener('click', () => {
-        this.addDatePickerUIChanges();
-      });
-    });
-  };
+  private formatDate(date: Date): string {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    let month = '' + (d.getMonth() + 1);
+    let day = '' + d.getDate();
 
-  private addUIChanges() {
-    const divNode = document.createElement('div');
-    divNode.classList.add('dpButtons');
-    const bottunNode = document.createElement('div');
-    const textnode = document.createTextNode(this.todayButtonText);
-    bottunNode.addEventListener('click', () => {
-      this.setToday();
-    });
-    bottunNode.classList.add('todayButton');
-    bottunNode.appendChild(textnode);
+    if (month.length < 2) {
+      month = '0' + month;
+    }
+    if (day.length < 2) {
+      day = '0' + day;
+    }
 
-    document.querySelector('bs-calendar-layout').appendChild(bottunNode);
-  }
-
-  private setToday() {
-    this.selectedDate = this.todayDate;
-    this.cdRef.detectChanges();
-  }
-
-  public dateChange(dt: Date): void {
-    this.selectedDate = dt;
-    this.setDateEvent.emit(dt.toString());
-    // value.setHours(0, 0, 0, 0);
-    // if (value.getTime() !== this.previousDate.getTime()) {
-    //   this.previousDate = value;
-    //   if (this.datepicker.isOpen) {
-    //     this.setDateEvent.emit(value.toString());
-    //   }
-    // }
+    return [year, month, day].join('-');
   }
 }
