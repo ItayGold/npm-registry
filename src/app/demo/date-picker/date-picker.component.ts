@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ViewChild,
   Input,
   Output,
@@ -174,7 +173,7 @@ import { ChangeDetectorRef } from '@angular/core';
     `,
   ],
 })
-export class DatePickerComponent implements OnInit {
+export class DatePickerComponent {
   @Input() selectedDate: Date;
   @Input() todayDate: Date = new Date();
   @Input() todayButtonText: string;
@@ -189,16 +188,15 @@ export class DatePickerComponent implements OnInit {
     this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
   }
 
-  ngOnInit() {}
-
   public click() {
     this.datepicker.isOpen = !this.datepicker.isOpen;
   }
 
   /**
-   * addDatePickerUIChanges
+   * Add listeners on click for next, previous & current - addDatePickerUIChanges
+   * They should be remove on unload component
    */
-  public addDatePickerUIChanges = function() {
+  public addDatePickerUIChanges(): void {
     this.addUIChanges();
     const itemClicked = Array.from(
       document.querySelectorAll('.next , .previous, .current')
@@ -208,9 +206,9 @@ export class DatePickerComponent implements OnInit {
         this.addDatePickerUIChanges();
       });
     });
-  };
+  }
 
-  private addUIChanges() {
+  private addUIChanges(): void {
     const divNode = document.createElement('div');
     divNode.classList.add('dpButtons');
     const bottunNode = document.createElement('div');
@@ -224,7 +222,7 @@ export class DatePickerComponent implements OnInit {
     document.querySelector('bs-calendar-layout').appendChild(bottunNode);
   }
 
-  private setToday() {
+  private setToday(): void {
     this.selectedDate = this.todayDate;
     this.cdRef.detectChanges();
   }
@@ -232,12 +230,5 @@ export class DatePickerComponent implements OnInit {
   public dateChange(dt: Date): void {
     this.selectedDate = dt;
     this.setDateEvent.emit(dt.toString());
-    // value.setHours(0, 0, 0, 0);
-    // if (value.getTime() !== this.previousDate.getTime()) {
-    //   this.previousDate = value;
-    //   if (this.datepicker.isOpen) {
-    //     this.setDateEvent.emit(value.toString());
-    //   }
-    // }
   }
 }
