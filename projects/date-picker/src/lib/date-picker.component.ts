@@ -39,6 +39,33 @@ import { ChangeDetectorRef } from '@angular/core';
   `,
   styles: [
     `
+      input {
+        position: relative;
+        height: 0;
+        visibility: hidden;
+      }
+
+      .icon,
+      .calendar-icon {
+        font-size: 20px;
+        margin: 20px 10px 20px 20px;
+        color: #a7a7a7;
+        cursor: pointer;
+      }
+      .icon:hover,
+      .calendar-icon:hover {
+        color: #1174be;
+      }
+      .icon:focus,
+      .calendar-icon:focus {
+        outline: none;
+        color: #1174be;
+      }
+
+      .calendar-icon {
+        margin: 12px;
+      }
+
       ::ng-deep .todayButton {
         text-align: left;
         position: relative;

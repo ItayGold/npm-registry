@@ -76,13 +76,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/DatePickerModule.html" data-type="entity-link">DatePickerModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-DatePickerModule-08b8a82b36cd41d0ccabc45094c97635"' : 'data-target="#xs-components-links-module-DatePickerModule-08b8a82b36cd41d0ccabc45094c97635"' }>
+                                            'data-target="#components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' : 'data-target="#xs-components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-08b8a82b36cd41d0ccabc45094c97635"' :
-                                            'id="xs-components-links-module-DatePickerModule-08b8a82b36cd41d0ccabc45094c97635"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' :
+                                            'id="xs-components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' }>
                                             <li class="link">
                                                 <a href="components/DatePickerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">DatePickerComponent</a>
