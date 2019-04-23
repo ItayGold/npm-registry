@@ -13,7 +13,6 @@ import { ChangeDetectorRef } from '@angular/core';
   selector: 'click-date-picker',
   template: `
     <div>
-      <h1>Date picker</h1>
       <div>
         <span
           ><i
