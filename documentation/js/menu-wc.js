@@ -52,22 +52,46 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </a>
                         <ul class="links collapse" ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
                             <li class="link">
-                                <a href="modules/DatePickerModule.html" data-type="entity-link">DatePickerModule</a>
+                                <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-DatePickerModule-309af69a574485cd83198e5baf40b207"' : 'data-target="#xs-components-links-module-DatePickerModule-309af69a574485cd83198e5baf40b207"' }>
+                                            'data-target="#components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' : 'data-target="#xs-components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-309af69a574485cd83198e5baf40b207"' :
-                                            'id="xs-components-links-module-DatePickerModule-309af69a574485cd83198e5baf40b207"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' :
+                                            'id="xs-components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' }>
+                                            <li class="link">
+                                                <a href="components/AppComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/DatePickerModule.html" data-type="entity-link">DatePickerModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-DatePickerModule-007cd0d8030b9222447c3730a0bf693c"' : 'data-target="#xs-components-links-module-DatePickerModule-007cd0d8030b9222447c3730a0bf693c"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-007cd0d8030b9222447c3730a0bf693c"' :
+                                            'id="xs-components-links-module-DatePickerModule-007cd0d8030b9222447c3730a0bf693c"' }>
                                             <li class="link">
                                                 <a href="components/DatePickerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">DatePickerComponent</a>
                                             </li>
                                         </ul>
                                     </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/DatePickerRoutingModule.html" data-type="entity-link">DatePickerRoutingModule</a>
                             </li>
                 </ul>
                 </li>
@@ -84,6 +108,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                             </ul>
                         </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#miscellaneous-links"'
+                            : 'data-target="#xs-miscellaneous-links"' }>
+                            <span class="icon ion-ios-cube"></span>
+                            <span>Miscellaneous</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
+                            <li class="link">
+                                <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <a data-type="chapter-link" href="routes.html"><span class="icon ion-ios-git-branch"></span>Routes</a>
                         </li>

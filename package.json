@@ -15,7 +15,7 @@
     "npm-publish": "cd dist/date-picker && npm publish",
     "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
-    "compodoc": "npx compodoc -p projects/date-picker/src/tsconfig.app.json -w -s --theme=postmark",
+    "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
     "storybook": "start-storybook"
   },
   "dependencies": {
@@ -61,6 +61,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^5.1.0",
     "protractor": "~5.4.0",
+    "source-map-explorer": "^1.8.0",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.34.0",
     "tslib": "^1.9.3",

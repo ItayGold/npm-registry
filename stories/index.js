@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/angular';
 // import { withInfo } from '@storybook/addon-info';
 // import { withNotes } from '@storybook/addon-notes';
-// import { Button } from '@storybook/angular/demo';
+import { Button } from '@storybook/angular/demo';
 import { DatePickerComponent } from '@click/date-picker';
 
 storiesOf('@click date picker', module)
@@ -14,7 +14,7 @@ storiesOf('@click date picker', module)
   .add(
     'with text',
     () => ({
-      component: DatePickerComponent,
+      // component: DatePickerComponent,
       props: {
         setDateEvent: $event => {
           const d = new Date($event);
@@ -36,26 +36,26 @@ storiesOf('@click date picker', module)
         todayButtonText: `Today`,
       },
       template: `
-    <span
-    ><i
-      role="button"
-      [id]="['123']"
-      class="calendar-icon fa fa-calendar"
-      (click)="dp.click()"
-      (keypress)="dp.click()"
-    ></i
-  ></span>
+        <span
+        ><i
+          role="button"
+          [id]="['123']"
+          class="calendar-icon fa fa-calendar"
+          (click)="dp.click()"
+          (keypress)="dp.click()"
+        ></i
+      ></span>
 
-  <click-date-picker
-    (setDateEvent)="setDateEvent($event)"
-    class="dp"
-    #dp
-    [selectedDate]="selectedDate"
-    [todayDate]="todayDate"
-    [todayButtonText]="todayButtonText"
-  >
-  </click-date-picker>
-  `,
+      <click-date-picker
+        (setDateEvent)="setDateEvent($event)"
+        class="dp"
+        #dp
+        [selectedDate]="selectedDate"
+        [todayDate]="todayDate"
+        [todayButtonText]="todayButtonText"
+      >
+      </click-date-picker>
+      `,
     })
     // { info: { inline: true, header: false } },
     // { notes: 'My notes on some button' }
