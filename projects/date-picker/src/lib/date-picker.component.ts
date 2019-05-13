@@ -1,14 +1,24 @@
 import {
   Component,
-  OnInit,
   ViewChild,
   Input,
   Output,
   EventEmitter,
+  ChangeDetectorRef,
+  OnInit,
 } from '@angular/core';
-import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
-import { ChangeDetectorRef } from '@angular/core';
+import {
+  BsDatepickerConfig,
+  BsDaterangepickerDirective,
+} from 'ngx-bootstrap/datepicker';
+
+type clickActionType = () => void;
+
+export interface Message {
+  type: string;
+  val: any;
+  data?: any;
+}
 
 @Component({
   selector: 'click-date-picker',
@@ -164,27 +174,30 @@ export class DatePickerComponent implements OnInit {
   @Input() selectedDate: Date;
   @Input() todayDate: Date = new Date();
   @Input() todayButtonText: string;
-  @Output() setDateEvent = new EventEmitter<string>();
+  @Output() updateDateStore: EventEmitter<string> = new EventEmitter<string>();
+  @Output() updateMsgStore: EventEmitter<boolean> = new EventEmitter<boolean>();
   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
-
-  previousDate: Date = new Date(null);
+  @Input() showWeekNumbers: boolean;
+  @Input() isOpen: boolean;
   datePickerConfig: Partial<BsDatepickerConfig>;
+  previousDate: Date = new Date(null);
   moduleStrings: any = {};
 
-  constructor(private cdRef: ChangeDetectorRef) {
-    this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
+  constructor(private cdRef: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    this.datePickerConfig = Object.assign(
+      {},
+      { showWeekNumbers: this.showWeekNumbers }
+    );
   }
 
-  ngOnInit() {}
-
-  public click() {
+  click() {
     this.datepicker.isOpen = !this.datepicker.isOpen;
+    this.updateMsgStore.emit(Boolean(this.datepicker.isOpen));
   }
 
-  /**
-   * addDatePickerUIChanges
-   */
-  public addDatePickerUIChanges = function() {
+  addDatePickerUIChanges(): void {
     this.addUIChanges();
     const itemClicked = Array.from(
       document.querySelectorAll('.next , .previous, .current')
@@ -194,36 +207,47 @@ export class DatePickerComponent implements OnInit {
         this.addDatePickerUIChanges();
       });
     });
-  };
-
-  private addUIChanges() {
-    const divNode = document.createElement('div');
-    divNode.classList.add('dpButtons');
-    const bottunNode = document.createElement('div');
-    const textnode = document.createTextNode(this.todayButtonText);
-    bottunNode.addEventListener('click', () => {
-      this.setToday();
-    });
-    bottunNode.classList.add('todayButton');
-    bottunNode.appendChild(textnode);
-
-    document.querySelector('bs-calendar-layout').appendChild(bottunNode);
   }
 
-  private setToday() {
+  dateChange(dt: Date): void {
+    this.selectedDate = dt;
+    this.previousDate = new Date(dt);
+    const formattedDate: string = this.formatDate(dt.toString());
+    this.updateDateStore.emit(formattedDate);
+  }
+
+  private addUIChanges(): void {
+    const divNode = document.createElement('div');
+    divNode.classList.add('dpButtons');
+    const todayButtonElem = document.createElement('div');
+    const textnode = document.createTextNode(this.todayButtonText);
+    todayButtonElem.addEventListener('click', () => {
+      this.setToday();
+    });
+    todayButtonElem.classList.add('todayButton');
+    todayButtonElem.appendChild(textnode);
+
+    document.querySelector('bs-calendar-layout').appendChild(todayButtonElem);
+  }
+
+  private setToday(): void {
     this.selectedDate = this.todayDate;
     this.cdRef.detectChanges();
   }
 
-  public dateChange(dt: Date): void {
-    this.selectedDate = dt;
-    this.setDateEvent.emit(dt.toString());
-    // value.setHours(0, 0, 0, 0);
-    // if (value.getTime() !== this.previousDate.getTime()) {
-    //   this.previousDate = value;
-    //   if (this.datepicker.isOpen) {
-    //     this.setDateEvent.emit(value.toString());
-    //   }
-    // }
+  private formatDate(date: string): string {
+    const d = new Date(date);
+    const year = d.getFullYear();
+    let month = '' + (d.getMonth() + 1);
+    let day = '' + d.getDate();
+
+    if (month.length < 2) {
+      month = '0' + month;
+    }
+    if (day.length < 2) {
+      day = '0' + day;
+    }
+
+    return [year, month, day].join('-');
   }
 }
