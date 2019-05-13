@@ -187,7 +187,7 @@ export class DatePickerComponent {
     this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
   }
 
-  public click() {
+  click() {
     this.datepicker.isOpen = !this.datepicker.isOpen;
   }
 
@@ -195,7 +195,7 @@ export class DatePickerComponent {
    * Add listeners on click for next, previous & current - addDatePickerUIChanges
    * They should be remove on unload component
    */
-  public addDatePickerUIChanges(): void {
+  addDatePickerUIChanges(): void {
     this.addUIChanges();
     const itemClicked = Array.from(
       document.querySelectorAll('.next , .previous, .current')

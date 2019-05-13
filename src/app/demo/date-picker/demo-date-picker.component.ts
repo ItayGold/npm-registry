@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
 /**
@@ -15,12 +16,15 @@ import { ChangeDetectorRef } from '@angular/core';
     <div>
       <h2>Date picker</h2>
       <click-date-picker
-        (setDateEvent)="setDateEvent($event)"
-        class="dp"
         #dp
-        [selectedDate]="selectedDate"
+        class="dp"
+        [isOpen]="isOpen"
         [todayDate]="todayDate"
+        [selectedDate]="selectedDate"
         [todayButtonText]="todayButtonText"
+        [showWeekNumbers]="showWeekNumbers"
+        (updateDateStore)="updateDateStore($event)"
+        (updateMsgStore)="updateMsgStore($event)"
       >
       </click-date-picker>
     </div>
@@ -165,32 +169,22 @@ export class DemoDatePickerComponent {
   selectedDate: Date = new Date();
   todayDate: Date = new Date();
   todayButtonText: string = String(`Today`);
+  moduleStrings: any = {};
+  showWeekNumbers: boolean = false;
+  isOpen: boolean = false;
 
   previousDate: Date = new Date(null);
   datePickerConfig: Partial<BsDatepickerConfig>;
-  moduleStrings: any = {};
-
+  @ViewChild('dp') datepicker: BsDaterangepickerDirective;
   constructor(private cdRef: ChangeDetectorRef) {
     this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
   }
 
-  setDateEvent($event: Date): void {
-    const date = this.formatDate($event);
+  updateDateStore(dt: string): void {
+    alert(`Date's been updated @Store: ${dt}`);
   }
 
-  private formatDate(date: Date): string {
-    const d = new Date(date);
-    const year = d.getFullYear();
-    let month = '' + (d.getMonth() + 1);
-    let day = '' + d.getDate();
-
-    if (month.length < 2) {
-      month = '0' + month;
-    }
-    if (day.length < 2) {
-      day = '0' + day;
-    }
-
-    return [year, month, day].join('-');
+  updateMsgStore(status: boolean): void {
+    alert(`Message's been updated @Store: ${status}`);
   }
 }

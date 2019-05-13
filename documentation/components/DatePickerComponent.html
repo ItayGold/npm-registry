@@ -301,7 +301,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#addDatePickerUIChanges">addDatePickerUIChanges</a>
                             </li>
                             <li>
@@ -309,7 +308,6 @@
                                 <a href="#addUIChanges">addUIChanges</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
                                 <a href="#click">click</a>
                             </li>
                             <li>
@@ -524,7 +522,6 @@
                     <a name="addDatePickerUIChanges"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Public</span>
                             addDatePickerUIChanges
                         </b>
                         <a href="#addDatePickerUIChanges"><span class="icon ion-ios-link"></span></a>
@@ -533,8 +530,7 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>addDatePickerUIChanges()</code>
+<code>addDatePickerUIChanges()</code>
                 </td>
             </tr>
 
@@ -609,7 +605,6 @@ They should be remove on unload component</p>
                     <a name="click"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Public</span>
                             click
                         </b>
                         <a href="#click"><span class="icon ion-ios-link"></span></a>
@@ -618,8 +613,7 @@ They should be remove on unload component</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>click()</code>
+<code>click()</code>
                 </td>
             </tr>
 
@@ -1084,7 +1078,7 @@ export class DatePickerComponent {
     this.datePickerConfig &#x3D; Object.assign({}, { showWeekNumbers: false });
   }
 
-  public click() {
+  click() {
     this.datepicker.isOpen &#x3D; !this.datepicker.isOpen;
   }
 
@@ -1092,7 +1086,7 @@ export class DatePickerComponent {
    * Add listeners on click for next, previous &amp; current - addDatePickerUIChanges
    * They should be remove on unload component
    */
-  public addDatePickerUIChanges(): void {
+  addDatePickerUIChanges(): void {
     this.addUIChanges();
     const itemClicked &#x3D; Array.from(
       document.querySelectorAll(&#x27;.next , .previous, .current&#x27;)
