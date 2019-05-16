@@ -76,17 +76,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/DatePickerModule.html" data-type="entity-link">DatePickerModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' : 'data-target="#xs-components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' }>
+                                            'data-target="#components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' : 'data-target="#xs-components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' :
-                                            'id="xs-components-links-module-DatePickerModule-e020eddd0b47d890c93ea4e4fc523266"' }>
-                                            <li class="link">
-                                                <a href="components/DatePickerComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DatePickerComponent</a>
-                                            </li>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' :
+                                            'id="xs-components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' }>
                                             <li class="link">
                                                 <a href="components/DemoDatePickerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">DemoDatePickerComponent</a>
@@ -99,6 +95,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                 </ul>
                 </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#components-links"' :
+                            'data-target="#xs-components-links"' }>
+                            <span class="icon ion-md-cog"></span>
+                            <span>Components</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
+                            <li class="link">
+                                <a href="components/DatePickerComponent.html" data-type="entity-link">DatePickerComponent</a>
+                            </li>
+                        </ul>
+                    </li>
                         <li class="chapter">
                             <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#injectables-links"' :
                                 'data-target="#xs-injectables-links"' }>

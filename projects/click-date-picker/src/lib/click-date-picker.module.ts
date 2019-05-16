@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { DatePickerComponent } from './date-picker.component';
+import { ClickDatePickerComponent } from './click-date-picker.component';
 
 @NgModule({
-  declarations: [DatePickerComponent],
+  declarations: [ClickDatePickerComponent],
   imports: [DatepickerModule.forRoot(), BsDatepickerModule.forRoot()],
-  exports: [DatePickerComponent],
+  exports: [ClickDatePickerComponent],
 })
-export class DatePickerModule {}
+export class ClickDatePickerModule {}

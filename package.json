@@ -9,12 +9,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "remove": "rm -rf dist",
-    "build-lib": "ng build date-picker",
-    "npm-pack": "cd dist/date-picker && npm pack",
-    "npm-update-version": "cd projects/date-picker && npm version patch",
-    "npm-publish": "cd dist/date-picker && npm publish",
+    "build-lib": "ng build click-date-picker",
+    "npm-pack": "cd dist/click-date-picker && npm pack",
+    "npm-update-version": "cd projects/click-date-picker && npm version patch",
+    "npm-publish": "cd dist/click-date-picker && npm publish",
     "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish",
-    "git-push": "PACKAGE_VERSION=$(cat projects/date-picker/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
+    "git-push": "PACKAGE_VERSION=$(cat projects/click-date-picker/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
     "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark"
   },
   "dependencies": {

@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
@@ -174,11 +173,8 @@ export class DemoDatePickerComponent {
   isOpen: boolean = false;
 
   previousDate: Date = new Date(null);
-  datePickerConfig: Partial<BsDatepickerConfig>;
   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
-  constructor(private cdRef: ChangeDetectorRef) {
-    this.datePickerConfig = Object.assign({}, { showWeekNumbers: false });
-  }
+  constructor(private cdRef: ChangeDetectorRef) {}
 
   updateDateStore(dt: string): void {
     alert(`Date's been updated @Store: ${dt}`);

@@ -159,9 +159,6 @@
                             title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../components/DatePickerComponent.html">DatePickerComponent</a>
-                        </li>
-                        <li class="list-group-item">
                             <a href="../components/DemoDatePickerComponent.html">DemoDatePickerComponent</a>
                         </li>
                     </ul>
@@ -170,6 +167,9 @@
                     <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../modules/DatePickerModule.html">DatePickerModule</a>
+                        </li>
                         <li class="list-group-item">
                             <a href="../modules/DatePickerRoutingModule.html">DatePickerRoutingModule</a>
                         </li>
@@ -186,18 +186,18 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { DatepickerModule, BsDatepickerModule } from &#x27;ngx-bootstrap/datepicker&#x27;;
-// import { DatePickerComponent } from &#x27;./date-picker.component&#x27;;
 import { DemoDatePickerComponent } from &#x27;./demo-date-picker.component&#x27;;
 import { DatePickerRoutingModule } from &#x27;./date-picker-routing.module&#x27;;
-import { DatePickerComponent } from &#x27;@click/date-picker&#x27;;
+import { DatePickerModule } from &#x27;@click/date-picker&#x27;;
 
 @NgModule({
-  declarations: [DatePickerComponent, DemoDatePickerComponent],
+  declarations: [DemoDatePickerComponent],
   imports: [
     CommonModule,
     DatePickerRoutingModule,
     DatepickerModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    DatePickerModule,
   ],
 })
 export class DatePickerModule {}

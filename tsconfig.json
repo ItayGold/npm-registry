@@ -32,6 +32,14 @@
       ],
       "date-picker/*": [
         "dist/date-picker/*"
+      ],
+      "click-date-picker": [
+        "dist/click-date-picker",
+        "dist/click-date-picker"
+      ],
+      "click-date-picker/*": [
+        "dist/click-date-picker/*",
+        "dist/click-date-picker/*"
       ]
     }
   }

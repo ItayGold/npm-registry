@@ -12,8 +12,6 @@ import {
   BsDaterangepickerDirective,
 } from 'ngx-bootstrap/datepicker';
 
-type clickActionType = () => void;
-
 export interface Message {
   type: string;
   val: any;
@@ -170,7 +168,7 @@ export interface Message {
     `,
   ],
 })
-export class DatePickerComponent implements OnInit {
+export class ClickDatePickerComponent implements OnInit {
   @Input() selectedDate: Date;
   @Input() todayDate: Date = new Date();
   @Input() todayButtonText: string;
