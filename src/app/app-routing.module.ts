@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { DatePickerPageComponent } from './pages/date-picker-page/date-picker-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/date-picker', pathMatch: 'full' },
   {
     path: 'date-picker',
-    loadChildren: './demo/date-picker/date-picker.module#DatePickerModule',
+    loadChildren:
+      './click-date-picker-demo/click-date-picker-demo.module#ClickDatePickerDemoModule',
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full',
   },
 ];
 

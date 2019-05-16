@@ -73,22 +73,25 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppRoutingModule.html" data-type="entity-link">AppRoutingModule</a>
                             </li>
                             <li class="link">
-                                <a href="modules/DatePickerModule.html" data-type="entity-link">DatePickerModule</a>
+                                <a href="modules/ClickDatePickerDemoModule.html" data-type="entity-link">ClickDatePickerDemoModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' : 'data-target="#xs-components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' }>
+                                            'data-target="#components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' :
-                                            'id="xs-components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' :
+                                            'id="xs-components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' }>
                                             <li class="link">
-                                                <a href="components/DemoDatePickerComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">DemoDatePickerComponent</a>
+                                                <a href="components/ClickDatePickerDemoComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerDemoComponent</a>
                                             </li>
                                         </ul>
                                     </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ClickDatePickerRoutingModule.html" data-type="entity-link">ClickDatePickerRoutingModule</a>
                             </li>
                 </ul>
                 </li>
@@ -101,23 +104,23 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
-                                <a href="components/DatePickerComponent.html" data-type="entity-link">DatePickerComponent</a>
+                                <a href="components/ClickDatePickerComponent.html" data-type="entity-link">ClickDatePickerComponent</a>
                             </li>
                         </ul>
                     </li>
-                        <li class="chapter">
-                            <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#injectables-links"' :
-                                'data-target="#xs-injectables-links"' }>
-                                <span class="icon ion-md-arrow-round-down"></span>
-                                <span>Injectables</span>
-                                <span class="icon ion-ios-arrow-down"></span>
-                            </div>
-                            <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links"' : 'id="xs-injectables-links"' }>
-                                <li class="link">
-                                    <a href="injectables/DatePickerService.html" data-type="entity-link">DatePickerService</a>
-                                </li>
-                            </ul>
-                        </li>
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
+                            'data-target="#xs-interfaces-links"' }>
+                            <span class="icon ion-md-information-circle-outline"></span>
+                            <span>Interfaces</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
+                            <li class="link">
+                                <a href="interfaces/Message.html" data-type="entity-link">Message</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#miscellaneous-links"'
                             : 'data-target="#xs-miscellaneous-links"' }>

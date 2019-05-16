@@ -171,13 +171,13 @@ export interface Message {
 export class ClickDatePickerComponent implements OnInit {
   @Input() selectedDate: Date;
   @Input() todayDate: Date = new Date();
-  @Input() todayButtonText: string;
+  @Input() todayButtonText?: string = `Today`;
   @Output() updateDateStore: EventEmitter<string> = new EventEmitter<string>();
   @Output() updateMsgStore: EventEmitter<boolean> = new EventEmitter<boolean>();
   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
-  @Input() showWeekNumbers: boolean;
-  @Input() isOpen: boolean;
-  datePickerConfig: Partial<BsDatepickerConfig>;
+  @Input() showWeekNumbers?: boolean = false;
+  @Input() isOpen?: boolean = false;
+  datePickerConfig?: Partial<BsDatepickerConfig>;
   previousDate: Date = new Date(null);
   moduleStrings: any = {};
 

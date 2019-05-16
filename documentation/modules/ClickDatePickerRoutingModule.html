@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>ClickDatePickerRoutingModule</li>
 </ol>
 
 
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/click-date-picker-demo/click-date-picker-routing.module.ts</code>
         </p>
 
 
@@ -73,25 +73,20 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { ClickDatePickerDemoComponent } from &#x27;./click-date-picker-demo/click-date-picker-demo.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
-    path: &#x27;date-picker&#x27;,
-    loadChildren:
-      &#x27;./click-date-picker-demo/click-date-picker-demo.module#ClickDatePickerDemoModule&#x27;,
-  },
-  {
     path: &#x27;&#x27;,
-    redirectTo: &#x27;&#x27;,
-    pathMatch: &#x27;full&#x27;,
+    component: ClickDatePickerDemoComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class ClickDatePickerRoutingModule {}
 </code></pre>
     </div>
 </div>
@@ -126,7 +121,7 @@ export class AppRoutingModule {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ClickDatePickerRoutingModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

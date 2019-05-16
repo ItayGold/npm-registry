@@ -1,0 +1,23 @@
+<div>
+  <div>
+    <span
+      ><i
+        role="button"
+        [id]="['123']"
+        class="calendar-icon fa fa-calendar"
+        (click)="click()"
+        (keypress)="click()"
+      ></i
+    ></span>
+  </div>
+
+  <input
+    type="text"
+    #dp="bsDatepicker"
+    bsDatepicker
+    [bsValue]="selectedDate"
+    [bsConfig]="datePickerConfig"
+    (onShown)="addDatePickerUIChanges()"
+    (bsValueChange)="dateChange($event)"
+  />
+</div>

@@ -1,0 +1,15 @@
+<div>
+  <h2>Date picker</h2>
+  <click-date-picker
+    #dp
+    class="dp"
+    [isOpen]="isOpen"
+    [todayDate]="todayDate"
+    [selectedDate]="selectedDate"
+    [todayButtonText]="todayButtonText"
+    [showWeekNumbers]="showWeekNumbers"
+    (updateDateStore)="updateDateStore($event)"
+    (updateMsgStore)="updateMsgStore($event)"
+  >
+  </click-date-picker>
+</div>
