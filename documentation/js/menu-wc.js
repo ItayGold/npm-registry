@@ -76,22 +76,19 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/DatePickerModule.html" data-type="entity-link">DatePickerModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' : 'data-target="#xs-components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' }>
+                                            'data-target="#components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' : 'data-target="#xs-components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' :
-                                            'id="xs-components-links-module-DatePickerModule-a75bee1f128eeff129a4a5a4b3b96549"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' :
+                                            'id="xs-components-links-module-DatePickerModule-b822b25edf69aac349ee742f052caef4"' }>
                                             <li class="link">
                                                 <a href="components/DemoDatePickerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">DemoDatePickerComponent</a>
                                             </li>
                                         </ul>
                                     </li>
-                            </li>
-                            <li class="link">
-                                <a href="modules/DatePickerRoutingModule.html" data-type="entity-link">DatePickerRoutingModule</a>
                             </li>
                 </ul>
                 </li>
