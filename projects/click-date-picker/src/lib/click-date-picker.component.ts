@@ -208,10 +208,15 @@ export class ClickDatePickerComponent implements OnInit {
   }
 
   dateChange(dt: Date): void {
-    this.selectedDate = dt;
-    this.previousDate = new Date(dt);
-    const formattedDate: string = this.formatDate(dt.toString());
-    this.updateDateStore.emit(formattedDate);
+    dt.setHours(0, 0, 0, 0);
+    if (dt.getTime() !== this.previousDate.getTime()) {
+      this.selectedDate = dt;
+      this.previousDate = new Date(dt);
+      if (this.datepicker.isOpen) {
+        const formattedDate: string = this.formatDate(dt.toString());
+        this.updateDateStore.emit(formattedDate);
+      }
+    }
   }
 
   private addUIChanges(): void {
