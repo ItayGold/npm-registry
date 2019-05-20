@@ -22,7 +22,7 @@ export interface Message {
   selector: 'click-date-picker',
   template: `
     <div>
-      <div class="trigger-component">
+      <div>
         <span
           ><i
             role="button"
@@ -47,13 +47,13 @@ export interface Message {
   `,
   styles: [
     `
-      :host-context() input {
+      ::ng-deep input {
         position: relative;
         height: 0;
         visibility: hidden;
       }
 
-      :host-context(.trigger-component) .icon,
+      ::ng-deep .icon,
       .calendar-icon {
         font-size: 20px;
         margin: 20px 10px 20px 20px;
@@ -61,24 +61,19 @@ export interface Message {
         cursor: pointer;
       }
 
-      :host-context(.trigger-component) .icon:hover,
+      ::ng-deep .icon:hover,
       .calendar-icon:hover {
         color: #1174be;
       }
 
-      :host-context(.trigger-component) .icon:focus,
-      :host-context(.trigger-component) .calendar-icon:focus {
+      ::ng-deep .icon:focus,
+      ::ng-deep .calendar-icon:focus {
         outline: none;
         color: #1174be;
       }
 
-      :host-context(.trigger-component) .calendar-icon {
+      ::ng-deep .calendar-icon {
         margin: 12px;
-      }
-
-      :host-context(.fa) {
-      }
-      :host-context(.fa-calendar) {
       }
 
       ::ng-deep .todayButton {
