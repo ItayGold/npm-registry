@@ -45,15 +45,13 @@ export interface Message {
   `,
   styles: [
     `
-      ::ng-deep .fa .fa-calendar {
-      }
       ::ng-deep input {
         position: relative;
         height: 0;
         visibility: hidden;
       }
 
-      ::ng-deep .icon,
+      .icon,
       .calendar-icon {
         font-size: 20px;
         margin: 20px 10px 20px 20px;
@@ -61,22 +59,22 @@ export interface Message {
         cursor: pointer;
       }
 
-      ::ng-deep .icon:hover,
+      .icon:hover,
       .calendar-icon:hover {
         color: #1174be;
       }
 
-      ::ng-deep .icon:focus,
-      ::ng-deep .calendar-icon:focus {
+      .icon:focus,
+      .calendar-icon:focus {
         outline: none;
         color: #1174be;
       }
 
-      ::ng-deep .calendar-icon {
+      .calendar-icon {
         margin: 12px;
       }
 
-      ::ng-deep .todayButton {
+      .todayButton {
         text-align: left;
         position: relative;
         font-family: Roboto;

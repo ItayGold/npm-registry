@@ -42,6 +42,12 @@
         "dist/click-date-picker/*",
         "dist/click-date-picker/*",
         "dist/click-date-picker/*"
+      ],
+      "click-icon": [
+        "dist/click-icon"
+      ],
+      "click-icon/*": [
+        "dist/click-icon/*"
       ]
     }
   }
