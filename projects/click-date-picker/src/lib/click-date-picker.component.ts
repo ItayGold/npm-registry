@@ -26,10 +26,8 @@ export interface Message {
         <span
           ><i
             role="button"
-            [id]="['123']"
             class="calendar-icon fa fa-calendar"
             (click)="click()"
-            (keypress)="click()"
           ></i
         ></span>
       </div>
@@ -47,6 +45,8 @@ export interface Message {
   `,
   styles: [
     `
+      ::ng-deep .fa .fa-calendar {
+      }
       ::ng-deep input {
         position: relative;
         height: 0;
