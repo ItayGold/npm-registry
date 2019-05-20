@@ -22,7 +22,7 @@ export interface Message {
   selector: 'click-date-picker',
   template: `
     <div>
-      <div>
+      <div class="trigger-component">
         <span
           ><i
             role="button"
@@ -47,30 +47,32 @@ export interface Message {
   `,
   styles: [
     `
-      input {
+      :host-context() input {
         position: relative;
         height: 0;
         visibility: hidden;
       }
 
-      .icon,
+      :host-context(.trigger-component) .icon,
       .calendar-icon {
         font-size: 20px;
         margin: 20px 10px 20px 20px;
         color: #a7a7a7;
         cursor: pointer;
       }
-      .icon:hover,
+
+      :host-context(.trigger-component) .icon:hover,
       .calendar-icon:hover {
         color: #1174be;
       }
-      .icon:focus,
-      .calendar-icon:focus {
+
+      :host-context(.trigger-component) .icon:focus,
+      :host-context(.trigger-component) .calendar-icon:focus {
         outline: none;
         color: #1174be;
       }
 
-      .calendar-icon {
+      :host-context(.trigger-component) .calendar-icon {
         margin: 12px;
       }
 
