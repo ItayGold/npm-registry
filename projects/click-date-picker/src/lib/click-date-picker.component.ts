@@ -76,6 +76,11 @@ export interface Message {
         margin: 12px;
       }
 
+      :host-context(.fa) {
+      }
+      :host-context(.fa-calendar) {
+      }
+
       ::ng-deep .todayButton {
         text-align: left;
         position: relative;
