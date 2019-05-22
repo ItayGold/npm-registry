@@ -23,4 +23,6 @@ if (typeof program.package === 'undefined') {
   process.exit(1);
 }
 
-console.log(`program.package: ${program.package}`);
+console.log(`The selected package is: ${program.package}`);
+
+
