@@ -11,11 +11,13 @@
     "remove": "rm -rf dist",
     "build-lib": "ng build click-icon",
     "npm-pack": "cd dist/click-icon && npm pack",
-    "npm-update-version": "cd projects/click-icon && npm version patch",
+    "npm-update-version": "npm version patch && cd projects/click-icon && npm version patch",
     "npm-publish": "cd dist/click-icon && npm publish",
     "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish",
-    "git-push": "PACKAGE_VERSION=$(cat projects/click-icon/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
-    "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark"
+    "git-push": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
+    "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
+    "pkg": "node click-cli.js -p %s package && echo %s package",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",
@@ -29,6 +31,7 @@
     "@click/date-picker": "^1.0.29",
     "@click/icon": "^1.0.4",
     "bootstrap": "^4.3.1",
+    "commander": "^2.20.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "~3.1.4",
@@ -48,6 +51,7 @@
     "@types/node": "~8.9.4",
     "babel-loader": "^8.0.6",
     "codelyzer": "~4.5.0",
+    "cross-env": "^5.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",
