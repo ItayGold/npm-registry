@@ -17,7 +17,7 @@
     "npm-update-version": "npm version patch && cd projects/click-date-picker && npm version patch",
     "npm-publish": "cd dist/click-date-picker && npm publish",
     "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish",
-    "git-push": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
+    "git-push": "PACKAGE_VERSION=$(cat projects/click-date-picker package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
     "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
     "pkg": "node click-cli.js -p %s package && echo %s package",
     "patch-release": "npm version patch && npm publish && git push --follow-tags"
