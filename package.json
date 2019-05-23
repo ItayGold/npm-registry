@@ -2,7 +2,7 @@
   "name": "@click/npm-registry",
   "version": "1.0.3",
   "bin": {
-    "cli": "./cli.js"
+    "click": "./click-cli.js"
   },
   "scripts": {
     "ng": "ng",
@@ -11,17 +11,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "remove": "rm -rf dist",
-    "build-lib": "ng build click-date-picker",
-    "npm-pack": "cd dist/click-date-picker && npm pack",
-    "npm-update-version": "cd projects/click-date-picker && npm version patch",
-    "npm-publish": "cd dist/click-date-picker && npm publish",
-    "package": "npm run remove && npm run npm-update-version && npm run build-lib && npm run npm-pack && npm run npm-publish",
     "git-push": "PACKAGE_VERSION=$(cat projects/click-date-picker/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
     "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
     "pkg": "node cli.js -p $* && echo %s $package",
     "patch-release": "npm version patch && npm publish && git push --follow-tags",
-    "cli": "echo $pack"
+    "print-pkg-name": "echo $pack"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",
@@ -32,11 +26,11 @@
     "@angular/platform-browser": "^7.2.15",
     "@angular/platform-browser-dynamic": "^7.2.15",
     "@angular/router": "^7.2.15",
-    "@click/date-picker": "^1.0.29",
+    "@click/date-picker": "^1.0.31",
     "@click/icon": "^1.0.4",
     "bootstrap": "^4.3.1",
     "commander": "^2.20.0",
-    "core-js": "^2.5.4",
+    "core-js": "^2.6.8",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "~3.1.4",
     "rxjs": "~6.3.3",
@@ -48,7 +42,7 @@
     "@angular/cli": "^7.3.9",
     "@angular/compiler-cli": "^7.2.15",
     "@angular/language-service": "^7.2.15",
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.4.5",
     "@compodoc/compodoc": "^1.1.9",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -63,7 +57,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "^5.1.0",
+    "ng-packagr": "^5.2.0",
     "protractor": "~5.4.0",
     "source-map-explorer": "^1.8.0",
     "ts-node": "~7.0.0",
