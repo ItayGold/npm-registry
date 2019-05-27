@@ -1,6 +1,6 @@
 {
   "name": "@click/npm-registry",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "bin": {
     "click": "./click-cli.js"
   },
@@ -13,9 +13,7 @@
     "e2e": "ng e2e",
     "git-push": "PACKAGE_VERSION=$(cat projects/click-date-picker/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
     "compodoc": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
-    "pkg": "node cli.js -p $* && echo %s $package",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags",
-    "print-pkg-name": "echo $pack"
+    "post-commit": "git push --follow-tags"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",

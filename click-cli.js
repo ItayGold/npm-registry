@@ -18,7 +18,7 @@ const STYLE_MSG = {
 
 function log(msg, { status, isUpperCase, color }) {
   const COLOR =
-    STATUS_MSG.START === status ? STYLE_MSG.MAGENTA : STYLE_MSG.GREEN;
+    STATUS_MSG.START === status ? STYLE_MSG.MAGENTA : STYLE_MSG.YELLOW;
   const message = isUpperCase ? msg.toUpperCase() : msg;
   return console.log(colors[color || COLOR](`${message}`));
 }
@@ -30,47 +30,63 @@ program
   .alias('pub')
   .description(
     'Pack and publish your required package. Sure the package name is correct.'
+      .yellow
   )
   .option('-p --package <package>', 'Package Name')
-  .action(({ package } = { ...options }) => {
+  .option('-s --semver [semver]', 'Semantic version')
+  .action(({ package, semver } = { ...options }) => {
     if (typeof package === 'undefined') {
-      log(`Please run the script with the package name`, {
-        status: null,
-        isUpperCase: false,
-        color: 'yellow',
-      });
+      execSync(`click pub -h`, { stdio: 'inherit' });
       process.exit(1);
     }
 
-    log(`Start click publish process...`, {
+    log(`Start click publish (set of 5 processes)`, {
       status: 'start',
-      isUpperCase: true,
+      isUpperCase: false,
       color: 'blue',
     });
 
     execSync(`rm -rf dist/${package}`, { stdio: 'inherit' });
 
-    log(`The dist ${package} has been removed in the distrubution folder.`, {
+    log(`1/5: The dist ${package}'s been removed in the distrubution folder.`, {
       status: 'end',
-      isUpperCase: true,
+      isUpperCase: false,
+    });
+
+    execSync(`cd projects/${package} && npm version ${semver || 'patch'}`, {
+      stdio: 'inherit',
+    });
+
+    log(`2/5: The new version of ${package}'s been patched.`, {
+      status: 'end',
+      isUpperCase: false,
     });
 
     execSync(`ng build ${package}`, { stdio: 'inherit' });
 
-    log(`The build of ${package} has been completed.`, {
+    log(`3/5: The build of ${package}'s been completed.`, {
       status: 'end',
-      isUpperCase: true,
-    });
-
-    execSync(`cd projects/${package} && npm version patch`, {
-      stdio: 'inherit',
+      isUpperCase: false,
     });
 
     execSync(`cd dist/${package} && npm pack`, { stdio: 'inherit' });
 
+    log(`4/5: The ${package}'s been packed.`, {
+      status: 'end',
+      isUpperCase: false,
+    });
+
     execSync(`cd dist/${package} && npm publish`, {
       stdio: 'inherit',
     });
+
+    log(
+      `5/5: The ${package}'s been published to The Click Private NPM Registry at: \n http://npm.clicksoftware.com:4873.`,
+      {
+        status: 'end',
+        isUpperCase: false,
+      }
+    );
   });
 
 program.parse(process.argv);
