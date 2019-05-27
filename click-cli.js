@@ -29,8 +29,12 @@ program
   .command('publish')
   .alias('pub')
   .description(
-    'Pack and publish your required package. Sure the package name is correct.'
-      .yellow
+    ` 
+      Pack and publish your required package. 
+      A package name is required. Sure the package name is correct.
+      A semantic version is optional.
+
+    `
   )
   .option('-p --package <package>', 'Package Name')
   .option('-s --semver [semver]', 'Semantic version')
