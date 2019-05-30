@@ -72,20 +72,6 @@ export class ClickIconComponent implements OnInit {
   @Input() active: string;
   @Input() imgClass: string;
   @Input() id: string;
-<<<<<<< HEAD
-  @Input() withArrows?: boolean = false;
-  @Output() messageEvent: EventEmitter<string> = new EventEmitter<string>();
-  @Output() prev;
-  @Output() next;
-
-  constructor() {
-  }
-  ngOnInit() { }
-
-  onClickHandler(event: KeyboardEvent): void | boolean {
-    this.messageEvent.emit(this.name);
-    return false;
-=======
   @Output() messageEvent: EventEmitter<string> = new EventEmitter<string>();
   @Output() prev: () => void;
   @Output() next: () => void;
@@ -97,6 +83,5 @@ export class ClickIconComponent implements OnInit {
 
   onClickHandler(event): void {
     this.messageEvent.emit(event.target);
->>>>>>> click-icon
   }
 }
