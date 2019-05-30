@@ -2,11 +2,21 @@
   <h2>Icon</h2>
   <click-icon
     id="clickIconId"
+<<<<<<< HEAD
     (click)="onClickIcon()"
     (messageEvent)="getIconName($event)"
     name="clickIconName"
     imgClass="clickIconClasses"
     title="{{ moduleStrings.GanttResolutionTooltip }}"
     (keydown)="shiftResolutionKeyboardSupport($event, button)"
+=======
+    withArrows="true"
+    (click)="onClickIcon()"
+    (messageEvent)="getIconName($event)"
+    name="clickIconTitle"
+    [imgClass]="clickIconClasses"
+    title="clickIconTitle"
+    (keydown)="onKeydownHandler($event)"
+>>>>>>> click-icon
   ></click-icon>
 </div>
