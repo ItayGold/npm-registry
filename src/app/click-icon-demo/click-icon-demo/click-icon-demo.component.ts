@@ -36,12 +36,9 @@ export class ClickIconDemoComponent implements OnInit {
   getIconName(name: string): void {
     alert(`The name of the clicked icon: ${name}`);
   }
-<<<<<<< HEAD
-=======
 
   onKeydownHandler(event: KeyboardEvent): void | boolean {
     alert(`[LOG] the icon is Clicked: ${event.type}`);
     return false;
   }
->>>>>>> click-icon
 }
