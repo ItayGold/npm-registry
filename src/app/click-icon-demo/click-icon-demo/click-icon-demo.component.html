@@ -1,0 +1,13 @@
+<div>
+  <h2>Icon</h2>
+  <click-icon
+    id="clickIconId"
+    withArrows="true"
+    (click)="onClickIcon()"
+    (messageEvent)="getIconName($event)"
+    name="clickIconTitle"
+    [imgClass]="clickIconClasses"
+    title="clickIconTitle"
+    (keydown)="onKeydownHandler($event)"
+  ></click-icon>
+</div>

@@ -3,15 +3,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'click-icon',
   template: `
-    <span
-      ><i
-        role="button"
-        [id]="[id]"
-        [ngClass]="[imgClass]"
-        (click)="onClickHandler()"
-        tabindex="0"
-      ></i
-    ></span>
+    <span>
+      <i *ngIf="withArrows" class="fa fa-angle-left arrow leftArrow" (click)="prev()" tabindex="0"></i>
+        <span>
+          <i
+            role="button"
+            [id]="[id]"
+            [ngClass]="[imgClass]"
+            (click)="onClickHandler($event)"
+            tabindex="0">
+          </i>
+        </span>
+      <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="next()" tabindex="0"></i>
+    </span>
   `,
   styles: [
     `
@@ -34,6 +38,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       .calendar-icon {
         margin: 12px;
       }
+
+      .leftArrow {
+        margin-left: 20px;
+      }
+
+      .arrow {
+        font-size: 20px;
+        color: #A7A7A7;
+        cursor: pointer;
+      }
     `,
   ],
 })
@@ -44,8 +58,8 @@ export class ClickIconComponent implements OnInit {
   @Input() id: string;
   @Output() MessageEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {}
-  ngOnInit() {}
+  constructor() { }
+  ngOnInit() { }
 
   onClickHandler(): void {
     this.MessageEvent.emit(this.name);
