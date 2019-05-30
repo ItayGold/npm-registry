@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'click-icon',
@@ -52,16 +53,21 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   ],
 })
 export class ClickIconComponent implements OnInit {
+  @Input() withArrows: boolean;
   @Input() name: string;
   @Input() active: string;
   @Input() imgClass: string;
   @Input() id: string;
-  @Output() MessageEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Output() messageEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Output() prev: () => void;
+  @Output() next: () => void;
 
-  constructor() { }
+  constructor() {
+    this.withArrows = this.withArrows || false;
+  }
   ngOnInit() { }
 
-  onClickHandler(): void {
-    this.MessageEvent.emit(this.name);
+  onClickHandler(event): void {
+    this.messageEvent.emit(event.target);
   }
 }
