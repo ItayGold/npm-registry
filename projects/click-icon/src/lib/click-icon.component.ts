@@ -5,19 +5,6 @@ import { Event } from '@angular/router';
   selector: 'click-icon',
   template: `
     <span>
-<<<<<<< HEAD
-    <i *ngIf="withArrows" class="fa fa-angle-left leftArrow" (click)="prev()" tabindex="0"></i>
-      <span
-      ><i
-        role="button"
-        [id]="[id]"
-        [ngClass]="[imgClass]"
-        (click)="onClickHandler($event)"
-        tabindex="0"
-      ></i
-    ></span>
-    <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="next()" tabindex="0"></i>
-=======
       <i *ngIf="withArrows" class="fa fa-angle-left arrow leftArrow" (click)="prev()" tabindex="0"></i>
         <span>
           <i
@@ -29,7 +16,6 @@ import { Event } from '@angular/router';
           </i>
         </span>
       <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="next()" tabindex="0"></i>
->>>>>>> click-icon
     </span>
   `,
   styles: [
