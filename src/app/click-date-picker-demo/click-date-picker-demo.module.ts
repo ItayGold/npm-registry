@@ -15,4 +15,4 @@ import { ClickDatePickerDemoComponent } from './click-date-picker-demo/click-dat
     ClickDatePickerModule,
   ],
 })
-export class ClickDatePickerDemoModule {}
+export class ClickDatePickerDemoModule { }

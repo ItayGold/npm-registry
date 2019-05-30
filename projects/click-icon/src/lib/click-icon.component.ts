@@ -3,15 +3,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'click-icon',
   template: `
-    <span
+    <span>
+    <i *ngIf="withArrows" class="fa fa-angle-left leftArrow" (click)="prev()" tabindex="0"></i>
+      <span
       ><i
         role="button"
         [id]="[id]"
         [ngClass]="[imgClass]"
-        (click)="onClickHandler()"
+        (click)="onClickHandler($event)"
         tabindex="0"
       ></i
     ></span>
+    <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="next()" tabindex="0"></i>
+    </span>
   `,
   styles: [
     `
@@ -42,12 +46,17 @@ export class ClickIconComponent implements OnInit {
   @Input() active: string;
   @Input() imgClass: string;
   @Input() id: string;
-  @Output() MessageEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Input() withArrows?: boolean = false;
+  @Output() messageEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Output() prev;
+  @Output() next;
 
-  constructor() {}
-  ngOnInit() {}
+  constructor() {
+  }
+  ngOnInit() { }
 
-  onClickHandler(): void {
-    this.MessageEvent.emit(this.name);
+  onClickHandler(event: KeyboardEvent): void | boolean {
+    this.messageEvent.emit(this.name);
+    return false;
   }
 }

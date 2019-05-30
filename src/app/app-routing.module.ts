@@ -4,8 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'date-picker',
-    loadChildren:
-      './click-date-picker-demo/click-date-picker-demo.module#ClickDatePickerDemoModule',
+    loadChildren: () => import('./click-date-picker-demo/click-date-picker-demo.module')
+      .then(mod => mod.ClickDatePickerDemoModule)
+  },
+  {
+    path: 'icon',
+    loadChildren: () => import('./click-icon-demo/click-icon-demo.module')
+      .then(mod => mod.ClickIconDemoModule)
   },
   {
     path: '',
@@ -18,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

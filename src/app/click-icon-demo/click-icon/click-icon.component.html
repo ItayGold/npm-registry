@@ -1,0 +1,23 @@
+<span>
+  <i
+    *ngIf="withArrows"
+    class="fa fa-angle-left leftArrow"
+    (click)="prev()"
+    tabindex="0"
+  ></i>
+  <span
+    ><i
+      role="button"
+      [id]="[id]"
+      [ngClass]="[imgClass]"
+      (click)="onClickHandler($event)"
+      tabindex="0"
+    ></i
+  ></span>
+  <i
+    *ngIf="withArrows"
+    class="fa fa-angle-right arrow"
+    (click)="next()"
+    tabindex="0"
+  ></i>
+</span>

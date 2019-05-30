@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClickDatePickerDemoComponent } from './click-date-picker-demo/click-date-picker-demo.component';
+import { ClickIconDemoComponent } from './click-icon-demo/click-icon-demo.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ClickDatePickerDemoComponent,
+    component: ClickIconDemoComponent,
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ClickDatePickerRoutingModule { }
+export class ClickIconDemoRoutingModule { }
