@@ -55,13 +55,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' : 'data-target="#xs-components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' }>
+                                            'data-target="#components-links-module-AppModule-cc898d5c0d8e2e649285f2d28cb71cd4"' : 'data-target="#xs-components-links-module-AppModule-cc898d5c0d8e2e649285f2d28cb71cd4"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' :
-                                            'id="xs-components-links-module-AppModule-e4aed49e280c58d2779fd36e123ea2ab"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-cc898d5c0d8e2e649285f2d28cb71cd4"' :
+                                            'id="xs-components-links-module-AppModule-cc898d5c0d8e2e649285f2d28cb71cd4"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
@@ -76,13 +76,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickDatePickerDemoModule.html" data-type="entity-link">ClickDatePickerDemoModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' }>
+                                            'data-target="#components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' :
-                                            'id="xs-components-links-module-ClickDatePickerDemoModule-a77655492a2732a2e9aad3f09eeadb9c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' :
+                                            'id="xs-components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' }>
                                             <li class="link">
                                                 <a href="components/ClickDatePickerDemoComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerDemoComponent</a>
@@ -92,6 +92,27 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/ClickDatePickerRoutingModule.html" data-type="entity-link">ClickDatePickerRoutingModule</a>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ClickIconDemoModule.html" data-type="entity-link">ClickIconDemoModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ClickIconDemoModule-1ba5c2b9aa7f66da811cc22910066215"' : 'data-target="#xs-components-links-module-ClickIconDemoModule-1ba5c2b9aa7f66da811cc22910066215"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickIconDemoModule-1ba5c2b9aa7f66da811cc22910066215"' :
+                                            'id="xs-components-links-module-ClickIconDemoModule-1ba5c2b9aa7f66da811cc22910066215"' }>
+                                            <li class="link">
+                                                <a href="components/ClickIconDemoComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickIconDemoComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ClickIconDemoRoutingModule.html" data-type="entity-link">ClickIconDemoRoutingModule</a>
                             </li>
                 </ul>
                 </li>
@@ -105,6 +126,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
                                 <a href="components/ClickDatePickerComponent.html" data-type="entity-link">ClickDatePickerComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickIconComponent.html" data-type="entity-link">ClickIconComponent</a>
                             </li>
                         </ul>
                     </li>

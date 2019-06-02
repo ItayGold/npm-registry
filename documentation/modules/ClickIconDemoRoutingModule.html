@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>ClickIconDemoRoutingModule</li>
 </ol>
 
 
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/click-icon-demo/click-icon-demo-routing.module.ts</code>
         </p>
 
 
@@ -73,30 +73,20 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { ClickIconDemoComponent } from &#x27;./click-icon-demo/click-icon-demo.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
-    path: &#x27;date-picker&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./click-date-picker-demo/click-date-picker-demo.module&#x27;)\
-      .then(mod &#x3D;&gt; mod.ClickDatePickerDemoModule)&quot;
-  },
-  {
-    path: &#x27;icon&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./click-icon-demo/click-icon-demo.module&#x27;)\
-      .then(mod &#x3D;&gt; mod.ClickIconDemoModule)&quot;
-  },
-  {
     path: &#x27;&#x27;,
-    redirectTo: &#x27;&#x27;,
-    pathMatch: &#x27;full&#x27;
-  }
+    component: ClickIconDemoComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class ClickIconDemoRoutingModule { }
 </code></pre>
     </div>
 </div>
@@ -131,7 +121,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ClickIconDemoRoutingModule.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

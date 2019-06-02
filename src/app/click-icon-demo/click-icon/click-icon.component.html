@@ -2,7 +2,7 @@
   <i
     *ngIf="withArrows"
     class="fa fa-angle-left leftArrow"
-    (click)="prev()"
+    (click)="onNavClicked($event, 'left')"
     tabindex="0"
   ></i>
   <span
@@ -17,7 +17,7 @@
   <i
     *ngIf="withArrows"
     class="fa fa-angle-right arrow"
-    (click)="next()"
+    (click)="onNavClicked($event, 'right')"
     tabindex="0"
   ></i>
 </span>

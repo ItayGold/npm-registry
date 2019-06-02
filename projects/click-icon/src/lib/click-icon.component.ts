@@ -1,11 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Event } from '@angular/router';
 
 @Component({
   selector: 'click-icon',
   template: `
     <span>
-      <i *ngIf="withArrows" class="fa fa-angle-left arrow leftArrow" (click)="prev()" tabindex="0"></i>
+      <i *ngIf="withArrows" class="fa fa-angle-left arrow leftArrow" (click)="onNavClicked($event, 'left')" tabindex="0"></i>
         <span>
           <i
             role="button"
@@ -15,7 +14,7 @@ import { Event } from '@angular/router';
             tabindex="0">
           </i>
         </span>
-      <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="next()" tabindex="0"></i>
+      <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="onNavClicked($event, 'right')" tabindex="0"></i>
     </span>
   `,
   styles: [
@@ -23,10 +22,11 @@ import { Event } from '@angular/router';
       .icon,
       .calendar-icon {
         font-size: 20px;
-        margin: 20px 10px 20px 20px;
+        margin: 12px;
         color: #a7a7a7;
         cursor: pointer;
       }
+
       .icon:hover,
       .calendar-icon:hover {
         color: #1174be;
@@ -36,6 +36,7 @@ import { Event } from '@angular/router';
         outline: none;
         color: #1174be;
       }
+
       .calendar-icon {
         margin: 12px;
       }
@@ -56,18 +57,39 @@ export class ClickIconComponent implements OnInit {
   @Input() withArrows: boolean;
   @Input() name: string;
   @Input() active: string;
-  @Input() imgClass: string;
+  @Input() imgClass?: string;
   @Input() id: string;
-  @Output() messageEvent: EventEmitter<string> = new EventEmitter<string>();
-  @Output() prev: () => void;
-  @Output() next: () => void;
+  @Output() messageEvent: EventEmitter<string>;
+  @Output() prev: EventEmitter<string>;
+  @Output() next: EventEmitter<string>;
 
   constructor() {
     this.withArrows = this.withArrows || false;
+    this.messageEvent = new EventEmitter<string>();
+    this.prev = new EventEmitter<string>();
+    this.next = new EventEmitter<string>();
+    this.imgClass = this.imgClass && this.imgClass.length
+      ? `calendar-icon fa fa-calendar ` + this.imgClass
+      : `calendar-icon fa fa-calendar`;
   }
   ngOnInit() { }
 
   onClickHandler(event): void {
     this.messageEvent.emit(event.target);
+  }
+
+  onNavClicked(event: KeyboardEvent, direction: string): void | boolean {
+    if (!this.withArrows) {
+      return false;
+    }
+
+    if (direction === 'left') {
+      this.prev.emit(direction);
+    } else {
+      this.next.emit(direction);
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
   }
 }

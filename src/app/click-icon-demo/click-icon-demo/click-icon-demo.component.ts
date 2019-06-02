@@ -21,7 +21,7 @@ export class ClickIconDemoComponent implements OnInit {
   constructor() {
     this.clickIconId = `click-icon-demo`;
     this.clickIconName = `resolution`;
-    this.clickIconClasses = `fa fa-list-alt icon`;
+    this.clickIconClasses = ``;
     this.clickIconTitle = `Click Icon Title`;
   }
 
@@ -40,5 +40,13 @@ export class ClickIconDemoComponent implements OnInit {
   onKeydownHandler(event: KeyboardEvent): void | boolean {
     alert(`[LOG] the icon is Clicked: ${event.type}`);
     return false;
+  }
+
+  onPrevClicked(direction: string) {
+    alert(`The direction is ${direction}`);
+  }
+
+  onNextClicked(direction: string) {
+    alert(`The direction is ${direction}`);
   }
 }
