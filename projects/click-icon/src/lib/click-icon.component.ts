@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
+
 @Component({
   selector: 'click-icon',
   template: `
@@ -57,7 +59,7 @@ export class ClickIconComponent implements OnInit {
   @Input() withArrows: boolean;
   @Input() name: string;
   @Input() active: string;
-  @Input() imgClass?: string;
+  @Input() iconCssClasses?: string;
   @Input() id: string;
   @Output() messageEvent: EventEmitter<string>;
   @Output() prev: EventEmitter<string>;
@@ -68,9 +70,9 @@ export class ClickIconComponent implements OnInit {
     this.messageEvent = new EventEmitter<string>();
     this.prev = new EventEmitter<string>();
     this.next = new EventEmitter<string>();
-    this.imgClass = this.imgClass && this.imgClass.length
-      ? `calendar-icon fa fa-calendar ` + this.imgClass
-      : `calendar-icon fa fa-calendar`;
+    this.iconCssClasses = this.iconCssClasses && this.iconCssClasses.length
+      ? DEF_ICON_CLASSES + this.iconCssClasses
+      : DEF_ICON_CLASSES;
   }
   ngOnInit() { }
 
