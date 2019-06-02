@@ -66,17 +66,19 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
   ],
 })
 export class ClickIconComponent implements OnInit {
-  @Input() withArrows: boolean;
+  @Input() withArrows?: boolean;
   @Input() name: string;
   @Input() active: string;
   @Input() iconCssClasses?: string;
   @Input() id: string;
   @Output() messageEvent: EventEmitter<string>;
-  @Output() prev: EventEmitter<string>;
-  @Output() next: EventEmitter<string>;
+  @Output() prev?: EventEmitter<string>;
+  @Output() next?: EventEmitter<string>;
 
   constructor() {
+    console.log(`before reassigning: ${this.withArrows}`);
     this.withArrows = this.withArrows || false;
+    console.log(`after reassigning: ${this.withArrows}`);
     this.messageEvent = new EventEmitter<string>();
     this.prev = new EventEmitter<string>();
     this.next = new EventEmitter<string>();
@@ -86,7 +88,7 @@ export class ClickIconComponent implements OnInit {
   }
   ngOnInit() { }
 
-  onClickHandler(event): void {
+  onClickHandler(event: any): void {
     this.messageEvent.emit(event.target);
   }
 

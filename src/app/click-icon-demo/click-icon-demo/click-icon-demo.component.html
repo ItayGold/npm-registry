@@ -1,8 +1,23 @@
 <div>
   <h2>Icon</h2>
+
+  <h4>With the arrows</h4>
   <click-icon
-    id="clickIconId"
-    withArrows="true"
+    id="clickIconId1"
+    withArrows="demoWithArrows"
+    (click)="onClickIcon()"
+    (messageEvent)="getIconName($event)"
+    name="clickIconTitle"
+    title="clickIconTitle"
+    (keydown)="onKeydownHandler($event)"
+    (prev)="onPrevClicked($event)"
+    (next)="onNextClicked($event)"
+  ></click-icon>
+
+  <h4>Without the arrows</h4>
+  <click-icon
+    id="clickIconId2"
+    withArrows="demoWithoutArrows"
     (click)="onClickIcon()"
     (messageEvent)="getIconName($event)"
     name="clickIconTitle"

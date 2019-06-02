@@ -17,12 +17,16 @@ export class ClickIconDemoComponent implements OnInit {
   clickIconName: string;
   clickIconClasses: string;
   clickIconTitle: string;
+  demoWithArrows: boolean;
+  demoWithoutArrows: boolean;
 
   constructor() {
     this.clickIconId = `click-icon-demo`;
     this.clickIconName = `resolution`;
     this.clickIconClasses = ``;
     this.clickIconTitle = `Click Icon Title`;
+    this.demoWithArrows = true;
+    this.demoWithoutArrows = false;
   }
 
   ngOnInit() {
