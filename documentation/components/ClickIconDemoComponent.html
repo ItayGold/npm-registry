@@ -805,7 +805,6 @@ export class ClickIconDemoComponent implements OnInit {
     (click)&#x3D;&quot;onClickIcon()&quot;
     (messageEvent)&#x3D;&quot;getIconName($event)&quot;
     name&#x3D;&quot;clickIconTitle&quot;
-    [imgClass]&#x3D;&quot;clickIconClasses&quot;
     title&#x3D;&quot;clickIconTitle&quot;
     (keydown)&#x3D;&quot;onKeydownHandler($event)&quot;
     (prev)&#x3D;&quot;onPrevClicked($event)&quot;
@@ -852,7 +851,7 @@ export class ClickIconDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <click-icon    id="clickIconId"    withArrows="true"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    name="clickIconTitle"    [imgClass]="clickIconClasses"    title="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <click-icon    id="clickIconId"    withArrows="true"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    name="clickIconTitle"    title="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconDemoComponent'};

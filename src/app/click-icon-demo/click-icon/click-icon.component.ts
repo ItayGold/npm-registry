@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ClickIconComponent implements OnInit {
   @Input() name: string;
   @Input() active: string;
-  @Input() imgClass: string;
+  @Input() iconCssClasses: string;
   @Input() id: string;
   @Input() withArrows?: boolean;
   @Output() messageEvent: EventEmitter<string>;
@@ -20,7 +20,7 @@ export class ClickIconComponent implements OnInit {
     this.messageEvent = new EventEmitter<string>();
     this.prev = new EventEmitter<string>();
     this.next = new EventEmitter<string>();
-    this.imgClass = `fa fa-calendar`;
+    this.iconCssClasses = `calendar-icon fa fa-calendar`;
   }
   ngOnInit() { }
 

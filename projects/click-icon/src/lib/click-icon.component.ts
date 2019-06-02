@@ -11,7 +11,7 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
           <i
             role="button"
             [id]="[id]"
-            [ngClass]="[imgClass]"
+            [ngClass]="[iconCssClasses]"
             (click)="onClickHandler($event)"
             tabindex="0">
           </i>
