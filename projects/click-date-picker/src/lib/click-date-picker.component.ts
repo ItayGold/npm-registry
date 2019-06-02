@@ -22,18 +22,9 @@ export interface Message {
   selector: 'click-date-picker',
   template: `
     <div>
-      <div>
-        <span
-          ><i
-            role="button"
-            class="calendar-icon fa fa-calendar"
-            (click)="click()"
-          ></i
-        ></span>
-      </div>
-
       <input
         type="text"
+        class="custom-input"
         #dp="bsDatepicker"
         bsDatepicker
         [bsValue]="selectedDate"
@@ -45,7 +36,7 @@ export interface Message {
   `,
   styles: [
     `
-      ::ng-deep input {
+      .custom-input {
         position: relative;
         height: 0;
         visibility: hidden;
@@ -181,7 +172,7 @@ export class ClickDatePickerComponent implements OnInit {
   previousDate: Date = new Date(null);
   moduleStrings: any = {};
 
-  constructor(private cdRef: ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.datePickerConfig = Object.assign(

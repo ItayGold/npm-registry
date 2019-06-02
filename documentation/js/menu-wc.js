@@ -76,13 +76,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickDatePickerDemoModule.html" data-type="entity-link">ClickDatePickerDemoModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' }>
+                                            'data-target="#components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' :
-                                            'id="xs-components-links-module-ClickDatePickerDemoModule-4dbd2691c1ed3bfe34faf4e46bfa1c08"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' :
+                                            'id="xs-components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' }>
                                             <li class="link">
                                                 <a href="components/ClickDatePickerDemoComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerDemoComponent</a>

@@ -190,9 +190,6 @@ for date range picker use another component</p>
                                 <a href="#onClickIcon">onClickIcon</a>
                             </li>
                             <li>
-                                <a href="#onKeydownHandler">onKeydownHandler</a>
-                            </li>
-                            <li>
                                 <a href="#onNextClicked">onNextClicked</a>
                             </li>
                             <li>
@@ -362,7 +359,7 @@ for date range picker use another component</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onClickIcon(event: KeyboardEvent)</code>
+<code>onClickIcon(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
@@ -392,77 +389,7 @@ for date range picker use another component</p>
                                 <tr>
                                     <td>event</td>
                                     <td>
-                                            <code>KeyboardEvent</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>void | boolean</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="onKeydownHandler"></a>
-                    <span class="name">
-                        <b>
-                            onKeydownHandler
-                        </b>
-                        <a href="#onKeydownHandler"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>onKeydownHandler(event: KeyboardEvent)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon-demo/click-icon-demo.component.ts:44</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>event</td>
-                                    <td>
-                                            <code>KeyboardEvent</code>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
 
                                     <td>
@@ -509,8 +436,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon-demo/click-icon-demo.component.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon-demo/click-icon-demo.component.ts:48</a></div>
                 </td>
             </tr>
 
@@ -579,8 +506,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="49"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon-demo/click-icon-demo.component.ts:49</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon-demo/click-icon-demo.component.ts:44</a></div>
                 </td>
             </tr>
 
@@ -835,18 +762,13 @@ export class ClickIconDemoComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickIcon(event: KeyboardEvent): void | boolean {
-    alert(&#x60;The click on the icon has been triggered: ${event}&#x60;);
+  onClickIcon(event: any): void | boolean {
+    alert(&#x60;The click on the icon has been triggered: ${event.type}&#x60;);
     return false;
   }
 
   getIconName(name: string): void {
     alert(&#x60;The name of the clicked icon: ${name}&#x60;);
-  }
-
-  onKeydownHandler(event: KeyboardEvent): void | boolean {
-    alert(&#x60;[LOG] the icon is Clicked: ${event.type}&#x60;);
-    return false;
   }
 
   onPrevClicked(direction: string) {
@@ -864,31 +786,35 @@ export class ClickIconDemoComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
   &lt;h2&gt;Icon&lt;/h2&gt;
 
-  &lt;h4&gt;With the arrows&lt;/h4&gt;
-  &lt;click-icon
-    [id]&#x3D;&quot;clickIconId1&quot;
-    [withArrows]&#x3D;&quot;demoWithArrows&quot;
-    (click)&#x3D;&quot;onClickIcon()&quot;
-    (messageEvent)&#x3D;&quot;getIconName($event)&quot;
-    [name]&#x3D;&quot;clickIconTitle&quot;
-    [title]&#x3D;&quot;clickIconTitle&quot;
-    (keydown)&#x3D;&quot;onKeydownHandler($event)&quot;
-    (prev)&#x3D;&quot;onPrevClicked($event)&quot;
-    (next)&#x3D;&quot;onNextClicked($event)&quot;
-  &gt;&lt;/click-icon&gt;
+  &lt;div class&#x3D;&quot;click-icon-demo&quot;&gt;
+    &lt;div&gt;
+      &lt;h4&gt;With the arrows&lt;/h4&gt;
+      &lt;click-icon
+        [id]&#x3D;&quot;clickIconId1&quot;
+        [withArrows]&#x3D;&quot;true&quot;
+        (click)&#x3D;&quot;onClickIcon($event)&quot;
+        (messageEvent)&#x3D;&quot;getIconName($event)&quot;
+        [name]&#x3D;&quot;clickIconTitle&quot;
+        [title]&#x3D;&quot;clickIconTitle&quot;
+        (prev)&#x3D;&quot;onPrevClicked($event)&quot;
+        (next)&#x3D;&quot;onNextClicked($event)&quot;
+      &gt;&lt;/click-icon&gt;
+    &lt;/div&gt;
 
-  &lt;h4&gt;Without the arrows&lt;/h4&gt;
-  &lt;click-icon
-    id&#x3D;&quot;clickIconId2&quot;
-    [withArrows]&#x3D;&quot;demoWithoutArrows&quot;
-    (click)&#x3D;&quot;onClickIcon()&quot;
-    (messageEvent)&#x3D;&quot;getIconName($event)&quot;
-    [name]&#x3D;&quot;clickIconTitle&quot;
-    [title]&#x3D;&quot;clickIconTitle&quot;
-    (keydown)&#x3D;&quot;onKeydownHandler($event)&quot;
-    (prev)&#x3D;&quot;onPrevClicked($event)&quot;
-    (next)&#x3D;&quot;onNextClicked($event)&quot;
-  &gt;&lt;/click-icon&gt;
+    &lt;div&gt;
+      &lt;h4&gt;Without the arrows&lt;/h4&gt;
+      &lt;click-icon
+        id&#x3D;&quot;clickIconId2&quot;
+        [withArrows]&#x3D;&quot;demoWithoutArrows&quot;
+        (click)&#x3D;&quot;onClickIcon($event)&quot;
+        (messageEvent)&#x3D;&quot;getIconName($event)&quot;
+        [name]&#x3D;&quot;clickIconTitle&quot;
+        [title]&#x3D;&quot;clickIconTitle&quot;
+        (prev)&#x3D;&quot;onPrevClicked($event)&quot;
+        (next)&#x3D;&quot;onNextClicked($event)&quot;
+      &gt;&lt;/click-icon&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -897,7 +823,23 @@ export class ClickIconDemoComponent implements OnInit {
                 <p class="comment">
                     <code>./click-icon-demo.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">.click-icon-demo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: stretch;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+
+  * &gt; {
+    width: 200px;
+    height: 100px;
+    margin-right: 100px;
+    flex: 1 1 calc(200 + 15px);
+  }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -930,7 +872,7 @@ export class ClickIconDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <h4>With the arrows</h4>  <click-icon    [id]="clickIconId1"    [withArrows]="demoWithArrows"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    [name]="clickIconTitle"    [title]="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon>  <h4>Without the arrows</h4>  <click-icon    id="clickIconId2"    [withArrows]="demoWithoutArrows"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    [name]="clickIconTitle"    [title]="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <div class="click-icon-demo">    <div>      <h4>With the arrows</h4>      <click-icon        [id]="clickIconId1"        [withArrows]="true"        (click)="onClickIcon($event)"        (messageEvent)="getIconName($event)"        [name]="clickIconTitle"        [title]="clickIconTitle"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"      ></click-icon>    </div>    <div>      <h4>Without the arrows</h4>      <click-icon        id="clickIconId2"        [withArrows]="demoWithoutArrows"        (click)="onClickIcon($event)"        (messageEvent)="getIconName($event)"        [name]="clickIconTitle"        [title]="clickIconTitle"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"      ></click-icon>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconDemoComponent'};

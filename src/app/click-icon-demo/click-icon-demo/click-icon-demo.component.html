@@ -6,12 +6,11 @@
       <h4>With the arrows</h4>
       <click-icon
         [id]="clickIconId1"
-        [withArrows]="demoWithArrows"
-        (click)="onClickIcon()"
+        [withArrows]="true"
+        (click)="onClickIcon($event)"
         (messageEvent)="getIconName($event)"
         [name]="clickIconTitle"
         [title]="clickIconTitle"
-        (keydown)="onKeydownHandler($event)"
         (prev)="onPrevClicked($event)"
         (next)="onNextClicked($event)"
       ></click-icon>
@@ -22,11 +21,10 @@
       <click-icon
         id="clickIconId2"
         [withArrows]="demoWithoutArrows"
-        (click)="onClickIcon()"
+        (click)="onClickIcon($event)"
         (messageEvent)="getIconName($event)"
         [name]="clickIconTitle"
         [title]="clickIconTitle"
-        (keydown)="onKeydownHandler($event)"
         (prev)="onPrevClicked($event)"
         (next)="onNextClicked($event)"
       ></click-icon>

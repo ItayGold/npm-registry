@@ -88,8 +88,9 @@ export class ClickIconComponent implements OnInit {
       : DEF_ICON_CLASSES;
   }
 
-  onClickHandler(event: any): void {
-    this.messageEvent.emit(event.target);
+  onClickHandler(event: any): void | boolean {
+    this.messageEvent.emit(this.name);
+    return false;
   }
 
   onNavClicked(event: KeyboardEvent, direction: string): void | boolean {

@@ -1038,18 +1038,6 @@ export class ClickDatePickerComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
-  &lt;div&gt;
-    &lt;span
-      &gt;&lt;i
-        role&#x3D;&quot;button&quot;
-        [id]&#x3D;&quot;[&#x27;123&#x27;]&quot;
-        class&#x3D;&quot;calendar-icon fa fa-calendar&quot;
-        (click)&#x3D;&quot;click()&quot;
-        (keypress)&#x3D;&quot;click()&quot;
-      &gt;&lt;/i
-    &gt;&lt;/span&gt;
-  &lt;/div&gt;
-
   &lt;input
     type&#x3D;&quot;text&quot;
     #dp&#x3D;&quot;bsDatepicker&quot;
@@ -1203,7 +1191,7 @@ export class ClickDatePickerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <div>    <span      ><i        role="button"        [id]="[\'123\']"        class="calendar-icon fa fa-calendar"        (click)="click()"        (keypress)="click()"      ></i    ></span>  </div>  <input    type="text"    #dp="bsDatepicker"    bsDatepicker    [bsValue]="selectedDate"    [bsConfig]="datePickerConfig"    (onShown)="addDatePickerUIChanges()"    (bsValueChange)="dateChange($event)"  /></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <input    type="text"    #dp="bsDatepicker"    bsDatepicker    [bsValue]="selectedDate"    [bsConfig]="datePickerConfig"    (onShown)="addDatePickerUIChanges()"    (bsValueChange)="dateChange($event)"  /></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickDatePickerComponent'};

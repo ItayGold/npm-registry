@@ -21,10 +21,9 @@ export class ClickDatePickerDemoComponent {
   moduleStrings: any = {};
   showWeekNumbers: boolean = false;
   isOpen: boolean = false;
-
   previousDate: Date = new Date(null);
   @ViewChild('dp') datepicker: BsDaterangepickerDirective;
-  constructor(private cdRef: ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef) { }
 
   updateDateStore(dt: string): void {
     alert(`Date's been updated @Store: ${dt}`);
@@ -32,5 +31,17 @@ export class ClickDatePickerDemoComponent {
 
   updateMsgStore(status: boolean): void {
     alert(`Message's been updated @Store: ${status}`);
+  }
+
+  onPrevClicked(direction: string) {
+    alert(`The direction is ${direction}`);
+  }
+
+  onNextClicked(direction: string) {
+    alert(`The direction is ${direction}`);
+  }
+
+  getIconName(name: string): void {
+    alert(`The name of the icon is ${name}`);
   }
 }

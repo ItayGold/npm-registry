@@ -32,18 +32,13 @@ export class ClickIconDemoComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickIcon(event: KeyboardEvent): void | boolean {
-    alert(`The click on the icon has been triggered: ${event}`);
+  onClickIcon(event: any): void | boolean {
+    alert(`The click on the icon has been triggered: ${event.type}`);
     return false;
   }
 
   getIconName(name: string): void {
     alert(`The name of the clicked icon: ${name}`);
-  }
-
-  onKeydownHandler(event: KeyboardEvent): void | boolean {
-    alert(`[LOG] the icon is Clicked: ${event.type}`);
-    return false;
   }
 
   onPrevClicked(direction: string) {
