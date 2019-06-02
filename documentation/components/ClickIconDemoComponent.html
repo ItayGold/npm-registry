@@ -866,12 +866,12 @@ export class ClickIconDemoComponent implements OnInit {
 
   &lt;h4&gt;With the arrows&lt;/h4&gt;
   &lt;click-icon
-    id&#x3D;&quot;clickIconId1&quot;
-    withArrows&#x3D;&quot;demoWithArrows&quot;
+    [id]&#x3D;&quot;clickIconId1&quot;
+    [withArrows]&#x3D;&quot;demoWithArrows&quot;
     (click)&#x3D;&quot;onClickIcon()&quot;
     (messageEvent)&#x3D;&quot;getIconName($event)&quot;
-    name&#x3D;&quot;clickIconTitle&quot;
-    title&#x3D;&quot;clickIconTitle&quot;
+    [name]&#x3D;&quot;clickIconTitle&quot;
+    [title]&#x3D;&quot;clickIconTitle&quot;
     (keydown)&#x3D;&quot;onKeydownHandler($event)&quot;
     (prev)&#x3D;&quot;onPrevClicked($event)&quot;
     (next)&#x3D;&quot;onNextClicked($event)&quot;
@@ -880,11 +880,11 @@ export class ClickIconDemoComponent implements OnInit {
   &lt;h4&gt;Without the arrows&lt;/h4&gt;
   &lt;click-icon
     id&#x3D;&quot;clickIconId2&quot;
-    withArrows&#x3D;&quot;demoWithoutArrows&quot;
+    [withArrows]&#x3D;&quot;demoWithoutArrows&quot;
     (click)&#x3D;&quot;onClickIcon()&quot;
     (messageEvent)&#x3D;&quot;getIconName($event)&quot;
-    name&#x3D;&quot;clickIconTitle&quot;
-    title&#x3D;&quot;clickIconTitle&quot;
+    [name]&#x3D;&quot;clickIconTitle&quot;
+    [title]&#x3D;&quot;clickIconTitle&quot;
     (keydown)&#x3D;&quot;onKeydownHandler($event)&quot;
     (prev)&#x3D;&quot;onPrevClicked($event)&quot;
     (next)&#x3D;&quot;onNextClicked($event)&quot;
@@ -930,7 +930,7 @@ export class ClickIconDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <h4>With the arrows</h4>  <click-icon    id="clickIconId1"    withArrows="demoWithArrows"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    name="clickIconTitle"    title="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon>  <h4>Without the arrows</h4>  <click-icon    id="clickIconId2"    withArrows="demoWithoutArrows"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    name="clickIconTitle"    title="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <h4>With the arrows</h4>  <click-icon    [id]="clickIconId1"    [withArrows]="demoWithArrows"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    [name]="clickIconTitle"    [title]="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon>  <h4>Without the arrows</h4>  <click-icon    id="clickIconId2"    [withArrows]="demoWithoutArrows"    (click)="onClickIcon()"    (messageEvent)="getIconName($event)"    [name]="clickIconTitle"    [title]="clickIconTitle"    (keydown)="onKeydownHandler($event)"    (prev)="onPrevClicked($event)"    (next)="onNextClicked($event)"  ></click-icon></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconDemoComponent'};
