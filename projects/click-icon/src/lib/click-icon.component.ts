@@ -52,6 +52,10 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
         color: #A7A7A7;
         cursor: pointer;
       }
+
+      i {
+        font-weight: 900;
+      }
     `,
   ],
 })
