@@ -8,6 +8,11 @@ const routes: Routes = [
       .then(mod => mod.ClickDatePickerDemoModule)
   },
   {
+    path: 'date-picker-range',
+    loadChildren: () => import('./click-date-picker-range-demo/click-date-picker-range-demo.module')
+      .then(mod => mod.ClickDatePickerRangeDemoModule)
+  },
+  {
     path: 'icon',
     loadChildren: () => import('./click-icon-demo/click-icon-demo.module')
       .then(mod => mod.ClickIconDemoModule)

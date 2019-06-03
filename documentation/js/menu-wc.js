@@ -76,19 +76,40 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickDatePickerDemoModule.html" data-type="entity-link">ClickDatePickerDemoModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' }>
+                                            'data-target="#components-links-module-ClickDatePickerDemoModule-224336ad69258384ee6123aaab82aa17"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-224336ad69258384ee6123aaab82aa17"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' :
-                                            'id="xs-components-links-module-ClickDatePickerDemoModule-c2b9b46da99c346d90ad01c6191e48d9"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-224336ad69258384ee6123aaab82aa17"' :
+                                            'id="xs-components-links-module-ClickDatePickerDemoModule-224336ad69258384ee6123aaab82aa17"' }>
                                             <li class="link">
                                                 <a href="components/ClickDatePickerDemoComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerDemoComponent</a>
                                             </li>
                                         </ul>
                                     </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ClickDatePickerRangeDemoModule.html" data-type="entity-link">ClickDatePickerRangeDemoModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ClickDatePickerRangeDemoModule-68bbc84a6abb8e7e77f4c67f4bffbacb"' : 'data-target="#xs-components-links-module-ClickDatePickerRangeDemoModule-68bbc84a6abb8e7e77f4c67f4bffbacb"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerRangeDemoModule-68bbc84a6abb8e7e77f4c67f4bffbacb"' :
+                                            'id="xs-components-links-module-ClickDatePickerRangeDemoModule-68bbc84a6abb8e7e77f4c67f4bffbacb"' }>
+                                            <li class="link">
+                                                <a href="components/ClickDatePickerRangeDemoComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerRangeDemoComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ClickDatePickerRangeDemoRoutingModule.html" data-type="entity-link">ClickDatePickerRangeDemoRoutingModule</a>
                             </li>
                             <li class="link">
                                 <a href="modules/ClickDatePickerRoutingModule.html" data-type="entity-link">ClickDatePickerRoutingModule</a>
@@ -126,6 +147,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
                                 <a href="components/ClickDatePickerComponent.html" data-type="entity-link">ClickDatePickerComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickDatepickerRangeComponent.html" data-type="entity-link">ClickDatepickerRangeComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/ClickIconComponent.html" data-type="entity-link">ClickIconComponent</a>

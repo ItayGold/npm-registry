@@ -3,9 +3,9 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 
 @Component({
-  selector: 'click-datepicker-range',
-  templateUrl: `./click-date-picker-demo.component.html`,
-  styles: [`./click-date-picker-demo.component.scss`]
+  selector: 'click-date-picker-range',
+  templateUrl: `./click-date-picker-range.component.html`,
+  styles: [`./click-date-picker-range.component.scss`]
 })
 export class ClickDatepickerRangeComponent implements OnInit {
   @Input() placeholder: string;

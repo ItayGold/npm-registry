@@ -3,7 +3,7 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 
 @Component({
-  selector: 'click-datepicker-range',
+  selector: 'click-date-picker-range',
   template: `
     <div class="date">
       <input
@@ -32,15 +32,42 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
     </div>
   `,
   styles: [`
-    .date {
-      display: table;
+    .input-group-btn {
+      position: relative;
+      font-size: 0;
+      white-space: nowrap;
+      border-radius: 0;
     }
+    .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+      border-radius: 0;
+    }
+    .date {
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+    }
+
     .date .btn {
       font-size: 16px;
     }
+
     .date .btn .fa {
       color: #a7a7a7;
     }
+
+    .date input {
+      width: 381px;
+      border: 1px solid #CBCBCB;
+      border-radius: 0;
+      height: 38px;
+      cursor: pointer;
+      box-shadow: none;
+      padding: 5px 7px;
+    }
+
     .date input:focus {
       outline: -webkit-focus-ring-color auto 5px !important;
     }
@@ -104,7 +131,7 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
     ::ng-deep .bs-datepicker-container .bs-datepicker-head button:hover {
       background-color: #0986d3 !important;
     }
-    ::ng-deep .bs-datepicker-body table td[class*="select-"] span:after {
+    ::ng-deep .bs-datepicker-body table td[class*='select-'] span:after {
       background-color: #0875bf !important;
     }
     ::ng-deep .bs-datepicker-container .bs-datepicker-head .next, ::ng-deep .bs-datepicker-container .bs-datepicker-head .previous {
@@ -113,8 +140,8 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
     }
     ::ng-deep .bs-datepicker-container .bs-datepicker-body table td span.selected,
     ::ng-deep .bs-datepicker-container .bs-datepicker-body table td.selected span,
-    ::ng-deep .bs-datepicker-container .bs-datepicker-body table td span[class*="select-"]:after,
-    ::ng-deep .bs-datepicker-container .bs-datepicker-body table td[class*="select-"] span:after {
+    ::ng-deep .bs-datepicker-container .bs-datepicker-body table td span[class*='select-']:after,
+    ::ng-deep .bs-datepicker-container .bs-datepicker-body table td[class*='select-'] span:after {
       background-color: #0875bf !important;
     }
   `]

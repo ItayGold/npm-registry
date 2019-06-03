@@ -1,23 +1,24 @@
 .date {
   display: table;
-}
-.date .btn {
-  font-size: 16px;
-}
-.date .btn .fa {
-  color: #a7a7a7;
-}
-.date input:focus {
-  outline: -webkit-focus-ring-color auto 5px !important;
+  .btn {
+    font-size: 16px;
+    .fa {
+      color: #a7a7a7;
+    }
+  }
+  input:focus {
+    outline: -webkit-focus-ring-color auto 5px !important;
+  }
 }
 ::ng-deep .bs-calendar-container > .ng-star-inserted {
   display: flex;
 }
+
 ::ng-deep .bs-calendar-container button {
   font: 200 14px system-ui;
 }
-::ng-deep .todayButton {
-  text-align: left;
+@mixin datePickerButton($property) {
+  text-align: $property;
   position: relative;
   font-family: Roboto;
   font-size: 12px;
@@ -26,22 +27,21 @@
   color: #0875bf;
   display: inline-block;
   flex-grow: 1;
+}
+
+::ng-deep .todayButton {
+  @include datePickerButton(left);
   padding: 10px 0 10px 15px;
 }
+
 ::ng-deep .bs-datepicker-body .closeButton {
-  text-align: right;
-  position: relative;
-  font-family: Roboto;
-  font-size: 12px;
-  cursor: pointer;
-  line-height: 1.5;
-  color: #0875bf;
-  display: inline-block;
-  flex-grow: 1;
+  @include datePickerButton(right);
 }
+
 ::ng-deep .bs-datepicker-body .hrLine {
   margin: 0 !important;
 }
+
 ::ng-deep .bs-datepicker-body table th {
   color: #0875bf !important;
   font-family: Roboto;
@@ -49,35 +49,44 @@
   line-height: 11px;
   padding: 3px 3px 4px 3px;
 }
+
 ::ng-deep .bs-datepicker .is-other-month {
   color: #cbcbcb !important;
 }
+
 ::ng-deep .bs-datepicker-body table td {
   font-size: 12px !important;
 }
+
 ::ng-deep .bs-datepicker-body .dpButtons {
   display: flex;
 }
+
 ::ng-deep bs-daterangepicker-container .bs-datepicker-container {
   padding: 10px !important;
 }
+
 ::ng-deep .bs-datepicker-container .bs-datepicker-head {
   background-color: #0875bf !important;
   height: 50px;
   border-radius: 2px 2px 0 0;
   font-weight: 300 !important;
 }
+
 ::ng-deep .bs-datepicker-container .bs-datepicker-head button:hover {
   background-color: #0986d3 !important;
 }
+
 ::ng-deep .bs-datepicker-body table td[class*='select-'] span:after {
   background-color: #0875bf !important;
 }
+
 ::ng-deep .bs-datepicker-container .bs-datepicker-head .next,
 ::ng-deep .bs-datepicker-container .bs-datepicker-head .previous {
   font-size: 18px;
   line-height: 18px;
 }
+
 ::ng-deep .bs-datepicker-container .bs-datepicker-body table td span.selected,
 ::ng-deep .bs-datepicker-container .bs-datepicker-body table td.selected span,
 ::ng-deep
