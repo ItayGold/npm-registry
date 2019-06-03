@@ -25,7 +25,7 @@
     "@angular/platform-browser": "^7.2.15",
     "@angular/platform-browser-dynamic": "^7.2.15",
     "@angular/router": "^7.2.15",
-    "@click/date-picker": "^1.0.37",
+    "@click/date-picker": "^1.1.0",
     "@click/icon": "^1.1.22",
     "bootstrap": "^4.3.1",
     "commander": "^2.20.0",

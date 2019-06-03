@@ -1,0 +1,25 @@
+<div class="date">
+  <input
+    type="text"
+    #dp="bsDaterangepicker"
+    (keydown.enter)="onKeydown($event)"
+    placeholder="{{ placeholder }}"
+    [(ngModel)]="dateRangePickerModel"
+    (ngModelChange)="getDatePickerRange($event)"
+    bsDaterangepicker
+    [minDate]="minDate"
+    [maxDate]="maxDate"
+    [bsConfig]="datePickerConfig"
+    readonly
+  />
+  <div class="input-group-btn">
+    <button
+      class="btn btn-default"
+      tabindex="0"
+      (keydown.enter)="onKeydown($event)"
+      (click)="click()"
+    >
+      <i class="fa fa-calendar"></i>
+    </button>
+  </div>
+</div>

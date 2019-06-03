@@ -14,7 +14,7 @@ import { ClickDatePickerDemoComponent } from './click-date-picker-demo/click-dat
     DatepickerModule.forRoot(),
     BsDatepickerModule.forRoot(),
     ClickIconModule,
-    ClickDatePickerModule,
+    ClickDatePickerModule
   ],
 })
 export class ClickDatePickerDemoModule { }
