@@ -65,7 +65,7 @@ export interface Message {
         margin: 12px;
       }
 
-      .todayButton {
+      ::ng-deep .today-button {
         text-align: left;
         position: relative;
         font-family: Roboto;
@@ -218,7 +218,7 @@ export class ClickDatePickerComponent implements OnInit {
     todayButtonElem.addEventListener('click', () => {
       this.setToday();
     });
-    todayButtonElem.classList.add('todayButton');
+    todayButtonElem.classList.add('today-button');
     todayButtonElem.appendChild(textnode);
 
     document.querySelector('bs-calendar-layout').appendChild(todayButtonElem);
