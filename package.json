@@ -7,7 +7,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run g:docs && npm run aws:sync",
-      "pre-push": "npm run ver:2:tag"
+      "pre-push": "npm version patch && npm run ver:2:tag"
     }
   },
   "scripts": {
