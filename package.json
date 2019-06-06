@@ -15,7 +15,7 @@
     "g:docs": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
     "r:docs": "open http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com",
     "click:pub": "click publish",
-    "pre-push": "npm run ver:2:tag && git push --follow-tags",
+    "pre-push": "npm version patch && npm run ver:2:tag && git push --follow-tags",
     "aws:sync": "aws s3 sync --acl public-read --sse --delete /documentation/. s3://http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com"
   },
   "dependencies": {
