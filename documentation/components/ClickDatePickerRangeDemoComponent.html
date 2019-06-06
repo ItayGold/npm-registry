@@ -680,13 +680,16 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;click-date-picker-range
-  #dp
-  class&#x3D;&quot;dp&quot;
-  [placeholder]&#x3D;&quot;dtPlaceholder&quot;
-  (datePickerRangeEvent)&#x3D;&quot;onDtRangeChanged($event)&quot;
-&gt;
-&lt;/click-date-picker-range&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div&gt;
+  &lt;h2&gt;Date Picker Range&lt;/h2&gt;
+  &lt;click-date-picker-range
+    #dp
+    class&#x3D;&quot;dp&quot;
+    [placeholder]&#x3D;&quot;dtPlaceholder&quot;
+    (datePickerRangeEvent)&#x3D;&quot;onDtRangeChanged($event)&quot;
+  &gt;
+  &lt;/click-date-picker-range&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -727,7 +730,7 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><click-date-picker-range  #dp  class="dp"  [placeholder]="dtPlaceholder"  (datePickerRangeEvent)="onDtRangeChanged($event)"></click-date-picker-range></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Date Picker Range</h2>  <click-date-picker-range    #dp    class="dp"    [placeholder]="dtPlaceholder"    (datePickerRangeEvent)="onDtRangeChanged($event)"  >  </click-date-picker-range></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickDatePickerRangeDemoComponent'};
