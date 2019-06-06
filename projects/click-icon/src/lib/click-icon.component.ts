@@ -11,7 +11,7 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
           <i
             role="button"
             [id]="[id]"
-            [ngClass]="[iconCssClasses]"
+            [ngClass]="[cssClasses]"
             (click)="onClickHandler($event)"
             tabindex="0">
           </i>
@@ -67,11 +67,11 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
 })
 export class ClickIconComponent implements OnInit {
   @Input() withArrows?: boolean;
-  @Input() name: string;
+  @Input() name?: string;
   @Input() active?: string;
-  @Input() iconCssClasses?: string;
-  @Input() id: string;
-  @Output() messageEvent: EventEmitter<string>;
+  @Input() cssClasses?: string;
+  @Input() id?: string;
+  @Output() messageEvent?: EventEmitter<string>;
   @Output() prev?: EventEmitter<string>;
   @Output() next?: EventEmitter<string>;
 
@@ -83,8 +83,8 @@ export class ClickIconComponent implements OnInit {
   ngOnInit() {
     this.withArrows = this.withArrows || false;
 
-    this.iconCssClasses = this.iconCssClasses && this.iconCssClasses.length
-      ? DEF_ICON_CLASSES + this.iconCssClasses
+    this.cssClasses = this.cssClasses && this.cssClasses.length
+      ? DEF_ICON_CLASSES + this.cssClasses
       : DEF_ICON_CLASSES;
   }
 

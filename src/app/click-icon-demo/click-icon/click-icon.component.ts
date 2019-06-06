@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
 
 @Component({
   selector: 'click-icon',
@@ -6,25 +7,29 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./click-icon.component.scss'],
 })
 export class ClickIconComponent implements OnInit {
-  @Input() name: string;
-  @Input() active: string;
-  @Input() iconCssClasses: string;
-  @Input() id: string;
   @Input() withArrows?: boolean;
-  @Output() messageEvent: EventEmitter<string>;
-  @Output() prev: EventEmitter<string>;
-  @Output() next: EventEmitter<string>;
+  @Input() name?: string;
+  @Input() active?: string;
+  @Input() cssClasses?: string;
+  @Input() id?: string;
+  @Output() messageEvent?: EventEmitter<string>;
+  @Output() prev?: EventEmitter<string>;
+  @Output() next?: EventEmitter<string>;
 
   constructor() {
-    this.withArrows = this.withArrows || false;
     this.messageEvent = new EventEmitter<string>();
     this.prev = new EventEmitter<string>();
     this.next = new EventEmitter<string>();
-    this.iconCssClasses = `calendar-icon fa fa-calendar`;
   }
-  ngOnInit() { }
+  ngOnInit() {
+    this.withArrows = this.withArrows || false;
 
-  onClickHandler(event: KeyboardEvent): void | boolean {
+    this.cssClasses = this.cssClasses && this.cssClasses.length
+      ? DEF_ICON_CLASSES + this.cssClasses
+      : DEF_ICON_CLASSES;
+  }
+
+  onClickHandler(event: any): void | boolean {
     this.messageEvent.emit(this.name);
     return false;
   }
