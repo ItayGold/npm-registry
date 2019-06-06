@@ -1,6 +1,6 @@
 {
   "name": "@click/npm-registry",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "bin": {
     "click": "./click-cli.js"
   },
