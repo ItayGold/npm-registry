@@ -4,6 +4,11 @@
   "bin": {
     "click": "./click-cli.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm version patch && npm run ver:2:tag && git push --follow-tags && npm run g:docs && npm run aws:sync"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,7 +20,6 @@
     "g:docs": "npx compodoc -p src/tsconfig.app.json --theme=postmark",
     "r:docs": "open http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com",
     "click:pub": "click publish",
-    "pre-push": "npm version patch && npm run ver:2:tag && git push --follow-tags && npm run g:docs && npm run aws:sync",
     "aws:sync": "aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs-repo-podev-dev"
   },
   "dependencies": {
