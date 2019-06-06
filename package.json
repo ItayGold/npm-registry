@@ -1,12 +1,12 @@
 {
   "name": "@click/npm-registry",
-  "version": "1.2.50",
+  "version": "1.2.51",
   "bin": {
     "click": "./click-cli.js"
   },
   "husky": {
     "hooks": {
-      "post-commit": "npm version patch && npm run g:docs",
+      "post-commit": "npm run g:docs",
       "pre-push": "npm run aws:sync && npm run ver:2:tag"
     }
   },
