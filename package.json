@@ -11,11 +11,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "sync:pkg:git": "PACKAGE_VERSION=$(cat projects/click-date-picker/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push origin master --tags",
+    "ver:2:tag": "PACKAGE_VERSION=$(cat projects/click-date-picker/package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION",
     "g:docs": "npx compodoc -p src/tsconfig.app.json -w -s --theme=postmark",
     "r:docs": "open http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com",
     "click:pub": "click publish",
-    "pre-push": "git push --follow-tags",
+    "pre-push": "npm run ver:2:tag && git push --follow-tags",
     "aws:sync": "aws s3 sync --acl public-read --sse --delete /documentation/. s3://http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com"
   },
   "dependencies": {
