@@ -682,13 +682,15 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
   &lt;h2&gt;Date Picker Range&lt;/h2&gt;
-  &lt;click-date-picker-range
-    #dp
-    class&#x3D;&quot;dp&quot;
-    [placeholder]&#x3D;&quot;dtPlaceholder&quot;
-    (datePickerRangeEvent)&#x3D;&quot;onDtRangeChanged($event)&quot;
-  &gt;
-  &lt;/click-date-picker-range&gt;
+  &lt;div class&#x3D;&quot;demo-dp-range&quot;&gt;
+    &lt;click-date-picker-range
+      #dp
+      class&#x3D;&quot;dp&quot;
+      [placeholder]&#x3D;&quot;dtPlaceholder&quot;
+      (datePickerRangeEvent)&#x3D;&quot;onDtRangeChanged($event)&quot;
+    &gt;
+    &lt;/click-date-picker-range&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -697,7 +699,21 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
                 <p class="comment">
                     <code>./click-date-picker-range-demo.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.demo-dp-range {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .date {
+  width: 481px;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -730,7 +746,7 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <h2>Date Picker Range</h2>  <click-date-picker-range    #dp    class="dp"    [placeholder]="dtPlaceholder"    (datePickerRangeEvent)="onDtRangeChanged($event)"  >  </click-date-picker-range></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Date Picker Range</h2>  <div class="demo-dp-range">    <click-date-picker-range      #dp      class="dp"      [placeholder]="dtPlaceholder"      (datePickerRangeEvent)="onDtRangeChanged($event)"    >    </click-date-picker-range>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickDatePickerRangeDemoComponent'};

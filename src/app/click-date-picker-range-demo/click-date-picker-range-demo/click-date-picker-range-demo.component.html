@@ -1,10 +1,12 @@
 <div>
   <h2>Date Picker Range</h2>
-  <click-date-picker-range
-    #dp
-    class="dp"
-    [placeholder]="dtPlaceholder"
-    (datePickerRangeEvent)="onDtRangeChanged($event)"
-  >
-  </click-date-picker-range>
+  <div class="demo-dp-range">
+    <click-date-picker-range
+      #dp
+      class="dp"
+      [placeholder]="dtPlaceholder"
+      (datePickerRangeEvent)="onDtRangeChanged($event)"
+    >
+    </click-date-picker-range>
+  </div>
 </div>

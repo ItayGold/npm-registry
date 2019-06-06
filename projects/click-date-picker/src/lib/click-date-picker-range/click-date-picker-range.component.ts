@@ -38,16 +38,18 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
       white-space: nowrap;
       border-radius: 0;
     }
+
     .btn-default {
       color: #333;
       background-color: #fff;
       border-color: #ccc;
       border-radius: 0;
     }
+
     .date {
       font-size: 14px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .date .btn {
@@ -59,10 +61,10 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
     }
 
     .date input {
-      width: 381px;
+      width: 100%;
       border: 1px solid #CBCBCB;
       border-radius: 0;
-      height: 38px;
+      min-height: 36px;
       cursor: pointer;
       box-shadow: none;
       padding: 5px 7px;

@@ -1,0 +1,14 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.demo-dp-range {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .date {
+  width: 481px;
+}
