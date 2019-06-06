@@ -13,6 +13,7 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
             [id]="[id]"
             [ngClass]="[cssClasses]"
             (click)="onClickHandler($event)"
+            (keypress)="onClickHandler($event)"
             tabindex="0">
           </i>
         </span>
