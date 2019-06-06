@@ -61,10 +61,10 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
     }
 
     .date input {
-      width: 100%;
+      width: 90%;
       border: 1px solid #CBCBCB;
       border-radius: 0;
-      min-height: 36px;
+      height: auto;
       cursor: pointer;
       box-shadow: none;
       padding: 5px 7px;
