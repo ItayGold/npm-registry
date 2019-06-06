@@ -6,7 +6,8 @@
   },
   "husky": {
     "hooks": {
-      "post-push": "npm version patch && npm run g:docs && npm run aws:sync && npm run ver:2:tag && git push && git push --follow-tags"
+      "post-commit": "npm version patch && npm run g:docs",
+      "pre-push": "npm run aws:sync && npm run ver:2:tag"
     }
   },
   "scripts": {
@@ -20,7 +21,8 @@
     "g:docs": "npx compodoc -p src/tsconfig.app.json --theme=postmark",
     "r:docs": "open http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com",
     "click:pub": "click publish",
-    "aws:sync": "aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs-repo-podev-dev"
+    "aws:sync": "aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs-repo-podev-dev",
+    "git:push": " git push && git push --follow-tags"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",
