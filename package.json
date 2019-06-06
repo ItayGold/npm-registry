@@ -6,7 +6,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm version patch && npm run ver:2:tag && git push --follow-tags && npm run g:docs && npm run aws:sync"
+      "pre-push": "npm version patch && npm run g:docs && npm run aws:sync && npm run ver:2:tag && git push --follow-tags"
     }
   },
   "scripts": {
