@@ -1,6 +1,24 @@
-# NpmRegistry
+# About NPM Registry
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+- npm is lots of things.
+
+- npm is the package manager for Node.js. It was created in 2009 as an open source project to help JavaScript developers easily share packaged modules of code.
+
+- The npm Registry is a public collection of packages of open-source code for Node.js, front-end web apps, mobile apps, robots, routers, and countless other needs of the JavaScript community.
+
+- npm is the command line client that allows developers to install and publish those packages.
+
+- npm, Inc. is the company that hosts and maintains all of the above.
+
+## Live Click NPM registry
+
+You can visit the private NPM registry here: http://npm.clicksoftware.com:4873.
+Here you could see all reusable components/node modules/npm packages/angular libraries & all versions.
+
+## NPM Docs with the live examples
+
+You could visit the NPM Docs resource for all reusable components: http://npm-docs.clicksoftware.com
+Here you find the structure of reusable component, it's inputs, outputs, styles and a live example at demo page.
 
 ## Development server
 

@@ -78,13 +78,10 @@
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
   },
-  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.",
+  "description": "The private npm Registry is a private collection of packages of open-source code for Node.js, front-end web apps, mobile apps, robots, routers, and countless other needs of the JavaScript community.",
   "repository": {
     "type": "git",
     "url": "https://vm-csiltfs.clicksoftware.com/tfs/RD17/SO%20Suite/_git/npm-registry"
-  },
-  "bugs": {
-    "url": "https://github.com/ItayGold/admin/issues"
   },
   "author": "Itay Gold",
   "license": "MIT"
