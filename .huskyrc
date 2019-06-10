@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-push": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md && git push --tags"
+    "pre-commit": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   }
 }
