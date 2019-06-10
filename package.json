@@ -20,7 +20,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ver:2:tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION",
+    "update:ver": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION",
     "gen:docs": "npx compodoc -p src/tsconfig.app.json --theme=postmark",
     "read:docs": "open http://npm-docs.clicksoftware.com",
     "deploy:docs": "npm run gen:docs && aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com",
