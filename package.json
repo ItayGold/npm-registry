@@ -4,6 +4,11 @@
   "bin": {
     "click": "./click-cli.js"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 11"
+  ],
   "husky": {
     "hooks": {}
   },
@@ -77,6 +82,9 @@
   "repository": {
     "type": "git",
     "url": "https://vm-csiltfs.clicksoftware.com/tfs/RD17/SO%20Suite/_git/npm-registry"
+  },
+  "bugs": {
+    "url": "https://github.com/ItayGold/admin/issues"
   },
   "author": "Itay Gold",
   "license": "MIT"
