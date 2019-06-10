@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-push": "npm run update:version",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md && git push --follow-tags"
+    "pre-push": "npm version patch && npm run update:version",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md && git push --tags"
   }
 }
