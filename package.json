@@ -16,10 +16,9 @@
     "e2e": "ng e2e",
     "ver:2:tag": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION",
     "gen:docs": "npx compodoc -p src/tsconfig.app.json --theme=postmark",
-    "read:docs": "open http://npm-docs-repo-podev-dev.s3-website.eu-central-1.amazonaws.com",
-    "deploy:docs": "aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs-repo-podev-dev",
-    "click:pub": "click publish",
-    "docs:aws": "npm run g:docs && npm run aws:sync && npm version patch && npm run ver:2:tag && git add ."
+    "read:docs": "open http://npm-docs.clicksoftware.com",
+    "deploy:docs": "npm run gen:docs && aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com",
+    "click:pub": "click publish --help"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",
