@@ -9,6 +9,7 @@
   },
   "scripts": {
     "ng": "ng",
+    "conventional-changelog": "conventional-changelog",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -18,7 +19,8 @@
     "gen:docs": "npx compodoc -p src/tsconfig.app.json --theme=postmark",
     "read:docs": "open http://npm-docs.clicksoftware.com",
     "deploy:docs": "npm run gen:docs && aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com",
-    "click:pub": "click publish --help"
+    "click:pub": "click publish --help",
+    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",
@@ -52,6 +54,7 @@
     "@types/node": "~8.9.4",
     "babel-loader": "^8.0.6",
     "codelyzer": "~4.5.0",
+    "conventional-changelog-cli": "^2.0.21",
     "cross-env": "^5.2.0",
     "husky": "^2.4.0",
     "jasmine-core": "~2.99.1",
