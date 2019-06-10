@@ -18,9 +18,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "update:version": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION",
-    "gen:docs": "npx compodoc -p src/tsconfig.app.json --theme=postmark",
+    "gen:docs": "",
     "read:docs": "open http://npm-docs.clicksoftware.com",
-    "deploy:docs": "npm run gen:docs && aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com",
+    "deploy:docs": "npm run gen:docs && ",
     "click:pub": "click publish --help",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
   },
