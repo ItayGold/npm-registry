@@ -2,15 +2,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
 
+/**
+ * CSS class calender with typo
+ * supports the automation tests
+ * TODO: fix the typo at automation tests and the component
+ */
 @Component({
   selector: 'click-icon',
   template: `
-    <span>
+    <span class="calender">
       <i *ngIf="withArrows" class="w6 w6-angle-left arrow leftArrow" (click)="onNavClicked($event, 'left')" tabindex="0"></i>
         <span>
           <i
             role="button"
-            [id]="[id]"
             [ngClass]="[cssClasses]"
             (click)="onClickHandler($event)"
             (keypress)="onClickHandler($event)"
@@ -68,10 +72,8 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
 })
 export class ClickIconComponent implements OnInit {
   @Input() withArrows?: boolean;
-  @Input() name?: string;
   @Input() active?: string;
   @Input() cssClasses?: string;
-  @Input() id?: string;
   @Output() messageEvent?: EventEmitter<string>;
   @Output() prev?: EventEmitter<string>;
   @Output() next?: EventEmitter<string>;
@@ -90,7 +92,7 @@ export class ClickIconComponent implements OnInit {
   }
 
   onClickHandler(event: any): void | boolean {
-    this.messageEvent.emit(this.name);
+    this.messageEvent.emit(JSON.stringify(event));
     return false;
   }
 

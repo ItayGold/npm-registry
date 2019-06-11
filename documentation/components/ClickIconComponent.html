@@ -650,7 +650,10 @@ export class ClickIconComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;span&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- CSS class calender with typo
+supports the automation tests
+TODO: fix the typo at automation tests and the component --&gt;
+&lt;span class&#x3D;&quot;calender&quot;&gt;
   &lt;i
     *ngIf&#x3D;&quot;withArrows&quot;
     class&#x3D;&quot;w6 w6-angle-left leftArrow&quot;
@@ -727,7 +730,7 @@ export class ClickIconComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><span>  <i    *ngIf="withArrows"    class="w6 w6-angle-left leftArrow"    (click)="onNavClicked($event, \'left\')"    tabindex="0"  ></i>  <span    ><i      role="button"      [id]="[id]"      [ngClass]="[cssClasses]"      (click)="onClickHandler($event)"      tabindex="0"    ></i  ></span>  <i    *ngIf="withArrows"    class="w6 w6-angle-right arrow"    (click)="onNavClicked($event, \'right\')"    tabindex="0"  ></i></span></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- CSS class calender with typosupports the automation testsTODO: fix the typo at automation tests and the component --><span class="calender">  <i    *ngIf="withArrows"    class="w6 w6-angle-left leftArrow"    (click)="onNavClicked($event, \'left\')"    tabindex="0"  ></i>  <span    ><i      role="button"      [id]="[id]"      [ngClass]="[cssClasses]"      (click)="onClickHandler($event)"      tabindex="0"    ></i  ></span>  <i    *ngIf="withArrows"    class="w6 w6-angle-right arrow"    (click)="onNavClicked($event, \'right\')"    tabindex="0"  ></i></span></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconComponent'};
