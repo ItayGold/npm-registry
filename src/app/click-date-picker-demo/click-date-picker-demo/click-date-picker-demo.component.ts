@@ -7,7 +7,7 @@ import { ChangeDetectorRef } from '@angular/core';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://localhost:4200/date-picker</example-url>
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker</example-url>
  */
 @Component({
   selector: 'click-date-picker-demo',

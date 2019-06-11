@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "npx compodoc -p src/tsconfig.app.json --theme=postmark && echo 'Be sure that your app server is running...' && aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com && conventional-changelog -p angular -i CHANGELOG.md -s && git add .",
+    "pre-commit": "click docs",
     "post-publish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   }
 }

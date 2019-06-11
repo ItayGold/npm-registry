@@ -93,5 +93,59 @@ program
     );
   });
 
+program
+  .command('docs:sync:s3')
+  .alias('docs')
+  .description(
+    ` 
+      Generate documents by compodoc & deploy them to the AWS S3.
+      AWS CLI is required on your system.
+    `
+  )
+  .action(({ ...options }) => {
+    log(`Start generating docs (set of 3 processes)`, {
+      status: 'start',
+      isUpperCase: false,
+      color: 'blue',
+    });
+
+    execSync(`npx compodoc -p src/tsconfig.app.json --theme=postmark`, {
+      stdio: 'inherit',
+    });
+
+    log(`1/1: The generated docs are ready.`, {
+      status: 'end',
+      isUpperCase: false,
+    });
+
+    execSync(
+      `aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com`,
+      { stdio: 'inherit' }
+    );
+    // execSync(`npm run build npm-registry  -- --prod --aot`, {
+    //   stdio: 'inherit',
+    // });
+    execSync(`npm run build npm-registry`, {
+      stdio: 'inherit',
+    });
+    execSync(
+      `aws s3 sync --acl public-read --sse --delete dist/npm-registry/ s3://npm-docs-demo`,
+      { stdio: 'inherit' }
+    );
+    log(`1/2: The docs & demos are deployed.`, {
+      status: 'end',
+      isUpperCase: false,
+    });
+
+    execSync(
+      `conventional-changelog -p angular -i CHANGELOG.md -s && git add .`,
+      { stdio: 'inherit' }
+    );
+    log(`1/3: The change log has been updated.`, {
+      status: 'end',
+      isUpperCase: false,
+    });
+  });
+
 program.parse(process.argv);
 if (program.args.length === 0) program.help();
