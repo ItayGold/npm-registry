@@ -770,7 +770,7 @@ export class ClickDatepickerRangeComponent implements OnInit {
       (keydown.enter)&#x3D;&quot;onKeydown($event)&quot;
       (click)&#x3D;&quot;click()&quot;
     &gt;
-      &lt;i class&#x3D;&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;
+      &lt;i class&#x3D;&quot;w6 w6-calendar2&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -807,7 +807,7 @@ export class ClickDatepickerRangeComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="date">  <input    type="text"    #dp="bsDaterangepicker"    (keydown.enter)="onKeydown($event)"    placeholder="{{ placeholder }}"    [(ngModel)]="dateRangePickerModel"    (ngModelChange)="getDatePickerRange($event)"    bsDaterangepicker    [minDate]="minDate"    [maxDate]="maxDate"    [bsConfig]="datePickerConfig"    readonly  />  <div class="input-group-btn">    <button      class="btn btn-default"      tabindex="0"      (keydown.enter)="onKeydown($event)"      (click)="click()"    >      <i class="fa fa-calendar"></i>    </button>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="date">  <input    type="text"    #dp="bsDaterangepicker"    (keydown.enter)="onKeydown($event)"    placeholder="{{ placeholder }}"    [(ngModel)]="dateRangePickerModel"    (ngModelChange)="getDatePickerRange($event)"    bsDaterangepicker    [minDate]="minDate"    [maxDate]="maxDate"    [bsConfig]="datePickerConfig"    readonly  />  <div class="input-group-btn">    <button      class="btn btn-default"      tabindex="0"      (keydown.enter)="onKeydown($event)"      (click)="click()"    >      <i class="w6 w6-calendar2"></i>    </button>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickDatepickerRangeComponent'};

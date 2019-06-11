@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
+const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
 
 @Component({
   selector: 'click-icon',

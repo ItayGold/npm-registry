@@ -26,7 +26,7 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
           (keydown.enter)="onKeydown($event)"
           (click)="click()"
         >
-          <i class="fa fa-calendar"></i>
+          <i class="w6 w6-calendar2"></i>
         </button>
       </div>
     </div>

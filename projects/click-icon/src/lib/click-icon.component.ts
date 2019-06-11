@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
+const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
 
 @Component({
   selector: 'click-icon',
   template: `
     <span>
-      <i *ngIf="withArrows" class="fa fa-angle-left arrow leftArrow" (click)="onNavClicked($event, 'left')" tabindex="0"></i>
+      <i *ngIf="withArrows" class="w6 w6-angle-left arrow leftArrow" (click)="onNavClicked($event, 'left')" tabindex="0"></i>
         <span>
           <i
             role="button"
@@ -17,7 +17,7 @@ const DEF_ICON_CLASSES = `calendar-icon fa fa-calendar `;
             tabindex="0">
           </i>
         </span>
-      <i *ngIf="withArrows" class="fa fa-angle-right arrow" (click)="onNavClicked($event, 'right')" tabindex="0"></i>
+      <i *ngIf="withArrows" class="w6 w6-angle-right arrow" (click)="onNavClicked($event, 'right')" tabindex="0"></i>
     </span>
   `,
   styles: [
