@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://localhost:4200/icon</example-url>
+ * <example-url>https://stackblitz.com/edit/angular-1wmnxx</example-url>
  */
 @Component({
   selector: 'app-click-icon-demo',
