@@ -1,6 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
 
+/**
+ * click/icon's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://localhost:4200/icon</example-url>
+ */
 @Component({
   selector: 'click-icon',
   templateUrl: './click-icon.component.html',

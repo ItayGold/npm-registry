@@ -18,6 +18,13 @@ export interface Message {
   data?: any;
 }
 
+/**
+ * click/date-picker's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://localhost:4200/date-picker</example-url>
+ */
 @Component({
   selector: 'click-date-picker',
   templateUrl: './click-date-picker.component.html',
@@ -36,7 +43,7 @@ export class ClickDatePickerComponent implements OnInit {
   previousDate: Date = new Date(null);
   moduleStrings: any = {};
 
-  constructor(private cdRef: ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.datePickerConfig = Object.assign(

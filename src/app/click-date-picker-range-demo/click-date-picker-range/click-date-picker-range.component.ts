@@ -2,6 +2,13 @@ import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angu
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 
+/**
+ * click/date-picker's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://localhost:4200/date-picker-range</example-url>
+ */
 @Component({
   selector: 'click-date-picker-range',
   templateUrl: `./click-date-picker-range.component.html`,

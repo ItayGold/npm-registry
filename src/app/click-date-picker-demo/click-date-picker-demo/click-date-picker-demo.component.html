@@ -1,10 +1,8 @@
 <div>
   <h2>Date picker</h2>
   <click-icon
-    [id]="clickIconId1"
     [withArrows]="true"
     (click)="dp.click()"
-    [name]="clickIconTitle"
     (prev)="onPrevClicked($event)"
     (next)="onNextClicked($event)"
   ></click-icon>
