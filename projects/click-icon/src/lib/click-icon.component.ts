@@ -86,6 +86,7 @@ export class ClickIconComponent implements OnInit {
   @Output() next?: EventEmitter<string>;
   @Input() title: object;
 
+
   constructor() {
     this.messageEvent = new EventEmitter<string>();
     this.prev = new EventEmitter<string>();
