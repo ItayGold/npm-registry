@@ -11,9 +11,10 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
   selector: 'click-icon',
   template: `
     <span class="calender">
-      <i *ngIf="withArrows" class="w6 w6-angle-left arrow leftArrow" (click)="onNavClicked($event, 'left')" tabindex="0"></i>
+      <i *ngIf="withArrows" class="w6 w6-angle-left arrow leftArrow" title="{{title['left']}}"
+      (keypress)="onNavClicked($event, 'left')" (click)="onNavClicked($event, 'left')" tabindex="0"></i>
         <span>
-          <i
+          <i title="{{title['icon']}}"
             role="button"
             [ngClass]="[cssClasses]"
             (click)="onClickHandler($event)"
@@ -21,7 +22,8 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
             tabindex="0">
           </i>
         </span>
-      <i *ngIf="withArrows" class="w6 w6-angle-right arrow" (click)="onNavClicked($event, 'right')" tabindex="0"></i>
+      <i *ngIf="withArrows" class="w6 w6-angle-right arrow" title="{{title['right']}}"
+      (keypress)="onNavClicked($event, 'right')" (click)="onNavClicked($event, 'right')" tabindex="0"></i>
     </span>
   `,
   styles: [
@@ -45,7 +47,7 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
       }
 
       .calendar-icon {
-        margin: 12px;
+        margin: 8px;
       }
 
       .leftArrow {
@@ -53,9 +55,14 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
       }
 
       .arrow {
-        font-size: 20px;
         color: #A7A7A7;
         cursor: pointer;
+        font-size: 12px;
+        position: relative;
+        top: -2px;
+      }
+      .arrow:hover {
+        color: #1174be;
       }
 
       .arrow:focus,
@@ -77,15 +84,16 @@ export class ClickIconComponent implements OnInit {
   @Output() messageEvent?: EventEmitter<string>;
   @Output() prev?: EventEmitter<string>;
   @Output() next?: EventEmitter<string>;
+  @Input() title: object;
 
   constructor() {
     this.messageEvent = new EventEmitter<string>();
     this.prev = new EventEmitter<string>();
     this.next = new EventEmitter<string>();
   }
+
   ngOnInit() {
     this.withArrows = this.withArrows || false;
-
     this.cssClasses = this.cssClasses && this.cssClasses.length
       ? DEF_ICON_CLASSES + this.cssClasses
       : DEF_ICON_CLASSES;
