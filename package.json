@@ -19,12 +19,9 @@
     "click": "click",
     "conventional-changelog": "conventional-changelog",
     "update:version": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION",
-    "gen:docs": "",
     "read:docs": "open http://npm-docs.clicksoftware.com",
-    "deploy:docs": "npm run gen:docs && ",
     "click:pub": "click publish --help",
-    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
-    "compodoc": "npx compodoc -p src/tsconfig.app.json -s -w"
+    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@angular/animations": "^7.2.15",

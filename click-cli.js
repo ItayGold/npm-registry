@@ -103,7 +103,7 @@ program
     `
   )
   .action(({ ...options }) => {
-    log(`Start generating docs (set of 3 processes)`, {
+    log(`Start generating docs (set of 4 processes)`, {
       status: 'start',
       isUpperCase: false,
       color: 'blue',
@@ -113,7 +113,7 @@ program
       stdio: 'inherit',
     });
 
-    log(`1/1: The generated docs are ready.`, {
+    log(`2/4: The generated docs are ready.`, {
       status: 'end',
       isUpperCase: false,
     });
@@ -122,17 +122,15 @@ program
       `aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com`,
       { stdio: 'inherit' }
     );
-    // execSync(`npm run build npm-registry  -- --prod --aot`, {
-    //   stdio: 'inherit',
-    // });
-    execSync(`npm run build npm-registry`, {
+    execSync(`npm run build npm-registry  -- --prod --aot`, {
       stdio: 'inherit',
     });
+
     execSync(
       `aws s3 sync --acl public-read --sse --delete dist/npm-registry/ s3://npm-docs-demo`,
       { stdio: 'inherit' }
     );
-    log(`1/2: The docs & demos are deployed.`, {
+    log(`3/4: The docs & demos are deployed.`, {
       status: 'end',
       isUpperCase: false,
     });
@@ -141,10 +139,22 @@ program
       `conventional-changelog -p angular -i CHANGELOG.md -s && git add .`,
       { stdio: 'inherit' }
     );
-    log(`1/3: The change log has been updated.`, {
+    log(`4/4: The change log has been updated.`, {
       status: 'end',
       isUpperCase: false,
     });
+
+    // execSync(
+    //   `git add . && npm version patch && PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION`,
+    //   {
+    //     stdio: 'inherit',
+    //   }
+    // );
+
+    // log(`1/4: Sync package version with the git tag.`, {
+    //   status: 'end',
+    //   isUpperCase: false,
+    // });
   });
 
 program.parse(process.argv);
