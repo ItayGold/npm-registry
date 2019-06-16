@@ -136,7 +136,7 @@ program
     });
 
     execSync(
-      `conventional-changelog -p angular -i CHANGELOG.md -s && git add .`,
+      `conventional-changelog -p angular -i CHANGELOG.md -s && git add . --dry-run`,
       { stdio: 'inherit' }
     );
     log(`4/4: The change log has been updated.`, {
@@ -145,7 +145,7 @@ program
     });
 
     // execSync(
-    //   `git add . && npm version patch && PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION`,
+    //   `npm version patch && git add . --dry-run && PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION`,
     //   {
     //     stdio: 'inherit',
     //   }
