@@ -170,12 +170,8 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
-import { FormsModule } from &#x27;@angular/forms&#x27;;
-import { DatepickerModule, BsDatepickerModule } from &#x27;ngx-bootstrap/datepicker&#x27;;
-
 import { ClickDatePickerRangeDemoRoutingModule } from &#x27;./click-date-picker-range-demo-routing.module&#x27;;
 import { ClickDatePickerRangeDemoComponent } from &#x27;./click-date-picker-range-demo/click-date-picker-range-demo.component&#x27;;
-// import { ClickDatepickerRangeComponent } from &#x27;./click-date-picker-range/click-date-picker-range.component&#x27;;
 import { ClickDatePickerModule } from &#x27;@click/date-picker&#x27;;
 
 @NgModule({
@@ -183,9 +179,6 @@ import { ClickDatePickerModule } from &#x27;@click/date-picker&#x27;;
   imports: [
     CommonModule,
     ClickDatePickerRangeDemoRoutingModule,
-    FormsModule,
-    DatepickerModule.forRoot(),
-    BsDatepickerModule.forRoot(),
     ClickDatePickerModule
   ]
 })

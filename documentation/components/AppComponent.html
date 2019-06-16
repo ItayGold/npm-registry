@@ -136,32 +136,8 @@ export class AppComponent {}
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!--The content below is only a placeholder and can be replaced.--&gt;
-&lt;div style&#x3D;&quot;text-align:center; overflow: hidden;&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;text-align:center; overflow: hidden;&quot;&gt;
   &lt;h1&gt;@click packages&lt;/h1&gt;
-
-  &lt;!-- &lt;nav&gt;
-    &lt;a routerLink&#x3D;&quot;/date-picker&quot; routerLinkActive&#x3D;&quot;active&quot;&gt;Date picker&lt;/a&gt;
-  &lt;/nav&gt; --&gt;
-  &lt;!-- &lt;span
-    &gt;&lt;i
-      role&#x3D;&quot;button&quot;
-      [id]&#x3D;&quot;[&#x27;123&#x27;]&quot;
-      class&#x3D;&quot;calendar-icon w6 w6-calendar2&quot;
-      (click)&#x3D;&quot;dp.click()&quot;
-      (keypress)&#x3D;&quot;dp.click()&quot;
-    &gt;&lt;/i
-  &gt;&lt;/span&gt;
-
-  &lt;click-date-picker
-    (setDateEvent)&#x3D;&quot;setDateEvent($event)&quot;
-    class&#x3D;&quot;dp&quot;
-    #dp
-    [selectedDate]&#x3D;&quot;selectedDate&quot;
-    [todayDate]&#x3D;&quot;todayDate&quot;
-    [todayButtonText]&#x3D;&quot;todayButtonText&quot;
-  &gt;
-  &lt;/click-date-picker&gt; --&gt;
   &lt;router-outlet&gt;&lt;/router-outlet&gt;
 &lt;/div&gt;
 </code></pre>
@@ -224,7 +200,7 @@ export class AppComponent {}
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--The content below is only a placeholder and can be replaced.--><div style="text-align:center; overflow: hidden;">  <h1>@click packages</h1>  <!-- <nav>    <a routerLink="/date-picker" routerLinkActive="active">Date picker</a>  </nav> -->  <!-- <span    ><i      role="button"      [id]="[\'123\']"      class="calendar-icon w6 w6-calendar2"      (click)="dp.click()"      (keypress)="dp.click()"    ></i  ></span>  <click-date-picker    (setDateEvent)="setDateEvent($event)"    class="dp"    #dp    [selectedDate]="selectedDate"    [todayDate]="todayDate"    [todayButtonText]="todayButtonText"  >  </click-date-picker> -->  <router-outlet></router-outlet></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div style="text-align:center; overflow: hidden;">  <h1>@click packages</h1>  <router-outlet></router-outlet></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
