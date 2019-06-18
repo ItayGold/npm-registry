@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClickDatePickerComponent } from './click-date-picker-demo/click-date-picker/click-date-picker.component';
 import { ClickDatepickerRangeComponent } from './click-date-picker-range-demo/click-date-picker-range/click-date-picker-range.component';
-// import { ClickIconComponent } from './click-icon-demo/click-icon/click-icon.component';
 
 @NgModule({
   declarations: [AppComponent, ClickDatePickerComponent, ClickDatepickerRangeComponent],
