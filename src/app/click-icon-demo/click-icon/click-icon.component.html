@@ -2,24 +2,28 @@
 supports the automation tests
 TODO: fix the typo at automation tests and the component -->
 <span class="calender">
-  <i
+  <i 
     *ngIf="withArrows"
-    class="w6 w6-angle-left leftArrow"
+    class="w6 w6-angle-left arrow leftArrow"
+    (keypress)="onNavClicked($event, 'left')"
+    title="{{title.left}}"
     (click)="onNavClicked($event, 'left')"
     tabindex="0"
   ></i>
-  <span
-    ><i
+  <span>
+    <i title="{{title.icon}}"
       role="button"
-      [id]="[id]"
       [ngClass]="[cssClasses]"
       (click)="onClickHandler($event)"
+      (keypress)="onClickHandler($event)"
       tabindex="0"
-    ></i
-  ></span>
-  <i
+    ></i>
+  </span>
+  <i 
     *ngIf="withArrows"
     class="w6 w6-angle-right arrow"
+    title="{{title.right}}"
+    (keypress)="onNavClicked($event, 'right')"
     (click)="onNavClicked($event, 'right')"
     tabindex="0"
   ></i>

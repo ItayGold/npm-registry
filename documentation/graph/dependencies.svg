@@ -22,223 +22,223 @@
 <text text-anchor="start" x="1358.2258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_AppModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-268 871,-268 871,-70 8,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="8,-70 8,-268 716,-268 716,-70 8,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_AppModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="168,-78 168,-130 863,-130 863,-78 168,-78"/>
+<polygon fill="none" stroke="#000000" points="168,-78 168,-130 708,-130 708,-78 168,-78"/>
 </g>
-<g id="clust7" class="cluster">
+<g id="clust6" class="cluster">
 <title>cluster_AppModule_imports</title>
 <polygon fill="none" stroke="#000000" points="16,-78 16,-130 160,-130 160,-78 16,-78"/>
 </g>
-<g id="clust9" class="cluster">
+<g id="clust8" class="cluster">
 <title>cluster_AppModule_bootstrap</title>
-<polygon fill="none" stroke="#000000" points="373,-208 373,-260 497,-260 497,-208 373,-208"/>
+<polygon fill="none" stroke="#000000" points="322,-208 322,-260 446,-260 446,-208 322,-208"/>
+</g>
+<g id="clust16" class="cluster">
+<title>cluster_ClickDatePickerDemoModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="724,-70 724,-195 1186,-195 1186,-70 724,-70"/>
 </g>
 <g id="clust17" class="cluster">
-<title>cluster_ClickDatePickerDemoModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="879,-70 879,-195 1341,-195 1341,-70 879,-70"/>
-</g>
-<g id="clust18" class="cluster">
 <title>cluster_ClickDatePickerDemoModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="1109,-78 1109,-130 1333,-130 1333,-78 1109,-78"/>
+<polygon fill="none" stroke="#000000" points="954,-78 954,-130 1178,-130 1178,-78 954,-78"/>
 </g>
-<g id="clust20" class="cluster">
+<g id="clust19" class="cluster">
 <title>cluster_ClickDatePickerDemoModule_imports</title>
-<polygon fill="none" stroke="#000000" points="887,-78 887,-130 1101,-130 1101,-78 887,-78"/>
+<polygon fill="none" stroke="#000000" points="732,-78 732,-130 946,-130 946,-78 732,-78"/>
+</g>
+<g id="clust23" class="cluster">
+<title>cluster_ClickDatePickerRangeDemoModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="1194,-70 1194,-195 1762,-195 1762,-70 1194,-70"/>
 </g>
 <g id="clust24" class="cluster">
-<title>cluster_ClickDatePickerRangeDemoModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="1349,-70 1349,-195 1917,-195 1917,-70 1349,-70"/>
-</g>
-<g id="clust25" class="cluster">
 <title>cluster_ClickDatePickerRangeDemoModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="1649,-78 1649,-130 1909,-130 1909,-78 1649,-78"/>
+<polygon fill="none" stroke="#000000" points="1494,-78 1494,-130 1754,-130 1754,-78 1494,-78"/>
 </g>
-<g id="clust27" class="cluster">
+<g id="clust26" class="cluster">
 <title>cluster_ClickDatePickerRangeDemoModule_imports</title>
-<polygon fill="none" stroke="#000000" points="1357,-78 1357,-130 1641,-130 1641,-78 1357,-78"/>
+<polygon fill="none" stroke="#000000" points="1202,-78 1202,-130 1486,-130 1486,-78 1202,-78"/>
+</g>
+<g id="clust42" class="cluster">
+<title>cluster_ClickIconDemoModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="1770,-70 1770,-195 2345,-195 2345,-70 1770,-70"/>
 </g>
 <g id="clust43" class="cluster">
-<title>cluster_ClickIconDemoModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="1925,-70 1925,-195 2345,-195 2345,-70 1925,-70"/>
-</g>
-<g id="clust44" class="cluster">
 <title>cluster_ClickIconDemoModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="2151,-78 2151,-130 2337,-130 2337,-78 2151,-78"/>
+<polygon fill="none" stroke="#000000" points="1996,-78 1996,-130 2337,-130 2337,-78 1996,-78"/>
 </g>
 <g id="clust46" class="cluster">
 <title>cluster_ClickIconDemoModule_imports</title>
-<polygon fill="none" stroke="#000000" points="1933,-78 1933,-130 2143,-130 2143,-78 1933,-78"/>
+<polygon fill="none" stroke="#000000" points="1778,-78 1778,-130 1988,-130 1988,-78 1778,-78"/>
 </g>
 <!-- AppComponent -->
 <g id="node1" class="node">
 <title>AppComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="854.9399,-122 749.0601,-122 749.0601,-86 854.9399,-86 854.9399,-122"/>
-<text text-anchor="middle" x="802" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="699.9399,-122 594.0601,-122 594.0601,-86 699.9399,-86 699.9399,-122"/>
+<text text-anchor="middle" x="647" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent</text>
 </g>
 <!-- AppModule -->
-<g id="node5" class="node">
+<g id="node4" class="node">
 <title>AppModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="476.6571,-187 473.6571,-191 452.6571,-191 449.6571,-187 393.3429,-187 393.3429,-151 476.6571,-151 476.6571,-187"/>
-<text text-anchor="middle" x="435" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="425.6571,-187 422.6571,-191 401.6571,-191 398.6571,-187 342.3429,-187 342.3429,-151 425.6571,-151 425.6571,-187"/>
+<text text-anchor="middle" x="384" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppModule</text>
 </g>
 <!-- AppComponent&#45;&gt;AppModule -->
 <g id="edge1" class="edge">
 <title>AppComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M802,-122.2843C802,-143.3211 802,-175 802,-175 802,-175 486.7423,-175 486.7423,-175"/>
-<polygon fill="#000000" stroke="#000000" points="486.7423,-171.5001 476.7423,-175 486.7422,-178.5001 486.7423,-171.5001"/>
+<path fill="none" stroke="#000000" d="M647,-122.1061C647,-141.3391 647,-169 647,-169 647,-169 435.6731,-169 435.6731,-169"/>
+<polygon fill="#000000" stroke="#000000" points="435.6732,-165.5001 425.6731,-169 435.6731,-172.5001 435.6732,-165.5001"/>
 </g>
 <!-- ClickDatePickerComponent -->
 <g id="node2" class="node">
 <title>ClickDatePickerComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="730.8543,-122 557.1457,-122 557.1457,-86 730.8543,-86 730.8543,-122"/>
-<text text-anchor="middle" x="644" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="575.8543,-122 402.1457,-122 402.1457,-86 575.8543,-86 575.8543,-122"/>
+<text text-anchor="middle" x="489" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerComponent</text>
 </g>
 <!-- ClickDatePickerComponent&#45;&gt;AppModule -->
 <g id="edge2" class="edge">
 <title>ClickDatePickerComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M644,-122.0225C644,-139.3734 644,-163 644,-163 644,-163 486.792,-163 486.792,-163"/>
-<polygon fill="#000000" stroke="#000000" points="486.792,-159.5001 476.792,-163 486.7919,-166.5001 486.792,-159.5001"/>
+<path fill="none" stroke="#000000" d="M413.9506,-122.1061C413.9506,-122.1061 413.9506,-140.991 413.9506,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="410.4506,-140.9909 413.9506,-150.991 417.4506,-140.991 410.4506,-140.9909"/>
 </g>
 <!-- ClickDatepickerRangeComponent -->
 <g id="node3" class="node">
 <title>ClickDatepickerRangeComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="539.3375,-122 330.6625,-122 330.6625,-86 539.3375,-86 539.3375,-122"/>
-<text text-anchor="middle" x="435" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatepickerRangeComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="384.3375,-122 175.6625,-122 175.6625,-86 384.3375,-86 384.3375,-122"/>
+<text text-anchor="middle" x="280" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatepickerRangeComponent</text>
 </g>
 <!-- ClickDatepickerRangeComponent&#45;&gt;AppModule -->
 <g id="edge3" class="edge">
 <title>ClickDatepickerRangeComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M435,-122.1061C435,-122.1061 435,-140.991 435,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="431.5001,-140.9909 435,-150.991 438.5001,-140.991 431.5001,-140.9909"/>
-</g>
-<!-- ClickIconComponent -->
-<g id="node4" class="node">
-<title>ClickIconComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="312.0408,-122 175.9592,-122 175.9592,-86 312.0408,-86 312.0408,-122"/>
-<text text-anchor="middle" x="244" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconComponent</text>
-</g>
-<!-- ClickIconComponent&#45;&gt;AppModule -->
-<g id="edge4" class="edge">
-<title>ClickIconComponent&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M244,-122.0225C244,-139.3734 244,-163 244,-163 244,-163 383.0842,-163 383.0842,-163"/>
-<polygon fill="#000000" stroke="#000000" points="383.0843,-166.5001 393.0842,-163 383.0842,-159.5001 383.0843,-166.5001"/>
+<path fill="none" stroke="#000000" d="M363.2953,-122.1061C363.2953,-122.1061 363.2953,-140.991 363.2953,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="359.7953,-140.9909 363.2953,-150.991 366.7953,-140.991 359.7953,-140.9909"/>
 </g>
 <!-- AppComponent  -->
-<g id="node7" class="node">
+<g id="node6" class="node">
 <title>AppComponent </title>
-<polygon fill="#80b1d3" stroke="#000000" points="489.439,-252 380.561,-252 380.561,-216 489.439,-216 489.439,-252"/>
-<text text-anchor="middle" x="435" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent </text>
+<polygon fill="#80b1d3" stroke="#000000" points="438.439,-252 329.561,-252 329.561,-216 438.439,-216 438.439,-252"/>
+<text text-anchor="middle" x="384" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppComponent </text>
 </g>
 <!-- AppModule&#45;&gt;AppComponent  -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>AppModule&#45;&gt;AppComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M435,-187.1061C435,-187.1061 435,-205.991 435,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="431.5001,-205.9909 435,-215.991 438.5001,-205.991 431.5001,-205.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="1,5" d="M384,-187.1061C384,-187.1061 384,-205.991 384,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="380.5001,-205.9909 384,-215.991 387.5001,-205.991 380.5001,-205.9909"/>
 </g>
 <!-- AppRoutingModule -->
-<g id="node6" class="node">
+<g id="node5" class="node">
 <title>AppRoutingModule</title>
 <polygon fill="#8dd3c7" stroke="#000000" points="152.2744,-122 149.2744,-126 128.2744,-126 125.2744,-122 23.7256,-122 23.7256,-86 152.2744,-86 152.2744,-122"/>
 <text text-anchor="middle" x="88" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">AppRoutingModule</text>
 </g>
 <!-- AppRoutingModule&#45;&gt;AppModule -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>AppRoutingModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="#000000" d="M88,-122.2843C88,-143.3211 88,-175 88,-175 88,-175 383.1437,-175 383.1437,-175"/>
-<polygon fill="#000000" stroke="#000000" points="383.1437,-178.5001 393.1437,-175 383.1437,-171.5001 383.1437,-178.5001"/>
+<path fill="none" stroke="#000000" d="M88,-122.1061C88,-141.3391 88,-169 88,-169 88,-169 332.2182,-169 332.2182,-169"/>
+<polygon fill="#000000" stroke="#000000" points="332.2183,-172.5001 342.2182,-169 332.2182,-165.5001 332.2183,-172.5001"/>
 </g>
 <!-- ClickDatePickerDemoComponent -->
-<g id="node8" class="node">
+<g id="node7" class="node">
 <title>ClickDatePickerDemoComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1325.066,-122 1116.934,-122 1116.934,-86 1325.066,-86 1325.066,-122"/>
-<text text-anchor="middle" x="1221" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerDemoComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="1170.066,-122 961.934,-122 961.934,-86 1170.066,-86 1170.066,-122"/>
+<text text-anchor="middle" x="1066" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerDemoComponent</text>
 </g>
 <!-- ClickDatePickerDemoModule -->
-<g id="node9" class="node">
+<g id="node8" class="node">
 <title>ClickDatePickerDemoModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="1200.2836,-187 1197.2836,-191 1176.2836,-191 1173.2836,-187 1013.7164,-187 1013.7164,-151 1200.2836,-151 1200.2836,-187"/>
-<text text-anchor="middle" x="1107" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerDemoModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="1045.2836,-187 1042.2836,-191 1021.2836,-191 1018.2836,-187 858.7164,-187 858.7164,-151 1045.2836,-151 1045.2836,-187"/>
+<text text-anchor="middle" x="952" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerDemoModule</text>
 </g>
 <!-- ClickDatePickerDemoComponent&#45;&gt;ClickDatePickerDemoModule -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>ClickDatePickerDemoComponent&#45;&gt;ClickDatePickerDemoModule</title>
-<path fill="none" stroke="#000000" d="M1158.5543,-122.1061C1158.5543,-122.1061 1158.5543,-140.991 1158.5543,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="1155.0544,-140.9909 1158.5543,-150.991 1162.0544,-140.991 1155.0544,-140.9909"/>
+<path fill="none" stroke="#000000" d="M1003.5544,-122.1061C1003.5544,-122.1061 1003.5544,-140.991 1003.5544,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="1000.0544,-140.9909 1003.5544,-150.991 1007.0544,-140.991 1000.0544,-140.9909"/>
 </g>
 <!-- ClickDatePickerRoutingModule -->
-<g id="node10" class="node">
+<g id="node9" class="node">
 <title>ClickDatePickerRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="1092.6895,-122 1089.6895,-126 1068.6895,-126 1065.6895,-122 895.3105,-122 895.3105,-86 1092.6895,-86 1092.6895,-122"/>
-<text text-anchor="middle" x="994" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="937.6895,-122 934.6895,-126 913.6895,-126 910.6895,-122 740.3105,-122 740.3105,-86 937.6895,-86 937.6895,-122"/>
+<text text-anchor="middle" x="839" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRoutingModule</text>
 </g>
 <!-- ClickDatePickerRoutingModule&#45;&gt;ClickDatePickerDemoModule -->
-<g id="edge8" class="edge">
+<g id="edge7" class="edge">
 <title>ClickDatePickerRoutingModule&#45;&gt;ClickDatePickerDemoModule</title>
-<path fill="none" stroke="#000000" d="M1053.2265,-122.1061C1053.2265,-122.1061 1053.2265,-140.991 1053.2265,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="1049.7266,-140.9909 1053.2265,-150.991 1056.7266,-140.991 1049.7266,-140.9909"/>
+<path fill="none" stroke="#000000" d="M898.2265,-122.1061C898.2265,-122.1061 898.2265,-140.991 898.2265,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="894.7266,-140.9909 898.2265,-150.991 901.7266,-140.991 894.7266,-140.9909"/>
 </g>
 <!-- ClickDatePickerRangeDemoComponent -->
-<g id="node11" class="node">
+<g id="node10" class="node">
 <title>ClickDatePickerRangeDemoComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="1900.8319,-122 1657.1681,-122 1657.1681,-86 1900.8319,-86 1900.8319,-122"/>
-<text text-anchor="middle" x="1779" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRangeDemoComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="1745.8319,-122 1502.1681,-122 1502.1681,-86 1745.8319,-86 1745.8319,-122"/>
+<text text-anchor="middle" x="1624" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRangeDemoComponent</text>
 </g>
 <!-- ClickDatePickerRangeDemoModule -->
-<g id="node12" class="node">
+<g id="node11" class="node">
 <title>ClickDatePickerRangeDemoModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="1750.0492,-187 1747.0492,-191 1726.0492,-191 1723.0492,-187 1527.9508,-187 1527.9508,-151 1750.0492,-151 1750.0492,-187"/>
-<text text-anchor="middle" x="1639" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRangeDemoModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="1595.0492,-187 1592.0492,-191 1571.0492,-191 1568.0492,-187 1372.9508,-187 1372.9508,-151 1595.0492,-151 1595.0492,-187"/>
+<text text-anchor="middle" x="1484" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRangeDemoModule</text>
 </g>
 <!-- ClickDatePickerRangeDemoComponent&#45;&gt;ClickDatePickerRangeDemoModule -->
-<g id="edge9" class="edge">
+<g id="edge8" class="edge">
 <title>ClickDatePickerRangeDemoComponent&#45;&gt;ClickDatePickerRangeDemoModule</title>
-<path fill="none" stroke="#000000" d="M1703.5544,-122.1061C1703.5544,-122.1061 1703.5544,-140.991 1703.5544,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="1700.0544,-140.9909 1703.5544,-150.991 1707.0544,-140.991 1700.0544,-140.9909"/>
+<path fill="none" stroke="#000000" d="M1548.5543,-122.1061C1548.5543,-122.1061 1548.5543,-140.991 1548.5543,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="1545.0544,-140.9909 1548.5543,-150.991 1552.0544,-140.991 1545.0544,-140.9909"/>
 </g>
 <!-- ClickDatePickerRangeDemoRoutingModule -->
-<g id="node13" class="node">
+<g id="node12" class="node">
 <title>ClickDatePickerRangeDemoRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="1632.6671,-122 1629.6671,-126 1608.6671,-126 1605.6671,-122 1365.3329,-122 1365.3329,-86 1632.6671,-86 1632.6671,-122"/>
-<text text-anchor="middle" x="1499" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRangeDemoRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="1477.6671,-122 1474.6671,-126 1453.6671,-126 1450.6671,-122 1210.3329,-122 1210.3329,-86 1477.6671,-86 1477.6671,-122"/>
+<text text-anchor="middle" x="1344" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickDatePickerRangeDemoRoutingModule</text>
 </g>
 <!-- ClickDatePickerRangeDemoRoutingModule&#45;&gt;ClickDatePickerRangeDemoModule -->
-<g id="edge10" class="edge">
+<g id="edge9" class="edge">
 <title>ClickDatePickerRangeDemoRoutingModule&#45;&gt;ClickDatePickerRangeDemoModule</title>
-<path fill="none" stroke="#000000" d="M1580.2795,-122.1061C1580.2795,-122.1061 1580.2795,-140.991 1580.2795,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="1576.7795,-140.9909 1580.2795,-150.991 1583.7795,-140.991 1576.7795,-140.9909"/>
+<path fill="none" stroke="#000000" d="M1425.2795,-122.1061C1425.2795,-122.1061 1425.2795,-140.991 1425.2795,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="1421.7795,-140.9909 1425.2795,-150.991 1428.7795,-140.991 1421.7795,-140.9909"/>
 </g>
-<!-- ClickIconDemoComponent -->
-<g id="node14" class="node">
-<title>ClickIconDemoComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="2329.252,-122 2158.748,-122 2158.748,-86 2329.252,-86 2329.252,-122"/>
-<text text-anchor="middle" x="2244" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoComponent</text>
+<!-- ClickIconComponent -->
+<g id="node13" class="node">
+<title>ClickIconComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="2329.0408,-122 2192.9592,-122 2192.9592,-86 2329.0408,-86 2329.0408,-122"/>
+<text text-anchor="middle" x="2261" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconComponent</text>
 </g>
 <!-- ClickIconDemoModule -->
 <g id="node15" class="node">
 <title>ClickIconDemoModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="2215.4692,-187 2212.4692,-191 2191.4692,-191 2188.4692,-187 2066.5308,-187 2066.5308,-151 2215.4692,-151 2215.4692,-187"/>
-<text text-anchor="middle" x="2141" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="2163.4692,-187 2160.4692,-191 2139.4692,-191 2136.4692,-187 2014.5308,-187 2014.5308,-151 2163.4692,-151 2163.4692,-187"/>
+<text text-anchor="middle" x="2089" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoModule</text>
+</g>
+<!-- ClickIconComponent&#45;&gt;ClickIconDemoModule -->
+<g id="edge10" class="edge">
+<title>ClickIconComponent&#45;&gt;ClickIconDemoModule</title>
+<path fill="none" stroke="#000000" d="M2261,-122.1061C2261,-141.3391 2261,-169 2261,-169 2261,-169 2173.6913,-169 2173.6913,-169"/>
+<polygon fill="#000000" stroke="#000000" points="2173.6913,-165.5001 2163.6913,-169 2173.6913,-172.5001 2173.6913,-165.5001"/>
+</g>
+<!-- ClickIconDemoComponent -->
+<g id="node14" class="node">
+<title>ClickIconDemoComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="2174.252,-122 2003.748,-122 2003.748,-86 2174.252,-86 2174.252,-122"/>
+<text text-anchor="middle" x="2089" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoComponent</text>
 </g>
 <!-- ClickIconDemoComponent&#45;&gt;ClickIconDemoModule -->
 <g id="edge11" class="edge">
 <title>ClickIconDemoComponent&#45;&gt;ClickIconDemoModule</title>
-<path fill="none" stroke="#000000" d="M2187.0544,-122.1061C2187.0544,-122.1061 2187.0544,-140.991 2187.0544,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="2183.5544,-140.9909 2187.0544,-150.991 2190.5544,-140.991 2183.5544,-140.9909"/>
+<path fill="none" stroke="#000000" d="M2089,-122.1061C2089,-122.1061 2089,-140.991 2089,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="2085.5001,-140.9909 2089,-150.991 2092.5001,-140.991 2085.5001,-140.9909"/>
 </g>
 <!-- ClickIconDemoRoutingModule -->
 <g id="node16" class="node">
 <title>ClickIconDemoRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="2135.087,-122 2132.087,-126 2111.087,-126 2108.087,-122 1940.913,-122 1940.913,-86 2135.087,-86 2135.087,-122"/>
-<text text-anchor="middle" x="2038" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="1980.087,-122 1977.087,-126 1956.087,-126 1953.087,-122 1785.913,-122 1785.913,-86 1980.087,-86 1980.087,-122"/>
+<text text-anchor="middle" x="1883" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoRoutingModule</text>
 </g>
 <!-- ClickIconDemoRoutingModule&#45;&gt;ClickIconDemoModule -->
 <g id="edge12" class="edge">
 <title>ClickIconDemoRoutingModule&#45;&gt;ClickIconDemoModule</title>
-<path fill="none" stroke="#000000" d="M2100.7795,-122.1061C2100.7795,-122.1061 2100.7795,-140.991 2100.7795,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="2097.2795,-140.9909 2100.7795,-150.991 2104.2795,-140.991 2097.2795,-140.9909"/>
+<path fill="none" stroke="#000000" d="M1883,-122.1061C1883,-141.3391 1883,-169 1883,-169 1883,-169 2004.338,-169 2004.338,-169"/>
+<polygon fill="#000000" stroke="#000000" points="2004.338,-172.5001 2014.338,-169 2004.338,-165.5001 2004.338,-172.5001"/>
 </g>
 </g>
 </svg>

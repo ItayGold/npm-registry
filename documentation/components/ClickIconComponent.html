@@ -185,6 +185,9 @@ for date range picker use another component</p>
                                 <a href="#name">name</a>
                             </li>
                             <li>
+                                <a href="#title">title</a>
+                            </li>
+                            <li>
                                 <a href="#withArrows">withArrows</a>
                             </li>
                         </ul>
@@ -229,7 +232,7 @@ for date range picker use another component</p>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -327,6 +330,27 @@ for date range picker use another component</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="title"></a>
+                        <b>title</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:22</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="withArrows"></a>
                         <b>withArrows</b>
                     </td>
@@ -363,7 +387,7 @@ for date range picker use another component</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:23</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -384,7 +408,7 @@ for date range picker use another component</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:25</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -405,7 +429,7 @@ for date range picker use another component</p>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:24</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -440,8 +464,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:32</a></div>
                 </td>
             </tr>
 
@@ -479,8 +503,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:40</a></div>
                 </td>
             </tr>
 
@@ -549,8 +573,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:45</a></div>
                 </td>
             </tr>
 
@@ -636,6 +660,7 @@ export class ClickIconComponent implements OnInit {
   @Input() active?: string;
   @Input() cssClasses?: string;
   @Input() id?: string;
+  @Input() title: object;
   @Output() messageEvent?: EventEmitter&lt;string&gt;;
   @Output() prev?: EventEmitter&lt;string&gt;;
   @Output() next?: EventEmitter&lt;string&gt;;
@@ -681,24 +706,28 @@ export class ClickIconComponent implements OnInit {
 supports the automation tests
 TODO: fix the typo at automation tests and the component --&gt;
 &lt;span class&#x3D;&quot;calender&quot;&gt;
-  &lt;i
+  &lt;i 
     *ngIf&#x3D;&quot;withArrows&quot;
-    class&#x3D;&quot;w6 w6-angle-left leftArrow&quot;
+    class&#x3D;&quot;w6 w6-angle-left arrow leftArrow&quot;
+    (keypress)&#x3D;&quot;onNavClicked($event, &#x27;left&#x27;)&quot;
+    title&#x3D;&quot;{{title.left}}&quot;
     (click)&#x3D;&quot;onNavClicked($event, &#x27;left&#x27;)&quot;
     tabindex&#x3D;&quot;0&quot;
   &gt;&lt;/i&gt;
-  &lt;span
-    &gt;&lt;i
+  &lt;span&gt;
+    &lt;i title&#x3D;&quot;{{title.icon}}&quot;
       role&#x3D;&quot;button&quot;
-      [id]&#x3D;&quot;[id]&quot;
       [ngClass]&#x3D;&quot;[cssClasses]&quot;
       (click)&#x3D;&quot;onClickHandler($event)&quot;
+      (keypress)&#x3D;&quot;onClickHandler($event)&quot;
       tabindex&#x3D;&quot;0&quot;
-    &gt;&lt;/i
-  &gt;&lt;/span&gt;
-  &lt;i
+    &gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;i 
     *ngIf&#x3D;&quot;withArrows&quot;
     class&#x3D;&quot;w6 w6-angle-right arrow&quot;
+    title&#x3D;&quot;{{title.right}}&quot;
+    (keypress)&#x3D;&quot;onNavClicked($event, &#x27;right&#x27;)&quot;
     (click)&#x3D;&quot;onNavClicked($event, &#x27;right&#x27;)&quot;
     tabindex&#x3D;&quot;0&quot;
   &gt;&lt;/i&gt;
@@ -713,10 +742,10 @@ TODO: fix the typo at automation tests and the component --&gt;
                 <pre class="line-numbers"><code class="language-scss">.icon,
 .calendar-icon {
   font-size: 20px;
-  margin: 20px 10px 20px 20px;
   color: #a7a7a7;
   cursor: pointer;
 }
+
 .icon:hover,
 .calendar-icon:hover {
   color: #1174be;
@@ -726,8 +755,34 @@ TODO: fix the typo at automation tests and the component --&gt;
   outline: none;
   color: #1174be;
 }
+
 .calendar-icon {
-  margin: 12px;
+  margin: 8px;
+}
+
+.leftArrow {
+  margin-left: 20px;
+}
+
+.arrow {
+  color: #A7A7A7;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+}
+.arrow:hover {
+  color: #1174be;
+}
+
+.arrow:focus,
+.leftArrow:focus {
+  color: #1174be;
+  outline: none;
+}
+
+i {
+  font-weight: 900;
 }
 </code></pre>
     </div>
@@ -762,7 +817,7 @@ TODO: fix the typo at automation tests and the component --&gt;
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- CSS class calender with typosupports the automation testsTODO: fix the typo at automation tests and the component --><span class="calender">  <i    *ngIf="withArrows"    class="w6 w6-angle-left leftArrow"    (click)="onNavClicked($event, \'left\')"    tabindex="0"  ></i>  <span    ><i      role="button"      [id]="[id]"      [ngClass]="[cssClasses]"      (click)="onClickHandler($event)"      tabindex="0"    ></i  ></span>  <i    *ngIf="withArrows"    class="w6 w6-angle-right arrow"    (click)="onNavClicked($event, \'right\')"    tabindex="0"  ></i></span></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- CSS class calender with typosupports the automation testsTODO: fix the typo at automation tests and the component --><span class="calender">  <i     *ngIf="withArrows"    class="w6 w6-angle-left arrow leftArrow"    (keypress)="onNavClicked($event, \'left\')"    title="{{title.left}}"    (click)="onNavClicked($event, \'left\')"    tabindex="0"  ></i>  <span>    <i title="{{title.icon}}"      role="button"      [ngClass]="[cssClasses]"      (click)="onClickHandler($event)"      (keypress)="onClickHandler($event)"      tabindex="0"    ></i>  </span>  <i     *ngIf="withArrows"    class="w6 w6-angle-right arrow"    title="{{title.right}}"    (keypress)="onNavClicked($event, \'right\')"    (click)="onNavClicked($event, \'right\')"    tabindex="0"  ></i></span></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconComponent'};
