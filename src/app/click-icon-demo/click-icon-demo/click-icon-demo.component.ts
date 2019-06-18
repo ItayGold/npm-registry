@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
  * @example
  * <example-url>https://stackblitz.com/edit/angular-1wmnxx</example-url>
  */
+
+
+interface Tooltip {
+  left: string;
+  right: string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-click-icon-demo',
   templateUrl: './click-icon-demo.component.html',
   styleUrls: ['./click-icon-demo.component.scss']
 })
+
 export class ClickIconDemoComponent implements OnInit {
   clickIconId: string;
   clickIconName: string;
@@ -19,6 +28,7 @@ export class ClickIconDemoComponent implements OnInit {
   clickIconTitle: string;
   demoWithArrows: boolean;
   demoWithoutArrows: boolean;
+  tooltip: Tooltip;
 
   constructor() {
     this.clickIconId = `click-icon-demo`;
@@ -27,6 +37,12 @@ export class ClickIconDemoComponent implements OnInit {
     this.clickIconTitle = `Click Icon Title`;
     this.demoWithArrows = true;
     this.demoWithoutArrows = false;
+
+    this.tooltip = {
+      left: 'Move 1 Day Backward',
+      right: 'Move 1 Day Forward',
+      icon: 'Change Start Date Of The Gantt'
+    };
   }
 
   ngOnInit() {
