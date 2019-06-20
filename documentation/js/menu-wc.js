@@ -60,24 +60,16 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-54241f105cc4a23b387488b47e55ced5"' : 'data-target="#xs-components-links-module-AppModule-54241f105cc4a23b387488b47e55ced5"' }>
+                                            'data-target="#components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' : 'data-target="#xs-components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-54241f105cc4a23b387488b47e55ced5"' :
-                                            'id="xs-components-links-module-AppModule-54241f105cc4a23b387488b47e55ced5"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' :
+                                            'id="xs-components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/ClickDatePickerComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/ClickDatepickerRangeComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatepickerRangeComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -87,21 +79,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/ClickDatePickerDemoModule.html" data-type="entity-link">ClickDatePickerDemoModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' :
-                                            'id="xs-components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' }>
-                                            <li class="link">
-                                                <a href="components/ClickDatePickerDemoComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerDemoComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/ClickDatePickerRangeDemoModule.html" data-type="entity-link">ClickDatePickerRangeDemoModule</a>
@@ -131,13 +108,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickIconDemoModule.html" data-type="entity-link">ClickIconDemoModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickIconDemoModule-b3f005fa69a6f0d265dea4b5fac42693"' : 'data-target="#xs-components-links-module-ClickIconDemoModule-b3f005fa69a6f0d265dea4b5fac42693"' }>
+                                            'data-target="#components-links-module-ClickIconDemoModule-826f1e94376a27fd995d3ca53bada1a3"' : 'data-target="#xs-components-links-module-ClickIconDemoModule-826f1e94376a27fd995d3ca53bada1a3"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickIconDemoModule-b3f005fa69a6f0d265dea4b5fac42693"' :
-                                            'id="xs-components-links-module-ClickIconDemoModule-b3f005fa69a6f0d265dea4b5fac42693"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickIconDemoModule-826f1e94376a27fd995d3ca53bada1a3"' :
+                                            'id="xs-components-links-module-ClickIconDemoModule-826f1e94376a27fd995d3ca53bada1a3"' }>
                                             <li class="link">
                                                 <a href="components/ClickIconComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickIconComponent</a>
@@ -155,6 +132,28 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                 </ul>
                 </li>
                     <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#components-links"' :
+                            'data-target="#xs-components-links"' }>
+                            <span class="icon ion-md-cog"></span>
+                            <span>Components</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
+                            <li class="link">
+                                <a href="components/ClickDatePickerComponent.html" data-type="entity-link">ClickDatePickerComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickDatePickerDemoComponent.html" data-type="entity-link">ClickDatePickerDemoComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickDatepickerRangeComponent.html" data-type="entity-link">ClickDatepickerRangeComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickIconComponent.html" data-type="entity-link">ClickIconComponent</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
                             'data-target="#xs-interfaces-links"' }>
                             <span class="icon ion-md-information-circle-outline"></span>
@@ -164,9 +163,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse" ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
                                 <a href="interfaces/Message.html" data-type="entity-link">Message</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/Tooltip.html" data-type="entity-link">Tooltip</a>
                             </li>
                         </ul>
                     </li>
@@ -192,7 +188,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                     <li class="divider"></li>
                     <li class="copyright">
                         Documentation generated using <a href="https://compodoc.app/" target="_blank">
-                            <img data-src="images/compodoc-vectorise-inverted.png" class="img-responsive" data-type="compodoc-logo">
+                            <img data-src="images/compodoc-vectorise.png" class="img-responsive" data-type="compodoc-logo">
                         </a>
                     </li>
             </ul>
