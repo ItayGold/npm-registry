@@ -9,7 +9,6 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/postmark.css">
     </head>
     <body>
 
@@ -660,7 +659,7 @@ export class ClickIconComponent implements OnInit {
   @Input() active?: string;
   @Input() cssClasses?: string;
   @Input() id?: string;
-  @Input() title: any;
+  @Input() title?: any;
   @Output() messageEvent?: EventEmitter&lt;string&gt;;
   @Output() prev?: EventEmitter&lt;string&gt;;
   @Output() next?: EventEmitter&lt;string&gt;;
@@ -706,16 +705,17 @@ export class ClickIconComponent implements OnInit {
 supports the automation tests
 TODO: fix the typo at automation tests and the component --&gt;
 &lt;span class&#x3D;&quot;calender&quot;&gt;
-  &lt;i 
+  &lt;i
     *ngIf&#x3D;&quot;withArrows&quot;
     class&#x3D;&quot;w6 w6-angle-left arrow leftArrow&quot;
     (keypress)&#x3D;&quot;onNavClicked($event, &#x27;left&#x27;)&quot;
-    title&#x3D;&quot;{{title.left}}&quot;
+    title&#x3D;&quot;{{ title.left }}&quot;
     (click)&#x3D;&quot;onNavClicked($event, &#x27;left&#x27;)&quot;
     tabindex&#x3D;&quot;0&quot;
   &gt;&lt;/i&gt;
   &lt;span&gt;
-    &lt;i title&#x3D;&quot;{{title.icon}}&quot;
+    &lt;i
+      title&#x3D;&quot;{{ title.icon }}&quot;
       role&#x3D;&quot;button&quot;
       [ngClass]&#x3D;&quot;[cssClasses]&quot;
       (click)&#x3D;&quot;onClickHandler($event)&quot;
@@ -723,10 +723,10 @@ TODO: fix the typo at automation tests and the component --&gt;
       tabindex&#x3D;&quot;0&quot;
     &gt;&lt;/i&gt;
   &lt;/span&gt;
-  &lt;i 
+  &lt;i
     *ngIf&#x3D;&quot;withArrows&quot;
     class&#x3D;&quot;w6 w6-angle-right arrow&quot;
-    title&#x3D;&quot;{{title.right}}&quot;
+    title&#x3D;&quot;{{ title.right }}&quot;
     (keypress)&#x3D;&quot;onNavClicked($event, &#x27;right&#x27;)&quot;
     (click)&#x3D;&quot;onNavClicked($event, &#x27;right&#x27;)&quot;
     tabindex&#x3D;&quot;0&quot;
@@ -817,7 +817,7 @@ i {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- CSS class calender with typosupports the automation testsTODO: fix the typo at automation tests and the component --><span class="calender">  <i     *ngIf="withArrows"    class="w6 w6-angle-left arrow leftArrow"    (keypress)="onNavClicked($event, \'left\')"    title="{{title.left}}"    (click)="onNavClicked($event, \'left\')"    tabindex="0"  ></i>  <span>    <i title="{{title.icon}}"      role="button"      [ngClass]="[cssClasses]"      (click)="onClickHandler($event)"      (keypress)="onClickHandler($event)"      tabindex="0"    ></i>  </span>  <i     *ngIf="withArrows"    class="w6 w6-angle-right arrow"    title="{{title.right}}"    (keypress)="onNavClicked($event, \'right\')"    (click)="onNavClicked($event, \'right\')"    tabindex="0"  ></i></span></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- CSS class calender with typosupports the automation testsTODO: fix the typo at automation tests and the component --><span class="calender">  <i    *ngIf="withArrows"    class="w6 w6-angle-left arrow leftArrow"    (keypress)="onNavClicked($event, \'left\')"    title="{{ title.left }}"    (click)="onNavClicked($event, \'left\')"    tabindex="0"  ></i>  <span>    <i      title="{{ title.icon }}"      role="button"      [ngClass]="[cssClasses]"      (click)="onClickHandler($event)"      (keypress)="onClickHandler($event)"      tabindex="0"    ></i>  </span>  <i    *ngIf="withArrows"    class="w6 w6-angle-right arrow"    title="{{ title.right }}"    (keypress)="onNavClicked($event, \'right\')"    (click)="onNavClicked($event, \'right\')"    tabindex="0"  ></i></span></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconComponent'};

@@ -26,8 +26,6 @@ export class ClickIconDemoComponent implements OnInit {
   clickIconName: string;
   clickIconClasses: string;
   clickIconTitle: string;
-  demoWithArrows: boolean;
-  demoWithoutArrows: boolean;
   tooltip: Tooltip;
 
   constructor() {
@@ -35,8 +33,6 @@ export class ClickIconDemoComponent implements OnInit {
     this.clickIconName = `resolution`;
     this.clickIconClasses = ``;
     this.clickIconTitle = `Click Icon Title`;
-    this.demoWithArrows = true;
-    this.demoWithoutArrows = false;
 
     this.tooltip = {
       left: 'Move 1 Day Backward',

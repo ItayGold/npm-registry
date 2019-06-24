@@ -60,24 +60,25 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+<<<<<<< HEAD
                                             'data-target="#components-links-module-AppModule-e192cb80c71d51925eea8491fcbf9652"' : 'data-target="#xs-components-links-module-AppModule-e192cb80c71d51925eea8491fcbf9652"' }>
+=======
+                                            'data-target="#components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' : 'data-target="#xs-components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' }>
+>>>>>>> 8e4ca86079090b770017f365b260c80c69c16e7e
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
+<<<<<<< HEAD
                                         <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-e192cb80c71d51925eea8491fcbf9652"' :
                                             'id="xs-components-links-module-AppModule-e192cb80c71d51925eea8491fcbf9652"' }>
+=======
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' :
+                                            'id="xs-components-links-module-AppModule-2a679288bed8ab788df09b79c88779b4"' }>
+>>>>>>> 8e4ca86079090b770017f365b260c80c69c16e7e
                                             <li class="link">
                                                 <a href="components/AppComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AppComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/ClickDatePickerComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/ClickDatepickerRangeComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatepickerRangeComponent</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -87,21 +88,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/ClickDatePickerDemoModule.html" data-type="entity-link">ClickDatePickerDemoModule</a>
-                                    <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' : 'data-target="#xs-components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' }>
-                                            <span class="icon ion-md-cog"></span>
-                                            <span>Components</span>
-                                            <span class="icon ion-ios-arrow-down"></span>
-                                        </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' :
-                                            'id="xs-components-links-module-ClickDatePickerDemoModule-c83b62743ce63ed31eb2ac7ead4333a7"' }>
-                                            <li class="link">
-                                                <a href="components/ClickDatePickerDemoComponent.html"
-                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDatePickerDemoComponent</a>
-                                            </li>
-                                        </ul>
-                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/ClickDatePickerRangeDemoModule.html" data-type="entity-link">ClickDatePickerRangeDemoModule</a>
@@ -155,6 +141,28 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                 </ul>
                 </li>
                     <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#components-links"' :
+                            'data-target="#xs-components-links"' }>
+                            <span class="icon ion-md-cog"></span>
+                            <span>Components</span>
+                            <span class="icon ion-ios-arrow-down"></span>
+                        </div>
+                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
+                            <li class="link">
+                                <a href="components/ClickDatePickerComponent.html" data-type="entity-link">ClickDatePickerComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickDatePickerDemoComponent.html" data-type="entity-link">ClickDatePickerDemoComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickDatepickerRangeComponent.html" data-type="entity-link">ClickDatepickerRangeComponent</a>
+                            </li>
+                            <li class="link">
+                                <a href="components/ClickIconComponent.html" data-type="entity-link">ClickIconComponent</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="chapter">
                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
                             'data-target="#xs-interfaces-links"' }>
                             <span class="icon ion-md-information-circle-outline"></span>
@@ -164,9 +172,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse" ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
                                 <a href="interfaces/Message.html" data-type="entity-link">Message</a>
-                            </li>
-                            <li class="link">
-                                <a href="interfaces/Tooltip.html" data-type="entity-link">Tooltip</a>
                             </li>
                         </ul>
                     </li>
@@ -192,7 +197,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                     <li class="divider"></li>
                     <li class="copyright">
                         Documentation generated using <a href="https://compodoc.app/" target="_blank">
-                            <img data-src="images/compodoc-vectorise-inverted.png" class="img-responsive" data-type="compodoc-logo">
+                            <img data-src="images/compodoc-vectorise.png" class="img-responsive" data-type="compodoc-logo">
                         </a>
                     </li>
             </ul>

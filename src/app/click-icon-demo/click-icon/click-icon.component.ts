@@ -19,7 +19,7 @@ export class ClickIconComponent implements OnInit {
   @Input() active?: string;
   @Input() cssClasses?: string;
   @Input() id?: string;
-  @Input() title: any;
+  @Input() title?: any;
   @Output() messageEvent?: EventEmitter<string>;
   @Output() prev?: EventEmitter<string>;
   @Output() next?: EventEmitter<string>;

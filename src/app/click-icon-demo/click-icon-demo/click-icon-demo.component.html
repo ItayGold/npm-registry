@@ -17,11 +17,12 @@
     <div>
       <h4>Without the arrows</h4>
       <click-icon
-        [withArrows]="demoWithoutArrows"
+        [withArrows]="false"
         (click)="onClickIcon($event)"
         (messageEvent)="getIconName($event)"
         (prev)="onPrevClicked($event)"
         (next)="onNextClicked($event)"
+        [title]="tooltip"
       ></click-icon>
     </div>
   </div>

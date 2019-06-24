@@ -32,7 +32,7 @@
     "@angular/platform-browser-dynamic": "^7.2.15",
     "@angular/router": "^7.2.15",
     "@click/date-picker": "^1.4.3",
-    "@click/icon": "^1.4.34",
+    "@click/icon": "^1.4.35",
     "bootstrap": "^4.3.1",
     "commander": "^2.20.0",
     "core-js": "^2.6.9",
