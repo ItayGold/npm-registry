@@ -194,5 +194,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "npm-registry"
 }

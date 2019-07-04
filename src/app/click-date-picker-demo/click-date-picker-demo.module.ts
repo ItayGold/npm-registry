@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ClickIconDemoModule } from '../click-icon-demo/click-icon-demo.module';
 import { ClickDatePickerRoutingModule } from './click-date-picker-routing.module';
-import { ClickDatePickerModule } from '@click/date-picker';
-import { ClickIconModule } from '@click/icon';
+import { ClickDatePickerComponent } from './click-date-picker/click-date-picker.component';
 import { ClickDatePickerDemoComponent } from './click-date-picker-demo/click-date-picker-demo.component';
 
 @NgModule({
-  declarations: [ClickDatePickerDemoComponent],
+  declarations: [ClickDatePickerComponent, ClickDatePickerDemoComponent],
   imports: [
     CommonModule,
-    ClickDatePickerRoutingModule,
-    ClickIconModule,
-    ClickDatePickerModule
+    DatepickerModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    ClickIconDemoModule,
+    ClickDatePickerRoutingModule
   ],
 })
 export class ClickDatePickerDemoModule { }
