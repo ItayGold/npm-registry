@@ -1,0 +1,26 @@
+.click-search-input-demo-container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.click-search-input-demo h4{
+  padding: 50px 0 25px;
+}
+
+.click-search-input-demo-content{
+  display: flex;
+  flex-direction: row;
+
+  * {
+    flex-basis: 50%;
+    text-align: left;
+
+    &:first-child{
+      margin-right: 10px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+}
