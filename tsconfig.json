@@ -11,13 +11,32 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "paths": {
-      "click-date-picker": ["dist/click-date-picker"],
-      "click-date-picker/*": ["dist/click-date-picker/*"],
-      "click-icon": ["dist/click-icon"],
-      "click-icon/*": ["dist/click-icon/*"]
+      "click-date-picker": [
+        "dist/click-date-picker"
+      ],
+      "click-date-picker/*": [
+        "dist/click-date-picker/*"
+      ],
+      "click-icon": [
+        "dist/click-icon"
+      ],
+      "click-icon/*": [
+        "dist/click-icon/*"
+      ],
+      "click-tristate-checkbox": [
+        "dist/click-tristate-checkbox"
+      ],
+      "click-tristate-checkbox/*": [
+        "dist/click-tristate-checkbox/*"
+      ]
     }
   }
 }

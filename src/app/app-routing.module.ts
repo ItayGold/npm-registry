@@ -18,6 +18,11 @@ const routes: Routes = [
       .then(mod => mod.ClickIconDemoModule)
   },
   {
+    path: 'tristate-checkbox',
+    loadChildren: () => import('./click-tristate-checkbox/click-tristate-checkbox.module')
+      .then(mod => mod.ClickTristateCheckboxModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
