@@ -1,0 +1,18 @@
+<div class="search" [class.has-value]="hasValue">
+  <i class="search-icon icon icon-search"></i>
+  <button
+    type="button"
+    class="search-clear icon icon-remove"
+    (click)="resetSearch()"
+    (focusin)="onFocusIn()"
+    (focusout)="onFocusOut()"></button>
+  <input
+    #searchInput
+    type="text"
+    maxlength="32"
+    class="search-input"
+    (input)="onSearchChange($event.target.value)"
+    (focusin)="onFocusIn()"
+    (focusout)="onFocusOut()"
+    [placeholder]="placeholder" />
+</div>
