@@ -1,0 +1,45 @@
+.tree {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0%;
+}
+
+.tree-search {
+  margin-bottom: 12px;
+
+  .modal-body.with-search & {
+    padding: 0 15px;
+  }
+}
+
+.tree-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  color: #333;
+  min-height: 0%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .nav-tree-body .tree > & {
+    margin-left: 15px;
+  }
+
+  & & {
+    padding-left: 27px;
+  }
+}
+
+.tree-list-inner {
+  margin-right: 15px;
+  margin-bottom: 28px;
+}
+
+.tree-list > * {
+  flex: 1 1 auto;
+  min-height: 0%;
+  display: flex;
+  flex-direction: column;
+}
