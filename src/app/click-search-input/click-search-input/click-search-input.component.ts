@@ -7,7 +7,7 @@ import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewCh
 })
 export class ClickSearchInputComponent {
 
-  private hasValue = false;
+  hasValue = false;
 
   @Input() placeholder = 'Search...';
   @Output() changed = new EventEmitter<string>();

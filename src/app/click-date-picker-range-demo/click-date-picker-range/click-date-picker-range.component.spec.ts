@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClickDatePickerRangeComponent } from './click-date-picker-range.component';
+import { ClickDatepickerRangeComponent as ClickDatePickerRangeComponent  } from './click-date-picker-range.component';
 
 describe('ClickDatePickerRangeComponent', () => {
   let component: ClickDatePickerRangeComponent;

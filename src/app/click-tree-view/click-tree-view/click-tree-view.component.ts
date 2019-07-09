@@ -12,7 +12,7 @@ import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristat
 })
 export class ClickTreeViewComponent implements OnInit {
 
-  private hasResults = true;
+  public hasResults = true;
   private workingNodes: Map<number, ClickTreeNode> = new Map<number, ClickTreeNode>();
 
   @Input() keys: ClickKeyNode[];
