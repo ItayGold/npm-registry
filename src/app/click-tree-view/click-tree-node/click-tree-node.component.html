@@ -1,13 +1,23 @@
 <li *ngIf="node.isVisible" class="tree-item" [ngClass]="getNodeStateClass()">
+
   <div class="tree-item-body">
-    <span class="tree-item-arrow fa fa-angle-right" (click)="onNodeClick($event, node)"></span>
+    <span class="tree-item-arrow" (click)="onNodeClick($event, node)"></span>
     <click-tristate-checkbox [value]='node.checkState' (valueChanged)="onChecked($event, node)"></click-tristate-checkbox>
     <span [innerHTML]="getLabelWithAmount()" class="tree-item-label" (click)="onNodeClick($event, node)">
     </span>
   </div>
-  <ul *ngIf="hasChildren()" class="tree-list has-sublist" [class.is-visible]="node.isExpanded"
-    [class.is-hidden]="!node.isExpanded">
-    <click-tree-node *ngFor="let key of keyNode.children" [keyNode]="key" [nodes]="nodes"
-      (changed)="onSubNodeChanged($event)"></click-tree-node>
+
+  <ul
+    *ngIf="hasChildren()"
+    class="tree-list has-sublist"
+    [class.is-visible]="node.isExpanded"
+    [class.is-hidden]="!node.isExpanded"
+  >
+    <click-tree-node
+      *ngFor="let key of keyNode.children"
+      [keyNode]="key"
+      [nodes]="nodes"
+      (changed)="onSubNodeChanged($event)"
+    ></click-tree-node>
   </ul>
 </li>
