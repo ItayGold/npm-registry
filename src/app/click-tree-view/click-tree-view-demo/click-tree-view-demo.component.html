@@ -4,9 +4,49 @@
   <div class="click-tree-view-demo">
     <h4>Empty tree view</h4>
     <div class="click-tree-view-demo-content">
-      <click-tree-view [nodes]="mockNodes" [keys]="mockKeys"></click-tree-view>
+      <click-tree-view></click-tree-view>
       <code>{{ codes[0] }}</code>
     </div>
   </div>
-   
+
+  <div class="click-tree-view-demo">
+    <h4>Placeholdered tree view</h4>
+    <div class="click-tree-view-demo-content">
+      <click-tree-view filterPlaceholder="Type search string..."></click-tree-view>
+      <code>{{ codes[1] }}</code>
+    </div>
+  </div>
+
+  <div class="click-tree-view-demo">
+    <h4>Filled tree view</h4>
+    <div class="click-tree-view-demo-content">
+      <click-tree-view [nodes]="mockNodes" [keys]="mockKeys"></click-tree-view>
+      <pre><code>{{ codes[2] }}</code></pre>
+    </div>
+  </div>
+
+  <div class="click-tree-view-demo">
+    <h4>Expanded tree view</h4>
+    <div class="click-tree-view-demo-content">
+      <click-tree-view [nodes]="mockNodes2" [keys]="mockKeys"></click-tree-view>
+      <pre><code>{{ codes[3] }}</code></pre>
+    </div>
+  </div>
+
+  <div class="click-tree-view-demo">
+    <h4>Selected tree view</h4>
+    <div class="click-tree-view-demo-content">
+      <click-tree-view [nodes]="mockNodes3" [keys]="mockKeys"></click-tree-view>
+      <pre><code>{{ codes[4] }}</code></pre>
+    </div>
+  </div>
+
+  <div class="click-tree-view-demo">
+    <h4>Change event tree view</h4>
+    <div class="click-tree-view-demo-content">
+      <click-tree-view [nodes]="mockNodes4" [keys]="mockKeys" (changeTree)="onChangeTree($event)"></click-tree-view>
+      <pre><code>{{ codes[5] }}</code></pre>
+    </div>
+  </div>
+  
 </div>

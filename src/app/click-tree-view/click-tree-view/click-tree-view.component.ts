@@ -13,11 +13,11 @@ import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristat
 export class ClickTreeViewComponent implements OnInit {
 
   private hasResults = true;
+  private workingNodes: Map<number, ClickTreeNode> = new Map<number, ClickTreeNode>();
 
-  @Input() nodes: Map<number, ClickTreeNode>;
-  @Input() workingNodes: Map<number, ClickTreeNode> = new Map<number, ClickTreeNode>();
-  @Input() filterPlaceholder: string = 'Search...';
   @Input() keys: ClickKeyNode[];
+  @Input() nodes: Map<number, ClickTreeNode>;
+  @Input() filterPlaceholder: string = 'Search...';
   @Output() changeTree = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
 
   @ViewChild('searchInput') searchInput: any;
@@ -26,7 +26,10 @@ export class ClickTreeViewComponent implements OnInit {
   constructor(private calculationService: ClickTreeViewCalculationService) {}
 
   ngOnInit(): void {
-    if (!this.nodes) return;
+    if (!this.nodes) {
+      this.hasResults = false;
+      return;
+    }
 
     this.nodes.forEach((node) => {
       if (!node.isVisible) {
@@ -43,8 +46,6 @@ export class ClickTreeViewComponent implements OnInit {
       copiedNode.label = node.label;
       copiedNode.loweredLabel = node.loweredLabel;
       copiedNode.levelIndex = node.levelIndex;
-
-      
 
       this.workingNodes.set(copiedNode.key, copiedNode);
     });
@@ -68,6 +69,10 @@ export class ClickTreeViewComponent implements OnInit {
       this.refreshNodes();
       this.checkVisibleNodes();
       this.updateScrollBar();
+      return;
+    }
+
+    if (!this.keys) {
       return;
     }
 
