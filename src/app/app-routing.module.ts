@@ -23,6 +23,11 @@ const routes: Routes = [
       .then(mod => mod.ClickTristateCheckboxModule)
   },
   {
+    path: 'search-input',
+    loadChildren: () => import('./click-search-input/click-search-input.module')
+      .then(mod => mod.ClickSearchInputModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

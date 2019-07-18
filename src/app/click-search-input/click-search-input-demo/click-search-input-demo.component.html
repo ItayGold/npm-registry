@@ -1,0 +1,28 @@
+<div class="click-search-input-demo-container">
+  <h3>click search input</h3>
+
+  <div class="click-search-input-demo">
+    <h4>Empty search input</h4>
+    <div class="click-search-input-demo-content">
+      <click-search-input></click-search-input>
+      <code>{{ codes[0] }}</code>
+    </div>
+  </div>
+
+  <div class="click-search-input-demo">
+    <h4>Placeholdered search input</h4>
+    <div class="click-search-input-demo-content">
+      <click-search-input placeholder="Type search string..."></click-search-input>
+      <code>{{ codes[1] }}</code>
+    </div>
+  </div>
+
+  <div class="click-search-input-demo">
+      <h4>Placeholdered search input</h4>
+      <div class="click-search-input-demo-content">
+        <click-search-input (changed)="onChanged($event)"></click-search-input>
+        <code>{{ codes[2] }}</code>
+      </div>
+    </div>
+  
+</div>

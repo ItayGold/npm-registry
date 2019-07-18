@@ -237,7 +237,44 @@
           "options": {
             "tsConfig": [
               "projects/click-tristate-checkbox/tsconfig.lib.json",
-              "projects/click-tristate-checkbox/tsconfig.spec.json"
+              "projects/click-tristate-checkbox/tsconfig.spec.json",
+              "projects/search-input/tsconfig.lib.json",
+              "projects/search-input/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "click-search-input": {
+      "root": "projects/click-search-input",
+      "sourceRoot": "projects/click-search-input/src",
+      "projectType": "library",
+      "prefix": "click",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/click-search-input/tsconfig.lib.json",
+            "project": "projects/click-search-input/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/click-search-input/src/test.ts",
+            "tsConfig": "projects/click-search-input/tsconfig.spec.json",
+            "karmaConfig": "projects/click-search-input/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/click-search-input/tsconfig.lib.json",
+              "projects/click-search-input/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
