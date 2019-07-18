@@ -1,5 +1,5 @@
 <div class="form-field" [class.has-error]="!!errorLabel">
-  <div [ngClass]="{'multiselected': valueInternal === checkboxState.Intermediate}" class="checkbox">
+  <div class="checkbox" [class.multiselected]="valueInternal === checkboxState.Intermediate">
     <input
       [id]="id"
       (change)="onCheckboxChange()"
