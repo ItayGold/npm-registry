@@ -28,6 +28,18 @@ import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewCh
       width: 100%;
       height: 38px;
     }
+    :host-context(.tabs-search) .search {
+      height: 100%;
+    }
+    :host-context(.table-heading.has-search) .search {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: auto;
+      width: auto;
+    }
     .search-icon {
       position: absolute;
       top: 50%;
@@ -79,9 +91,12 @@ import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewCh
       box-shadow: none;
       transition: 0.3s ease;
     }
-    .sidebar-search .search-input {
+    :host-context(.sidebar-search) .search-input {
       background-color: #3d474f;
       border: 1px solid #3d474f;
+    }
+    :host-context(.table-heading.has-search) .search-input:not(:focus):not(:hover):not(.has-value) {
+      background-color: transparent;
     }
     .search-input:disabled {
       background-color: #f3f3f3;
@@ -113,9 +128,6 @@ import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewCh
     .search-clear + .search-input,
     .search-icon.right + .search-input {
       padding-right: 38px;
-    }
-    .table-heading.has-search .search-input:not(:focus):not(:hover):not(.has-value) {
-      background-color: transparent;
     }
     .icon {
       display: inline-block;
