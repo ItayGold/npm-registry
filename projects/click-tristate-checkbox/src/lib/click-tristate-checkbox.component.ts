@@ -4,15 +4,15 @@ import { ClickTristateCheckboxState } from './click-tristate-checkbox-state.enum
 @Component({
   selector: 'click-tristate-checkbox',
   template: `
-    <div class="form-field" [class.has-error]="!!errorLabel">
-      <div class="checkbox" [class.multiselected]="valueInternal === checkboxState.Intermediate">
+    <div class="checkbox-field" [class.has-error]="!!errorLabel">
+      <div class="checkbox" [class.multiselected]="isMultiselected">
         <input
-          [id]="id"
-          (change)="onCheckboxChange()"
-          [checked]="convertCheckboxStateToBoolean()"
-          [disabled]="disabled"
-          class="checkbox-input visually-hidden"
           type="checkbox"
+          class="checkbox-input visually-hidden"
+          [id]="id"
+          [checked]="!isUnchecked"
+          [disabled]="disabled"
+          (change)="onCheckboxChange()"
         >
         <label class="checkbox-control" [for]="id">
           <span class="checkbox-mark"></span>
@@ -21,28 +21,38 @@ import { ClickTristateCheckboxState } from './click-tristate-checkbox-state.enum
           </span>
         </label>
       </div>
-      <div class="form-error">{{ errorLabel }}</div>
+      <div class="checkbox-error">{{ errorLabel }}</div>
     </div>
   `,
   styles: [`
-    .form-field {
+    .checkbox-field {
       color: #333;
       font-size: 14px;
     }
-    .form-field + .form-field {
+    .checkbox-field + .checkbox-field {
       margin-left: 10px;
     }
-    .form-error {
+    .checkbox-error {
       display: none;
       margin-top: 3px;
       color: #cd4032;
       font-weight: 500;
     }
-    .form-field.has-error .form-error {
+    .checkbox-field.has-error .checkbox-error {
       display: block;
     }
-    .checkbox ~ .form-error {
+    .checkbox ~ .checkbox-error {
       margin-left: 25px;
+    }
+    .checkbox-input {
+      margin: -1px;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip: rect(0, 0, 0, 0);
+      position: absolute;
     }
     .checkbox-control {
       display: flex;
@@ -127,30 +137,19 @@ import { ClickTristateCheckboxState } from './click-tristate-checkbox-state.enum
       background-color: #08559d;
       border-color: #08559d;
     }
-    .form-field.has-error .checkbox-input ~ .checkbox-control .checkbox-mark, .form-field.has-error .checkbox-input:hover ~ .checkbox-control .checkbox-mark {
+    .checkbox-field.has-error .checkbox-input ~ .checkbox-control .checkbox-mark, .checkbox-field.has-error .checkbox-input:hover ~ .checkbox-control .checkbox-mark {
       border-color: #cd4032;
-    }
-    .visually-hidden {
-      margin: -1px;
-      padding: 0;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      clip: rect(0, 0, 0, 0);
-      position: absolute;
-    }
+    } 
   `],
 })
 export class ClickTristateCheckboxComponent {
 
-  id = this.generateUniqueId();
-  checkboxState = ClickTristateCheckboxState;
-  valueInternal = ClickTristateCheckboxState.Unchecked;
+  public id: string;
+  private valueInternal: ClickTristateCheckboxState;
 
-  @Input() disabled = false;
-  @Input() checkboxLabel: string;
   @Input() errorLabel: string;
+  @Input() checkboxLabel: string;
+  @Input() disabled: boolean = false;
   @Input()
   set value(value: number | boolean) {
     if (value === true) {
@@ -158,13 +157,16 @@ export class ClickTristateCheckboxComponent {
     } else if (value === false) {
       this.valueInternal = ClickTristateCheckboxState.Unchecked;
     } else {
-      this.valueInternal = value;
+      this.valueInternal = value as ClickTristateCheckboxState;
     }
   }
-  @Output() valueChanged: EventEmitter<ClickTristateCheckboxState> = new EventEmitter<ClickTristateCheckboxState>();
 
-  convertCheckboxStateToBoolean(): boolean {
-    return this.valueInternal === ClickTristateCheckboxState.Unchecked ? false : true;
+  @Output()
+  valueChanged: EventEmitter<ClickTristateCheckboxState> = new EventEmitter<ClickTristateCheckboxState>();
+
+  constructor() {
+    this.id = this.generateUniqueId();
+    this.valueInternal = ClickTristateCheckboxState.Unchecked;
   }
 
   private generateUniqueId(): string {
@@ -172,13 +174,19 @@ export class ClickTristateCheckboxComponent {
   }
 
   private calculateNextState(): ClickTristateCheckboxState {
-    return this.valueInternal === ClickTristateCheckboxState.Unchecked
-      ? ClickTristateCheckboxState.Checked
-      : ClickTristateCheckboxState.Unchecked;
+    return this.isUnchecked ? ClickTristateCheckboxState.Checked : ClickTristateCheckboxState.Unchecked;
   }
 
-  onCheckboxChange() {
+  onCheckboxChange(): void {
     this.valueInternal = this.calculateNextState();
     this.valueChanged.emit(this.valueInternal);
+  }
+
+  get isMultiselected(): boolean {
+    return this.valueInternal === ClickTristateCheckboxState.Intermediate;
+  }
+
+  get isUnchecked(): boolean {
+    return this.valueInternal === ClickTristateCheckboxState.Unchecked;
   }
 }
