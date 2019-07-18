@@ -7,12 +7,13 @@ import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewCh
 })
 export class ClickSearchInputComponent {
 
-  private hasValue = false;
+  public hasValue: boolean = false;
 
-  @Input() placeholder = 'Search...';
-  @Output() changed = new EventEmitter<string>();
+  @Input() placeholder: string = 'Search...';
+  @Input() maxLength: number = 32;
+  @Output() changed: EventEmitter<string> = new EventEmitter<string>();
   @ViewChild('searchInput') searchInput: ElementRef;
-  @HostBinding('class.search-focus') searchFocus = false;
+  @HostBinding('class.search-focus') searchFocus: boolean = false;
 
   onFocusIn(): void {
     this.searchFocus = true;
@@ -22,15 +23,14 @@ export class ClickSearchInputComponent {
     this.searchFocus = false;
   }
 
-  onSearchChange(value: string): void {
-    this.hasValue = !!value;
-    this.changed.emit(value.trim());
+  onSearchChange(query: string): void {
+    this.hasValue = !!query;
+    this.changed.emit(query && query.trim());
   }
 
   resetSearch(): void {
     this.searchInput.nativeElement.value = '';
     this.searchInput.nativeElement.dispatchEvent(new Event('input'));
-    this.searchFocus = false;
   }
 
 }

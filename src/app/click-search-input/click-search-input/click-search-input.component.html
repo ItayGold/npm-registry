@@ -9,10 +9,10 @@
   <input
     #searchInput
     type="text"
-    maxlength="32"
     class="search-input"
     (input)="onSearchChange($event.target.value)"
     (focusin)="onFocusIn()"
     (focusout)="onFocusOut()"
+    [maxLength]="maxLength"
     [placeholder]="placeholder" />
 </div>
