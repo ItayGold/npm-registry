@@ -236,6 +236,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
+              "projects/click-tristate-checkbox/tsconfig.lib.json",
+              "projects/click-tristate-checkbox/tsconfig.spec.json",
               "projects/search-input/tsconfig.lib.json",
               "projects/search-input/tsconfig.spec.json"
             ],

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ClickTristateCheckboxState } from '../enums';
 
 @Component({
@@ -8,13 +8,12 @@ import { ClickTristateCheckboxState } from '../enums';
 })
 export class ClickTristateCheckboxComponent {
 
-  id = this.generateUniqueId();
-  checkboxState = ClickTristateCheckboxState;
-  valueInternal = ClickTristateCheckboxState.Unchecked;
+  public id: string;
+  private valueInternal: ClickTristateCheckboxState;
 
-  @Input() disabled = false;
-  @Input() checkboxLabel: string;
   @Input() errorLabel: string;
+  @Input() checkboxLabel: string;
+  @Input() disabled: boolean = false;
   @Input()
   set value(value: number | boolean) {
     if (value === true) {
@@ -22,13 +21,16 @@ export class ClickTristateCheckboxComponent {
     } else if (value === false) {
       this.valueInternal = ClickTristateCheckboxState.Unchecked;
     } else {
-      this.valueInternal = value;
+      this.valueInternal = value as ClickTristateCheckboxState;
     }
   }
-  @Output() valueChanged: EventEmitter<ClickTristateCheckboxState> = new EventEmitter<ClickTristateCheckboxState>();
 
-  convertCheckboxStateToBoolean(): boolean {
-    return this.valueInternal === ClickTristateCheckboxState.Unchecked ? false : true;
+  @Output()
+  valueChanged: EventEmitter<ClickTristateCheckboxState> = new EventEmitter<ClickTristateCheckboxState>();
+
+  constructor() {
+    this.id = this.generateUniqueId();
+    this.valueInternal = ClickTristateCheckboxState.Unchecked;
   }
 
   private generateUniqueId(): string {
@@ -36,13 +38,19 @@ export class ClickTristateCheckboxComponent {
   }
 
   private calculateNextState(): ClickTristateCheckboxState {
-    return this.valueInternal === ClickTristateCheckboxState.Unchecked
-      ? ClickTristateCheckboxState.Checked
-      : ClickTristateCheckboxState.Unchecked;
+    return this.isUnchecked ? ClickTristateCheckboxState.Checked : ClickTristateCheckboxState.Unchecked;
   }
 
-  onCheckboxChange() {
+  onCheckboxChange(): void {
     this.valueInternal = this.calculateNextState();
     this.valueChanged.emit(this.valueInternal);
+  }
+
+  get isMultiselected(): boolean {
+    return this.valueInternal === ClickTristateCheckboxState.Intermediate;
+  }
+
+  get isUnchecked(): boolean {
+    return this.valueInternal === ClickTristateCheckboxState.Unchecked;
   }
 }

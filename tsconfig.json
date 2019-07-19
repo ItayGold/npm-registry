@@ -31,17 +31,23 @@
       "click-icon/*": [
         "dist/click-icon/*"
       ],
-      "click-search-input": [
-        "dist/click-search-input"
-      ],
-      "click-search-input/*": [
-        "dist/click-search-input/*"
-      ],
       "click-tristate-checkbox": [
         "dist/click-tristate-checkbox"
       ],
       "click-tristate-checkbox/*": [
         "dist/click-tristate-checkbox/*"
+      ],
+      "search-input": [
+        "dist/search-input"
+      ],
+      "search-input/*": [
+        "dist/search-input/*"
+      ],
+      "click-search-input": [
+        "dist/click-search-input"
+      ],
+      "click-search-input/*": [
+        "dist/click-search-input/*"
       ]
     }
   }

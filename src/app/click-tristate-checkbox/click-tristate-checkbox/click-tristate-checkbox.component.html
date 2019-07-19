@@ -1,12 +1,12 @@
-<div class="form-field" [class.has-error]="!!errorLabel">
-  <div [ngClass]="{'multiselected': valueInternal === checkboxState.Intermediate}" class="checkbox">
+<div class="checkbox-field" [class.has-error]="!!errorLabel">
+  <div class="checkbox" [class.multiselected]="isMultiselected">
     <input
-      [id]="id"
-      (change)="onCheckboxChange()"
-      [checked]="convertCheckboxStateToBoolean()"
-      [disabled]="disabled"
-      class="checkbox-input visually-hidden"
       type="checkbox"
+      class="checkbox-input visually-hidden"
+      [id]="id"
+      [checked]="!isUnchecked"
+      [disabled]="disabled"
+      (change)="onCheckboxChange()"
     >
     <label class="checkbox-control" [for]="id">
       <span class="checkbox-mark"></span>
@@ -15,5 +15,5 @@
       </span>
     </label>
   </div>
-  <div class="form-error">{{ errorLabel }}</div>
+  <div class="checkbox-error">{{ errorLabel }}</div>
 </div>
