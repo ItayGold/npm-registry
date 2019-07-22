@@ -1,0 +1,25 @@
+<div class="tree">
+
+  <div class="tree-search">
+    <click-search-input
+      #searchInput
+      (changed)="onSearchChanged($event)"
+      [placeholder]="filterPlaceholder"
+    ></click-search-input>
+  </div>
+
+  <ul class="tree-list is-root scroller-container">
+    <div #scrollContainer *ngIf="hasResults" class="tree-list-inner" perfectScrollbar>
+      <click-tree-node
+        *ngFor="let keyNode of keys"
+        [nodes]="workingNodes"
+        [keyNode]="keyNode"
+        (changed)="onTreeNodeChanged($event)"
+      ></click-tree-node>
+    </div>
+
+    <li *ngIf="!hasResults" class="tree-item">
+      <div class="tree-item-label">No items available</div>
+    </li>
+  </ul>
+</div>

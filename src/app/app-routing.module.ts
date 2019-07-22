@@ -18,14 +18,19 @@ const routes: Routes = [
       .then(mod => mod.ClickIconDemoModule)
   },
   {
+    path: 'search-input',
+    loadChildren: () => import('./click-search-input/click-search-input.module')
+      .then(mod => mod.ClickSearchInputModule)
+  },
+  {
     path: 'tristate-checkbox',
     loadChildren: () => import('./click-tristate-checkbox/click-tristate-checkbox.module')
       .then(mod => mod.ClickTristateCheckboxModule)
   },
   {
-    path: 'search-input',
-    loadChildren: () => import('./click-search-input/click-search-input.module')
-      .then(mod => mod.ClickSearchInputModule)
+    path: 'tree-view',
+    loadChildren: () => import('./click-tree-view/click-tree-view.module')
+      .then(mod => mod.ClickTreeViewModule)
   },
   {
     path: '',
