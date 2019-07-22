@@ -1,0 +1,19 @@
+<div class="checkbox-field" [class.has-error]="!!errorLabel">
+  <div class="checkbox" [class.multiselected]="isMultiselected">
+    <input
+      type="checkbox"
+      class="checkbox-input visually-hidden"
+      [id]="id"
+      [checked]="!isUnchecked"
+      [disabled]="disabled"
+      (change)="onCheckboxChange()"
+    >
+    <label class="checkbox-control" [for]="id">
+      <span class="checkbox-mark"></span>
+      <span class="checkbox-label" *ngIf="checkboxLabel">
+         {{ checkboxLabel }}
+      </span>
+    </label>
+  </div>
+  <div class="checkbox-error">{{ errorLabel }}</div>
+</div>

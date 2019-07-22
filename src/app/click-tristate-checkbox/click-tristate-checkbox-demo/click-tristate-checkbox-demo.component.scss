@@ -1,0 +1,18 @@
+.click-tristate-checkbox-demo-container{
+    width: 50%;
+    margin: 0 auto 50px;
+}
+
+.click-tristate-checkbox-demo h4{
+    padding: 50px 0;
+}
+
+.click-tristate-checkbox-demo-content{
+    display: flex;
+    flex-direction: row;
+
+    * {
+        flex-basis: 50%;
+        text-align: left;
+    }
+}
