@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
+import { ClickTristateCheckboxState as CheckboxState } from '@click/tristate-checkbox';
 
-import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection } from '../models';
 import { ClickTreeViewCalculationService } from '../services';
-import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristate-checkbox/enums';
+import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection } from '../models';
 
 @Component({
   selector: 'click-tree-view',
@@ -12,12 +12,14 @@ import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristat
 })
 export class ClickTreeViewComponent implements OnInit {
 
-  public hasResults = true;
+  public hasResults: boolean = true;
+
   private workingNodes: Map<number, ClickTreeNode> = new Map<number, ClickTreeNode>();
 
   @Input() keys: ClickKeyNode[];
   @Input() nodes: Map<number, ClickTreeNode>;
   @Input() filterPlaceholder: string = 'Search...';
+  @Input() noItemPlaceholder: string = 'No items available';
   @Output() changeTree = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
 
   @ViewChild('searchInput') searchInput: any;
@@ -56,7 +58,7 @@ export class ClickTreeViewComponent implements OnInit {
     }
   }
 
-  refreshNodes() {
+  refreshNodes(): void {
     this.workingNodes.forEach((node) => {
       node.isExpanded = false;
       node.isVisible = true;
@@ -64,8 +66,8 @@ export class ClickTreeViewComponent implements OnInit {
     });
   }
 
-  onSearchChanged(searchString) {
-    if (!searchString) {
+  onSearchChanged(query: string) {
+    if (!query) {
       this.refreshNodes();
       this.checkVisibleNodes();
       this.updateScrollBar();
@@ -78,24 +80,24 @@ export class ClickTreeViewComponent implements OnInit {
 
     for (const keyNode of this.keys) {
       const node = this.workingNodes.get(keyNode.key);
-      this.markResults(node, keyNode, searchString);
+      this.markResults(node, keyNode, query);
     }
 
     this.checkVisibleNodes();
     this.updateScrollBar();
   }
 
-  onTreeNodeChanged(event: { node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }) {
+  onTreeNodeChanged(event: { node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }): void {
     this.checkVisibleNodes();
     this.updateScrollBar();
     this.changeTree.emit(event);
   }
 
-  checkVisibleNodes() {
+  checkVisibleNodes(): void {
     this.hasResults = this.workingNodesArray.some(item => !!item.isVisible);
   }
 
-  get workingNodesArray() {
+  get workingNodesArray(): ClickTreeNode[] {
     return Array.from(this.workingNodes.values());
   }
 
@@ -109,7 +111,7 @@ export class ClickTreeViewComponent implements OnInit {
       : str;
   }
 
-  private markResults(node: ClickTreeNode, keyNode: ClickKeyNode, searchString: string) {
+  private markResults(node: ClickTreeNode, keyNode: ClickKeyNode, searchString: string): void {
     if (node.loweredLabel.indexOf(searchString.toLocaleLowerCase()) >= 0) {
       node.highlightedLabel = this.highlightString(node.label, searchString, 'highlighted');
       node.isExpanded = true;
@@ -131,7 +133,7 @@ export class ClickTreeViewComponent implements OnInit {
     }
   }
 
-  private expandParents(node: ClickTreeNode, keyNode: ClickKeyNode) {
+  private expandParents(node: ClickTreeNode, keyNode: ClickKeyNode): void {
     node.isExpanded = true;
     node.isVisible = true;
 
@@ -143,7 +145,7 @@ export class ClickTreeViewComponent implements OnInit {
     this.expandParents(parent, keyNode.parentKeyNode);
   }
 
-  private updateScrollBar() {
+  private updateScrollBar(): void {
     if (this.perfectScrollbarDirective) {
       this.perfectScrollbarDirective.update();
     }

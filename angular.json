@@ -282,6 +282,41 @@
           }
         }
       }
+    },
+    "click-tree-view": {
+      "root": "projects/click-tree-view",
+      "sourceRoot": "projects/click-tree-view/src",
+      "projectType": "library",
+      "prefix": "click",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/click-tree-view/tsconfig.lib.json",
+            "project": "projects/click-tree-view/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/click-tree-view/src/test.ts",
+            "tsConfig": "projects/click-tree-view/tsconfig.spec.json",
+            "karmaConfig": "projects/click-tree-view/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/click-tree-view/tsconfig.lib.json",
+              "projects/click-tree-view/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "npm-registry"

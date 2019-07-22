@@ -3,8 +3,7 @@
   <div class="tree-item-body">
     <span class="tree-item-arrow" (click)="onNodeClick($event, node)"></span>
     <click-tristate-checkbox [value]='node.checkState' (valueChanged)="onChecked($event, node)"></click-tristate-checkbox>
-    <span [innerHTML]="getLabelWithAmount()" class="tree-item-label" (click)="onNodeClick($event, node)">
-    </span>
+    <span class="tree-item-label" [innerHTML]="getLabelWithAmount()" (click)="onNodeClick($event, node)"></span>
   </div>
 
   <ul

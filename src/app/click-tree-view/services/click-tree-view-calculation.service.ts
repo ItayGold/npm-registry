@@ -5,7 +5,7 @@ import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristat
 
 @Injectable({ providedIn: 'root' })
 export class ClickTreeViewCalculationService {
-  getAmountOfSelectedSubNodes(keyNode: ClickKeyNode, nodes: Map<number, ClickTreeNode>) {
+  getAmountOfSelectedSubNodes(keyNode: ClickKeyNode, nodes: Map<number, ClickTreeNode>): number {
     const amountWrapper = {
       amount: 0
     };
@@ -17,8 +17,9 @@ export class ClickTreeViewCalculationService {
     return amountWrapper.amount;
   }
 
-  private calculateSelectedAmount(keyNode: ClickKeyNode, amountObj: { amount: number }, nodes: Map<number, ClickTreeNode>) {
+  private calculateSelectedAmount(keyNode: ClickKeyNode, amountObj: { amount: number }, nodes: Map<number, ClickTreeNode>): void {
     const node = nodes.get(keyNode.key);
+
     if (node.isVisible && (node.checkState === CheckboxState.Checked || node.checkState === CheckboxState.Intermediate)) {
       amountObj.amount += 1;
     }
