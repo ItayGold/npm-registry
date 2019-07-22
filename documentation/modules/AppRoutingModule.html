@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
     </head>
     <body>
 
@@ -88,6 +89,21 @@ const routes: Routes &#x3D; [
     path: &#x27;icon&#x27;,
     loadChildren: () &#x3D;&gt; &quot;import(&#x27;./click-icon-demo/click-icon-demo.module&#x27;)\
       .then(mod &#x3D;&gt; mod.ClickIconDemoModule)&quot;
+  },
+  {
+    path: &#x27;search-input&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./click-search-input/click-search-input.module&#x27;)\
+      .then(mod &#x3D;&gt; mod.ClickSearchInputModule)&quot;
+  },
+  {
+    path: &#x27;tristate-checkbox&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./click-tristate-checkbox/click-tristate-checkbox.module&#x27;)\
+      .then(mod &#x3D;&gt; mod.ClickTristateCheckboxModule)&quot;
+  },
+  {
+    path: &#x27;tree-view&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./click-tree-view/click-tree-view.module&#x27;)\
+      .then(mod &#x3D;&gt; mod.ClickTreeViewModule)&quot;
   },
   {
     path: &#x27;&#x27;,
