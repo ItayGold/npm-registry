@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
     </head>
     <body>
 
@@ -661,7 +662,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Tooltip</code>
+                            <i>Type : </i>        <code><a href="../interfaces/Tooltip.html" target="_self" >Tooltip</a></code>
 
                         </td>
                     </tr>
@@ -833,7 +834,7 @@ export class ClickIconDemoComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <div class="click-icon-demo">    <div>      <h4>With the arrows</h4>      <click-icon        [withArrows]="true"        (click)="onClickIcon($event)"        (messageEvent)="getIconName($event)"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"        [title]="tooltip"      ></click-icon>    </div>    <div>      <h4>Without the arrows</h4>      <click-icon        [withArrows]="false"        (click)="onClickIcon($event)"        (messageEvent)="getIconName($event)"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"        [title]="tooltip"      ></click-icon>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconDemoComponent'};
 </script>

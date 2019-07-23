@@ -1,0 +1,982 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@click/npm-registry documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ClickTristateCheckboxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>click-tristate-checkbox</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./click-tristate-checkbox.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./click-tristate-checkbox.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#valueInternal">valueInternal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateNextState">calculateNextState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#generateUniqueId">generateUniqueId</a>
+                            </li>
+                            <li>
+                                <a href="#onCheckboxChange">onCheckboxChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkboxLabel">checkboxLabel</a>
+                            </li>
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                            <li>
+                                <a href="#errorLabel">errorLabel</a>
+                            </li>
+                            <li>
+                                <a href="#value">value</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#valueChanged">valueChanged</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#value">value</a>
+                                </li>
+                                <li>
+                                    <a href="#isMultiselected">isMultiselected</a>
+                                </li>
+                                <li>
+                                    <a href="#isUnchecked">isUnchecked</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="checkboxLabel"></a>
+                        <b>checkboxLabel</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:15</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <b>disabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:16</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorLabel"></a>
+                        <b>errorLabel</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:14</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <b>value</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:18</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="valueChanged"></a>
+                        <b>valueChanged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ClickTristateCheckboxState" target="_self" >EventEmitter&lt;ClickTristateCheckboxState&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:29</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateNextState"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            calculateNextState
+                        </b>
+                        <a href="#calculateNextState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateNextState()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/enumerations.html#ClickTristateCheckboxState" target="_self" >ClickTristateCheckboxState</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateUniqueId"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            generateUniqueId
+                        </b>
+                        <a href="#generateUniqueId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateUniqueId()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCheckboxChange"></a>
+                    <span class="name">
+                        <b>
+                            onCheckboxChange
+                        </b>
+                        <a href="#onCheckboxChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCheckboxChange()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            id</b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="valueInternal"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            valueInternal</b>
+                            <a href="#valueInternal"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ClickTristateCheckboxState" target="_self" >ClickTristateCheckboxState</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>value(value)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:18</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isMultiselected"></a>
+                        <span class="name"><b>isMultiselected</b><a href="#isMultiselected"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isMultiselected()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:49</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isUnchecked"></a>
+                        <span class="name"><b>isUnchecked</b><a href="#isUnchecked"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>isUnchecked()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component.ts:53</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, Output } from &#x27;@angular/core&#x27;;
+import { ClickTristateCheckboxState } from &#x27;../enums&#x27;;
+
+@Component({
+  selector: &#x27;click-tristate-checkbox&#x27;,
+  templateUrl: &#x27;./click-tristate-checkbox.component.html&#x27;,
+  styleUrls: [&#x27;./click-tristate-checkbox.component.scss&#x27;],
+})
+export class ClickTristateCheckboxComponent {
+
+  public id: string;
+  private valueInternal: ClickTristateCheckboxState;
+
+  @Input() errorLabel: string;
+  @Input() checkboxLabel: string;
+  @Input() disabled: boolean &#x3D; false;
+  @Input()
+  set value(value: number | boolean) {
+    if (value &#x3D;&#x3D;&#x3D; true) {
+      this.valueInternal &#x3D; ClickTristateCheckboxState.Checked;
+    } else if (value &#x3D;&#x3D;&#x3D; false) {
+      this.valueInternal &#x3D; ClickTristateCheckboxState.Unchecked;
+    } else {
+      this.valueInternal &#x3D; value as ClickTristateCheckboxState;
+    }
+  }
+
+  @Output()
+  valueChanged: EventEmitter&lt;ClickTristateCheckboxState&gt; &#x3D; new EventEmitter&lt;ClickTristateCheckboxState&gt;();
+
+  constructor() {
+    this.id &#x3D; this.generateUniqueId();
+    this.valueInternal &#x3D; ClickTristateCheckboxState.Unchecked;
+  }
+
+  private generateUniqueId(): string {
+    return &#x60;_${Math.random().toString(36).substr(2, 9)}&#x60;;
+  }
+
+  private calculateNextState(): ClickTristateCheckboxState {
+    return this.isUnchecked ? ClickTristateCheckboxState.Checked : ClickTristateCheckboxState.Unchecked;
+  }
+
+  onCheckboxChange(): void {
+    this.valueInternal &#x3D; this.calculateNextState();
+    this.valueChanged.emit(this.valueInternal);
+  }
+
+  get isMultiselected(): boolean {
+    return this.valueInternal &#x3D;&#x3D;&#x3D; ClickTristateCheckboxState.Intermediate;
+  }
+
+  get isUnchecked(): boolean {
+    return this.valueInternal &#x3D;&#x3D;&#x3D; ClickTristateCheckboxState.Unchecked;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;checkbox-field&quot; [class.has-error]&#x3D;&quot;!!errorLabel&quot;&gt;
+  &lt;div class&#x3D;&quot;checkbox&quot; [class.multiselected]&#x3D;&quot;isMultiselected&quot;&gt;
+    &lt;input
+      type&#x3D;&quot;checkbox&quot;
+      class&#x3D;&quot;checkbox-input visually-hidden&quot;
+      [id]&#x3D;&quot;id&quot;
+      [checked]&#x3D;&quot;!isUnchecked&quot;
+      [disabled]&#x3D;&quot;disabled&quot;
+      (change)&#x3D;&quot;onCheckboxChange()&quot;
+    &gt;
+    &lt;label class&#x3D;&quot;checkbox-control&quot; [for]&#x3D;&quot;id&quot;&gt;
+      &lt;span class&#x3D;&quot;checkbox-mark&quot;&gt;&lt;/span&gt;
+      &lt;span class&#x3D;&quot;checkbox-label&quot; *ngIf&#x3D;&quot;checkboxLabel&quot;&gt;
+         {{ checkboxLabel }}
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;checkbox-error&quot;&gt;{{ errorLabel }}&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./click-tristate-checkbox.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.checkbox-field {
+  color: #333;
+  font-size: 14px;
+
+  &amp; + &amp; {
+    margin-left: 10px;
+  }
+}
+
+.checkbox-error {
+  display: none;
+  margin-top: 3px;
+  color: #cd4032;
+  font-weight: 500;
+
+  .checkbox-field.has-error &amp; {
+    display: block;
+  }
+
+  .checkbox ~ &amp; {
+    margin-left: 25px;
+  }
+}
+
+.checkbox-input {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.checkbox-control {
+  display: flex;
+  margin: 0;
+  cursor: pointer;
+
+  .checkbox-input:disabled ~ &amp; {
+    cursor: default;
+    color: #808080;
+  }
+}
+
+.checkbox-label {
+  &amp;:not(:empty) {
+    margin-left: 9px;
+    line-height: 19px;
+  }
+  .dropdown-filters &amp; {
+    white-space: nowrap;
+  }
+}
+
+.checkbox-mark {
+  position: relative;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  border: 1px solid #cbcbcb;
+  transition: 0.3s ease;
+  flex: 0 0 auto;
+
+  &amp;::before,
+  &amp;::after {
+    content: none;
+    position: absolute;
+    width: 1.5px;
+    background-color: #fff;
+    display: block;
+  }
+
+  .checkbox-input ~ .checkbox-control &amp;::after {
+    content: none;
+  }
+
+  .checkbox-input:checked ~ .checkbox-control &amp;::before {
+    content: &#x27;&#x27;;
+    top: 7px;
+    left: 3px;
+    transform: rotate(-45deg);
+    height: 4px;
+  }
+
+  .checkbox-input:checked ~ .checkbox-control &amp;::after {
+    content: &#x27;&#x27;;
+    top: 3px;
+    left: 7px;
+    transform: rotate(-135deg);
+    height: 9px;
+  }
+
+  .checkbox.multiselected .checkbox-input:checked ~ .checkbox-control &amp;::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 10px;
+  }
+
+  .checkbox.multiselected
+    .checkbox-input:checked
+    ~ .checkbox-control
+    &amp;::before {
+    content: none;
+  }
+
+  .checkbox-input:disabled ~ .checkbox-control &amp; {
+    background-color: #f3f3f3;
+    border-color: #f3f3f3;
+  }
+
+  .checkbox-input:checked:disabled ~ .checkbox-control &amp; {
+    background-color: #cbcbcb;
+    border-color: #f3f3f3;
+  }
+
+  .checkbox-input:focus ~ .checkbox-control &amp; {
+    border-color: #0875bf;
+    box-shadow: 0 0 2px 0 #0875bf;
+  }
+
+  .checkbox-input:checked:not(:disabled) ~ .checkbox-control &amp; {
+    background-color: #0875bf;
+    border-color: #0875bf;
+  }
+
+  .checkbox:hover .checkbox-input:not(:disabled) ~ .checkbox-control &amp; {
+    border-color: #a7a7a7;
+  }
+
+  .checkbox:hover .checkbox-input:checked:not(:disabled) ~ .checkbox-control &amp; {
+    background-color: #08559d;
+    border-color: #08559d;
+  }
+
+  .checkbox-field.has-error .checkbox-input ~ .checkbox-control &amp;,
+  .checkbox-field.has-error .checkbox-input:hover ~ .checkbox-control &amp; {
+    border-color: #cd4032;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="checkbox-field" [class.has-error]="!!errorLabel">  <div class="checkbox" [class.multiselected]="isMultiselected">    <input      type="checkbox"      class="checkbox-input visually-hidden"      [id]="id"      [checked]="!isUnchecked"      [disabled]="disabled"      (change)="onCheckboxChange()"    >    <label class="checkbox-control" [for]="id">      <span class="checkbox-mark"></span>      <span class="checkbox-label" *ngIf="checkboxLabel">         {{ checkboxLabel }}      </span>    </label>  </div>  <div class="checkbox-error">{{ errorLabel }}</div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ClickTristateCheckboxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ClickTristateCheckboxComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

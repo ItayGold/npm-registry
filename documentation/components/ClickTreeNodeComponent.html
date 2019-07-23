@@ -1,0 +1,1403 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@click/npm-registry documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/postmark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ClickTreeNodeComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/click-tree-view/click-tree-node/click-tree-node.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>click-tree-node</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./click-tree-node.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./click-tree-node.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getLabelWithAmount">getLabelWithAmount</a>
+                            </li>
+                            <li>
+                                <a href="#getNodeStateClass">getNodeStateClass</a>
+                            </li>
+                            <li>
+                                <a href="#getSelectedAmount">getSelectedAmount</a>
+                            </li>
+                            <li>
+                                <a href="#hasChildren">hasChildren</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onChecked">onChecked</a>
+                            </li>
+                            <li>
+                                <a href="#onNodeClick">onNodeClick</a>
+                            </li>
+                            <li>
+                                <a href="#onSubNodeChanged">onSubNodeChanged</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setCheckState">setCheckState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setParentState">setParentState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateScrollBar">updateScrollBar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#keyNode">keyNode</a>
+                            </li>
+                            <li>
+                                <a href="#node">node</a>
+                            </li>
+                            <li>
+                                <a href="#nodes">nodes</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#changed">changed</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class">class</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(domSanitizer: <a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank">DomSanitizer</a>, calculationService: <a href="../injectables/ClickTreeViewCalculationService.html">ClickTreeViewCalculationService</a>, perfectScrollbarDirective: PerfectScrollbarDirective)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>domSanitizer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/DomSanitizer" target="_blank" >DomSanitizer</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>calculationService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ClickTreeViewCalculationService.html" target="_self" >ClickTreeViewCalculationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>perfectScrollbarDirective</td>
+                                                  
+                                                        <td>
+                                                                    <code>PerfectScrollbarDirective</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="keyNode"></a>
+                        <b>keyNode</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ClickKeyNode.html" target="_self" >ClickKeyNode</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:18</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="node"></a>
+                        <b>node</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ClickTreeNode.html" target="_self" >ClickTreeNode</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:16</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nodes"></a>
+                        <b>nodes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/ClickTreeNode.html" target="_self" >Map&lt;number | ClickTreeNode&gt;</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changed"></a>
+                        <b>changed</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:19</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class"></a>
+                        <span class="name">
+                            <b>
+                            class</b>
+                            <a href="#class"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;tree-item-node&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLabelWithAmount"></a>
+                    <span class="name">
+                        <b>
+                            getLabelWithAmount
+                        </b>
+                        <a href="#getLabelWithAmount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLabelWithAmount()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://angular.io/api/platform-browser/SafeHtml" target="_blank" >SafeHtml</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNodeStateClass"></a>
+                    <span class="name">
+                        <b>
+                            getNodeStateClass
+                        </b>
+                        <a href="#getNodeStateClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNodeStateClass()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelectedAmount"></a>
+                    <span class="name">
+                        <b>
+                            getSelectedAmount
+                        </b>
+                        <a href="#getSelectedAmount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSelectedAmount()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasChildren"></a>
+                    <span class="name">
+                        <b>
+                            hasChildren
+                        </b>
+                        <a href="#hasChildren"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasChildren()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onChecked"></a>
+                    <span class="name">
+                        <b>
+                            onChecked
+                        </b>
+                        <a href="#onChecked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onChecked(nextState: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, node: <a href="../classes/ClickTreeNode.html">ClickTreeNode</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nextState</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="../classes/ClickTreeNode.html" target="_self" >ClickTreeNode</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onNodeClick"></a>
+                    <span class="name">
+                        <b>
+                            onNodeClick
+                        </b>
+                        <a href="#onNodeClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onNodeClick($event: <a href="https://angular.io/api/router/Event" target="_blank">Event</a>, node: <a href="../classes/ClickTreeNode.html">ClickTreeNode</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>$event</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/router/Event" target="_blank" >Event</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>node</td>
+                                    <td>
+                                                <code><a href="../classes/ClickTreeNode.html" target="_self" >ClickTreeNode</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubNodeChanged"></a>
+                    <span class="name">
+                        <b>
+                            onSubNodeChanged
+                        </b>
+                        <a href="#onSubNodeChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubNodeChanged(event: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCheckState"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setCheckState
+                        </b>
+                        <a href="#setCheckState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setCheckState(keyNode: <a href="../classes/ClickKeyNode.html">ClickKeyNode</a>, state: CheckboxState)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>keyNode</td>
+                                    <td>
+                                                <code><a href="../classes/ClickKeyNode.html" target="_self" >ClickKeyNode</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>state</td>
+                                    <td>
+                                            <code>CheckboxState</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setParentState"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setParentState
+                        </b>
+                        <a href="#setParentState"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setParentState(keyNode: <a href="../classes/ClickKeyNode.html">ClickKeyNode</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>keyNode</td>
+                                    <td>
+                                                <code><a href="../classes/ClickKeyNode.html" target="_self" >ClickKeyNode</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateScrollBar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            updateScrollBar
+                        </b>
+                        <a href="#updateScrollBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateScrollBar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-node/click-tree-node.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, HostBinding, Input, OnInit, Optional, Output } from &#x27;@angular/core&#x27;;
+import { DomSanitizer, SafeHtml } from &#x27;@angular/platform-browser&#x27;;
+import { PerfectScrollbarDirective } from &#x27;ngx-perfect-scrollbar&#x27;;
+import { ClickTristateCheckboxState as CheckboxState } from &#x27;@click/tristate-checkbox&#x27;;
+
+import { ClickTreeNode, ClickKeyNode } from &#x27;../models&#x27;;
+import { ClickTreeViewCalculationService } from &#x27;../services/click-tree-view-calculation.service&#x27;;
+
+@Component({
+  selector: &#x27;click-tree-node&#x27;,
+  templateUrl: &#x27;./click-tree-node.component.html&#x27;,
+  styleUrls: [&#x27;./click-tree-node.component.scss&#x27;],
+})
+export class ClickTreeNodeComponent implements OnInit {
+
+  @Input() node: ClickTreeNode;
+  @Input() nodes: Map&lt;number, ClickTreeNode&gt;;
+  @Input() keyNode: ClickKeyNode;
+  @Output() changed &#x3D; new EventEmitter&lt;{ node: ClickTreeNode, nodes: Map&lt;number, ClickTreeNode&gt; }&gt;();
+  @HostBinding(&#x27;class&#x27;) class: string &#x3D; &#x27;tree-item-node&#x27;;
+
+  constructor(
+    private domSanitizer: DomSanitizer,
+    private calculationService: ClickTreeViewCalculationService,
+    @Optional() private perfectScrollbarDirective: PerfectScrollbarDirective) {
+  }
+
+  ngOnInit(): void {
+    this.node &#x3D; this.nodes.get(this.keyNode.key);
+  }
+
+  onNodeClick($event: Event, node: ClickTreeNode): void {
+    node.isExpanded &#x3D; !node.isExpanded;
+    this.updateScrollBar();
+
+    if (this.keyNode.children.length &#x3D;&#x3D;&#x3D; 0) {
+      const nextState &#x3D; node.checkState &#x3D;&#x3D;&#x3D; CheckboxState.Checked ? CheckboxState.Unchecked : CheckboxState.Checked;
+      this.onChecked(nextState, node);
+      return;
+    }
+
+    if (node.isExpanded) {
+      node.selectedAmount &#x3D; 0;
+      return;
+    }
+
+    node.selectedAmount &#x3D; this.calculationService.getAmountOfSelectedSubNodes(this.keyNode, this.nodes);
+  }
+
+  onSubNodeChanged(event: { node: ClickTreeNode, nodes: Map&lt;number, ClickTreeNode&gt; }): void {
+    this.changed.emit(event);
+  }
+
+  onChecked(nextState: number, node: ClickTreeNode): void {
+    node.checkState &#x3D; nextState;
+
+    if (node.checkState &#x3D;&#x3D;&#x3D; CheckboxState.Unchecked) {
+      node.selectedAmount &#x3D; 0;
+    }
+
+    this.setCheckState(this.keyNode, nextState);
+    this.setParentState(this.keyNode);
+
+    this.changed.emit({ node, nodes: this.nodes });
+  }
+
+  getSelectedAmount(): string {
+    return this.node.selectedAmount ? &#x60;(${this.node.selectedAmount} selected)&#x60; : &#x27;&#x27;;
+  }
+
+  getNodeStateClass(): string {
+    const { children } &#x3D; this.keyNode;
+    const subNodes &#x3D; children.map(x &#x3D;&gt; this.nodes.get(x.key));
+    const isChildrenVisible &#x3D; subNodes.filter(x &#x3D;&gt; x.isVisible).length &gt; 0;
+    const expandedState &#x3D; this.node.isExpanded ? &#x27;is-expanded&#x27; : &#x27;is-collapsed&#x27;;
+    const isLast &#x3D; children &amp;&amp; children.length &gt; 0 &amp;&amp; isChildrenVisible ? expandedState : &#x27;is-last&#x27;;
+    return isLast;
+  }
+
+  hasChildren(): boolean {
+    return this.keyNode.children &amp;&amp; this.keyNode.children.length &gt; 0;
+  }
+
+  getLabelWithAmount(): SafeHtml {
+    const label &#x3D; !!this.node.highlightedLabel ? this.node.highlightedLabel : this.node.label;
+    const htmlString &#x3D; &#x60;${label} ${this.getSelectedAmount()}&#x60;;
+    return this.domSanitizer.bypassSecurityTrustHtml(htmlString);
+  }
+
+  private setCheckState(keyNode: ClickKeyNode, state: CheckboxState): void {
+    const node &#x3D; this.nodes.get(keyNode.key);
+    node.checkState &#x3D; state;
+    node.isExpanded &#x3D; state &#x3D;&#x3D;&#x3D; CheckboxState.Checked;
+
+    for (const childKey of keyNode.children) {
+      this.setCheckState(childKey, state);
+    }
+  }
+
+  private setParentState(keyNode: ClickKeyNode): void {
+    const node &#x3D; this.nodes.get(keyNode.key);
+    if (!node.parentKey) {
+      return;
+    }
+
+    const parent &#x3D; this.nodes.get(node.parentKey);
+    const parentChildren &#x3D; [];
+    this.nodes.forEach((x) &#x3D;&gt; {
+      if (x.parentKey &#x3D;&#x3D;&#x3D; node.parentKey) {
+        parentChildren.push(x);
+      }
+    });
+
+    const checked &#x3D; parentChildren.filter(x &#x3D;&gt; x.checkState &#x3D;&#x3D;&#x3D; CheckboxState.Checked);
+    const intermediate &#x3D; parentChildren.filter(x &#x3D;&gt; x.checkState &#x3D;&#x3D;&#x3D; CheckboxState.Intermediate);
+    const unchecked &#x3D; parentChildren.filter(x &#x3D;&gt; x.checkState &#x3D;&#x3D;&#x3D; CheckboxState.Unchecked);
+
+    if (parentChildren.length &gt; checked.length || intermediate.length &gt; 0) {
+      parent.checkState &#x3D; CheckboxState.Intermediate;
+    }
+
+    if (parentChildren.length &#x3D;&#x3D;&#x3D; checked.length) {
+      parent.checkState &#x3D; CheckboxState.Checked;
+    }
+
+    if (unchecked.length &#x3D;&#x3D;&#x3D; parentChildren.length) {
+      parent.checkState &#x3D; CheckboxState.Unchecked;
+    }
+
+    this.setParentState(keyNode.parentKeyNode);
+  }
+
+  private updateScrollBar(): void {
+    if (this.perfectScrollbarDirective) {
+      this.perfectScrollbarDirective.update();
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;li *ngIf&#x3D;&quot;node.isVisible&quot; class&#x3D;&quot;tree-item&quot; [ngClass]&#x3D;&quot;getNodeStateClass()&quot;&gt;
+
+  &lt;div class&#x3D;&quot;tree-item-body&quot;&gt;
+    &lt;span class&#x3D;&quot;tree-item-arrow&quot; (click)&#x3D;&quot;onNodeClick($event, node)&quot;&gt;&lt;/span&gt;
+    &lt;click-tristate-checkbox [value]&#x3D;&#x27;node.checkState&#x27; (valueChanged)&#x3D;&quot;onChecked($event, node)&quot;&gt;&lt;/click-tristate-checkbox&gt;
+    &lt;span class&#x3D;&quot;tree-item-label&quot; [innerHTML]&#x3D;&quot;getLabelWithAmount()&quot; (click)&#x3D;&quot;onNodeClick($event, node)&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;ul
+    *ngIf&#x3D;&quot;hasChildren()&quot;
+    class&#x3D;&quot;tree-list has-sublist&quot;
+    [class.is-visible]&#x3D;&quot;node.isExpanded&quot;
+    [class.is-hidden]&#x3D;&quot;!node.isExpanded&quot;
+  &gt;
+    &lt;click-tree-node
+      *ngFor&#x3D;&quot;let key of keyNode.children&quot;
+      [keyNode]&#x3D;&quot;key&quot;
+      [nodes]&#x3D;&quot;nodes&quot;
+      (changed)&#x3D;&quot;onSubNodeChanged($event)&quot;
+    &gt;&lt;/click-tree-node&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./click-tree-node.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">:host ::ng-deep .highlighted {
+  padding: 1px;  
+  background-color: #fff5d5;
+}
+
+.tree-list{
+  &amp;.has-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 27px;
+  }
+  
+  &amp;.is-visible {
+    display: block;
+  }
+
+  &amp;.is-hidden {
+    display: none;
+  }
+}
+
+.tree-item {
+  &amp;.is-expanded {
+    .tree-list.is-root &gt; .tree-item-node &gt; &amp; {
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.tree-item-body {
+  display: flex;
+  padding: 5px 0;
+}
+
+
+.tree-item-label {
+  margin-left: 9px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+
+  click-checkbox ~ &amp; {
+    margin-left: 9px;
+  }
+}
+
+.tree-item-arrow {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: 10px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  color: #808080;
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTIgNDkyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0OTIgNDkyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTk4LjYwOCwyNDYuMTA0TDM4Mi42NjQsNjIuMDRjNS4wNjgtNS4wNTYsNy44NTYtMTEuODE2LDcuODU2LTE5LjAyNGMwLTcuMjEyLTIuNzg4LTEzLjk2OC03Ljg1Ni0xOS4wMzJsLTE2LjEyOC0xNi4xMiAgICBDMzYxLjQ3NiwyLjc5MiwzNTQuNzEyLDAsMzQ3LjUwNCwwcy0xMy45NjQsMi43OTItMTkuMDI4LDcuODY0TDEwOS4zMjgsMjI3LjAwOGMtNS4wODQsNS4wOC03Ljg2OCwxMS44NjgtNy44NDgsMTkuMDg0ICAgIGMtMC4wMiw3LjI0OCwyLjc2LDE0LjAyOCw3Ljg0OCwxOS4xMTJsMjE4Ljk0NCwyMTguOTMyYzUuMDY0LDUuMDcyLDExLjgyLDcuODY0LDE5LjAzMiw3Ljg2NGM3LjIwOCwwLDEzLjk2NC0yLjc5MiwxOS4wMzItNy44NjQgICAgbDE2LjEyNC0xNi4xMmMxMC40OTItMTAuNDkyLDEwLjQ5Mi0yNy41NzIsMC0zOC4wNkwxOTguNjA4LDI0Ni4xMDR6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg&#x3D;&#x3D;);
+  background-position: top center;
+  background-size: 8px 16px;
+  background-repeat: no-repeat;
+  transform: scale(-1, 1);
+  opacity: 0.6;
+  
+  .tree-item.is-last &amp; {
+    opacity: 0;
+  }
+
+  .tree-item.is-expanded &gt; .tree-item-body &amp; {
+    transform: rotate(-90deg);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><li *ngIf="node.isVisible" class="tree-item" [ngClass]="getNodeStateClass()">  <div class="tree-item-body">    <span class="tree-item-arrow" (click)="onNodeClick($event, node)"></span>    <click-tristate-checkbox [value]=\'node.checkState\' (valueChanged)="onChecked($event, node)"></click-tristate-checkbox>    <span class="tree-item-label" [innerHTML]="getLabelWithAmount()" (click)="onNodeClick($event, node)"></span>  </div>  <ul    *ngIf="hasChildren()"    class="tree-list has-sublist"    [class.is-visible]="node.isExpanded"    [class.is-hidden]="!node.isExpanded"  >    <click-tree-node      *ngFor="let key of keyNode.children"      [keyNode]="key"      [nodes]="nodes"      (changed)="onSubNodeChanged($event)"    ></click-tree-node>  </ul></li></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ClickTreeNodeComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ClickTreeNodeComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
