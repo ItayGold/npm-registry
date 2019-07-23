@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClickSearchInputModule } from '@click/search-input';
-import { ClickTristateCheckboxModule } from '@click/tristate-checkbox';
+import { ClickSearchInputModule } from '../click-search-input/click-search-input.module';
+import { ClickTristateCheckboxModule } from '../click-tristate-checkbox/click-tristate-checkbox.module';
 
 import { ClickTreeViewComponent } from './click-tree-view/click-tree-view.component';
 import { ClickTreeNodeComponent } from './click-tree-node/click-tree-node.component';

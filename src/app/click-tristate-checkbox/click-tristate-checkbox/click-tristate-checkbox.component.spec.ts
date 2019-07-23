@@ -56,7 +56,7 @@ describe('ClickTristateCheckboxComponent', () => {
   it('generateUniqueId_shouldReturnCorrectId', () => {
     for (let k = 0; k < 1000; k += 1) {
       const id = component['generateUniqueId']();
-      expect(id.length).toEqual(10);
+      expect(id.length).toBeGreaterThanOrEqual(9);
       expect(id.charAt(0)).toEqual('_');
     }
   });
@@ -64,33 +64,33 @@ describe('ClickTristateCheckboxComponent', () => {
   it('setterValue_setsCorrectValue', () => {
     component.value = true;
     fixture.detectChanges();
-    expect(component.valueInternal).toEqual(1);
+    expect(component['valueInternal']).toEqual(1);
 
     component.value = false;
     fixture.detectChanges();
-    expect(component.valueInternal).toEqual(0);
+    expect(component['valueInternal']).toEqual(0);
 
     component.value = 2;
     fixture.detectChanges();
-    expect(component.valueInternal).toEqual(2);
+    expect(component['valueInternal']).toEqual(2);
   });
 
   it('calculateNextState_shouldReturnCorrectState', () => {
-    component.valueInternal = 0;
+    component['valueInternal'] = 0;
     fixture.detectChanges();
     expect(component['calculateNextState']()).toEqual(1);
 
-    component.valueInternal = 1;
+    component['valueInternal'] = 1;
     fixture.detectChanges();
     expect(component['calculateNextState']()).toEqual(0);
 
-    component.valueInternal = 2;
+    component['valueInternal'] = 2;
     fixture.detectChanges();
     expect(component['calculateNextState']()).toEqual(0);
   });
 
   it('multiselectedContainer_shouldWork', () => {
-    component.valueInternal = 2;
+    component['valueInternal'] = 2;
     fixture.detectChanges();
     const multiselectDiv = debugComponentNative.querySelector('div.multiselected');
     expect(multiselectDiv).toBeTruthy();
