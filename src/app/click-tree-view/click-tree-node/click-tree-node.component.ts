@@ -1,7 +1,7 @@
 import { Component, EventEmitter, HostBinding, Input, OnInit, Optional, Output } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
-import { ClickTristateCheckboxState as CheckboxState } from '@click/tristate-checkbox';
+import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristate-checkbox/enums/click-tristate-checkbox-state';
 
 import { ClickTreeNode, ClickKeyNode } from '../models';
 import { ClickTreeViewCalculationService } from '../services/click-tree-view-calculation.service';
