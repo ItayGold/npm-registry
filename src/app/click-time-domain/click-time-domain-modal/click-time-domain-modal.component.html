@@ -1,0 +1,72 @@
+<div class="modal-body" (document:keydown.enter)="closeModalWithEnter()">
+  <div class="calendar">
+    <div class="calendar-header">
+      <div class="calendar-autoupdate">
+        <div class="checkbox">
+          <click-tristate-checkbox
+            [value]="isRelative"
+            (valueChanged)="changeRelative($event)"
+            checkboxLabel="Auto update">
+          </click-tristate-checkbox>
+        </div>
+        <span class="tooltip-trigger d-flex align-items-center">
+          <span class="calendar-tip icon icon-info"
+                tooltip="Auto update tip"
+                placement="top"
+                container="body">
+          </span>
+        </span>
+      </div>
+      <div class="calendar-inputs">
+        <div class="form-field" [ngClass]="{'has-error': error === 'StartInvalid' }">
+          <input
+            #firstInputDate
+            class="form-control input-date input-date-from"
+            (keydown)="preventKeys($event)"
+            (keyup)="changeFirstValueByKeyup($event)"
+            (blur)="blurInputHandler($event)"
+            [style.width]="dateInputWidth"
+            [ngModel]="fromFormatted"
+            (ngModelChange)="changeInputHandler()"
+            [mask]="inputMaskFrom"
+            [showMaskTyped]="true"
+            [dropSpecialCharacters]="false"
+            type="text">
+        </div>
+        <div class="form-field" [ngClass]="{'has-error': error === 'EndInvalid' }">
+          <input
+            #secondInputDate
+            class="form-control input-date"
+            [style.width]="dateInputWidth"
+            [ngModel]="toFormatted"
+            (ngModelChange)="changeInputHandler()"
+            (keydown)="preventKeys($event)"
+            (keyup)="changeSecondValueByKeyup($event)"
+            (blur)="blurInputHandler($event)"
+            [mask]="inputMaskTo"
+            [showMaskTyped]="true"
+            [dropSpecialCharacters]="false"
+            type="text">
+        </div>
+      </div>
+
+      <span class="calendar-summary">Selected range ({{ differenceInDays }} days)</span>
+
+    </div>
+    <click-date-range-calendar [value]="dateRangeValue" (valueChanged)="onDatepickerValueChange($event)"></click-date-range-calendar>
+  </div>
+  <div class="modal-controls d-flex justify-content-between align-items-center">
+
+    <span role="button" class="link" (click)="handleTodaySelect()">today</span>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="modal-error" *ngIf="error !== 'Valid'">{{ Errors[error] }}</span>
+      <button 
+        (click)="confirm()"
+        [disabled]="!isUpdated || error !== 'Valid'"
+        type="button" 
+        class="btn btn-primary">Save</button>
+      <button type="button" class="btn btn-default" (click)="decline()">Cancel</button>
+    </div>
+  </div>
+</div>

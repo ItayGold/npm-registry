@@ -1,0 +1,14 @@
+<span class="btn-inline" role="button" (click)="showModal()">
+  <span class="btn-icon icon icon-calendar"></span>
+  <span #datesWrapper class="btn-text input-date-fake">
+    {{ fromFormatted }}
+    <span #divider class="btn-divider">-</span>
+    {{ toFormatted }}&nbsp;({{ differenceInDays }} days)
+  </span>
+</span>
+<span class="btn-inline" role="button">
+  <span class="btn-icon icon icon-calendar-today"></span>
+  <span class="btn-text">Today</span>
+</span>
+
+<span #dateContentWidthMeasurementBlock class="input-date-measure" [ngStyle]="{'visibility': 'hidden'}">{{ mask }}</span>
