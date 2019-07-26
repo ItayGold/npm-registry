@@ -6,12 +6,12 @@
           <click-tristate-checkbox
             [value]="isRelative"
             (valueChanged)="changeRelative($event)"
-            checkboxLabel="Auto update">
+            [checkboxLabel]="translations.CalendarForm_AutoUpdate_CheckBoxLabel">
           </click-tristate-checkbox>
         </div>
         <span class="tooltip-trigger d-flex align-items-center">
           <span class="calendar-tip icon icon-info"
-                tooltip="Auto update tip"
+                [tooltip]="translations.CalendarForm_AutoUpdate_CheckBoxTooltip"
                 placement="top"
                 container="body">
           </span>
@@ -50,22 +50,22 @@
         </div>
       </div>
 
-      <span class="calendar-summary">Selected range ({{ differenceInDays }} days)</span>
+      <span class="calendar-summary">{{ translations.CalendarForm_LoadDates_Count }} ({{ differenceInDays }} {{ dayCountLabel }})</span>
 
     </div>
     <click-date-range-calendar [value]="dateRangeValue" (valueChanged)="onDatepickerValueChange($event)"></click-date-range-calendar>
   </div>
 
   <div class="modal-controls d-flex justify-content-between align-items-center">
-    <span role="button" class="link" (click)="handleTodaySelect()">today</span>
+    <span role="button" class="link" (click)="handleTodaySelect()">{{ translations.CalendarForm_Today_LinkButton }}</span>
     <div class="d-flex justify-content-between align-items-center">
       <span class="modal-error" *ngIf="error !== 'Valid'">{{ Errors[error] }}</span>
       <button 
         (click)="confirm()"
         [disabled]="!isUpdated || error !== 'Valid'"
         type="button" 
-        class="btn btn-primary">Save</button>
-      <button type="button" class="btn btn-default" (click)="decline()">Cancel</button>
+        class="btn btn-primary">{{ translations.Form_Save_Buttons }}</button>
+      <button type="button" class="btn btn-default" (click)="decline()">{{ translations.Form_Cancel_Buttons }}</button>
     </div>
   </div>
 </div>

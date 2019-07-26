@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClickTimeDomainComponent } from './click-time-domain/click-time-domain.component';
+import { ClickTimeDomainDemoComponent } from './click-time-domain-demo/click-time-domain-demo.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ClickTimeDomainComponent,
+    component: ClickTimeDomainDemoComponent,
   },
 ];
 

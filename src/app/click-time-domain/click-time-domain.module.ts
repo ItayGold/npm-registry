@@ -9,6 +9,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { ClickTimeDomainComponent } from './click-time-domain/click-time-domain.component';
+import { ClickTimeDomainDemoComponent } from './click-time-domain-demo/click-time-domain-demo.component';
 import { ClickTimeDomainRoutingModule } from './click-time-domain-routing.module';
 import { ClickTimeDomainModalComponent } from './click-time-domain-modal/click-time-domain-modal.component';
 import { ClickDateRangeCalendarComponent } from './click-date-range-calendar/click-date-range-calendar.component';
@@ -19,6 +20,7 @@ import { ClickTristateCheckboxComponent } from '../click-tristate-checkbox/click
     ClickDateRangeCalendarComponent,
     ClickTristateCheckboxComponent,
     ClickTimeDomainModalComponent,
+    ClickTimeDomainDemoComponent,
     ClickTimeDomainComponent,
   ],
   imports: [

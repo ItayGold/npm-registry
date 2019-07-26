@@ -3,12 +3,12 @@
   <span #datesWrapper class="btn-text input-date-fake">
     {{ fromFormatted }}
     <span #divider class="btn-divider">-</span>
-    {{ toFormatted }}&nbsp;({{ differenceInDays }} days)
+    {{ toFormatted }}&nbsp;({{ differenceInDays }} {{ dayCountLabel }})
   </span>
 </span>
 <span class="btn-inline" role="button">
   <span class="btn-icon icon icon-calendar-today"></span>
-  <span class="btn-text">Today</span>
+  <span class="btn-text">{{ translations.CalendarForm_Today_LinkButton }}</span>
 </span>
 
 <span #dateContentWidthMeasurementBlock class="input-date-measure">{{ mask }}</span>

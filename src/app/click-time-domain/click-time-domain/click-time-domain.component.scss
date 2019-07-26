@@ -1,25 +1,10 @@
 :host {
-  height: 45px;
-  flex: 0 0 auto;
   display: flex;
-  justify-content: center;
-  padding: 0 15px;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(51, 51, 51, 0.2);
-}
-
-.main-header-inner {
-  height: 100%;
-  margin: 0 -15px;
-}
-
-.main-header-col {
-  width: 33.3%;
-  padding: 0 15px;
-}
-
-.time-domain-selection {
   position: relative;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
 .input-date-fake {

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@an
 
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap/datepicker';
+import { ClickTimeDomainTranslations } from '../models/click-time-domain-translations-keys';
 import { Subject } from 'rxjs';
 
 import {
@@ -32,12 +33,10 @@ enum Errors {
   selector: 'click-time-domain-modal',
   templateUrl: './click-time-domain-modal.component.html',
   styleUrls: ['./click-time-domain-modal.component.scss'],
-  providers: [
-    {
-      provide: BsDatepickerConfig,
-      useClass: BsDaterangepickerConfig
-    }
-  ],
+  providers: [{
+    provide: BsDatepickerConfig,
+    useClass: BsDaterangepickerConfig
+  }],
   encapsulation: ViewEncapsulation.None
 })
 export class ClickTimeDomainModalComponent implements OnInit {
@@ -63,6 +62,7 @@ export class ClickTimeDomainModalComponent implements OnInit {
   delimiter: string;
   inputMaskTo: string;
   inputMaskFrom: string;
+  translations: ClickTimeDomainTranslations;
 
   @ViewChild('firstInputDate') firstInputDate: ElementRef;
   @ViewChild('secondInputDate') secondInputDate: ElementRef;
@@ -97,6 +97,12 @@ export class ClickTimeDomainModalComponent implements OnInit {
 
   get toFormatted() {
     return format(this.to, this.mask); // Do not set any calculation here
+  }
+
+  get dayCountLabel(): string {
+    return this.differenceInDays > 1
+      ? this.translations.CalendarForm_LoadDates_Days
+      : this.translations.CalendarForm_LoadDates_Day;
   }
 
   getDateFromKeyupEvent({ target: { value }, key }) {
