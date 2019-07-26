@@ -26,7 +26,7 @@ export class ClickTimeDomainComponent {
 
   @Input() calendar;
   @Output() datesChanged = new EventEmitter();
-  @HostBinding('class') class = 'main-header-col d-flex align-items-center justify-content-center time-domain-selection';
+  @HostBinding('class') class = 'main-header-col align-items-center justify-content-center time-domain-selection';
 
   from: Date;
   get fromFormatted() {
