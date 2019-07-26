@@ -1,0 +1,148 @@
+.bs-datepicker {
+  box-shadow: none;
+  justify-content: center;
+}
+
+.bs-datepicker-container {
+  padding: 0;
+}
+
+.bs-datepicker-container,
+bs-daterangepicker-container {
+  position: relative !important;
+}
+
+.today {
+  background-color: #daebf6;
+  color: #0875bf;
+  .theme-dark-blue .bs-datepicker-body table &.select-start,
+  .theme-dark-blue .bs-datepicker-body table td &.select-start {
+    background-color: #08559d;
+  }
+}
+
+.bs-datepicker-head {
+  .theme-dark-blue & {
+    background-color: #0875bf;
+  }
+}
+
+.theme-dark-blue .bs-datepicker-body table td {
+  span.selected,
+  &.selected span,
+  span[class*='select-']:after,
+  &[class*='select-'] span:after {
+    background-color: #0875bf;
+  }
+}
+
+.theme-dark-blue .bs-datepicker-body {
+  padding: 12px 15px;
+
+  table th {
+    color: #0875bf;
+    font-size: 14px;
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  table td {
+    color: #595959;
+    font-size: 14px;
+
+    &.week {
+      display: none;
+    }
+
+    &:before,
+    span:before {
+      top: 4px;
+      bottom: 4px;
+      left: -10px;
+      right: -10px;
+    }
+    &:nth-child(2):before,
+    &:nth-child(2) span:before {
+      left: 0;
+    }
+    &:nth-child(2) .today:before {
+      left: 10px;
+    }
+    &:last-child:before,
+    &:last-child span:before {
+      right: 0;
+    }
+
+    .is-other-month:before,
+    .is-other-month span:before {
+      background-color: #fff;
+    }
+  }
+  table.days td.active:before,
+  table.days td.in-range:before,
+  table.days span.active:before,
+  table.days span.in-range:before {
+    background: #f0f0f0;
+  }
+  table.days span.in-range.select-start:before {
+    background: transparent;
+  }
+}
+
+.theme-dark-blue
+  .bs-datepicker-body
+  table.days
+  span.is-highlighted.in-range:before,
+.theme-dark-blue
+  .bs-datepicker-body
+  table.days
+  span.in-range.select-start:before,
+.theme-dark-blue .bs-datepicker-body table.days span.select-end:before {
+  left: 10px;
+}
+
+.theme-dark-blue
+  .bs-datepicker-body
+  table.days
+  span.is-highlighted.in-range:before,
+.theme-dark-blue
+  .bs-datepicker-body
+  table.days
+  span.in-range.select-end:before {
+  right: 10px;
+}
+
+.theme-dark-blue .bs-datepicker-body table.days span.is-other-month:after,
+.theme-dark-blue .bs-datepicker-body table.days span.is-other-month:before {
+  background-color: #fff;
+  left: -2px;
+  right: -2px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  box-sizing: content-box;
+  width: 9px;
+}
+
+.theme-dark-blue .bs-datepicker-body table.days span.is-other-month:before {
+  left: -2px;
+  right: auto;
+}
+
+.theme-dark-blue .bs-datepicker-body table.days span.is-other-month:after {
+  left: auto;
+  right: -2px;
+}
+
+.bs-datepicker-head button:hover {
+  background-color: #0986d3;
+}
+
+.bs-datepicker-body table td span.is-other-month,
+.bs-datepicker-body table td.is-other-month span {
+  color: #cbcbcb;
+}

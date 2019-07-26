@@ -7,7 +7,8 @@ import {
     Output,
     Input,
     OnChanges,
-    SimpleChanges
+    SimpleChanges,
+    ViewEncapsulation,
   } from '@angular/core';
   import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap';
   import { combineLatest, BehaviorSubject, Subject } from 'rxjs';
@@ -28,6 +29,7 @@ import {
     useFactory: configFactory,
     deps: [BsDaterangepickerConfig]
   }],
+  encapsulation: ViewEncapsulation.None
 })
 export class ClickDateRangeCalendarComponent implements OnInit, AfterViewInit, OnChanges {
     private valueSubject = new BehaviorSubject<Date[]>(null);

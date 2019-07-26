@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap/datepicker';
@@ -38,6 +38,7 @@ enum Errors {
       useClass: BsDaterangepickerConfig
     }
   ],
+  encapsulation: ViewEncapsulation.None
 })
 export class ClickTimeDomainModalComponent implements OnInit {
 
