@@ -1,11 +1,13 @@
 import { Component, ViewChild, AfterViewInit, EventEmitter, Output, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap';
 
-export const configFactory = (config: BsDaterangepickerConfig) => ({
-  ...config,
-  containerClass: 'theme-dark-blue',
-  customTodayClass: 'today',
-});
+export function configFactory(config: BsDaterangepickerConfig) {
+  return {
+    ...config,
+    containerClass: 'theme-dark-blue',
+    customTodayClass: 'today',
+  };
+} 
 
 @Component({
   selector: 'click-date-range-calendar',

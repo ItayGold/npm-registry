@@ -1,4 +1,5 @@
-import * as moment from 'moment';
+import * as moment_ from 'moment';
+const moment = moment_;
 
 export function toUtcDate(date: string | Date, prevent: boolean = false): Date {
   const SECOND_MULTIPLIER = prevent ? 0 : 60000;

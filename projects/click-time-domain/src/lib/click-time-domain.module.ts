@@ -11,12 +11,11 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ClickTimeDomainComponent } from './click-time-domain.component';
 import { ClickTimeDomainModalComponent } from './click-time-domain-modal.component';
 import { ClickDateRangeCalendarComponent } from './click-date-range-calendar.component';
-import { ClickTristateCheckboxComponent } from '@click/tristate-checkbox';
+import { ClickTristateCheckboxModule } from '@click/tristate-checkbox';
 
 @NgModule({
   declarations: [
     ClickDateRangeCalendarComponent,
-    ClickTristateCheckboxComponent,
     ClickTimeDomainModalComponent,
     ClickTimeDomainComponent,
   ],
@@ -28,6 +27,7 @@ import { ClickTristateCheckboxComponent } from '@click/tristate-checkbox';
     NgxMaskModule.forRoot(),
     TooltipModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    ClickTristateCheckboxModule,
   ],
   entryComponents: [
     ClickTimeDomainModalComponent
