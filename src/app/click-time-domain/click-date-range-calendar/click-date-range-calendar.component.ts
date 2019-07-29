@@ -1,24 +1,11 @@
-import {
-    Component,
-    OnInit,
-    ViewChild,
-    AfterViewInit,
-    EventEmitter,
-    Output,
-    Input,
-    OnChanges,
-    SimpleChanges,
-    ViewEncapsulation,
-  } from '@angular/core';
-  import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap';
-  import { combineLatest, BehaviorSubject, Subject } from 'rxjs';
-  import { filter, map } from 'rxjs/operators';
-  
-  export const configFactory = (config: BsDaterangepickerConfig) => ({
-    ...config,
-    containerClass: 'theme-dark-blue',
-    customTodayClass: 'today',
-  });
+import { Component, ViewChild, AfterViewInit, EventEmitter, Output, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap';
+
+export const configFactory = (config: BsDaterangepickerConfig) => ({
+  ...config,
+  containerClass: 'theme-dark-blue',
+  customTodayClass: 'today',
+});
 
 @Component({
   selector: 'click-date-range-calendar',
@@ -31,49 +18,35 @@ import {
   }],
   encapsulation: ViewEncapsulation.None
 })
-export class ClickDateRangeCalendarComponent implements OnInit, AfterViewInit, OnChanges {
-    private valueSubject = new BehaviorSubject<Date[]>(null);
-    private isDatePickerInitializedSubject = new BehaviorSubject<boolean>(false);
-  
-    private value$ = this.valueSubject.asObservable();
-    private isDatePickerInitialized$ = this.isDatePickerInitializedSubject.asObservable();
-  
-    @ViewChild('datepicker') datePicker: any;
-    @Output() valueChanged: EventEmitter<Date[]> = new EventEmitter<Date[]>();
-    @Input() value: Date[];
-  
-    constructor() {}
-  
-    ngOnInit() {}
-  
-    ngAfterViewInit(): void {
-      this.isDatePickerInitializedSubject.next(true);
-      combineLatest(this.isDatePickerInitialized$, this.value$)
-        .pipe(
-          filter(
-            ([isDatePickerInitialized, value]) =>
-              isDatePickerInitialized && !!value
-          ),
-          map(([isDatePickerInitialized, value]) => value)
-        )
-        .subscribe((value: Date[]) => {
-          setTimeout(() => {
-            this.datePicker._rangeStack = [...value];
-            this.datePicker.value = [...value];
-  
-            if (this.datePicker._rangeStack.length === 2) {
-              this.datePicker._rangeStack = [];
-            }
-          });
-        });
-      this.datePicker.valueChange.subscribe(x => this.valueChanged.next(x));
-    }
-  
-    ngOnChanges(changes: SimpleChanges): void {
-      const { value } = changes;
-      if (value) {
-        this.valueSubject.next(value.currentValue);
-      }
-    }
-  
+export class ClickDateRangeCalendarComponent implements AfterViewInit, OnChanges {
+
+  private datePickerInitialized: boolean = false;
+
+  @Input() value: Date[];
+  @Output() valueChanged: EventEmitter<Date[]> = new EventEmitter<Date[]>();
+  @ViewChild('datepicker') datePicker: any;
+
+  ngAfterViewInit(): void {
+    this.datePickerInitialized = true;
+    this.updateRange(this.value);
+    this.datePicker.valueChange.subscribe((values: Date[]) => this.valueChanged.next(values));
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    const { value } = changes;
+    if (this.datePickerInitialized && value) {
+      this.updateRange(value.currentValue);
+    }
+  }
+
+  updateRange(values: Date[]): void {
+    setTimeout(() => {
+      this.datePicker._rangeStack = [...values];
+      this.datePicker.value = [...values];
+
+      if (this.datePicker._rangeStack.length === 2) {
+        this.datePicker._rangeStack = [];
+      }
+    });
+  }
+}

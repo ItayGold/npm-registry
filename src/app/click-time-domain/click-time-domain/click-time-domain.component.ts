@@ -1,10 +1,9 @@
-import { Component, Input, Output, ViewChild, ElementRef, Renderer2, HostBinding, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, Output, ViewChild, ElementRef, Renderer2, HostBinding, EventEmitter, HostListener, ViewEncapsulation } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { validateDateMask } from '../helpers/w6-mask-helper';
-import { ClickTimeDomainTranslations } from '../models/click-time-domain-translations-keys';
+import { ClickTimeDomainState, ClickTimeDomainTranslations } from '../models/click-time-domain-models';
 import { format, toUtcDate, toLocalDate, diffDays, addDays } from '../helpers/w6-date-helper';
-import { ClickTimeDomainState } from '../models/click-time-domain-state';
 import { ClickTimeDomainModalComponent } from '../click-time-domain-modal/click-time-domain-modal.component';
 
 const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
@@ -13,7 +12,8 @@ const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
 @Component({
   selector: 'click-time-domain',
   templateUrl: './click-time-domain.component.html',
-  styleUrls: ['./click-time-domain.component.scss']
+  styleUrls: ['./click-time-domain.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ClickTimeDomainComponent {
 
@@ -56,18 +56,15 @@ export class ClickTimeDomainComponent {
   set mask(value: string) { this._mask = validateDateMask(value); }
 
   @Output() datesSaved = new EventEmitter<ClickTimeDomainState>();
-
   @ViewChild('divider') divider: ElementRef;
   @ViewChild('datesWrapper') datesWrapper: ElementRef;
+  @HostBinding('class') class = 'time-domain';
 
-  constructor(
-    private renderer: Renderer2,
-    private modalService: BsModalService,
-  ) {
+  constructor(private renderer: Renderer2, private modalService: BsModalService) {
     this.updateTimeDomainState();
   }
 
-  ngOnChanges({ calendarState, translations }) {
+  ngOnChanges({ calendarState }) {
     if (calendarState) {
       const { isRelative, from, to, currentDate } = calendarState.currentValue;
 
@@ -79,11 +76,6 @@ export class ClickTimeDomainComponent {
       ) {
         this.updateTimeDomainState(calendarState.currentValue);
       }
-    }
-
-    if (translations) {
-      const translates = translations.currentValue;
-      Object.keys(translates).map(t => console.log(t));
     }
   }
 
@@ -119,7 +111,7 @@ export class ClickTimeDomainComponent {
     };
     this.bsModalRef = this.modalService.show(ClickTimeDomainModalComponent, { initialState, class: `${MODAL_DIALOG_CLASS} ${this.customModalClass}` });
 
-    this.bsModalRef.content.onClose.subscribe(() => {
+    this.bsModalRef.content.closed.subscribe(() => {
       const { dateRangeChanged, isRelative, currentDate, isRelativeTouched } = this.bsModalRef.content;
       let from = dateRangeChanged[0];
       let to = dateRangeChanged[1];
@@ -151,6 +143,8 @@ export class ClickTimeDomainComponent {
       this.isRelative = isRelative;
       this.currentDate = currentDate;
       this.daysFromCurrent = 0;
+
+      this.differenceInDays = diffDays(this.to, this.from) + 1;
 
       this.datesSaved.emit({
         isRelative,

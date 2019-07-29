@@ -59,7 +59,22 @@ export class ClickTimeDomainDemoComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // setTimeout(() => {
+    //  this.translations = {
+    //     Form_Save_Buttons: 'Save',
+    //     Form_Cancel_Buttons: 'Cancel',
+    //     CalendarForm_EndInvalid: 'Invalid end date',
+    //     CalendarForm_StartInvalid: 'Invalid start date',
+    //     CalendarForm_LoadDates_Day: 'Day',
+    //     CalendarForm_LoadDates_Days: 'Days',
+    //     CalendarForm_LoadDates_Count: 'Selected days',
+    //     CalendarForm_Today_LinkButton: 'today',
+    //     CalendarForm_AutoUpdate_CheckBoxLabel: 'Auto update',
+    //     CalendarForm_AutoUpdate_CheckBoxTooltip: 'Tooltip autoupdate',
+    //   };
+    // }, 5000);
+  }
 
   onDatesSaved(event) {
     alert(JSON.stringify(event));

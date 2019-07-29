@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap/datepicker';
-import { ClickTimeDomainTranslations } from '../models/click-time-domain-translations-keys';
-import { Subject } from 'rxjs';
+import { ClickTimeDomainTranslations } from '../models/click-time-domain-models';
 
 import {
   revealDelimiter,
@@ -42,9 +41,11 @@ enum Errors {
 export class ClickTimeDomainModalComponent implements OnInit {
 
   Errors = Errors;
+  error: string = 'Valid';
 
   to: Date;
   from: Date;
+  mask: string;
   currentDate: Date;
   dateRangeInit: Date[];
   dateRangeValue: Date[];
@@ -52,51 +53,49 @@ export class ClickTimeDomainModalComponent implements OnInit {
   dateInputWidth: string;
   differenceInDays: number;
   offsetTimezone: number;
-  onClose: Subject<boolean> = new Subject();
-  error = 'Valid';
-  isUpdated = false;
+  isUpdated: boolean = false;
   isRelative: boolean;
-  isRelativeTouched = false;
-
-  mask: string;
+  isRelativeTouched: boolean = false;
   delimiter: string;
   inputMaskTo: string;
   inputMaskFrom: string;
   translations: ClickTimeDomainTranslations;
+
+  @Output() closed: EventEmitter<void> = new EventEmitter();
 
   @ViewChild('firstInputDate') firstInputDate: ElementRef;
   @ViewChild('secondInputDate') secondInputDate: ElementRef;
 
   constructor(public modalRef: BsModalRef) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.delimiter = revealDelimiter(this.mask);
     this.dateRangeInit = [...this.dateRangeValue];
     this.dateRangeChanged = [...this.dateRangeValue];
     this.setInputValues(this.dateRangeValue);
   }
 
-  confirm() {
+  confirm(): void {
     if (!this.isUpdated || this.error !== 'Valid') return;
 
-    this.onClose.next();
+    this.closed.emit();
     this.modalRef.hide();
   }
 
-  decline() {
+  decline(): void {
     this.modalRef.hide();
   }
 
-  closeModalWithEnter() {
+  closeModalWithEnter(): void {
     this.confirm();
   }
 
-  get fromFormatted() {
-    return format(this.from, this.mask); // Do not set any calculation here
+  get fromFormatted(): string {
+    return format(this.from, this.mask);
   }
 
-  get toFormatted() {
-    return format(this.to, this.mask); // Do not set any calculation here
+  get toFormatted(): string {
+    return format(this.to, this.mask);
   }
 
   get dayCountLabel(): string {
@@ -105,7 +104,11 @@ export class ClickTimeDomainModalComponent implements OnInit {
       : this.translations.CalendarForm_LoadDates_Day;
   }
 
-  getDateFromKeyupEvent({ target: { value }, key }) {
+  get errorTranslationName(): string {
+    return `CalendarForm_${this.error}`;
+  }
+
+  getDateFromKeyupEvent({ target: { value }, key }): Date {
     const dayOffset =
       (key === 'ArrowUp') ? 1 :
       (key === 'ArrowDown') ? -1 : 0;
@@ -113,7 +116,7 @@ export class ClickTimeDomainModalComponent implements OnInit {
     return addDays(parsedDate, dayOffset);
   }
 
-  changeFirstValueByKeyup(event: KeyboardEvent) {
+  changeFirstValueByKeyup(event: KeyboardEvent): void {
     if (!this.preventKeys(event) || !this.preventDateChangingByKey(event)) return;
     const newDate = this.getDateFromKeyupEvent(event as any);
     if (this.validateInputDate((<HTMLTextAreaElement>event.target).value)) {
@@ -123,7 +126,7 @@ export class ClickTimeDomainModalComponent implements OnInit {
     this.setValidationError();
   }
 
-  changeSecondValueByKeyup(event: KeyboardEvent) {
+  changeSecondValueByKeyup(event: KeyboardEvent): void {
     if (!this.preventKeys(event) || !this.preventDateChangingByKey(event)) return;
     const newDate = this.getDateFromKeyupEvent(event as any);
     if (this.validateInputDate((<HTMLTextAreaElement>event.target).value)) {
@@ -137,11 +140,11 @@ export class ClickTimeDomainModalComponent implements OnInit {
     (/^\d+$/i.test(event.key) || event.key.includes('Arrow') ||
     ['Delete', 'Backspace', 'Home', 'End', 'Tab'].includes(event.key))
 
-  preventDateChangingByKey = (event: KeyboardEvent) =>
+  preventDateChangingByKey = (event: KeyboardEvent): boolean =>
     (/^\d+$/i.test(event.key) ||
     ['ArrowUp', 'ArrowDown', 'Delete', 'Tab'].includes(event.key))
 
-  validateInputDate = (date: string) => {
+  validateInputDate = (date: string): boolean => {
     const parsedDate = parseFormattedDate(date, this.mask, this.delimiter);
     return (
       isDateValid(parsedDate) &&
@@ -149,11 +152,11 @@ export class ClickTimeDomainModalComponent implements OnInit {
     );
   }
 
-  isFormChanged = () =>
+  isFormChanged = (): boolean =>
     this.isRelativeTouched ||
     this.dateRangeChanged.some((date, i) => !!diffDays(date, this.dateRangeInit[i]))
 
-  onDatepickerValueChange([firstDate, secondDate]) {
+  onDatepickerValueChange([firstDate, secondDate]): void {
     this.dateRangeChanged = [firstDate, secondDate];
     setTimeout(() => {
       this.setInputValues([firstDate, secondDate || '']);
@@ -169,14 +172,14 @@ export class ClickTimeDomainModalComponent implements OnInit {
     this.to = secondDate;
   }
 
-  changeRelative(isRelative: boolean) {
+  changeRelative(isRelative: boolean): void {
     this.isRelativeTouched = true;
     this.isRelative = isRelative;
     this.currentDate = new Date();
     this.isUpdated = this.isFormChanged();
   }
 
-  handleTodaySelect() {
+  handleTodaySelect(): void {
     const isPreventUtcConvertion = !!this.offsetTimezone;
     const todayFrom =
       toUtcDate(toLocalDate(removeTime(new Date()), isPreventUtcConvertion), isPreventUtcConvertion);
@@ -190,11 +193,11 @@ export class ClickTimeDomainModalComponent implements OnInit {
     });
   }
 
-  changeInputHandler() {
+  changeInputHandler(): void {
     setTimeout(() => this.setValidationError());
   }
 
-  blurInputHandler({ target }) {
+  blurInputHandler({ target }): void {
     if (!this.validateInputDate(target.value)) {
       target.focus();
       target.select();
@@ -210,7 +213,7 @@ export class ClickTimeDomainModalComponent implements OnInit {
     if (!this.validateInputDate(secondInputValueString)) this.error = 'EndInvalid';
   }
 
-  calculateDayDifference() {
+  calculateDayDifference(): void {
     const [changedDateFrom, changedDateTo] = this.dateRangeChanged;
     this.differenceInDays = diffDays(changedDateTo || changedDateFrom, changedDateFrom) + 1;
   }

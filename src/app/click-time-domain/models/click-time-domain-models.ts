@@ -1,3 +1,10 @@
+export class ClickTimeDomainState {
+  from: Date;
+  to: Date;
+  isRelative: boolean;
+  currentDate: Date;
+}
+
 export type ClickTimeDomainTranslations = {
   Form_Save_Buttons: string,
   Form_Cancel_Buttons: string,
