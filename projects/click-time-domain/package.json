@@ -1,9 +1,13 @@
 {
-  "name": "click-time-domain",
-  "version": "0.0.1",
+  "name": "@click/time-domain",
+  "author": "Denis Demidenko",
+  "license": "MIT",
+  "version": "0.0.0",
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0",
+    "@angular/forms": "^7.2.15",
+    "@click/tristate-checkbox": "1.0.2",
     "moment": "2.24.0",
     "bootstrap": "^4.3.1",
     "ngx-bootstrap": "5.0.0",
