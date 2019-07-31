@@ -3,7 +3,7 @@ import { ClickTristateCheckboxState as CheckboxState } from '@click/tristate-che
 import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 
 import { ClickTreeViewService } from './click-tree-view.service';
-import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection } from '../models';
+import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection, ClickTreeViewTranslations } from '../models';
 
 @Component({
   selector: 'click-tree-view',
@@ -13,20 +13,21 @@ import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection } from '../models'
         <click-search-input
           #searchInput
           (changed)="onSearchChanged($event)"
-          [placeholder]="filterPlaceholder"
+          [placeholder]="translations.NavigationTree_Search_InputPlaceholder"
         ></click-search-input>
       </div>
       <ul class="tree-list is-root scroller-container">
         <div #scrollContainer *ngIf="hasResults" class="tree-list-inner" perfectScrollbar>
           <click-tree-node
             *ngFor="let keyNode of keys"
-            [nodes]="workingNodes"
             [keyNode]="keyNode"
+            [nodes]="workingNodes"
+            [translations]="translations"
             (changed)="onTreeNodeChanged($event)"
           ></click-tree-node>
         </div>
         <li *ngIf="!hasResults" class="tree-item">
-          <div class="tree-item-label">No items available</div>
+          <div class="tree-item-label">{{ translations.NavigationTree_List_NoItemAvailable }}</div>
         </li>
       </ul>
     </div>
@@ -80,8 +81,11 @@ export class ClickTreeViewComponent implements OnInit {
 
   @Input() keys: ClickKeyNode[];
   @Input() nodes: Map<number, ClickTreeNode>;
-  @Input() filterPlaceholder: string = 'Search...';
-  @Input() noItemPlaceholder: string = 'No items available';
+  @Input() translations: ClickTreeViewTranslations = {
+    NavigationTree_List_Selected: 'Selected',
+    NavigationTree_List_NoItemAvailable: 'No items available',
+    NavigationTree_Search_InputPlaceholder: 'Search domain...',
+  };
   @Output() changeTree = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
 
   @ViewChild('searchInput') searchInput: any;

@@ -14,8 +14,9 @@
   >
     <click-tree-node
       *ngFor="let key of keyNode.children"
-      [keyNode]="key"
       [nodes]="nodes"
+      [keyNode]="key"
+      [translations]="translations"
       (changed)="onSubNodeChanged($event)"
     ></click-tree-node>
   </ul>

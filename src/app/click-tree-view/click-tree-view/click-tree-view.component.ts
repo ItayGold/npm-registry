@@ -3,7 +3,7 @@ import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristate-checkbox/enums/click-tristate-checkbox-state';
 
 import { ClickTreeViewCalculationService } from '../services';
-import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection } from '../models';
+import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection, ClickTreeViewTranslations } from '../models';
 
 @Component({
   selector: 'click-tree-view',
@@ -18,8 +18,11 @@ export class ClickTreeViewComponent implements OnInit {
 
   @Input() keys: ClickKeyNode[];
   @Input() nodes: Map<number, ClickTreeNode>;
-  @Input() filterPlaceholder: string = 'Search...';
-  @Input() noItemPlaceholder: string = 'No items available';
+  @Input() translations: ClickTreeViewTranslations = {
+    NavigationTree_List_Selected: 'Selected',
+    NavigationTree_List_NoItemAvailable: 'No items available',
+    NavigationTree_Search_InputPlaceholder: 'Search domain...',
+  };
   @Output() changeTree = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
 
   @ViewChild('searchInput') searchInput: any;

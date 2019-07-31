@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ClickTreeNode, ClickKeyNode } from '../models';
+import { ClickTreeNode, ClickKeyNode, ClickTreeViewTranslations } from '../models';
 
 @Component({
   selector: 'click-tree-view-demo',
@@ -17,6 +17,12 @@ export class ClickTreeViewDemoComponent {
   mockNodes2 = new Map(this.mockNodes);
   mockNodes3 = new Map(this.mockNodes);
   mockNodes4 = new Map(this.mockNodes);
+
+  translations: ClickTreeViewTranslations = {
+    NavigationTree_List_Selected: 'выбрано',
+    NavigationTree_List_NoItemAvailable: 'Нет элементов',
+    NavigationTree_Search_InputPlaceholder: 'Домен поиска...',
+  };
 
   mockKeys: ClickKeyNode[];
 
@@ -94,8 +100,17 @@ const keyItems = [
   }
 ];
 
-<click-tree-view [nodes]="nodesItems" [keys]="keyItems" (changeTree)="onChangeTree($event)></click-tree-view>`,
-    ``,
+<click-tree-view [nodes]="nodesItems" [keys]="keyItems" (changeTree)="onChangeTree($event)"></click-tree-view>`,
+    `
+// keyItems, nodesItems - the same as before
+
+translations: ClickTreeViewTranslations = {
+  NavigationTree_List_Selected: 'выбрано',
+  NavigationTree_List_NoItemAvailable: 'Нет элементов',
+  NavigationTree_Search_InputPlaceholder: 'Домен поиска...',
+};
+
+<click-tree-view [nodes]="nodesItems" [keys]="keyItems" [translations]="translations"></click-tree-view>`,
   ];
 
   constructor() {
@@ -128,6 +143,8 @@ const keyItems = [
       parentKey: 2,
     });
   }
+
+  ngOnInit() {}
 
   onChangeTree(event) {
     alert(`Node with key: ${event.node.key} has changed state to ${event.node.checkState}`);
