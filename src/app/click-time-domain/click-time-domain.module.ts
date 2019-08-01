@@ -10,15 +10,15 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { ClickTimeDomainComponent } from './click-time-domain/click-time-domain.component';
 import { ClickTimeDomainDemoComponent } from './click-time-domain-demo/click-time-domain-demo.component';
-import { ClickTimeDomainRoutingModule } from './click-time-domain-routing.module';
 import { ClickTimeDomainModalComponent } from './click-time-domain-modal/click-time-domain-modal.component';
 import { ClickDateRangeCalendarComponent } from './click-date-range-calendar/click-date-range-calendar.component';
-import { ClickTristateCheckboxComponent } from '../click-tristate-checkbox/click-tristate-checkbox/click-tristate-checkbox.component';
+
+import { ClickTimeDomainRoutingModule } from './click-time-domain-routing.module';
+import { ClickTristateCheckboxModule } from '../click-tristate-checkbox/click-tristate-checkbox.module';
 
 @NgModule({
   declarations: [
     ClickDateRangeCalendarComponent,
-    ClickTristateCheckboxComponent,
     ClickTimeDomainModalComponent,
     ClickTimeDomainDemoComponent,
     ClickTimeDomainComponent,
@@ -32,6 +32,7 @@ import { ClickTristateCheckboxComponent } from '../click-tristate-checkbox/click
     TooltipModule.forRoot(),
     BsDatepickerModule.forRoot(),
     ClickTimeDomainRoutingModule,
+    ClickTristateCheckboxModule,
   ],
   exports: [
     ClickTimeDomainComponent,
