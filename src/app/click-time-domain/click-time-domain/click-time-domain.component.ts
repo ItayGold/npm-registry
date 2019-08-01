@@ -8,7 +8,8 @@ import {
   HostBinding,
   EventEmitter,
   HostListener,
-  ViewEncapsulation
+  ViewEncapsulation,
+  OnChanges
 } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
@@ -26,7 +27,7 @@ const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
   styleUrls: ['./click-time-domain.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ClickTimeDomainComponent {
+export class ClickTimeDomainComponent implements OnChanges {
 
   public differenceInDays: number;
   private offsetDays: number;
@@ -75,7 +76,7 @@ export class ClickTimeDomainComponent {
     this.updateTimeDomainState();
   }
 
-  ngOnChanges({ calendarState }) {
+  ngOnChanges({ calendarState }: any) {
     if (calendarState) {
       const { isRelative, from, to, currentDate } = calendarState.currentValue;
 
