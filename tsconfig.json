@@ -48,6 +48,12 @@
       ],
       "click-search-input/*": [
         "dist/click-search-input/*"
+      ],
+      "click-time-domain": [
+        "dist/click-time-domain"
+      ],
+      "click-time-domain/*": [
+        "dist/click-time-domain/*"
       ]
     }
   }
