@@ -3,7 +3,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristate-checkbox/enums/click-tristate-checkbox-state';
 
-import { ClickTreeNode, ClickKeyNode } from '../models';
+import { ClickTreeNode, ClickKeyNode, ClickTreeViewTranslations } from '../models';
 import { ClickTreeViewCalculationService } from '../services/click-tree-view-calculation.service';
 
 @Component({
@@ -16,6 +16,11 @@ export class ClickTreeNodeComponent implements OnInit {
   @Input() node: ClickTreeNode;
   @Input() nodes: Map<number, ClickTreeNode>;
   @Input() keyNode: ClickKeyNode;
+  @Input() translations: ClickTreeViewTranslations = {
+    NavigationTree_List_Selected: 'Selected',
+    NavigationTree_List_NoItemAvailable: 'No items available',
+    NavigationTree_Search_InputPlaceholder: 'Search domain...',
+  };
   @Output() changed = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
   @HostBinding('class') class: string = 'tree-item-node';
 
@@ -65,7 +70,8 @@ export class ClickTreeNodeComponent implements OnInit {
   }
 
   getSelectedAmount(): string {
-    return this.node.selectedAmount ? `(${this.node.selectedAmount} selected)` : '';
+    const selectedString = this.translations.NavigationTree_List_Selected.toLowerCase();
+    return this.node.selectedAmount ? `(${this.node.selectedAmount} ${selectedString})` : '';
   }
 
   getNodeStateClass(): string {
