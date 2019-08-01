@@ -20,7 +20,8 @@
     "conventional-changelog": "conventional-changelog",
     "read:docs": "open http://npm-docs.clicksoftware.com",
     "click:pub": "click publish --help",
-    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
+    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
+    "stats": "click analyze -p $project"
   },
   "dependencies": {
     "@angular/animations": "^8.2.0",
@@ -72,7 +73,9 @@
     "tsickle": "^0.36.0",
     "tslib": "^1.10.0",
     "tslint": "~5.11.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "webpack-bundle-analyzer": "^3.4.1",
+    "webpack-cli": "^3.3.6"
   },
   "description": "The private npm Registry is a private collection of packages of open-source code for Node.js, front-end web apps, mobile apps, robots, routers, and countless other needs of the JavaScript community.",
   "repository": {
