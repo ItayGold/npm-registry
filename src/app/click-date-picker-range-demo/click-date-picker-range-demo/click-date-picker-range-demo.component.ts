@@ -18,7 +18,7 @@ import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 export class ClickDatePickerRangeDemoComponent implements OnInit {
   @Input() placeholder: string;
   @Output() datePickerRangeEvent: EventEmitter<Date[]>;
-  @ViewChild(BsDaterangepickerDirective) datepicker: BsDaterangepickerDirective;
+  @ViewChild(BsDaterangepickerDirective, { static: false }) datepicker: BsDaterangepickerDirective;
   datePickerConfig: Partial<BsDatepickerConfig>;
   moduleStrings: any = {};
   minDate: Date;
