@@ -22,7 +22,7 @@ export class ClickDatePickerDemoComponent {
   showWeekNumbers: boolean = false;
   isOpen: boolean = false;
   previousDate: Date = new Date(null);
-  @ViewChild('dp') datepicker: BsDaterangepickerDirective;
+  @ViewChild('dp', { static: false }) datepicker: BsDaterangepickerDirective;
   constructor(private cdRef: ChangeDetectorRef) { }
 
   updateDateStore(dt: string): void {

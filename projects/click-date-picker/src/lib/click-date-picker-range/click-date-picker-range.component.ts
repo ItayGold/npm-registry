@@ -151,7 +151,7 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 export class ClickDatepickerRangeComponent implements OnInit {
   @Input() placeholder: string;
   @Output() datePickerRangeEvent: EventEmitter<Date[]>;
-  @ViewChild(BsDaterangepickerDirective) datepicker: BsDaterangepickerDirective;
+  @ViewChild(BsDaterangepickerDirective, { static: false }) datepicker: BsDaterangepickerDirective;
   datePickerConfig: Partial<BsDatepickerConfig>;
   moduleStrings: any = {};
   minDate: Date;

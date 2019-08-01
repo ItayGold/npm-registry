@@ -63,10 +63,10 @@ export class ClickTimeDomainModalComponent implements OnInit {
 
   @Output() closed: EventEmitter<void> = new EventEmitter();
 
-  @ViewChild('firstInputDate') firstInputDate: ElementRef;
-  @ViewChild('secondInputDate') secondInputDate: ElementRef;
+  @ViewChild('firstInputDate', { static: false }) firstInputDate: ElementRef;
+  @ViewChild('secondInputDate', { static: false }) secondInputDate: ElementRef;
 
-  constructor(public modalRef: BsModalRef) {}
+  constructor(public modalRef: BsModalRef) { }
 
   ngOnInit(): void {
     this.delimiter = revealDelimiter(this.mask);
@@ -111,7 +111,7 @@ export class ClickTimeDomainModalComponent implements OnInit {
   getDateFromKeyupEvent({ target: { value }, key }): Date {
     const dayOffset =
       (key === 'ArrowUp') ? 1 :
-      (key === 'ArrowDown') ? -1 : 0;
+        (key === 'ArrowDown') ? -1 : 0;
     const parsedDate = parseFormattedDate(value, this.mask, this.delimiter);
     return addDays(parsedDate, dayOffset);
   }
@@ -138,11 +138,11 @@ export class ClickTimeDomainModalComponent implements OnInit {
 
   preventKeys = (event: KeyboardEvent): boolean =>
     (/^\d+$/i.test(event.key) || event.key.includes('Arrow') ||
-    ['Delete', 'Backspace', 'Home', 'End', 'Tab'].includes(event.key))
+      ['Delete', 'Backspace', 'Home', 'End', 'Tab'].includes(event.key))
 
   preventDateChangingByKey = (event: KeyboardEvent): boolean =>
     (/^\d+$/i.test(event.key) ||
-    ['ArrowUp', 'ArrowDown', 'Delete', 'Tab'].includes(event.key))
+      ['ArrowUp', 'ArrowDown', 'Delete', 'Tab'].includes(event.key))
 
   validateInputDate = (date: string): boolean => {
     const parsedDate = parseFormattedDate(date, this.mask, this.delimiter);
@@ -188,8 +188,8 @@ export class ClickTimeDomainModalComponent implements OnInit {
     setTimeout(() => {
       this.dateRangeValue =
         !this.dateRangeChanged[1] && (this.dateRangeChanged[0].getTime() - todayFrom.getTime() === 0)
-        ? [todayFrom, todayTo]
-        : [todayFrom];
+          ? [todayFrom, todayTo]
+          : [todayFrom];
     });
   }
 

@@ -5,7 +5,7 @@ import {
   Output,
   EventEmitter,
   ChangeDetectorRef,
-  OnInit,
+  OnInit
 } from '@angular/core';
 import {
   BsDatepickerConfig,
@@ -36,7 +36,7 @@ export class ClickDatePickerComponent implements OnInit {
   @Input() todayButtonText: string;
   @Output() updateDateStore: EventEmitter<string> = new EventEmitter<string>();
   @Output() updateMsgStore: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @ViewChild('dp') datepicker: BsDaterangepickerDirective;
+  @ViewChild('dp', { static: false }) datepicker: BsDaterangepickerDirective;
   @Input() showWeekNumbers: boolean;
   @Input() isOpen: boolean;
   datePickerConfig: Partial<BsDatepickerConfig>;
