@@ -157,5 +157,27 @@ program
     // });
   });
 
+program
+  .command('analyze')
+  .description(
+    ` 
+      Analyze your project for the best performance and sophisticated maintenance.
+    `
+  )
+  .option('-p --project <project>', 'Project Name')
+  .action(({ project } = { ...options }) => {
+    if (typeof project === 'undefined') {
+      execSync(`click analyze -h`, { stdio: 'inherit' });
+      process.exit(1);
+    }
+
+    execSync(
+      `ng build ${project} --prod --aot --statsJson && npx webpack-bundle-analyzer dist/${project}/stats.json`,
+      {
+        stdio: 'inherit',
+      }
+    );
+  });
+
 program.parse(process.argv);
 if (program.args.length === 0) program.help();
