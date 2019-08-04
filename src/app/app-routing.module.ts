@@ -33,6 +33,11 @@ const routes: Routes = [
       .then(mod => mod.ClickTreeViewModule)
   },
   {
+    path: 'time-domain',
+    loadChildren: () => import('./click-time-domain/click-time-domain.module')
+      .then(mod => mod.ClickTimeDomainModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

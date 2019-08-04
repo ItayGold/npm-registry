@@ -12,7 +12,7 @@ export class ClickSearchInputComponent {
   @Input() placeholder: string = 'Search...';
   @Input() maxLength: number = 32;
   @Output() changed: EventEmitter<string> = new EventEmitter<string>();
-  @ViewChild('searchInput') searchInput: ElementRef;
+  @ViewChild('searchInput', { static: false }) searchInput: ElementRef;
   @HostBinding('class.search-focus') searchFocus: boolean = false;
 
   onFocusIn(): void {

@@ -59,6 +59,12 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
+                            <a href="#configFactory" title="src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts"><b>configFactory</b>&nbsp;&nbsp;&nbsp;(src/.../click-date-range-calendar.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#correctInputMask" title="src/app/click-time-domain/helpers/w6-mask-helper.ts"><b>correctInputMask</b>&nbsp;&nbsp;&nbsp;(src/.../w6-mask-helper.ts)</a>
+                        </li>
+                        <li>
                             <a href="#DEF_ICON_CLASSES" title="src/app/click-icon-demo/click-icon/click-icon.component.ts"><b>DEF_ICON_CLASSES</b>&nbsp;&nbsp;&nbsp;(src/.../click-icon.component.ts)</a>
                         </li>
                         <li>
@@ -67,6 +73,21 @@
                         <li>
                             <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
                         </li>
+                        <li>
+                            <a href="#MODAL_DIALOG_CLASS" title="src/app/click-time-domain/click-time-domain/click-time-domain.component.ts"><b>MODAL_DIALOG_CLASS</b>&nbsp;&nbsp;&nbsp;(src/.../click-time-domain.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#revealDelimiter" title="src/app/click-time-domain/helpers/w6-mask-helper.ts"><b>revealDelimiter</b>&nbsp;&nbsp;&nbsp;(src/.../w6-mask-helper.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#validateDateMask" title="src/app/click-time-domain/helpers/w6-mask-helper.ts"><b>validateDateMask</b>&nbsp;&nbsp;&nbsp;(src/.../w6-mask-helper.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#validateDateMaskLong" title="src/app/click-time-domain/helpers/w6-mask-helper.ts"><b>validateDateMaskLong</b>&nbsp;&nbsp;&nbsp;(src/.../w6-mask-helper.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#validateTimeMask" title="src/app/click-time-domain/helpers/w6-mask-helper.ts"><b>validateTimeMask</b>&nbsp;&nbsp;&nbsp;(src/.../w6-mask-helper.ts)</a>
+                        </li>
                     </ul>
                 </td>
             </tr>
@@ -74,6 +95,245 @@
     </table>
 </section>
 
+    <h3>src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="configFactory"></a>
+                        <span class="name">
+                            <b>
+                            configFactory</b>
+                            <a href="#configFactory"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(config: BsDaterangepickerConfig) &#x3D;&gt; ({
+  ...config,
+  containerClass: &#x27;theme-dark-blue&#x27;,
+  customTodayClass: &#x27;today&#x27;,
+})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/click-time-domain/helpers/w6-mask-helper.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="correctInputMask"></a>
+                        <span class="name">
+                            <b>
+                            correctInputMask</b>
+                            <a href="#correctInputMask"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(enteredDate: Date, mask: string, delimiter: string): string &#x3D;&gt;
+  mask.split(delimiter).reduce(
+    (newMaskArray, maskPart) &#x3D;&gt; {
+      let newMaskPart &#x3D; maskPart;
+      if (enteredDate &amp;&amp; maskPart.toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;m&#x27;) newMaskPart &#x3D; String(enteredDate.getMonth() + 1);
+      if (enteredDate &amp;&amp; maskPart.toLowerCase() &#x3D;&#x3D;&#x3D; &#x27;d&#x27;) newMaskPart &#x3D; String(enteredDate.getDate());
+      return [...newMaskArray, &#x27;0&#x27;.repeat(newMaskPart.length)];
+    },
+    []).join(delimiter)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="revealDelimiter"></a>
+                        <span class="name">
+                            <b>
+                            revealDelimiter</b>
+                            <a href="#revealDelimiter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(mask: string, defaultDelimiter: string &#x3D; &#x27;/&#x27;): string &#x3D;&gt; {
+  if (!mask) return defaultDelimiter;
+  const characterRegex: RegExp &#x3D; /[a-zA-Z0-9|_]/g;
+  // example &quot;___mm,,,,,,,-dd---- yyyy-___&quot;
+  const removedInRawSpecSymbols: string  &#x3D; mask.split(&#x27;&#x27;).reduce(
+    (acc, symbol) &#x3D;&gt; (!characterRegex.test(symbol) &amp;&amp; acc.slice(-1) !&#x3D;&#x3D; symbol ? acc + symbol : acc), &#x27;&#x27;);
+  // example &quot;___mm,-dd- yyyy-___&quot;
+  const removedCharacters: string[] &#x3D; removedInRawSpecSymbols.replace(characterRegex, &#x27;&#x27;).split(&#x27;&#x27;);
+  // example &quot;,-- -&quot;
+  const sortedSpecSymbols: string[] &#x3D; removedCharacters.sort((a, b) &#x3D;&gt; (a &lt; b ? -1 : 1));
+  // example &quot; ,---&quot;
+  const mappedSpecSymbols &#x3D; sortedSpecSymbols.reduce(
+    (acc, symbol) &#x3D;&gt; ({ ...acc, [symbol]: (symbol in acc) ? acc[symbol] + 1 : 1 }), {});
+  // example { &quot; &quot;: 1, &quot;,&quot;: 1, &quot;-&quot;: 3 }
+  const delimiterInfo: DelimiterInfo &#x3D; Object.entries(mappedSpecSymbols).reduce(
+    (acc, [symbol, entries]: [string, number]) &#x3D;&gt;
+      (acc.entries &lt; entries ? { symbol, entries } : acc),
+    { symbol: defaultDelimiter, entries: 0 });
+  // example { symbol: &quot;-&quot;, entries: 3 }
+  return delimiterInfo.symbol;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validateDateMask"></a>
+                        <span class="name">
+                            <b>
+                            validateDateMask</b>
+                            <a href="#validateDateMask"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(mask: string): string &#x3D;&gt; {
+  const defaultMask &#x3D; &#x27;MM/DD/YYYY&#x27;;
+  const forbiddenValues &#x3D; [&#x27;null&#x27;, &#x27;Null&#x27;, &#x27;undefined&#x27;, &#x27;NaN&#x27;];
+  const maskToCheck &#x3D; mask &amp;&amp; !forbiddenValues.includes(mask) ? mask : defaultMask;
+  const maskIncludes: MaskInclude[] &#x3D; [];
+  const delimiter &#x3D; revealDelimiter(mask);
+  const maskGroups: MaskGroup[][] &#x3D; [
+    [&#x27;DD&#x27;, &#x27;D&#x27;],
+    [&#x27;MM&#x27;, &#x27;M&#x27;],
+    [&#x27;YYYY&#x27;, [&#x27;YYY&#x27;, &#x27;YY&#x27;], &#x27;YY&#x27;, [&#x27;Y&#x27;, &#x27;YY&#x27;]]
+  ];
+  maskGroups.map(maskGroup &#x3D;&gt;
+    maskGroup.some((group) &#x3D;&gt; {
+      const isArray &#x3D; (group instanceof Array);
+      const part &#x3D; isArray ? group[0] : group as string;
+      const index &#x3D; maskToCheck.toLowerCase().indexOf(part.toLowerCase());
+      if (index &gt;&#x3D; 0) {
+        maskIncludes.push([isArray ? group[1] : part, index]);
+        return true;
+      }
+    }));
+  if (!maskIncludes.length) return defaultMask;
+  const sortedMaskParts: MaskInclude[] &#x3D; maskIncludes.sort((a, b) &#x3D;&gt; (a[1] &lt; b[1] ? -1 : 1));
+  return sortedMaskParts.map(([maskPart]) &#x3D;&gt; maskPart).join(delimiter);
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validateDateMaskLong"></a>
+                        <span class="name">
+                            <b>
+                            validateDateMaskLong</b>
+                            <a href="#validateDateMaskLong"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(mask: string): string &#x3D;&gt; {
+  const defaultMask &#x3D; &#x27;LLLL&#x27;;
+  const forbiddenValues &#x3D; [&#x27;null&#x27;, &#x27;Null&#x27;, &#x27;undefined&#x27;, &#x27;NaN&#x27;];
+  const maskToCheck &#x3D; mask &amp;&amp; !forbiddenValues.includes(mask) ? mask : defaultMask;
+  const maskIncludes: MaskInclude[] &#x3D; [];
+  const delimiter &#x3D; revealDelimiter(mask, &#x27; &#x27;);
+  const maskGroups: MaskGroup[][] &#x3D; [
+    [&#x27;LLLL&#x27;, &#x27;llll&#x27;, &#x27;LLL&#x27;, &#x27;lll&#x27;, &#x27;LL&#x27;, &#x27;ll&#x27;],
+    [&#x27;Do&#x27;, &#x27;dddd&#x27;, [&#x27;DDDD&#x27;, &#x27;dddd&#x27;], [&#x27;DDD&#x27;, &#x27;ddd&#x27;], &#x27;ddd&#x27;, &#x27;dd&#x27;, &#x27;d&#x27;, &#x27;DD&#x27;, &#x27;D&#x27;],
+    [&#x27;Mo&#x27;, &#x27;MMMM&#x27;, [&#x27;mmmm&#x27;, &#x27;MMMM&#x27;], [&#x27;mmm&#x27;, &#x27;MMM&#x27;], &#x27;MMM&#x27;, &#x27;MM&#x27;, [&#x27;mm&#x27;, &#x27;MM&#x27;], &#x27;M&#x27;, [&#x27;m&#x27;, &#x27;M&#x27;]],
+    [&#x27;YYYY&#x27;, [&#x27;yyyy&#x27;, &#x27;YYYY&#x27;], [&#x27;yyy&#x27;, &#x27;YY&#x27;], [&#x27;YYY&#x27;, &#x27;YY&#x27;], [&#x27;yy&#x27;, &#x27;YY&#x27;], &#x27;YY&#x27;, [&#x27;Y&#x27;, &#x27;YY&#x27;], [&#x27;y&#x27;, &#x27;YY&#x27;]]
+  ];
+  for (let i &#x3D; 0; i &lt; maskGroups.length; i +&#x3D; 1) {
+    if (i &#x3D;&#x3D;&#x3D; 1 &amp;&amp; maskIncludes.length &gt; 0) break;
+    maskGroups[i].some((group) &#x3D;&gt; {
+      const isArray &#x3D; (group instanceof Array);
+      const part &#x3D; isArray ? group[0] : group as string;
+      const index &#x3D; maskToCheck.indexOf(part);
+      if (index &gt;&#x3D; 0) {
+        maskIncludes.push([isArray ? group[1] : part, index]);
+        return true;
+      }
+    });
+  }
+  if (!maskIncludes.length) return defaultMask;
+  const sortedMaskParts: MaskInclude[] &#x3D; maskIncludes.sort((a, b) &#x3D;&gt; (a[1] &lt; b[1] ? -1 : 1));
+  return sortedMaskParts.map(([maskPart]) &#x3D;&gt; maskPart).join(delimiter);
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validateTimeMask"></a>
+                        <span class="name">
+                            <b>
+                            validateTimeMask</b>
+                            <a href="#validateTimeMask"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(mask: string): string &#x3D;&gt; {
+  const defaultMask &#x3D; &#x27;hh:mm&#x27;;
+  const defaultDelimiter &#x3D; &#x27;:&#x27;;
+  const forbiddenValues &#x3D; [&#x27;null&#x27;, &#x27;Null&#x27;, &#x27;undefined&#x27;, &#x27;NaN&#x27;];
+  const maskToCheck &#x3D; mask &amp;&amp; !forbiddenValues.includes(mask) ? mask : defaultMask;
+  const maskIncludes: MaskInclude[] &#x3D; [];
+  const maskGroups: MaskGroup[][] &#x3D; [
+    [&#x27;HH&#x27;, &#x27;H&#x27;, &#x27;hh&#x27;, &#x27;h&#x27;],
+    [[&#x27;MM&#x27;, &#x27;mm&#x27;], [&#x27;M&#x27;, &#x27;m&#x27;], &#x27;mm&#x27;, &#x27;m&#x27;],
+    [[&#x27;SSS&#x27;, &#x27;ss&#x27;], [&#x27;SS&#x27;, &#x27;ss&#x27;], [&#x27;S&#x27;, &#x27;s&#x27;], &#x27;ss&#x27;, &#x27;s&#x27;],
+  ];
+  const ampm &#x3D; maskToCheck.includes(&#x27;a&#x27;) ? &#x27; a&#x27; : maskToCheck.includes(&#x27;A&#x27;) ? &#x27; A&#x27; : &#x27;&#x27;;
+  maskGroups.map(maskGroup &#x3D;&gt;
+    maskGroup.some((group) &#x3D;&gt; {
+      const isArray &#x3D; (group instanceof Array);
+      const part &#x3D; isArray ? group[0] : group as string;
+      const index &#x3D; maskToCheck.indexOf(part);
+      if (index &gt;&#x3D; 0) {
+        maskIncludes.push([isArray ? group[1] : part, index]);
+        return true;
+      }
+    }));
+  if (!maskIncludes.length) return defaultMask;
+  return maskIncludes.map(([maskPart]) &#x3D;&gt; maskPart).join(defaultDelimiter).concat(ampm);
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
     <h3>src/app/click-icon-demo/click-icon/click-icon.component.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -155,6 +415,36 @@
                             <i>Default value : </i><code>{
   production: false
 }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/click-time-domain/click-time-domain/click-time-domain.component.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MODAL_DIALOG_CLASS"></a>
+                        <span class="name">
+                            <b>
+                            MODAL_DIALOG_CLASS</b>
+                            <a href="#MODAL_DIALOG_CLASS"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;time-domain-modal-dialog&#x27;</code>
                         </td>
                     </tr>
 
