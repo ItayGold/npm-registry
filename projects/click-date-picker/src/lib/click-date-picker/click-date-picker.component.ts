@@ -165,7 +165,7 @@ export class ClickDatePickerComponent implements OnInit {
   @Input() todayButtonText?: string = `Today`;
   @Output() updateDateStore: EventEmitter<string> = new EventEmitter<string>();
   @Output() updateMsgStore: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @ViewChild('dp') datepicker: BsDaterangepickerDirective;
+  @ViewChild('dp', { static: false }) datepicker: BsDaterangepickerDirective;
   @Input() showWeekNumbers?: boolean = false;
   @Input() isOpen?: boolean = false;
   datePickerConfig?: Partial<BsDatepickerConfig>;

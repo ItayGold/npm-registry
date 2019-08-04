@@ -10,6 +10,6 @@ import { ClickIconComponent } from './click-icon/click-icon.component';
     CommonModule,
     ClickIconDemoRoutingModule,
   ],
-  exports: [ClickIconComponent]
+  exports: [ClickIconComponent, ClickIconDemoComponent]
 })
 export class ClickIconDemoModule { }

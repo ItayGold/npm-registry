@@ -8,7 +8,7 @@ import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://localhost:4200/date-picker-range</example-url>
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range</example-url>
  */
 @Component({
   selector: 'app-click-date-picker-range-demo',

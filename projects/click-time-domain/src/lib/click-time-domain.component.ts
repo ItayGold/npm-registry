@@ -1,4 +1,17 @@
-import { Component, Input, Output, ViewChild, ElementRef, Renderer2, HostBinding, EventEmitter, HostListener, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  HostBinding,
+  EventEmitter,
+  HostListener,
+  ViewEncapsulation,
+  OnChanges,
+  SimpleChanges
+} from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { validateDateMask } from '../helpers/w6-mask-helper';
@@ -38,7 +51,7 @@ const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
   `],
   encapsulation: ViewEncapsulation.None,
 })
-export class ClickTimeDomainComponent {
+export class ClickTimeDomainComponent implements OnChanges {
 
   public differenceInDays: number;
   private offsetDays: number;
@@ -79,15 +92,15 @@ export class ClickTimeDomainComponent {
   set mask(value: string) { this._mask = validateDateMask(value); }
 
   @Output() datesSaved = new EventEmitter<ClickTimeDomainState>();
-  @ViewChild('divider') divider: ElementRef;
-  @ViewChild('datesWrapper') datesWrapper: ElementRef;
+  @ViewChild('divider', { static: false }) divider: ElementRef;
+  @ViewChild('datesWrapper', { static: false }) datesWrapper: ElementRef;
   @HostBinding('class') class = 'time-domain';
 
   constructor(private renderer: Renderer2, private modalService: BsModalService) {
     this.updateTimeDomainState();
   }
 
-  ngOnChanges({ calendarState }) {
+  ngOnChanges({ calendarState }: SimpleChanges) {
     if (calendarState) {
       const { isRelative, from, to, currentDate } = calendarState.currentValue;
 
@@ -185,7 +198,7 @@ export class ClickTimeDomainComponent {
       ? this.translations.CalendarForm_LoadDates_Days
       : this.translations.CalendarForm_LoadDates_Day;
   }
-  
+
   @HostListener('window:resize')
   adjustModalWindowOffset(): void {
     if (this.modalWindow) {

@@ -688,7 +688,7 @@
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;https://stackblitz.com/edit/angular-1wmnxx&lt;/example-url&gt;
+ * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon&lt;/example-url&gt;
  */
 
 
@@ -757,7 +757,7 @@ export class ClickIconDemoComponent implements OnInit {
       &lt;click-icon
         [withArrows]&#x3D;&quot;true&quot;
         (click)&#x3D;&quot;onClickIcon($event)&quot;
-        (messageEvent)&#x3D;&quot;getIconName($event)&quot;
+        (messageEvent)&#x3D;&quot;getIconName(&#x27;With the arrows&#x27;)&quot;
         (prev)&#x3D;&quot;onPrevClicked($event)&quot;
         (next)&#x3D;&quot;onNextClicked($event)&quot;
         [title]&#x3D;&quot;tooltip&quot;
@@ -769,7 +769,7 @@ export class ClickIconDemoComponent implements OnInit {
       &lt;click-icon
         [withArrows]&#x3D;&quot;false&quot;
         (click)&#x3D;&quot;onClickIcon($event)&quot;
-        (messageEvent)&#x3D;&quot;getIconName($event)&quot;
+        (messageEvent)&#x3D;&quot;getIconName(&#x27;Without arrows&#x27;)&quot;
         (prev)&#x3D;&quot;onPrevClicked($event)&quot;
         (next)&#x3D;&quot;onNextClicked($event)&quot;
         [title]&#x3D;&quot;tooltip&quot;
@@ -822,7 +822,7 @@ export class ClickIconDemoComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="https://stackblitz.com/edit/angular-1wmnxx">
+            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon">
                 <p>no-iframes</p>
             </iframe>
     </div>
@@ -833,7 +833,7 @@ export class ClickIconDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <div class="click-icon-demo">    <div>      <h4>With the arrows</h4>      <click-icon        [withArrows]="true"        (click)="onClickIcon($event)"        (messageEvent)="getIconName($event)"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"        [title]="tooltip"      ></click-icon>    </div>    <div>      <h4>Without the arrows</h4>      <click-icon        [withArrows]="false"        (click)="onClickIcon($event)"        (messageEvent)="getIconName($event)"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"        [title]="tooltip"      ></click-icon>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <h2>Icon</h2>  <div class="click-icon-demo">    <div>      <h4>With the arrows</h4>      <click-icon        [withArrows]="true"        (click)="onClickIcon($event)"        (messageEvent)="getIconName(\'With the arrows\')"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"        [title]="tooltip"      ></click-icon>    </div>    <div>      <h4>Without the arrows</h4>      <click-icon        [withArrows]="false"        (click)="onClickIcon($event)"        (messageEvent)="getIconName(\'Without arrows\')"        (prev)="onPrevClicked($event)"        (next)="onNextClicked($event)"        [title]="tooltip"      ></click-icon>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickIconDemoComponent'};

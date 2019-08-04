@@ -85,7 +85,7 @@ for date range picker use another component</p>
     </p>
     <div class="io-description">
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://localhost:4200/date-picker&lt;/example-url&gt;</code></pre>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker&lt;/example-url&gt;</code></pre>
                 </div>
     </div>
 
@@ -644,7 +644,7 @@ for date range picker use another component</p>
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @ViewChild(&#x27;dp&#x27;)<br />
+                                @ViewChild(&#x27;dp&#x27;, {static: false})<br />
                             </code>
                         </td>
                     </tr>
@@ -896,7 +896,7 @@ import { ChangeDetectorRef } from &#x27;@angular/core&#x27;;
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://localhost:4200/date-picker&lt;/example-url&gt;
+ * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-date-picker-demo&#x27;,
@@ -911,7 +911,7 @@ export class ClickDatePickerDemoComponent {
   showWeekNumbers: boolean &#x3D; false;
   isOpen: boolean &#x3D; false;
   previousDate: Date &#x3D; new Date(null);
-  @ViewChild(&#x27;dp&#x27;) datepicker: BsDaterangepickerDirective;
+  @ViewChild(&#x27;dp&#x27;, { static: false }) datepicker: BsDaterangepickerDirective;
   constructor(private cdRef: ChangeDetectorRef) { }
 
   updateDateStore(dt: string): void {
@@ -1109,7 +1109,7 @@ export class ClickDatePickerDemoComponent {
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="http://localhost:4200/date-picker">
+            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker">
                 <p>no-iframes</p>
             </iframe>
     </div>

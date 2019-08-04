@@ -91,7 +91,7 @@ for date range picker use another component</p>
     </p>
     <div class="io-description">
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://localhost:4200/date-picker-range&lt;/example-url&gt;</code></pre>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range&lt;/example-url&gt;</code></pre>
                 </div>
     </div>
 
@@ -441,7 +441,7 @@ for date range picker use another component</p>
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @ViewChild(BsDaterangepickerDirective)<br />
+                                @ViewChild(BsDaterangepickerDirective, {static: false})<br />
                             </code>
                         </td>
                     </tr>
@@ -637,7 +637,7 @@ import &#x27;../../../../node_modules/bootstrap/dist/css/bootstrap.min.css&#x27;
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://localhost:4200/date-picker-range&lt;/example-url&gt;
+ * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;app-click-date-picker-range-demo&#x27;,
@@ -647,7 +647,7 @@ import &#x27;../../../../node_modules/bootstrap/dist/css/bootstrap.min.css&#x27;
 export class ClickDatePickerRangeDemoComponent implements OnInit {
   @Input() placeholder: string;
   @Output() datePickerRangeEvent: EventEmitter&lt;Date[]&gt;;
-  @ViewChild(BsDaterangepickerDirective) datepicker: BsDaterangepickerDirective;
+  @ViewChild(BsDaterangepickerDirective, { static: false }) datepicker: BsDaterangepickerDirective;
   datePickerConfig: Partial&lt;BsDatepickerConfig&gt;;
   moduleStrings: any &#x3D; {};
   minDate: Date;
@@ -711,7 +711,129 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
 }
 
 ::ng-deep .date {
-  width: 481px;
+  width: 220px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+
+  &amp; &gt; input {
+    width: 90%;
+    border: 1px solid #cbcbcb;
+    border-radius: 0;
+    height: auto;
+    cursor: pointer;
+    box-shadow: none;
+    padding: 5px 7px;
+    &amp; &gt; :focus {
+      outline: -webkit-focus-ring-color auto 5px !important;
+    }
+  }
+
+  &amp; &gt; .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    border-radius: 0;
+
+    &amp; &gt; .btn {
+      font-size: 16px;
+      &amp; &gt; .fa {
+        color: #a7a7a7;
+      }
+    }
+
+    &amp; &gt; .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+      border-radius: 0;
+    }
+  }
+}
+
+::ng-deep .bs-calendar-container &gt; .ng-star-inserted {
+  display: flex;
+}
+::ng-deep .bs-calendar-container button {
+  font: 200 14px system-ui;
+}
+::ng-deep .todayButton {
+  text-align: left;
+  position: relative;
+  font-family: Roboto;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1.5;
+  color: #0875bf;
+  display: inline-block;
+  flex-grow: 1;
+  padding: 10px 0 10px 15px;
+}
+::ng-deep .bs-datepicker-body .closeButton {
+  text-align: right;
+  position: relative;
+  font-family: Roboto;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1.5;
+  color: #0875bf;
+  display: inline-block;
+  flex-grow: 1;
+}
+::ng-deep .bs-datepicker-body .hrLine {
+  margin: 0 !important;
+}
+::ng-deep .bs-datepicker-body table th {
+  color: #0875bf !important;
+  font-family: Roboto;
+  font-size: 12px !important;
+  line-height: 11px;
+  padding: 3px 3px 4px 3px;
+}
+::ng-deep .bs-datepicker .is-other-month {
+  color: #cbcbcb !important;
+}
+::ng-deep .bs-datepicker-body table td {
+  font-size: 12px !important;
+}
+::ng-deep .bs-datepicker-body .dpButtons {
+  display: flex;
+}
+::ng-deep bs-daterangepicker-container .bs-datepicker-container {
+  padding: 10px !important;
+}
+::ng-deep .bs-datepicker-container .bs-datepicker-head {
+  background-color: #0875bf !important;
+  height: 50px;
+  border-radius: 2px 2px 0 0;
+  font-weight: 300 !important;
+}
+::ng-deep .bs-datepicker-container .bs-datepicker-head button:hover {
+  background-color: #0986d3 !important;
+}
+::ng-deep .bs-datepicker-body table td[class*&#x3D;&#x27;select-&#x27;] span:after {
+  background-color: #0875bf !important;
+}
+::ng-deep .bs-datepicker-container .bs-datepicker-head .next,
+::ng-deep .bs-datepicker-container .bs-datepicker-head .previous {
+  font-size: 18px;
+  line-height: 18px;
+}
+::ng-deep .bs-datepicker-container .bs-datepicker-body table td span.selected,
+::ng-deep .bs-datepicker-container .bs-datepicker-body table td.selected span,
+::ng-deep
+  .bs-datepicker-container
+  .bs-datepicker-body
+  table
+  td
+  span[class*&#x3D;&#x27;select-&#x27;]:after,
+::ng-deep
+  .bs-datepicker-container
+  .bs-datepicker-body
+  table
+  td[class*&#x3D;&#x27;select-&#x27;]
+  span:after {
+  background-color: #0875bf !important;
 }
 </code></pre>
     </div>
@@ -735,7 +857,7 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="http://localhost:4200/date-picker-range">
+            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range">
                 <p>no-iframes</p>
             </iframe>
     </div>

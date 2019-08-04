@@ -6,7 +6,7 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://localhost:4200/icon</example-url>
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon</example-url>
  */
 @Component({
   selector: 'click-icon',
