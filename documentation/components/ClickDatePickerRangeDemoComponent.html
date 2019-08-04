@@ -711,50 +711,46 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
 }
 
 ::ng-deep .date {
-  width: 481px;
-}
-
-.input-group-btn {
-  position: relative;
-  font-size: 0;
-  white-space: nowrap;
-  border-radius: 0;
-}
-
-.btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-  border-radius: 0;
-}
-
-.date {
+  width: 220px;
   font-size: 14px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+
+  &amp; &gt; input {
+    width: 90%;
+    border: 1px solid #cbcbcb;
+    border-radius: 0;
+    height: auto;
+    cursor: pointer;
+    box-shadow: none;
+    padding: 5px 7px;
+    &amp; &gt; :focus {
+      outline: -webkit-focus-ring-color auto 5px !important;
+    }
+  }
+
+  &amp; &gt; .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    border-radius: 0;
+
+    &amp; &gt; .btn {
+      font-size: 16px;
+      &amp; &gt; .fa {
+        color: #a7a7a7;
+      }
+    }
+
+    &amp; &gt; .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+      border-radius: 0;
+    }
+  }
 }
 
-.date .btn {
-  font-size: 16px;
-}
-
-.date .btn .fa {
-  color: #a7a7a7;
-}
-
-.date input {
-  width: 90%;
-  border: 1px solid #cbcbcb;
-  border-radius: 0;
-  height: auto;
-  cursor: pointer;
-  box-shadow: none;
-  padding: 5px 7px;
-}
-
-.date input:focus {
-  outline: -webkit-focus-ring-color auto 5px !important;
-}
 ::ng-deep .bs-calendar-container &gt; .ng-star-inserted {
   display: flex;
 }

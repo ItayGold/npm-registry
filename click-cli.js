@@ -122,9 +122,10 @@ program
       `aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com`,
       { stdio: 'inherit' }
     );
-    execSync(`npm run build npm-registry  -- --prod --aot`, {
-      stdio: 'inherit',
-    });
+
+    // execSync(`npm run build:ssr`, {
+    //   stdio: 'inherit',
+    // });
 
     execSync(
       `aws s3 sync --acl public-read --sse --delete dist/browser/ s3://npm-docs-demo`,
