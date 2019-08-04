@@ -7,7 +7,7 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://localhost:4200/date-picker-range</example-url>
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range</example-url>
  */
 @Component({
   selector: 'click-date-picker-range',

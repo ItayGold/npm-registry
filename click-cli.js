@@ -127,7 +127,7 @@ program
     });
 
     execSync(
-      `aws s3 sync --acl public-read --sse --delete dist/npm-registry/ s3://npm-docs-demo`,
+      `aws s3 sync --acl public-read --sse --delete dist/browser/ s3://npm-docs-demo`,
       { stdio: 'inherit' }
     );
     log(`3/4: The docs & demos are deployed.`, {

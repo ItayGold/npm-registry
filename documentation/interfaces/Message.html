@@ -204,7 +204,7 @@
   Output,
   EventEmitter,
   ChangeDetectorRef,
-  OnInit,
+  OnInit
 } from &#x27;@angular/core&#x27;;
 import {
   BsDatepickerConfig,
@@ -222,7 +222,7 @@ export interface Message {
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://localhost:4200/date-picker&lt;/example-url&gt;
+ * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-date-picker&#x27;,
@@ -235,7 +235,7 @@ export class ClickDatePickerComponent implements OnInit {
   @Input() todayButtonText: string;
   @Output() updateDateStore: EventEmitter&lt;string&gt; &#x3D; new EventEmitter&lt;string&gt;();
   @Output() updateMsgStore: EventEmitter&lt;boolean&gt; &#x3D; new EventEmitter&lt;boolean&gt;();
-  @ViewChild(&#x27;dp&#x27;) datepicker: BsDaterangepickerDirective;
+  @ViewChild(&#x27;dp&#x27;, { static: false }) datepicker: BsDaterangepickerDirective;
   @Input() showWeekNumbers: boolean;
   @Input() isOpen: boolean;
   datePickerConfig: Partial&lt;BsDatepickerConfig&gt;;

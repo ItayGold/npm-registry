@@ -88,10 +88,10 @@ export class ClickTreeViewComponent implements OnInit {
   };
   @Output() changeTree = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
 
-  @ViewChild('searchInput') searchInput: any;
-  @ViewChild('scrollContainer', { read: PerfectScrollbarDirective }) perfectScrollbarDirective: PerfectScrollbarDirective;
+  @ViewChild('searchInput', { static: false }) searchInput: any;
+  @ViewChild('scrollContainer', { static: false, read: PerfectScrollbarDirective }) perfectScrollbarDirective: PerfectScrollbarDirective;
 
-  constructor(private treeViewService: ClickTreeViewService) {}
+  constructor(private treeViewService: ClickTreeViewService) { }
 
   ngOnInit(): void {
     if (!this.nodes) {

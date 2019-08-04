@@ -6,7 +6,13 @@ export const configFactory = (config: BsDaterangepickerConfig) => ({
   containerClass: 'theme-dark-blue',
   customTodayClass: 'today',
 });
-
+/**
+ * click/icon's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-range-calendar</example-url>
+ */
 @Component({
   selector: 'click-date-range-calendar',
   templateUrl: './click-date-range-calendar.component.html',
