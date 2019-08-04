@@ -91,7 +91,7 @@ for date range picker use another component</p>
     </p>
     <div class="io-description">
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://localhost:4200/date-picker-range&lt;/example-url&gt;</code></pre>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range&lt;/example-url&gt;</code></pre>
                 </div>
     </div>
 
@@ -553,7 +553,7 @@ for date range picker use another component</p>
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @ViewChild(BsDaterangepickerDirective)<br />
+                                @ViewChild(BsDaterangepickerDirective, {static: false})<br />
                             </code>
                         </td>
                     </tr>
@@ -721,7 +721,7 @@ import { BsDaterangepickerDirective } from &#x27;ngx-bootstrap/datepicker&#x27;;
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://localhost:4200/date-picker-range&lt;/example-url&gt;
+ * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-date-picker-range&#x27;,
@@ -731,7 +731,7 @@ import { BsDaterangepickerDirective } from &#x27;ngx-bootstrap/datepicker&#x27;;
 export class ClickDatepickerRangeComponent implements OnInit {
   @Input() placeholder: string;
   @Output() datePickerRangeEvent: EventEmitter&lt;Date[]&gt;;
-  @ViewChild(BsDaterangepickerDirective) datepicker: BsDaterangepickerDirective;
+  @ViewChild(BsDaterangepickerDirective, { static: false }) datepicker: BsDaterangepickerDirective;
   datePickerConfig: Partial&lt;BsDatepickerConfig&gt;;
   moduleStrings: any &#x3D; {};
   minDate: Date;
@@ -828,7 +828,7 @@ export class ClickDatepickerRangeComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="http://localhost:4200/date-picker-range">
+            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range">
                 <p>no-iframes</p>
             </iframe>
     </div>

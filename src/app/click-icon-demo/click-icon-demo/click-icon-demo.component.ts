@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>https://stackblitz.com/edit/angular-1wmnxx</example-url>
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon</example-url>
  */
 
 

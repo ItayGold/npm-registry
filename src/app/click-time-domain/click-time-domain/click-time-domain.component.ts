@@ -20,7 +20,13 @@ import { ClickTimeDomainModalComponent } from '../click-time-domain-modal/click-
 
 const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
 
-
+/**
+ * click/icon's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain</example-url>
+ */
 @Component({
   selector: 'click-time-domain',
   templateUrl: './click-time-domain.component.html',

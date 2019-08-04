@@ -7,7 +7,7 @@ export function configFactory(config: BsDaterangepickerConfig) {
     containerClass: 'theme-dark-blue',
     customTodayClass: 'today',
   };
-} 
+}
 
 @Component({
   selector: 'click-date-range-calendar',
@@ -123,7 +123,7 @@ export class ClickDateRangeCalendarComponent implements AfterViewInit, OnChanges
 
   @Input() value: Date[];
   @Output() valueChanged: EventEmitter<Date[]> = new EventEmitter<Date[]>();
-  @ViewChild('datepicker') datePicker: any;
+  @ViewChild('datepicker', { static: false }) datePicker: any;
 
   ngAfterViewInit(): void {
     this.datePickerInitialized = true;

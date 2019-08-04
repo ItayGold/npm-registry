@@ -76,7 +76,7 @@
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_ClickIconDemoModule_exports</title>
-<polygon fill="none" stroke="#000000" points="249,-208 249,-260 405,-260 405,-208 249,-208"/>
+<polygon fill="none" stroke="#000000" points="142,-208 142,-260 490,-260 490,-208 142,-208"/>
 </g>
 <!-- ClickIconComponent -->
 <g id="node1" class="node">
@@ -93,8 +93,8 @@
 <!-- ClickIconComponent&#45;&gt;ClickIconDemoModule -->
 <g id="edge1" class="edge">
 <title>ClickIconComponent&#45;&gt;ClickIconDemoModule</title>
-<path fill="none" stroke="#000000" d="M499,-122.1061C499,-141.3391 499,-169 499,-169 499,-169 411.6913,-169 411.6913,-169"/>
-<polygon fill="#000000" stroke="#000000" points="411.6913,-165.5001 401.6913,-169 411.6913,-172.5001 411.6913,-165.5001"/>
+<path fill="none" stroke="#000000" d="M456.375,-122.1061C456.375,-141.3391 456.375,-169 456.375,-169 456.375,-169 411.5084,-169 411.5084,-169"/>
+<polygon fill="#000000" stroke="#000000" points="411.5084,-165.5001 401.5084,-169 411.5083,-172.5001 411.5084,-165.5001"/>
 </g>
 <!-- ClickIconDemoComponent -->
 <g id="node2" class="node">
@@ -111,14 +111,26 @@
 <!-- ClickIconComponent  -->
 <g id="node5" class="node">
 <title>ClickIconComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="397.04,-252 256.96,-252 256.96,-216 397.04,-216 397.04,-252"/>
-<text text-anchor="middle" x="327" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="482.04,-252 341.96,-252 341.96,-216 482.04,-216 482.04,-252"/>
+<text text-anchor="middle" x="412" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconComponent </text>
 </g>
 <!-- ClickIconDemoModule&#45;&gt;ClickIconComponent  -->
 <g id="edge4" class="edge">
 <title>ClickIconDemoModule&#45;&gt;ClickIconComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M327,-187.1061C327,-187.1061 327,-205.991 327,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="323.5001,-205.9909 327,-215.991 330.5001,-205.991 323.5001,-205.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M371.7323,-187.1061C371.7323,-187.1061 371.7323,-205.991 371.7323,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="368.2324,-205.9909 371.7323,-215.991 375.2324,-205.991 368.2324,-205.9909"/>
+</g>
+<!-- ClickIconDemoComponent  -->
+<g id="node6" class="node">
+<title>ClickIconDemoComponent </title>
+<polygon fill="#fb8072" stroke="#000000" points="324.252,-252 149.748,-252 149.748,-216 324.252,-216 324.252,-252"/>
+<text text-anchor="middle" x="237" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">ClickIconDemoComponent </text>
+</g>
+<!-- ClickIconDemoModule&#45;&gt;ClickIconDemoComponent  -->
+<g id="edge5" class="edge">
+<title>ClickIconDemoModule&#45;&gt;ClickIconDemoComponent </title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M288.3207,-187.1061C288.3207,-187.1061 288.3207,-205.991 288.3207,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="284.8207,-205.9909 288.3207,-215.991 291.8207,-205.991 284.8207,-205.9909"/>
 </g>
 <!-- ClickIconDemoRoutingModule -->
 <g id="node4" class="node">
@@ -129,8 +141,8 @@
 <!-- ClickIconDemoRoutingModule&#45;&gt;ClickIconDemoModule -->
 <g id="edge3" class="edge">
 <title>ClickIconDemoRoutingModule&#45;&gt;ClickIconDemoModule</title>
-<path fill="none" stroke="#000000" d="M121,-122.1061C121,-141.3391 121,-169 121,-169 121,-169 242.338,-169 242.338,-169"/>
-<polygon fill="#000000" stroke="#000000" points="242.338,-172.5001 252.338,-169 242.338,-165.5001 242.338,-172.5001"/>
+<path fill="none" stroke="#000000" d="M183.9588,-122.1061C183.9588,-141.3391 183.9588,-169 183.9588,-169 183.9588,-169 242.128,-169 242.128,-169"/>
+<polygon fill="#000000" stroke="#000000" points="242.128,-172.5001 252.128,-169 242.1279,-165.5001 242.128,-172.5001"/>
 </g>
 </g>
 </svg>
@@ -198,6 +210,9 @@
                         <li class="list-group-item">
                             <a href="../components/ClickIconComponent.html">ClickIconComponent</a>
                         </li>
+                        <li class="list-group-item">
+                            <a href="../components/ClickIconDemoComponent.html">ClickIconDemoComponent</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -220,7 +235,7 @@ import { ClickIconComponent } from &#x27;./click-icon/click-icon.component&#x27;
     CommonModule,
     ClickIconDemoRoutingModule,
   ],
-  exports: [ClickIconComponent]
+  exports: [ClickIconComponent, ClickIconDemoComponent]
 })
 export class ClickIconDemoModule { }
 </code></pre>

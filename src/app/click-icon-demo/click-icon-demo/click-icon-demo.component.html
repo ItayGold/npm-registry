@@ -7,7 +7,7 @@
       <click-icon
         [withArrows]="true"
         (click)="onClickIcon($event)"
-        (messageEvent)="getIconName($event)"
+        (messageEvent)="getIconName('With the arrows')"
         (prev)="onPrevClicked($event)"
         (next)="onNextClicked($event)"
         [title]="tooltip"
@@ -19,7 +19,7 @@
       <click-icon
         [withArrows]="false"
         (click)="onClickIcon($event)"
-        (messageEvent)="getIconName($event)"
+        (messageEvent)="getIconName('Without arrows')"
         (prev)="onPrevClicked($event)"
         (next)="onNextClicked($event)"
         [title]="tooltip"

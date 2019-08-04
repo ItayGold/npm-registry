@@ -55,6 +55,9 @@
         <li >
             <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
+        <li >
+            <a href="#example" role="tab" id="example-tab" data-toggle="tab" data-link="example">Examples</a>
+        </li>
 </ul>
 
 <div class="tab-content">
@@ -65,6 +68,15 @@
     <code>src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>click/icon&#39;s based on angular bootstrap library
+ngx-bootstrap
+for date range picker use another component</p>
+
+    </p>
 
 
     <p class="comment">
@@ -75,6 +87,14 @@
                     <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
     </p>
 
+    <p class="comment">
+        <h3>Example</h3>
+    </p>
+    <div class="io-description">
+                <div>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-range-calendar&lt;/example-url&gt;</code></pre>
+                </div>
+    </div>
 
 <section>
     <h3>Metadata</h3>
@@ -230,7 +250,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:31</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -254,7 +274,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:32</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -289,8 +309,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:35</a></div>
                 </td>
             </tr>
 
@@ -328,8 +348,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:41</a></div>
                 </td>
             </tr>
 
@@ -398,8 +418,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:48</a></div>
                 </td>
             </tr>
 
@@ -475,13 +495,13 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @ViewChild(&#x27;datepicker&#x27;)<br />
+                                @ViewChild(&#x27;datepicker&#x27;, {static: false})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -514,7 +534,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/click-time-domain/click-date-range-calendar/click-date-range-calendar.component.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -535,7 +555,13 @@ export const configFactory &#x3D; (config: BsDaterangepickerConfig) &#x3D;&gt; (
   containerClass: &#x27;theme-dark-blue&#x27;,
   customTodayClass: &#x27;today&#x27;,
 });
-
+/**
+ * click/icon&#x27;s based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-range-calendar&lt;/example-url&gt;
+ */
 @Component({
   selector: &#x27;click-date-range-calendar&#x27;,
   templateUrl: &#x27;./click-date-range-calendar.component.html&#x27;,
@@ -553,7 +579,7 @@ export class ClickDateRangeCalendarComponent implements AfterViewInit, OnChanges
 
   @Input() value: Date[];
   @Output() valueChanged: EventEmitter&lt;Date[]&gt; &#x3D; new EventEmitter&lt;Date[]&gt;();
-  @ViewChild(&#x27;datepicker&#x27;) datePicker: any;
+  @ViewChild(&#x27;datepicker&#x27;, { static: false }) datePicker: any;
 
   ngAfterViewInit(): void {
     this.datePickerInitialized &#x3D; true;
@@ -758,6 +784,11 @@ bs-daterangepicker-container {
         </div>
     </div>
 
+    <div class="tab-pane fade " id="c-example">
+            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-range-calendar">
+                <p>no-iframes</p>
+            </iframe>
+    </div>
     
 </div>
 

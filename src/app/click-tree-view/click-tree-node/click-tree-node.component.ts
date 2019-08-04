@@ -5,7 +5,13 @@ import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristat
 
 import { ClickTreeNode, ClickKeyNode, ClickTreeViewTranslations } from '../models';
 import { ClickTreeViewCalculationService } from '../services/click-tree-view-calculation.service';
-
+/**
+ * click/icon's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tree-view</example-url>
+ */
 @Component({
   selector: 'click-tree-node',
   templateUrl: './click-tree-node.component.html',

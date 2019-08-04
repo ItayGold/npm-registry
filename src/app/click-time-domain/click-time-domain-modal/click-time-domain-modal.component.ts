@@ -27,7 +27,13 @@ enum Errors {
   StartInvalid = 'Invalid start date',
   EndInvalid = 'Invalid end date',
 }
-
+/**
+ * click/icon's based on angular bootstrap library
+ * ngx-bootstrap
+ * for date range picker use another component
+ * @example
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain</example-url>
+ */
 @Component({
   selector: 'click-time-domain-modal',
   templateUrl: './click-time-domain-modal.component.html',
