@@ -26,11 +26,15 @@ export class ClickDatePickerDemoComponent {
   constructor(private cdRef: ChangeDetectorRef) { }
 
   updateDateStore(dt: string): void | boolean {
-    if (!this.datepicker.isOpen) {
-      return false;
+    const newDate = new Date(dt);
+
+    if (newDate.getTime() !== this.previousDate.getTime()) {
+      this.previousDate = newDate;
+      if (this.datepicker && !this.datepicker.isOpen) {
+        window.alert(`Date's been updated @Store: ${dt}`);
+      }
     }
 
-    window.alert(`Date's been updated @Store: ${dt}`);
   }
 
   updateMsgStore(status: boolean): void {
