@@ -25,7 +25,11 @@ export class ClickDatePickerDemoComponent {
   @ViewChild('dp', { static: false }) datepicker: BsDaterangepickerDirective;
   constructor(private cdRef: ChangeDetectorRef) { }
 
-  updateDateStore(dt: string): void {
+  updateDateStore(dt: string): void | boolean {
+    if (!this.datepicker.isOpen) {
+      return false;
+    }
+
     window.alert(`Date's been updated @Store: ${dt}`);
   }
 
