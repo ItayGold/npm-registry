@@ -178,9 +178,6 @@ for date range picker use another component</p>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
-                            </li>
-                            <li>
                                 <a href="#onChangeTree">onChangeTree</a>
                             </li>
                         </ul>
@@ -227,45 +224,6 @@ for date range picker use another component</p>
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <b>
-                            ngOnInit
-                        </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="153"
-                            class="link-to-prism">src/app/click-tree-view/click-tree-view-demo/click-tree-view-demo.component.ts:153</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="onChangeTree"></a>
                     <span class="name">
                         <b>
@@ -284,8 +242,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="155"
-                            class="link-to-prism">src/app/click-tree-view/click-tree-view-demo/click-tree-view-demo.component.ts:155</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">src/app/click-tree-view/click-tree-view-demo/click-tree-view-demo.component.ts:153</a></div>
                 </td>
             </tr>
 
@@ -786,10 +744,8 @@ translations: ClickTreeViewTranslations &#x3D; {
     });
   }
 
-  ngOnInit() { }
-
   onChangeTree(event) {
-    alert(&#x60;Node with key: ${event.node.key} has changed state to ${event.node.checkState}&#x60;);
+    window.alert(&#x60;Node with key: ${event.node.key} has changed state to ${event.node.checkState}&#x60;);
     return false;
   }
 }

@@ -915,23 +915,23 @@ export class ClickDatePickerDemoComponent {
   constructor(private cdRef: ChangeDetectorRef) { }
 
   updateDateStore(dt: string): void {
-    alert(&#x60;Date&#x27;s been updated @Store: ${dt}&#x60;);
+    window.alert(&#x60;Date&#x27;s been updated @Store: ${dt}&#x60;);
   }
 
   updateMsgStore(status: boolean): void {
-    alert(&#x60;Message&#x27;s been updated @Store: ${status}&#x60;);
+    window.alert(&#x60;Message&#x27;s been updated @Store: ${status}&#x60;);
   }
 
   onPrevClicked(direction: string) {
-    alert(&#x60;The direction is ${direction}&#x60;);
+    window.alert(&#x60;The direction is ${direction}&#x60;);
   }
 
   onNextClicked(direction: string) {
-    alert(&#x60;The direction is ${direction}&#x60;);
+    window.alert(&#x60;The direction is ${direction}&#x60;);
   }
 
   getIconName(name: string): void {
-    alert(&#x60;The name of the icon is ${name}&#x60;);
+    window.alert(&#x60;The name of the icon is ${name}&#x60;);
   }
 }
 </code></pre>

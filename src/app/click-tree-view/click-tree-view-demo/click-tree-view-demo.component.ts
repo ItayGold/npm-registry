@@ -150,10 +150,8 @@ translations: ClickTreeViewTranslations = {
     });
   }
 
-  ngOnInit() { }
-
   onChangeTree(event) {
-    alert(`Node with key: ${event.node.key} has changed state to ${event.node.checkState}`);
+    window.alert(`Node with key: ${event.node.key} has changed state to ${event.node.checkState}`);
     return false;
   }
 }

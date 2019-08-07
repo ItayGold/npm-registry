@@ -26,22 +26,22 @@ export class ClickDatePickerDemoComponent {
   constructor(private cdRef: ChangeDetectorRef) { }
 
   updateDateStore(dt: string): void {
-    alert(`Date's been updated @Store: ${dt}`);
+    window.alert(`Date's been updated @Store: ${dt}`);
   }
 
   updateMsgStore(status: boolean): void {
-    alert(`Message's been updated @Store: ${status}`);
+    window.alert(`Message's been updated @Store: ${status}`);
   }
 
   onPrevClicked(direction: string) {
-    alert(`The direction is ${direction}`);
+    window.alert(`The direction is ${direction}`);
   }
 
   onNextClicked(direction: string) {
-    alert(`The direction is ${direction}`);
+    window.alert(`The direction is ${direction}`);
   }
 
   getIconName(name: string): void {
-    alert(`The name of the icon is ${name}`);
+    window.alert(`The name of the icon is ${name}`);
   }
 }

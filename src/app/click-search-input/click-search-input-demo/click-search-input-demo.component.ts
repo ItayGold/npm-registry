@@ -22,7 +22,7 @@ export class ClickSearchInputDemoComponent {
   ];
 
   onChanged(event) {
-    alert(event);
+    window.alert(event);
     return false;
   }
 

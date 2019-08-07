@@ -728,20 +728,20 @@ export class ClickIconDemoComponent implements OnInit {
   }
 
   onClickIcon(event: any): void | boolean {
-    alert(&#x60;The click on the icon has been triggered: ${event.type}&#x60;);
+    window.alert(&#x60;The click on the icon has been triggered: ${event.type}&#x60;);
     return false;
   }
 
   getIconName(name: string): void {
-    alert(&#x60;The name of the clicked icon: ${name}&#x60;);
+    window.alert(&#x60;The name of the clicked icon: ${name}&#x60;);
   }
 
   onPrevClicked(direction: string) {
-    alert(&#x60;The direction is ${direction}&#x60;);
+    window.alert(&#x60;The direction is ${direction}&#x60;);
   }
 
   onNextClicked(direction: string) {
-    alert(&#x60;The direction is ${direction}&#x60;);
+    window.alert(&#x60;The direction is ${direction}&#x60;);
   }
 }
 </code></pre>

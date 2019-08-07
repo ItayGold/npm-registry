@@ -26,7 +26,7 @@ export class ClickTristateCheckboxDemoComponent {
   ];
 
   onClickCheckbox(event) {
-    alert(`checkbox changed event: ${event}`);
+    window.alert(`checkbox changed event: ${event}`);
     return false;
   }
 
