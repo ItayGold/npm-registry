@@ -287,8 +287,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:52</a></div>
                 </td>
             </tr>
 
@@ -357,8 +357,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:48</a></div>
                 </td>
             </tr>
 
@@ -427,8 +427,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:44</a></div>
                 </td>
             </tr>
 
@@ -535,7 +535,7 @@ for date range picker use another component</p>
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>    <code>void | boolean</code>
 
                     </div>
                     <div class="io-description">
@@ -567,8 +567,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/click-date-picker-demo/click-date-picker-demo/click-date-picker-demo.component.ts:40</a></div>
                 </td>
             </tr>
 
@@ -914,24 +914,32 @@ export class ClickDatePickerDemoComponent {
   @ViewChild(&#x27;dp&#x27;, { static: false }) datepicker: BsDaterangepickerDirective;
   constructor(private cdRef: ChangeDetectorRef) { }
 
-  updateDateStore(dt: string): void {
-    alert(&#x60;Date&#x27;s been updated @Store: ${dt}&#x60;);
+  updateDateStore(dt: string): void | boolean {
+    const newDate &#x3D; new Date(dt);
+
+    if (newDate.getTime() !&#x3D;&#x3D; this.previousDate.getTime()) {
+      this.previousDate &#x3D; newDate;
+      if (this.datepicker &amp;&amp; !this.datepicker.isOpen) {
+        window.alert(&#x60;Date&#x27;s been updated @Store: ${dt}&#x60;);
+      }
+    }
+
   }
 
   updateMsgStore(status: boolean): void {
-    alert(&#x60;Message&#x27;s been updated @Store: ${status}&#x60;);
+    window.alert(&#x60;Message&#x27;s been updated @Store: ${status}&#x60;);
   }
 
   onPrevClicked(direction: string) {
-    alert(&#x60;The direction is ${direction}&#x60;);
+    window.alert(&#x60;The direction is ${direction}&#x60;);
   }
 
   onNextClicked(direction: string) {
-    alert(&#x60;The direction is ${direction}&#x60;);
+    window.alert(&#x60;The direction is ${direction}&#x60;);
   }
 
   getIconName(name: string): void {
-    alert(&#x60;The name of the icon is ${name}&#x60;);
+    window.alert(&#x60;The name of the icon is ${name}&#x60;);
   }
 }
 </code></pre>

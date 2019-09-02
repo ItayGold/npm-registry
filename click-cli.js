@@ -123,9 +123,9 @@ program
       { stdio: 'inherit' }
     );
 
-    // execSync(`npm run build:ssr`, {
-    //   stdio: 'inherit',
-    // });
+    execSync(`npm run build:prerender`, {
+      stdio: 'inherit',
+    });
 
     execSync(
       `aws s3 sync --acl public-read --sse --delete dist/browser/ s3://npm-docs-demo`,

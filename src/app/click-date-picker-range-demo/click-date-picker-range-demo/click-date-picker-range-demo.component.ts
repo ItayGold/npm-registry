@@ -44,6 +44,6 @@ export class ClickDatePickerRangeDemoComponent implements OnInit {
   }
 
   onDtRangeChanged(dtRange: Date[]): void {
-    alert(`The date range is: ${dtRange.join('-')}`);
+    window.alert(`The date range is: ${dtRange.join('-')}`);
   }
 }

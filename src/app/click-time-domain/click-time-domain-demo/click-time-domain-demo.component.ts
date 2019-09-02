@@ -83,6 +83,6 @@ export class ClickTimeDomainDemoComponent implements OnInit {
   }
 
   onDatesSaved(event) {
-    alert(JSON.stringify(event));
+    window.alert(JSON.stringify(event));
   }
 }
