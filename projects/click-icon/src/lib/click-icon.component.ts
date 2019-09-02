@@ -70,10 +70,6 @@ const DEF_ICON_CLASSES = `calendar-icon w6 w6-calendar2 `;
         color: #1174be;
         outline: none;
       }
-
-      i {
-        font-weight: 900;
-      }
     `,
   ],
 })
