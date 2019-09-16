@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
+import { BsDaterangepickerDirective, BsLocaleService } from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
 /**
@@ -22,8 +22,10 @@ export class ClickDatePickerDemoComponent {
   showWeekNumbers: boolean = false;
   isOpen: boolean = false;
   previousDate: Date = new Date(null);
+  locale?: string = 'en';
   @ViewChild('dp', { static: false }) datepicker: BsDaterangepickerDirective;
-  constructor(private cdRef: ChangeDetectorRef) { }
+
+  constructor(private cdRef: ChangeDetectorRef) {}
 
   updateDateStore(dt: string): void | boolean {
     const newDate = new Date(dt);
