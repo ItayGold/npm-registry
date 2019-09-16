@@ -43,7 +43,7 @@ export class ClickDatePickerComponent implements OnInit {
   @ViewChild('dp', { static: false }) datepicker: BsDaterangepickerDirective;
   @Input() showWeekNumbers: boolean;
   @Input() isOpen: boolean;
-  @Input() locale: string;
+  @Input() locale?: string;
   datePickerConfig: Partial<BsDatepickerConfig>;
   previousDate: Date = new Date(null);
   moduleStrings: any = {};
