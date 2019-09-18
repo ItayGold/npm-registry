@@ -47,8 +47,9 @@ export class ClickDatePickerComponent implements OnInit {
   datePickerConfig: Partial<BsDatepickerConfig>;
   previousDate: Date = new Date(null);
   moduleStrings: any = {};
+  localeExists = false;
 
-  constructor(private cdRef: ChangeDetectorRef, private localeService: BsLocaleService) {}
+  constructor(private cdRef: ChangeDetectorRef, private localeService: BsLocaleService) { }
 
   ngOnInit(): void {
     this.datePickerConfig = Object.assign(
@@ -56,19 +57,26 @@ export class ClickDatePickerComponent implements OnInit {
       { showWeekNumbers: this.showWeekNumbers }
     );
 
-    let localeExists = false;
     for (const locale in locales) {
       if (locales[locale].abbr === this.locale) {
-        defineLocale(locales[locale].abbr, locales[locale]);
-        localeExists = true;
+        this.setLocale(locales[locale].abbr, locales[locale]);
+        break;
+      } else if (locales[locale].abbr === this.locale.slice(0, 2)) {
+        this.locale = this.locale.slice(0, 2);
+        this.setLocale(locales[locale].abbr, locales[locale]);
+        break;
       }
     }
 
-    if (localeExists) {
-      this.localeService.use(this.locale);
-    } else {
+    if (!this.localeExists) {
       this.localeService.use('en');
-    }
+     }
+  }
+
+  setLocale(localeAbbr, locale){
+    defineLocale(localeAbbr, locale);
+    this.localeService.use(this.locale);
+    this.localeExists = true;
   }
 
   click() {
