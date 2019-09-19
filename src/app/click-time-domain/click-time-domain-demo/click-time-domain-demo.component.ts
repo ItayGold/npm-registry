@@ -9,10 +9,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'click-time-domain-demo',
   templateUrl: './click-time-domain-demo.component.html',
-  styleUrls: ['./click-time-domain-demo.component.scss']
+  styleUrls: ['./click-time-domain-demo.component.scss'],
 })
 export class ClickTimeDomainDemoComponent implements OnInit {
-
   codes = [
     `<click-time-domain></click-time-domain>`,
     `<click-time-domain customModalClass="all-text-red-custom-class"></click-time-domain>`,
@@ -63,7 +62,7 @@ export class ClickTimeDomainDemoComponent implements OnInit {
     Form_Cancel_Buttons: 'Отменить',
   };
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     // setTimeout(() => {
