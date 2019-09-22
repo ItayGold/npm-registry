@@ -209,7 +209,11 @@
 import {
   BsDatepickerConfig,
   BsDaterangepickerDirective,
+  BsLocaleService
 } from &#x27;ngx-bootstrap/datepicker&#x27;;
+
+import * as locales from &#x27;ngx-bootstrap/locale&#x27;;
+import { defineLocale } from &#x27;ngx-bootstrap/chronos&#x27;;
 
 export interface Message {
   type: string;
@@ -238,17 +242,40 @@ export class ClickDatePickerComponent implements OnInit {
   @ViewChild(&#x27;dp&#x27;, { static: false }) datepicker: BsDaterangepickerDirective;
   @Input() showWeekNumbers: boolean;
   @Input() isOpen: boolean;
+  @Input() locale?: string;
   datePickerConfig: Partial&lt;BsDatepickerConfig&gt;;
   previousDate: Date &#x3D; new Date(null);
   moduleStrings: any &#x3D; {};
+  localeExists &#x3D; false;
 
-  constructor(private cdRef: ChangeDetectorRef) { }
+  constructor(private cdRef: ChangeDetectorRef, private localeService: BsLocaleService) { }
 
   ngOnInit(): void {
     this.datePickerConfig &#x3D; Object.assign(
       {},
       { showWeekNumbers: this.showWeekNumbers }
     );
+
+    for (const locale in locales) {
+      if (locales[locale].abbr &#x3D;&#x3D;&#x3D; this.locale) {
+        this.setLocale(locales[locale].abbr, locales[locale]);
+        break;
+      } else if (locales[locale].abbr &#x3D;&#x3D;&#x3D; this.locale.slice(0, 2)) {
+        this.locale &#x3D; this.locale.slice(0, 2);
+        this.setLocale(locales[locale].abbr, locales[locale]);
+        break;
+      }
+    }
+
+    if (!this.localeExists) {
+      this.localeService.use(&#x27;en&#x27;);
+     }
+  }
+
+  setLocale(localeAbbr, locale){
+    defineLocale(localeAbbr, locale);
+    this.localeService.use(this.locale);
+    this.localeExists &#x3D; true;
   }
 
   click() {

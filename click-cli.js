@@ -119,7 +119,7 @@ program
     });
 
     execSync(
-      `aws s3 sync --acl public-read --sse --delete documentation/ s3://npm-docs.clicksoftware.com`,
+      `aws s3 sync --acl bucket-owner-full-control --sse --delete documentation/ s3://npm-docs.clicksoftware.com`,
       { stdio: 'inherit' }
     );
 
@@ -128,7 +128,7 @@ program
     });
 
     execSync(
-      `aws s3 sync --acl public-read --sse --delete dist/browser/ s3://npm-docs-demo`,
+      `aws s3 sync --acl bucket-owner-full-control --sse --delete dist/browser/ s3://npm-docs-demo`,
       { stdio: 'inherit' }
     );
     log(`3/4: The docs & demos are deployed.`, {
