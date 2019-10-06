@@ -13,6 +13,11 @@ const routes: Routes = [
       .then(mod => mod.ClickDatePickerRangeDemoModule)
   },
   {
+    path: 'message-dialog',
+    loadChildren: () => import('./message-dialog/message-dialog.module')
+      .then(mod => mod.MeseageDialogDemoModule)
+  },
+  {
     path: 'icon',
     loadChildren: () => import('./click-icon-demo/click-icon-demo.module')
       .then(mod => mod.ClickIconDemoModule)
