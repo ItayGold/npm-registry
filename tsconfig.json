@@ -54,6 +54,12 @@
       ],
       "click-time-domain/*": [
         "dist/click-time-domain/*"
+      ],
+      "message-dialog": [
+        "dist/message-dialog"
+      ],
+      "message-dialog/*": [
+        "dist/message-dialog/*"
       ]
     }
   }
