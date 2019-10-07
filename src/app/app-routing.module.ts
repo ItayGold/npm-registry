@@ -14,8 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'message-dialog',
-    loadChildren: () => import('./message-dialog/message-dialog.module')
-      .then(mod => mod.MeseageDialogDemoModule)
+    loadChildren: () => import('./click-message-dialog/click-message-dialog.module')
+      .then(mod => mod.ClickMeseageDialogDemoModule)
   },
   {
     path: 'icon',

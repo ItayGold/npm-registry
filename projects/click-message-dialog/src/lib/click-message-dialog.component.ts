@@ -1,10 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
-import { MessageDialogResponse, Response } from '../models/message-dialog-response.model';
+import { MessageDialogResponse, Response } from '../models/click-message-dialog-response.model';
 
 @Component({
-  selector: 'message-dialog',
+  selector: 'click-message-dialog',
   templateUrl: `
   <div class="message-dialog">
     <div class="message-dialog-header">
@@ -110,10 +110,10 @@ import { MessageDialogResponse, Response } from '../models/message-dialog-respon
   `],
 })
 
-export class MessageDialogComponent implements OnInit {
+export class ClickMessageDialogComponent implements OnInit {
   moduleStrings: any = {};
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
-    private dialogRef: MatDialogRef<MessageDialogComponent>) {
+    private dialogRef: MatDialogRef<ClickMessageDialogComponent>) {
   }
 
   ngOnInit() {

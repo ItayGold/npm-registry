@@ -3,9 +3,9 @@ import { MatDialog } from '@angular/material';
 import { Observable } from 'rxjs';
 import { refCount, publishLast } from 'rxjs/operators';
 
-import { MessageDialogComponent } from './message-dialog.component';
-import { MessageDialogData } from '../models/message-dialog-data.model'
-import { MessageDialogResponse, Response } from '../models/message-dialog-response.model'
+import { ClickMessageDialogComponent } from './click-message-dialog.component';
+import { MessageDialogData } from '../models/click-message-dialog-data.model'
+import { MessageDialogResponse, Response } from '../models/click-message-dialog-response.model'
 
 
 @Injectable()
@@ -17,7 +17,7 @@ export class MessageDialogService {
   openMessageDialog(data: MessageDialogData): Observable<MessageDialogResponse> {
 
     const source = new Observable((observer) => {
-      const dialogRef = this.dialog.open(MessageDialogComponent,
+      const dialogRef = this.dialog.open(ClickMessageDialogComponent,
         {
           panelClass: 'dialog_style',
           data: data

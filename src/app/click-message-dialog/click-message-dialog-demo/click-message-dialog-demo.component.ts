@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageDialogData, DialogType, ButtonOptions } from '../models/message-dialog-data.model';
-import { MessageDialogService } from '../services/message-dialog.service'
+import { MessageDialogData, DialogType, ButtonOptions } from '../models/click-message-dialog-data.model';
+import { ClickMessageDialogService } from '../services/click-message-dialog.service'
 
 @Component({
   selector: 'app-message-dialog-demo',
-  templateUrl: './message-dialog-demo.component.html',
-  styleUrls: ['./message-dialog-demo.component.scss']
+  templateUrl: './click-message-dialog-demo.component.html',
+  styleUrls: ['./click-message-dialog-demo.component.scss']
 })
 
 
-export class MeseageDialogDemoComponent implements OnInit {
+export class ClickMeseageDialogDemoComponent implements OnInit {
   private errorDialogData = new MessageDialogData();
   private infoDialogData = new MessageDialogData();
   private warningDialogData = new MessageDialogData();
-  constructor(private messageDialogService:MessageDialogService ) {
+  constructor(private messageDialogService:ClickMessageDialogService ) {
     this.errorDialogData.title = "Error";
     this.errorDialogData.okButtonString = "Goy it";
     this.errorDialogData.cancelButtonString = "Cancel"

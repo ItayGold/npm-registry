@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MessageDialogService } from './message-dialog.service';
+import { MessageDialogService } from './click-message-dialog.service';
 
 describe('MessageDialogService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

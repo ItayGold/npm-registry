@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MeseageDialogDemoComponent } from './message-dialog-demo/message-dialog-demo.component';
+import { ClickMeseageDialogDemoComponent } from './click-message-dialog-demo/click-message-dialog-demo.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MeseageDialogDemoComponent,
+    component: ClickMeseageDialogDemoComponent,
   },
 ];
 
