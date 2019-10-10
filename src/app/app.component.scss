@@ -1,3 +1,16 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep .npm-registry-container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
 .dp {
   position: relative;
   right: 77px;
