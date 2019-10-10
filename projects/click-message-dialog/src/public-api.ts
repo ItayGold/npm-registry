@@ -2,6 +2,6 @@
  * Public API Surface of message-dialog
  */
 
-export * from './lib/message-dialog.service';
-export * from './lib/message-dialog.component';
-export * from './lib/message-dialog.module';
+export * from './lib/click-message-dialog.service';
+export * from './lib/click-message-dialog.component';
+export * from './lib/click-message-dialog.module';
