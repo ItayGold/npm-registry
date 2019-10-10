@@ -22,10 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
@@ -354,37 +351,35 @@
         }
       }
     },
-    "message-dialog": {
+    "click-message-dialog": {
       "projectType": "library",
-      "root": "projects/message-dialog",
-      "sourceRoot": "projects/message-dialog/src",
+      "root": "projects/click-message-dialog",
+      "sourceRoot": "projects/click-message-dialog/src",
       "prefix": "click",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/message-dialog/tsconfig.lib.json",
-            "project": "projects/message-dialog/ng-package.json"
+            "tsConfig": "projects/click-message-dialog/tsconfig.lib.json",
+            "project": "projects/click-message-dialog/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/message-dialog/src/test.ts",
-            "tsConfig": "projects/message-dialog/tsconfig.spec.json",
-            "karmaConfig": "projects/message-dialog/karma.conf.js"
+            "main": "projects/click-message-dialog/src/test.ts",
+            "tsConfig": "projects/click-message-dialog/tsconfig.spec.json",
+            "karmaConfig": "projects/click-message-dialog/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/message-dialog/tsconfig.lib.json",
-              "projects/message-dialog/tsconfig.spec.json"
+              "projects/click-message-dialog/tsconfig.lib.json",
+              "projects/click-message-dialog/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
