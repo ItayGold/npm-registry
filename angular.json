@@ -155,7 +155,7 @@
       "root": "projects/click-date-picker",
       "sourceRoot": "projects/click-date-picker/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "click",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

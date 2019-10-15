@@ -11,56 +11,21 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "click-date-picker": [
-        "dist/click-date-picker"
-      ],
-      "click-date-picker/*": [
-        "dist/click-date-picker/*"
-      ],
-      "click-icon": [
-        "dist/click-icon"
-      ],
-      "click-icon/*": [
-        "dist/click-icon/*"
-      ],
-      "click-tristate-checkbox": [
-        "dist/click-tristate-checkbox"
-      ],
-      "click-tristate-checkbox/*": [
-        "dist/click-tristate-checkbox/*"
-      ],
-      "search-input": [
-        "dist/search-input"
-      ],
-      "search-input/*": [
-        "dist/search-input/*"
-      ],
-      "click-search-input": [
-        "dist/click-search-input"
-      ],
-      "click-search-input/*": [
-        "dist/click-search-input/*"
-      ],
-      "click-time-domain": [
-        "dist/click-time-domain"
-      ],
-      "click-time-domain/*": [
-        "dist/click-time-domain/*"
-      ],
-      "message-dialog": [
-        "dist/message-dialog"
-      ],
-      "message-dialog/*": [
-        "dist/message-dialog/*"
-      ]
+      "click-date-picker": ["dist/click-date-picker"],
+      "click-date-picker/*": ["dist/click-date-picker/*"],
+      "click-icon": ["dist/click-icon"],
+      "click-icon/*": ["dist/click-icon/*"],
+      "click-tristate-checkbox": ["dist/click-tristate-checkbox"],
+      "click-tristate-checkbox/*": ["dist/click-tristate-checkbox/*"],
+      "click-search-input": ["dist/click-search-input"],
+      "click-search-input/*": ["dist/click-search-input/*"],
+      "click-time-domain": ["dist/click-time-domain"],
+      "click-time-domain/*": ["dist/click-time-domain/*"],
+      "click-message-dialog": ["dist/click-message-dialog"],
+      "click-message-dialog/*": ["dist/click-message-dialog/*"]
     }
   }
 }
