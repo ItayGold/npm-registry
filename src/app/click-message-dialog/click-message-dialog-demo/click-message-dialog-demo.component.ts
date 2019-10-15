@@ -6,12 +6,16 @@ import {
 } from '../models/click-message-dialog-data.model';
 import { ClickMessageDialogService } from '../services/click-message-dialog.service';
 
+/**
+ * @example
+ * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/message-dialog</example-url>
+ */
 @Component({
   selector: 'app-message-dialog-demo',
   templateUrl: './click-message-dialog-demo.component.html',
   styleUrls: ['./click-message-dialog-demo.component.scss'],
 })
-export class ClickMeseageDialogDemoComponent implements OnInit {
+export class ClickMessageDialogDemoComponent implements OnInit {
   private errorDialogData = new MessageDialogData();
   private infoDialogData = new MessageDialogData();
   private warningDialogData = new MessageDialogData();

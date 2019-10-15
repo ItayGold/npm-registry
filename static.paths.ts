@@ -6,5 +6,6 @@ export const ROUTES = [
   '/search-input',
   '/tristate-checkbox',
   '/tree-view',
-  '/time-domain'
+  '/time-domain',
+  '/message-dialog',
 ];

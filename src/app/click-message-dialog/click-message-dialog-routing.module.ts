@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClickMeseageDialogDemoComponent } from './click-message-dialog-demo/click-message-dialog-demo.component';
+import { ClickMessageDialogDemoComponent } from './click-message-dialog-demo/click-message-dialog-demo.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ClickMeseageDialogDemoComponent,
+    component: ClickMessageDialogDemoComponent,
   },
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class MeseageDialogDemoRoutingModule { }
+export class ClickMessageDialogDemoRoutingModule {}

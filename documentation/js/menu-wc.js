@@ -171,6 +171,46 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickIconDemoRoutingModule.html" data-type="entity-link">ClickIconDemoRoutingModule</a>
                             </li>
                             <li class="link">
+                                <a href="modules/ClickMeseageDialogDemoModule.html" data-type="entity-link">ClickMeseageDialogDemoModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' : 'data-target="#xs-components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
+                                            <span class="icon ion-md-cog"></span>
+                                            <span>Components</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' :
+                                            'id="xs-components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
+                                            <li class="link">
+                                                <a href="components/ClickMessageDialogComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickMessageDialogComponent</a>
+                                            </li>
+                                            <li class="link">
+                                                <a href="components/ClickMessageDialogDemoComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickMessageDialogDemoComponent</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <li class="chapter inner">
+                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                        'data-target="#injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' : 'data-target="#xs-injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
+                                        <span class="icon ion-md-arrow-round-down"></span>
+                                        <span>Injectables</span>
+                                        <span class="icon ion-ios-arrow-down"></span>
+                                    </div>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' :
+                                        'id="xs-injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
+                                        <li class="link">
+                                            <a href="injectables/ClickMessageDialogService.html"
+                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>ClickMessageDialogService</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li class="link">
+                                <a href="modules/ClickMessageDialogDemoRoutingModule.html" data-type="entity-link">ClickMessageDialogDemoRoutingModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/ClickSearchInputModule.html" data-type="entity-link">ClickSearchInputModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
@@ -303,6 +343,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="classes/ClickTreeNode.html" data-type="entity-link">ClickTreeNode</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MessageDialogData.html" data-type="entity-link">MessageDialogData</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MessageDialogResponse.html" data-type="entity-link">MessageDialogResponse</a>
                             </li>
                         </ul>
                     </li>

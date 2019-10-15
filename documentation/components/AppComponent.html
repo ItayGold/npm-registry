@@ -136,7 +136,7 @@ export class AppComponent {}
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;text-align:center; overflow: hidden;&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;npm-registry-container&quot;&gt;
   &lt;h1&gt;@click packages&lt;/h1&gt;
   &lt;router-outlet&gt;&lt;/router-outlet&gt;
 &lt;/div&gt;
@@ -147,7 +147,20 @@ export class AppComponent {}
                 <p class="comment">
                     <code>./app.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.dp {
+                <pre class="line-numbers"><code class="language-scss">html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep .npm-registry-container {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dp {
   position: relative;
   right: 77px;
   top: 5px;
@@ -200,8 +213,8 @@ export class AppComponent {}
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="text-align:center; overflow: hidden;">  <h1>@click packages</h1>  <router-outlet></router-outlet></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
+        var COMPONENT_TEMPLATE = '<div><div class="npm-registry-container">  <h1>@click packages</h1>  <router-outlet></router-outlet></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>
