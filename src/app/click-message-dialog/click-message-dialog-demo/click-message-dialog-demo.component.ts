@@ -20,7 +20,9 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   private warningDialogData = new MessageDialogData();
   private data = new MessageDialogData();
   isOpen: boolean;
-  width: '550px';
+  width: string;
+  height: string;
+
 
   constructor() {
     this.errorDialogData.title = 'Error';
@@ -30,7 +32,6 @@ export class ClickMessageDialogDemoComponent implements OnInit {
     Please follow the setup instructions as described in the documentation.`;
     this.errorDialogData.dialogType = DialogType.error;
     this.errorDialogData.buttonOptions = ButtonOptions.ok;
-    this.width = '550px'
 
     this.infoDialogData.title = 'Notic';
     this.infoDialogData.okButtonString = 'Apply';
@@ -54,15 +55,21 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   onErrorClick(): any {
     this.isOpen = true;
     this.data = this.errorDialogData
+    this.width = '550px';
+    this.height = '235px';
   }
 
   onInfoClick(): any {
     this.isOpen = true;
-    this.data = this.infoDialogData
+    this.data = this.infoDialogData;
+    this.width = '550px';
+    this.height = '235px';
   }
   onWarningClick(): any {
     this.isOpen = true;
-    this.data = this.infoDialogData
+    this.data = this.infoDialogData;
+    this.width = '550px';
+    this.height = '235px';
   }
 
   onCancelClick(): any {

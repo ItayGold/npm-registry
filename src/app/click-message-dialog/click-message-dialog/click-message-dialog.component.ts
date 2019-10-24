@@ -54,7 +54,7 @@ export class ClickMessageDialogComponent implements OnChanges {
   };
 
   openMessageDialog() {
-
+    
     const data = {
       title: this.title,
       message: this.message,
@@ -74,6 +74,7 @@ export class ClickMessageDialogComponent implements OnChanges {
       });
 
     dialogRef.afterClosed().subscribe(result => {
+      this.isOpen = false;
 
       if (!result.data) {
         return;

@@ -5,12 +5,11 @@ import { ClickMessageDialogDemoRoutingModule } from './click-message-dialog-rout
 import { ClickMessageDialogDemoComponent } from './click-message-dialog-demo/click-message-dialog-demo.component';
 import { ClickMessageDialogComponent } from './click-message-dialog/click-message-dialog.component';
 import { ClickMessageDialogInternalComponent } from './click-message-dialog-internal/click-message-dialog-internal.component';
-import { ClickMessageDialogService } from './services/click-message-dialog.service';
 
 @NgModule({
   declarations: [ClickMessageDialogComponent, ClickMessageDialogDemoComponent,ClickMessageDialogInternalComponent],
   imports: [CommonModule, ClickMessageDialogDemoRoutingModule, MatDialogModule],
-  providers: [ClickMessageDialogService],
+  providers: [],
   exports: [ClickMessageDialogComponent, ClickMessageDialogDemoComponent,ClickMessageDialogInternalComponent],
   entryComponents: [ClickMessageDialogComponent,ClickMessageDialogInternalComponent],
 })
