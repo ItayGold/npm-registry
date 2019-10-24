@@ -4,7 +4,6 @@ import {
   DialogType,
   ButtonOptions,
 } from '../models/click-message-dialog-data.model';
-import { ClickMessageDialogService } from '../services/click-message-dialog.service';
 
 /**
  * @example
@@ -19,7 +18,11 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   private errorDialogData = new MessageDialogData();
   private infoDialogData = new MessageDialogData();
   private warningDialogData = new MessageDialogData();
-  constructor(private messageDialogService: ClickMessageDialogService) {
+  private data = new MessageDialogData();
+  isOpen: boolean;
+  width: '550px';
+
+  constructor() {
     this.errorDialogData.title = 'Error';
     this.errorDialogData.okButtonString = 'Goy it';
     this.errorDialogData.cancelButtonString = 'Cancel';
@@ -27,6 +30,7 @@ export class ClickMessageDialogDemoComponent implements OnInit {
     Please follow the setup instructions as described in the documentation.`;
     this.errorDialogData.dialogType = DialogType.error;
     this.errorDialogData.buttonOptions = ButtonOptions.ok;
+    this.width = '550px'
 
     this.infoDialogData.title = 'Notic';
     this.infoDialogData.okButtonString = 'Apply';
@@ -45,16 +49,27 @@ export class ClickMessageDialogDemoComponent implements OnInit {
     this.warningDialogData.buttonOptions = ButtonOptions.okCancel;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onErrorClick(): any {
-    this.messageDialogService.openMessageDialog(this.errorDialogData);
+    this.isOpen = true;
+    this.data = this.errorDialogData
   }
 
   onInfoClick(): any {
-    this.messageDialogService.openMessageDialog(this.infoDialogData);
+    this.isOpen = true;
+    this.data = this.infoDialogData
   }
   onWarningClick(): any {
-    this.messageDialogService.openMessageDialog(this.warningDialogData);
+    this.isOpen = true;
+    this.data = this.infoDialogData
+  }
+
+  onCancelClick(): any {
+    console.log('onCancelClick');
+  }
+
+  onOkClick(): any {
+    console.log('onOKClick');
   }
 }

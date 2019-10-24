@@ -1,0 +1,19 @@
+<div class="message-dialog">
+    <div class="message-dialog-header">
+      <label class="message-dialog-header-label">{{ data.title }}</label>
+    </div>
+    <div class="message-dialog-body">
+      <div [class]="'icon icon' + data.dialogType">
+      </div>
+      <label class="message-dialog-body-label">{{ data.message }}</label>
+    </div>
+    <div class="message-dialog-button">
+      <button id="okBTN" class="btn_action ok-button" [mat-dialog-close]="save" (click)="onOkClick()">
+        {{ data.okButtonString }}
+      </button>
+      <button *ngIf="data.buttonOptions" class="cancel-button" [mat-dialog-close]="onCancelClick"
+        (click)="onCancelClick()">
+        {{ data.cancelButtonString }}
+      </button>
+    </div>
+  </div>
