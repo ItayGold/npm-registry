@@ -119,7 +119,7 @@ import {
       }
     }
   }
-  `,
+  `
   ],
 })
 export class ClickMessageDialogComponent implements OnInit {
