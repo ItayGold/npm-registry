@@ -1,11 +1,10 @@
 
-import { OnChanges, Output, EventEmitter } from '@angular/core';
+import { OnChanges, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Component, Input } from '@angular/core';
-import { ClickMessageDialogInternalComponent } from '../click-message-dialog-internal/click-message-dialog-internal.component'
-import {
-  Response,
-} from '../models/click-message-dialog-response.model';
+
+import { ClickMessageDialogInternalComponent } from '../click-message-dialog-internal/click-message-dialog-internal.component';
+import { Response } from '../models/click-message-dialog-response.model';
 
 export enum DialogType {
   warning,
@@ -40,14 +39,13 @@ export class ClickMessageDialogComponent implements OnChanges {
   @Input() okButtonString: string;
   @Input() cancelButtonString: string;
   @Input() buttonOptions = ButtonOptions.ok;
-  @Input() isOpen;
+  @Input() isOpen = false;
 
   @Output() cancelClick = new EventEmitter<boolean>();
   @Output() okClick = new EventEmitter<boolean>();
 
-
-  ngOnChanges(changes) {
-    if (this.isOpen) {
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.isOpen && changes.isOpen.currentValue) {
       this.openMessageDialog();
     }
   }
@@ -56,6 +54,7 @@ export class ClickMessageDialogComponent implements OnChanges {
   };
 
   openMessageDialog() {
+
     const data = {
       title: this.title,
       message: this.message,
@@ -63,21 +62,29 @@ export class ClickMessageDialogComponent implements OnChanges {
       okButtonString: this.okButtonString,
       cancelButtonString: this.cancelButtonString,
       buttonOptions: this.buttonOptions,
+      width: this.width,
+      height: this.height,
+      save: this.save
     };
-    const dialogRef = this.dialog.open(ClickMessageDialogInternalComponent, {
-      panelClass: 'dialog_style',
-      data,
-    });
+
+    const dialogRef = this.dialog.open(ClickMessageDialogInternalComponent,
+      {
+        panelClass: 'dialog_style',
+        data
+      });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result.data !== undefined) {
-        if (Response[result.data] == 'cancel') {
-          this.cancelClick.emit();
-        }
-        else if(Response[result.data] == 'ok'){          
-          this.okClick.emit();
-        }
+
+      if (!result.data) {
+        return;
       }
+
+      if (Response[result.data] === 'cancel') {
+        this.cancelClick.emit();
+        return;
+      }
+
+      this.okClick.emit();
 
     });
   };

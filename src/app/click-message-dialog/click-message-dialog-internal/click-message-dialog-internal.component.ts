@@ -15,16 +15,14 @@ import {
   styleUrls: ['./click-message-dialog-internal.component.scss'],
 })
 export class ClickMessageDialogInternalComponent implements OnInit {
-  moduleStrings: any = {};
-  @Input() save: any;
-  
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private dialogRef: MatDialogRef<ClickMessageDialogInternalComponent>
   ) {}
 
   ngOnInit() {
-    this.dialogRef.updateSize('550px', '235px');
+    this.dialogRef.updateSize(this.data.width , this.data.height);
     this.dialogRef.backdropClick();
     this.dialogRef.disableClose = true;
   }
