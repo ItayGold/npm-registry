@@ -9,5 +9,11 @@
     <button type="button" (click)="onWarningClick()" class="button">
       <span>Warning</span>
     </button>
+
+   <click-message-dialog [isOpen]="isOpen" [width]="width" [height]="height" [title]="data.title"
+   [okButtonString]="data.okButtonString" [cancelButtonString]="data.cancelButtonString" [message]="data.message"
+   [dialogType]="data.dialogType" [buttonOptions]="data.buttonOptions"
+   (cancelClick)="onCancelClick($event)" (okClick)="onOkClick($event)"
+   ></click-message-dialog>
   </div>
 </div>

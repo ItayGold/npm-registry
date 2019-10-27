@@ -1,9 +1,20 @@
-import { Component, Inject, OnInit, Input } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import {
-  MessageDialogResponse,
-  Response,
-} from '../models/click-message-dialog-response.model';
+
+import { OnChanges, Output, EventEmitter, SimpleChanges } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { Component, Input } from '@angular/core';
+
+import { ClickMessageDialogInternalComponent } from '../click-message-dialog-internal/click-message-dialog-internal.component';
+import { Response } from '../models/click-message-dialog-response.model';
+
+export enum DialogType {
+  warning,
+  info,
+  error
+}
+export enum ButtonOptions {
+  ok,
+  okCancel
+}
 
 /**
  * @example
@@ -14,25 +25,69 @@ import {
   templateUrl: './click-message-dialog.component.html',
   styleUrls: ['./click-message-dialog.component.scss'],
 })
-export class ClickMessageDialogComponent implements OnInit {
+
+export class ClickMessageDialogComponent implements OnChanges {
+
   moduleStrings: any = {};
+
   @Input() save: any;
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private dialogRef: MatDialogRef<ClickMessageDialogComponent>
-  ) {}
+  @Input() height: '235px';
+  @Input() width: '550px';
+  @Input() title: string;
+  @Input() message: string;
+  @Input() dialogType: DialogType;
+  @Input() okButtonString: string;
+  @Input() cancelButtonString: string;
+  @Input() buttonOptions = ButtonOptions.ok;
+  @Input() isOpen = false;
 
-  ngOnInit() {
-    this.dialogRef.updateSize('550px', '235px');
-    this.dialogRef.backdropClick();
-    this.dialogRef.disableClose = true;
+  @Output() cancelClick = new EventEmitter<boolean>();
+  @Output() okClick = new EventEmitter<boolean>();
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.isOpen && changes.isOpen.currentValue) {
+      this.openMessageDialog();
+    }
   }
 
-  onCancelClick() {
-    this.dialogRef.close(new MessageDialogResponse(Response.cancel));
-  }
+  constructor(public dialog: MatDialog) {
+  };
 
-  onOkClick() {
-    this.dialogRef.close(new MessageDialogResponse(Response.ok));
-  }
+  openMessageDialog() {
+    
+    const data = {
+      title: this.title,
+      message: this.message,
+      dialogType: this.dialogType,
+      okButtonString: this.okButtonString,
+      cancelButtonString: this.cancelButtonString,
+      buttonOptions: this.buttonOptions,
+      width: this.width,
+      height: this.height,
+      save: this.save
+    };
+
+    const dialogRef = this.dialog.open(ClickMessageDialogInternalComponent,
+      {
+        panelClass: 'dialog_style',
+        data
+      });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.isOpen = false;
+
+      if (!result.data) {
+        return;
+      }
+
+      if (Response[result.data] === 'cancel') {
+        this.cancelClick.emit();
+        return;
+      }
+
+      this.okClick.emit();
+
+    });
+  };
 }
+

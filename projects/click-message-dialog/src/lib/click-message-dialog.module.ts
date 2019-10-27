@@ -2,19 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material';
 import { ClickMessageDialogComponent } from './click-message-dialog.component';
-import { MessageDialogService } from './click-message-dialog.service';
+import { ClickMessageDialogInternalComponent } from './click-message-dialog-internal.component';
 
 
 @NgModule({
-  declarations: [ClickMessageDialogComponent],
+  declarations: [ClickMessageDialogComponent,ClickMessageDialogInternalComponent],
   imports: [
     CommonModule,
     MatDialogModule
   ],
-  providers: [
-    MessageDialogService,
-  ],
+  providers: [],
   exports: [ClickMessageDialogComponent],
-  entryComponents: [ClickMessageDialogComponent],
+  entryComponents: [ClickMessageDialogComponent,ClickMessageDialogInternalComponent],
 })
 export class ClickMeseageDialogModule { }

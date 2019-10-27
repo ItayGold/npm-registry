@@ -4,7 +4,6 @@ import {
   DialogType,
   ButtonOptions,
 } from '../models/click-message-dialog-data.model';
-import { ClickMessageDialogService } from '../services/click-message-dialog.service';
 
 /**
  * @example
@@ -19,7 +18,13 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   private errorDialogData = new MessageDialogData();
   private infoDialogData = new MessageDialogData();
   private warningDialogData = new MessageDialogData();
-  constructor(private messageDialogService: ClickMessageDialogService) {
+  private data = new MessageDialogData();
+  isOpen: boolean;
+  width: string;
+  height: string;
+
+
+  constructor() {
     this.errorDialogData.title = 'Error';
     this.errorDialogData.okButtonString = 'Goy it';
     this.errorDialogData.cancelButtonString = 'Cancel';
@@ -45,16 +50,33 @@ export class ClickMessageDialogDemoComponent implements OnInit {
     this.warningDialogData.buttonOptions = ButtonOptions.okCancel;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   onErrorClick(): any {
-    this.messageDialogService.openMessageDialog(this.errorDialogData);
+    this.isOpen = true;
+    this.data = this.errorDialogData
+    this.width = '550px';
+    this.height = '235px';
   }
 
   onInfoClick(): any {
-    this.messageDialogService.openMessageDialog(this.infoDialogData);
+    this.isOpen = true;
+    this.data = this.infoDialogData;
+    this.width = '550px';
+    this.height = '235px';
   }
   onWarningClick(): any {
-    this.messageDialogService.openMessageDialog(this.warningDialogData);
+    this.isOpen = true;
+    this.data = this.infoDialogData;
+    this.width = '550px';
+    this.height = '235px';
+  }
+
+  onCancelClick(): any {
+    console.log('onCancelClick');
+  }
+
+  onOkClick(): any {
+    console.log('onOKClick');
   }
 }
