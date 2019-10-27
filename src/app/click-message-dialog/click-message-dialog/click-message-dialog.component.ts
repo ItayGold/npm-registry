@@ -22,8 +22,7 @@ export enum ButtonOptions {
  */
 @Component({
   selector: 'click-message-dialog',
-  templateUrl: './click-message-dialog.component.html',
-  styleUrls: ['./click-message-dialog.component.scss'],
+  template: ''
 })
 
 export class ClickMessageDialogComponent implements OnChanges {
@@ -43,6 +42,7 @@ export class ClickMessageDialogComponent implements OnChanges {
 
   @Output() cancelClick = new EventEmitter<boolean>();
   @Output() okClick = new EventEmitter<boolean>();
+  @Output() isOpenChange = new EventEmitter<boolean>();
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.isOpen && changes.isOpen.currentValue) {
@@ -54,7 +54,7 @@ export class ClickMessageDialogComponent implements OnChanges {
   };
 
   openMessageDialog() {
-    
+
     const data = {
       title: this.title,
       message: this.message,
@@ -74,7 +74,7 @@ export class ClickMessageDialogComponent implements OnChanges {
       });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.isOpen = false;
+      this.isOpenChange.emit(false);
 
       if (!result.data) {
         return;
