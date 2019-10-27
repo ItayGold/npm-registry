@@ -21,7 +21,8 @@ export enum ButtonOptions {
  * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/message-dialog</example-url>
  */
 @Component({
-  selector: 'click-message-dialog'
+  selector: 'click-message-dialog',
+  template: ''
 })
 
 export class ClickMessageDialogComponent implements OnChanges {

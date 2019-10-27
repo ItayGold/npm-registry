@@ -10,7 +10,7 @@
       <span>Warning</span>
     </button>
 
-   <click-message-dialog [isOpen]="isOpen" [width]="width" [height]="height" [title]="data.title"
+   <click-message-dialog [(isOpen)]="isOpen" [width]="width" [height]="height" [title]="data.title"
    [okButtonString]="data.okButtonString" [cancelButtonString]="data.cancelButtonString" [message]="data.message"
    [dialogType]="data.dialogType" [buttonOptions]="data.buttonOptions"
    (cancelClick)="onCancelClick($event)" (okClick)="onOkClick($event)"
