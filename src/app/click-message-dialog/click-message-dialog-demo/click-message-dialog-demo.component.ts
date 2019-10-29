@@ -18,7 +18,7 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   private errorDialogData = new MessageDialogData();
   private infoDialogData = new MessageDialogData();
   private warningDialogData = new MessageDialogData();
-  private data = new MessageDialogData();
+  data = new MessageDialogData();
   isOpen: boolean;
   width: string;
   height: string;
