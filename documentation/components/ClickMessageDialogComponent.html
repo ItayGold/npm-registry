@@ -47,12 +47,6 @@
             <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
         <li >
-            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
-        </li>
-        <li >
-            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
-        </li>
-        <li >
             <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
         <li >
@@ -74,7 +68,7 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
     </p>
 
     <p class="comment">
@@ -106,17 +100,9 @@
                 <td class="col-md-9"><code>click-message-dialog</code></td>
             </tr>
 
-            <tr>
-                <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./click-message-dialog.component.scss</code></td>
-            </tr>
 
 
 
-            <tr>
-                <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./click-message-dialog.component.html</code></td>
-            </tr>
 
 
 
@@ -143,7 +129,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#data">data</a>
+                                <a href="#dialog">dialog</a>
                             </li>
                             <li>
                                 <a href="#moduleStrings">moduleStrings</a>
@@ -161,13 +147,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit">ngOnInit</a>
+                                <a href="#ngOnChanges">ngOnChanges</a>
                             </li>
                             <li>
-                                <a href="#onCancelClick">onCancelClick</a>
-                            </li>
-                            <li>
-                                <a href="#onOkClick">onOkClick</a>
+                                <a href="#openMessageDialog">openMessageDialog</a>
                             </li>
                         </ul>
                     </td>
@@ -182,12 +165,59 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#buttonOptions">buttonOptions</a>
+                            </li>
+                            <li>
+                                <a href="#cancelButtonString">cancelButtonString</a>
+                            </li>
+                            <li>
+                                <a href="#dialogType">dialogType</a>
+                            </li>
+                            <li>
+                                <a href="#height">height</a>
+                            </li>
+                            <li>
+                                <a href="#isOpen">isOpen</a>
+                            </li>
+                            <li>
+                                <a href="#message">message</a>
+                            </li>
+                            <li>
+                                <a href="#okButtonString">okButtonString</a>
+                            </li>
+                            <li>
                                 <a href="#save">save</a>
+                            </li>
+                            <li>
+                                <a href="#title">title</a>
+                            </li>
+                            <li>
+                                <a href="#width">width</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancelClick">cancelClick</a>
+                            </li>
+                            <li>
+                                <a href="#isOpenChange">isOpenChange</a>
+                            </li>
+                            <li>
+                                <a href="#okClick">okClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -201,12 +231,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, dialogRef: <a href="../interfaces/Message.html">MatDialogRef<ClickMessageDialogComponent></a>)</code>
+<code>constructor(dialog: MatDialog)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:51</a></div>
                             </td>
                         </tr>
 
@@ -224,22 +254,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>data</td>
+                                                        <td>dialog</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>dialogRef</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../interfaces/Message.html" target="_self" >MatDialogRef&lt;ClickMessageDialogComponent&gt;</a></code>
+                                                                    <code>MatDialog</code>
                                                         </td>
                                                   
                                                     <td>
@@ -262,6 +280,145 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="buttonOptions"></a>
+                        <b>buttonOptions</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>ButtonOptions.ok</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:40</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cancelButtonString"></a>
+                        <b>cancelButtonString</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:39</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialogType"></a>
+                        <b>dialogType</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#DialogType" target="_self" >DialogType</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="height"></a>
+                        <b>height</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:33</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isOpen"></a>
+                        <b>isOpen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="message"></a>
+                        <b>message</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:36</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="okButtonString"></a>
+                        <b>okButtonString</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:38</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="save"></a>
                         <b>save</b>
                     </td>
@@ -274,13 +431,114 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:32</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="title"></a>
+                        <b>title</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="width"></a>
+                        <b>width</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:34</a></div>
                             </td>
                         </tr>
             </tbody>
         </table>
 </section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cancelClick"></a>
+                        <b>cancelClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
 
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:43</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isOpenChange"></a>
+                        <b>isOpenChange</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:45</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="okClick"></a>
+                        <b>okClick</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:44</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
 
 
     <section>
@@ -292,26 +550,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
+                    <a name="ngOnChanges"></a>
                     <span class="name">
                         <b>
-                            ngOnInit
+                            ngOnChanges
                         </b>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnInit()</code>
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:47</a></div>
                 </td>
             </tr>
 
@@ -320,8 +578,39 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -331,65 +620,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="onCancelClick"></a>
+                    <a name="openMessageDialog"></a>
                     <span class="name">
                         <b>
-                            onCancelClick
+                            openMessageDialog
                         </b>
-                        <a href="#onCancelClick"><span class="icon ion-ios-link"></span></a>
+                        <a href="#openMessageDialog"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>onCancelClick()</code>
+<code>openMessageDialog()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:31</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="onOkClick"></a>
-                    <span class="name">
-                        <b>
-                            onOkClick
-                        </b>
-                        <a href="#onOkClick"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>onOkClick()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:56</a></div>
                 </td>
             </tr>
 
@@ -415,33 +665,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="data"></a>
+                        <a name="dialog"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            data</b>
-                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                            <i>Type : </i>    <code>MatDialog</code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @Inject(MAT_DIALOG_DATA)<br />
-                            </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:53</a></div>
                             </td>
                         </tr>
 
@@ -473,7 +714,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/click-message-dialog/click-message-dialog/click-message-dialog.component.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -486,12 +727,22 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Inject, OnInit, Input } from &#x27;@angular/core&#x27;;
-import { MatDialogRef, MAT_DIALOG_DATA } from &#x27;@angular/material&#x27;;
-import {
-  MessageDialogResponse,
-  Response,
-} from &#x27;../models/click-message-dialog-response.model&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { OnChanges, Output, EventEmitter, SimpleChanges } from &#x27;@angular/core&#x27;;
+import { MatDialog } from &#x27;@angular/material&#x27;;
+import { Component, Input } from &#x27;@angular/core&#x27;;
+
+import { ClickMessageDialogInternalComponent } from &#x27;../click-message-dialog-internal/click-message-dialog-internal.component&#x27;;
+import { Response } from &#x27;../models/click-message-dialog-response.model&#x27;;
+
+export enum DialogType {
+  warning,
+  info,
+  error
+}
+export enum ButtonOptions {
+  ok,
+  okCancel
+}
 
 /**
  * @example
@@ -499,142 +750,79 @@ import {
  */
 @Component({
   selector: &#x27;click-message-dialog&#x27;,
-  templateUrl: &#x27;./click-message-dialog.component.html&#x27;,
-  styleUrls: [&#x27;./click-message-dialog.component.scss&#x27;],
+  template: &#x27;&#x27;
 })
-export class ClickMessageDialogComponent implements OnInit {
+
+export class ClickMessageDialogComponent implements OnChanges {
+
   moduleStrings: any &#x3D; {};
+
   @Input() save: any;
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private dialogRef: MatDialogRef&lt;ClickMessageDialogComponent&gt;
-  ) {}
+  @Input() height: &#x27;235px&#x27;;
+  @Input() width: &#x27;550px&#x27;;
+  @Input() title: string;
+  @Input() message: string;
+  @Input() dialogType: DialogType;
+  @Input() okButtonString: string;
+  @Input() cancelButtonString: string;
+  @Input() buttonOptions &#x3D; ButtonOptions.ok;
+  @Input() isOpen &#x3D; false;
 
-  ngOnInit() {
-    this.dialogRef.updateSize(&#x27;550px&#x27;, &#x27;235px&#x27;);
-    this.dialogRef.backdropClick();
-    this.dialogRef.disableClose &#x3D; true;
+  @Output() cancelClick &#x3D; new EventEmitter&lt;boolean&gt;();
+  @Output() okClick &#x3D; new EventEmitter&lt;boolean&gt;();
+  @Output() isOpenChange &#x3D; new EventEmitter&lt;boolean&gt;();
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.isOpen &amp;&amp; changes.isOpen.currentValue) {
+      this.openMessageDialog();
+    }
   }
 
-  onCancelClick() {
-    this.dialogRef.close(new MessageDialogResponse(Response.cancel));
-  }
+  constructor(public dialog: MatDialog) {
+  };
 
-  onOkClick() {
-    this.dialogRef.close(new MessageDialogResponse(Response.ok));
-  }
+  openMessageDialog() {
+
+    const data &#x3D; {
+      title: this.title,
+      message: this.message,
+      dialogType: this.dialogType,
+      okButtonString: this.okButtonString,
+      cancelButtonString: this.cancelButtonString,
+      buttonOptions: this.buttonOptions,
+      width: this.width,
+      height: this.height,
+      save: this.save
+    };
+
+    const dialogRef &#x3D; this.dialog.open(ClickMessageDialogInternalComponent,
+      {
+        panelClass: &#x27;dialog_style&#x27;,
+        data
+      });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      this.isOpenChange.emit(false);
+
+      if (!result.data) {
+        return;
+      }
+
+      if (Response[result.data] &#x3D;&#x3D;&#x3D; &#x27;cancel&#x27;) {
+        this.cancelClick.emit();
+        return;
+      }
+
+      this.okClick.emit();
+
+    });
+  };
 }
+
 </code></pre>
     </div>
 
-    <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;message-dialog&quot;&gt;
-    &lt;div class&#x3D;&quot;message-dialog-header&quot;&gt;
-      &lt;label class&#x3D;&quot;message-dialog-header-label&quot;&gt;{{ data.title }}&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;message-dialog-body&quot;&gt;
-      &lt;div [class]&#x3D;&quot;&#x27;icon icon&#x27; + data.dialogType&quot;&gt;
-      &lt;/div&gt;
-      &lt;label class&#x3D;&quot;message-dialog-body-label&quot;&gt;{{ data.message }}&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class&#x3D;&quot;message-dialog-button&quot;&gt;
-      &lt;button id&#x3D;&quot;okBTN&quot; class&#x3D;&quot;btn_action ok-button&quot; [mat-dialog-close]&#x3D;&quot;save&quot; (click)&#x3D;&quot;onOkClick()&quot;&gt;
-        {{ data.okButtonString }}
-      &lt;/button&gt;
-      &lt;button *ngIf&#x3D;&quot;data.buttonOptions&quot; class&#x3D;&quot;cancel-button&quot; [mat-dialog-close]&#x3D;&quot;onCancelClick&quot;
-        (click)&#x3D;&quot;onCancelClick()&quot;&gt;
-        {{ data.cancelButtonString }}
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
-    </div>
 
-    <div class="tab-pane fade " id="c-styleData">
-                <p class="comment">
-                    <code>./click-message-dialog.component.scss</code>
-                </p>
-                <pre class="line-numbers"><code class="language-scss">.message-dialog {
-  .message-dialog-header {
-    height: 50px;
-    background-color: #0073c1;
-
-    .message-dialog-header-label {
-      height: 24px;
-      width: 300px;
-      color: #ffffff;
-      font-family: Roboto;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 53px;
-      padding-left: 30px;
-    }
-  }
-  .message-dialog-body {
-    padding-left: 30px;
-    margin-top: 35px;
-    height: 69px;
-    display: flex;
-
-    .message-dialog-body-label {
-      height: 100%;
-      width: 80%;
-      color: #333333;
-      font-family: Roboto;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      align-self: center;
-      white-space: pre-line;
-      margin-left: 33px;
-    }
-
-    .icon {
-      height: 60px;
-      width: 60px;
-      margin-left: -2px;
-
-      &amp;.icon0 {
-        height: 58px;
-        width: 64px;
-        background-image: url(&#x27;/assets/images/warning.svg&#x27;);
-      }
-
-      &amp;.icon1 {
-        background-image: url(&#x27;/assets/images/info.png&#x27;);
-      }
-
-      &amp;.icon2 {
-        background-image: url(&#x27;/assets/images/error.svg&#x27;);
-      }
-    }
-  }
-
-  .message-dialog-button {
-    float: right;
-    margin-right: 30px;
-    margin-top: 12px;
-
-    .ok-button {
-      height: 38px;
-      width: 83px;
-      border-radius: 2px;
-      background-color: #0073c1;
-      color: #ffffff;
-      border: none;
-    }
-
-    .cancel-button {
-      margin-left: 15px;
-      height: 38px;
-      width: 72px;
-      border-radius: 2px;
-      background-color: #ffffff;
-      border: 1px solid #cbcbcb;
-    }
-  }
-}
-</code></pre>
-    </div>
 
     <div class="tab-pane fade " id="c-tree">
         <div id="tree-container"></div>
@@ -666,8 +854,8 @@ export class ClickMessageDialogComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="message-dialog">    <div class="message-dialog-header">      <label class="message-dialog-header-label">{{ data.title }}</label>    </div>    <div class="message-dialog-body">      <div [class]="\'icon icon\' + data.dialogType">      </div>      <label class="message-dialog-body-label">{{ data.message }}</label>    </div>    <div class="message-dialog-button">      <button id="okBTN" class="btn_action ok-button" [mat-dialog-close]="save" (click)="onOkClick()">        {{ data.okButtonString }}      </button>      <button *ngIf="data.buttonOptions" class="cancel-button" [mat-dialog-close]="onCancelClick"        (click)="onCancelClick()">        {{ data.cancelButtonString }}      </button>    </div>  </div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
+        var COMPONENT_TEMPLATE = '<div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickMessageDialogInternalComponent', 'selector': 'click-message-dialog-internal'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickMessageDialogComponent'};
 </script>

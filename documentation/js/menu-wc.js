@@ -174,13 +174,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickMeseageDialogDemoModule.html" data-type="entity-link">ClickMeseageDialogDemoModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' : 'data-target="#xs-components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
+                                            'data-target="#components-links-module-ClickMeseageDialogDemoModule-790e169750b261804cad8e89c2e766ef"' : 'data-target="#xs-components-links-module-ClickMeseageDialogDemoModule-790e169750b261804cad8e89c2e766ef"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' :
-                                            'id="xs-components-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickMeseageDialogDemoModule-790e169750b261804cad8e89c2e766ef"' :
+                                            'id="xs-components-links-module-ClickMeseageDialogDemoModule-790e169750b261804cad8e89c2e766ef"' }>
                                             <li class="link">
                                                 <a href="components/ClickMessageDialogComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickMessageDialogComponent</a>
@@ -189,23 +189,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                                 <a href="components/ClickMessageDialogDemoComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickMessageDialogDemoComponent</a>
                                             </li>
+                                            <li class="link">
+                                                <a href="components/ClickMessageDialogInternalComponent.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickMessageDialogInternalComponent</a>
+                                            </li>
                                         </ul>
                                     </li>
-                                <li class="chapter inner">
-                                    <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' : 'data-target="#xs-injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
-                                        <span class="icon ion-md-arrow-round-down"></span>
-                                        <span>Injectables</span>
-                                        <span class="icon ion-ios-arrow-down"></span>
-                                    </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' :
-                                        'id="xs-injectables-links-module-ClickMeseageDialogDemoModule-c6a137eb0429986c64f8f39bc1372b18"' }>
-                                        <li class="link">
-                                            <a href="injectables/ClickMessageDialogService.html"
-                                                data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>ClickMessageDialogService</a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </li>
                             <li class="link">
                                 <a href="modules/ClickMessageDialogDemoRoutingModule.html" data-type="entity-link">ClickMessageDialogDemoRoutingModule</a>
