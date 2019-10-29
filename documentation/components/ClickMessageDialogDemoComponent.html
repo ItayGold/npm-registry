@@ -142,7 +142,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
                                 <a href="#data">data</a>
                             </li>
                             <li>
@@ -483,7 +482,6 @@
                         <a name="data"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
                             data</b>
                             <a href="#data"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -691,7 +689,7 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   private errorDialogData &#x3D; new MessageDialogData();
   private infoDialogData &#x3D; new MessageDialogData();
   private warningDialogData &#x3D; new MessageDialogData();
-  private data &#x3D; new MessageDialogData();
+  data &#x3D; new MessageDialogData();
   isOpen: boolean;
   width: string;
   height: string;
@@ -771,7 +769,7 @@ export class ClickMessageDialogDemoComponent implements OnInit {
    &lt;click-message-dialog [(isOpen)]&#x3D;&quot;isOpen&quot; [width]&#x3D;&quot;width&quot; [height]&#x3D;&quot;height&quot; [title]&#x3D;&quot;data.title&quot;
    [okButtonString]&#x3D;&quot;data.okButtonString&quot; [cancelButtonString]&#x3D;&quot;data.cancelButtonString&quot; [message]&#x3D;&quot;data.message&quot;
    [dialogType]&#x3D;&quot;data.dialogType&quot; [buttonOptions]&#x3D;&quot;data.buttonOptions&quot;
-   (cancelClick)&#x3D;&quot;onCancelClick($event)&quot; (okClick)&#x3D;&quot;onOkClick($event)&quot;
+   (cancelClick)&#x3D;&quot;onCancelClick()&quot; (okClick)&#x3D;&quot;onOkClick()&quot;
    &gt;&lt;/click-message-dialog&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -819,7 +817,7 @@ export class ClickMessageDialogDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <div class="click-icon-demo">    <button type="button" (click)="onErrorClick()" class="button">      <span>Error</span>    </button>    <button type="button" (click)="onInfoClick()" class="button">      <span>Info</span>    </button>    <button type="button" (click)="onWarningClick()" class="button">      <span>Warning</span>    </button>   <click-message-dialog [(isOpen)]="isOpen" [width]="width" [height]="height" [title]="data.title"   [okButtonString]="data.okButtonString" [cancelButtonString]="data.cancelButtonString" [message]="data.message"   [dialogType]="data.dialogType" [buttonOptions]="data.buttonOptions"   (cancelClick)="onCancelClick($event)" (okClick)="onOkClick($event)"   ></click-message-dialog>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>  <div class="click-icon-demo">    <button type="button" (click)="onErrorClick()" class="button">      <span>Error</span>    </button>    <button type="button" (click)="onInfoClick()" class="button">      <span>Info</span>    </button>    <button type="button" (click)="onWarningClick()" class="button">      <span>Warning</span>    </button>   <click-message-dialog [(isOpen)]="isOpen" [width]="width" [height]="height" [title]="data.title"   [okButtonString]="data.okButtonString" [cancelButtonString]="data.cancelButtonString" [message]="data.message"   [dialogType]="data.dialogType" [buttonOptions]="data.buttonOptions"   (cancelClick)="onCancelClick()" (okClick)="onOkClick()"   ></click-message-dialog>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickMessageDialogInternalComponent', 'selector': 'click-message-dialog-internal'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickMessageDialogDemoComponent'};
