@@ -5,9 +5,8 @@ import { Component, OnInit } from '@angular/core';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon</example-url>
+ * <example-url>https://npm-demo.goup.tech/icon</example-url>
  */
-
 
 interface Tooltip {
   left: string;
@@ -18,9 +17,8 @@ interface Tooltip {
 @Component({
   selector: 'app-click-icon-demo',
   templateUrl: './click-icon-demo.component.html',
-  styleUrls: ['./click-icon-demo.component.scss']
+  styleUrls: ['./click-icon-demo.component.scss'],
 })
-
 export class ClickIconDemoComponent implements OnInit {
   clickIconId: string;
   clickIconName: string;
@@ -37,12 +35,11 @@ export class ClickIconDemoComponent implements OnInit {
     this.tooltip = {
       left: 'Move 1 Day Backward',
       right: 'Move 1 Day Forward',
-      icon: 'Change Start Date Of The Gantt'
+      icon: 'Change Start Date Of The Gantt',
     };
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onClickIcon(event: any): void | boolean {
     window.alert(`The click on the icon has been triggered: ${event.type}`);

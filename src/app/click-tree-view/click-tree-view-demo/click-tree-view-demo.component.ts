@@ -1,24 +1,30 @@
 import { Component } from '@angular/core';
 
-import { ClickTreeNode, ClickKeyNode, ClickTreeViewTranslations } from '../models';
+import {
+  ClickTreeNode,
+  ClickKeyNode,
+  ClickTreeViewTranslations,
+} from '../models';
 /**
  * click/icon's based on angular bootstrap library
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tree-view</example-url>
+ * <example-url>https://npm-demo.goup.tech/tree-view</example-url>
  */
 @Component({
   selector: 'click-tree-view-demo',
   templateUrl: './click-tree-view-demo.component.html',
-  styleUrls: ['./click-tree-view-demo.component.scss']
+  styleUrls: ['./click-tree-view-demo.component.scss'],
 })
 export class ClickTreeViewDemoComponent {
-
   mockNodes: Map<number, ClickTreeNode> = new Map([
     [1, { key: 1, label: '1', loweredLabel: '1', isVisible: true }],
     [2, { key: 2, label: '2', loweredLabel: '2', isVisible: true }],
-    [3, { key: 3, label: '3', loweredLabel: '3', isVisible: true, parentKey: 2 }]
+    [
+      3,
+      { key: 3, label: '3', loweredLabel: '3', isVisible: true, parentKey: 2 },
+    ],
   ]);
   mockNodes2 = new Map(this.mockNodes);
   mockNodes3 = new Map(this.mockNodes);
@@ -127,10 +133,7 @@ translations: ClickTreeViewTranslations = {
     key2.children = [subKey3];
     subKey3.parentKeyNode = key2;
 
-    this.mockKeys = [
-      key1,
-      key2,
-    ];
+    this.mockKeys = [key1, key2];
 
     this.mockNodes2.set(2, {
       key: 2,
@@ -151,7 +154,9 @@ translations: ClickTreeViewTranslations = {
   }
 
   onChangeTree(event) {
-    window.alert(`Node with key: ${event.node.key} has changed state to ${event.node.checkState}`);
+    window.alert(
+      `Node with key: ${event.node.key} has changed state to ${event.node.checkState}`
+    );
     return false;
   }
 }

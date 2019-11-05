@@ -5,12 +5,12 @@ import {
   Output,
   EventEmitter,
   ChangeDetectorRef,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import {
   BsDatepickerConfig,
   BsDaterangepickerDirective,
-  BsLocaleService
+  BsLocaleService,
 } from 'ngx-bootstrap/datepicker';
 
 import * as locales from 'ngx-bootstrap/locale';
@@ -27,7 +27,7 @@ export interface Message {
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker</example-url>
+ * <example-url>https://npm-demo.goup.tech/date-picker</example-url>
  */
 @Component({
   selector: 'click-date-picker',
@@ -49,7 +49,10 @@ export class ClickDatePickerComponent implements OnInit {
   moduleStrings: any = {};
   localeExists = false;
 
-  constructor(private cdRef: ChangeDetectorRef, private localeService: BsLocaleService) { }
+  constructor(
+    private cdRef: ChangeDetectorRef,
+    private localeService: BsLocaleService
+  ) {}
 
   ngOnInit(): void {
     this.datePickerConfig = Object.assign(
@@ -70,10 +73,10 @@ export class ClickDatePickerComponent implements OnInit {
 
     if (!this.localeExists) {
       this.localeService.use('en');
-     }
+    }
   }
 
-  setLocale(localeAbbr, locale){
+  setLocale(localeAbbr, locale) {
     defineLocale(localeAbbr, locale);
     this.localeService.use(this.locale);
     this.localeExists = true;

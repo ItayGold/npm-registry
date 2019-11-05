@@ -5,7 +5,7 @@ import { ClickTristateCheckboxState } from '../enums';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tristate-checkbox</example-url>
+ * <example-url>https://npm-demo.goup.tech/tristate-checkbox</example-url>
  */
 @Component({
   selector: 'click-tristate-checkbox-demo',
@@ -13,7 +13,6 @@ import { ClickTristateCheckboxState } from '../enums';
   styleUrls: ['./click-tristate-checkbox-demo.component.scss'],
 })
 export class ClickTristateCheckboxDemoComponent {
-
   codes = [
     `<click-tristate-checkbox></click-tristate-checkbox>`,
     `<click-tristate-checkbox checkboxLabel="checkbox demo label"></click-tristate-checkbox>`,
@@ -29,5 +28,4 @@ export class ClickTristateCheckboxDemoComponent {
     window.alert(`checkbox changed event: ${event}`);
     return false;
   }
-
 }

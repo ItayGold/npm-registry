@@ -1,26 +1,40 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristate-checkbox/enums/click-tristate-checkbox-state';
 
 import { ClickTreeViewCalculationService } from '../services';
-import { ClickKeyNode, ClickTreeNode, ClickITreeViewSelection, ClickTreeViewTranslations } from '../models';
+import {
+  ClickKeyNode,
+  ClickTreeNode,
+  ClickITreeViewSelection,
+  ClickTreeViewTranslations,
+} from '../models';
 /**
  * click/icon's based on angular bootstrap library
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tree-view</example-url>
+ * <example-url>https://npm-demo.goup.tech/tree-view</example-url>
  */
 @Component({
   selector: 'click-tree-view',
   templateUrl: './click-tree-view.component.html',
-  styleUrls: ['./click-tree-view.component.scss']
+  styleUrls: ['./click-tree-view.component.scss'],
 })
 export class ClickTreeViewComponent implements OnInit {
-
   public hasResults: boolean = true;
 
-  private workingNodes: Map<number, ClickTreeNode> = new Map<number, ClickTreeNode>();
+  private workingNodes: Map<number, ClickTreeNode> = new Map<
+    number,
+    ClickTreeNode
+  >();
 
   @Input() keys: ClickKeyNode[];
   @Input() nodes: Map<number, ClickTreeNode>;
@@ -29,12 +43,19 @@ export class ClickTreeViewComponent implements OnInit {
     NavigationTree_List_NoItemAvailable: 'No items available',
     NavigationTree_Search_InputPlaceholder: 'Search domain...',
   };
-  @Output() changeTree = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
+  @Output() changeTree = new EventEmitter<{
+    node: ClickTreeNode;
+    nodes: Map<number, ClickTreeNode>;
+  }>();
 
   @ViewChild('searchInput', { static: false }) searchInput: any;
-  @ViewChild('scrollContainer', { read: PerfectScrollbarDirective, static: false }) perfectScrollbarDirective: PerfectScrollbarDirective;
+  @ViewChild('scrollContainer', {
+    read: PerfectScrollbarDirective,
+    static: false,
+  })
+  perfectScrollbarDirective: PerfectScrollbarDirective;
 
-  constructor(private calculationService: ClickTreeViewCalculationService) { }
+  constructor(private calculationService: ClickTreeViewCalculationService) {}
 
   ngOnInit(): void {
     if (!this.nodes) {
@@ -42,7 +63,7 @@ export class ClickTreeViewComponent implements OnInit {
       return;
     }
 
-    this.nodes.forEach((node) => {
+    this.nodes.forEach(node => {
       if (!node.isVisible) {
         return;
       }
@@ -63,12 +84,15 @@ export class ClickTreeViewComponent implements OnInit {
 
     for (const childNode of this.keys) {
       const node = this.workingNodes.get(childNode.key);
-      node.selectedAmount = this.calculationService.getAmountOfSelectedSubNodes(childNode, this.nodes);
+      node.selectedAmount = this.calculationService.getAmountOfSelectedSubNodes(
+        childNode,
+        this.nodes
+      );
     }
   }
 
   refreshNodes(): void {
-    this.workingNodes.forEach((node) => {
+    this.workingNodes.forEach(node => {
       node.isExpanded = false;
       node.isVisible = true;
       node.highlightedLabel = '';
@@ -96,7 +120,10 @@ export class ClickTreeViewComponent implements OnInit {
     this.updateScrollBar();
   }
 
-  onTreeNodeChanged(event: { node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }): void {
+  onTreeNodeChanged(event: {
+    node: ClickTreeNode;
+    nodes: Map<number, ClickTreeNode>;
+  }): void {
     this.checkVisibleNodes();
     this.updateScrollBar();
     this.changeTree.emit(event);
@@ -111,21 +138,39 @@ export class ClickTreeViewComponent implements OnInit {
   }
 
   getData(): ClickITreeViewSelection[] {
-    return this.workingNodesArray.map(({ key, checkState }) => ({ key, checkState }));
+    return this.workingNodesArray.map(({ key, checkState }) => ({
+      key,
+      checkState,
+    }));
   }
 
   highlightString(str: string, subStr: string, className: string): string {
     return subStr
-      ? `<span>${str.replace(new RegExp(subStr, 'i'), `<span class="${className}">$&</span>`)}</span>`
+      ? `<span>${str.replace(
+          new RegExp(subStr, 'i'),
+          `<span class="${className}">$&</span>`
+        )}</span>`
       : str;
   }
 
-  private markResults(node: ClickTreeNode, keyNode: ClickKeyNode, searchString: string): void {
+  private markResults(
+    node: ClickTreeNode,
+    keyNode: ClickKeyNode,
+    searchString: string
+  ): void {
     if (node.loweredLabel.indexOf(searchString.toLocaleLowerCase()) >= 0) {
-      node.highlightedLabel = this.highlightString(node.label, searchString, 'highlighted');
+      node.highlightedLabel = this.highlightString(
+        node.label,
+        searchString,
+        'highlighted'
+      );
       node.isExpanded = true;
       node.isVisible = true;
-      node.parentKey && this.expandParents(this.workingNodes.get(node.parentKey), keyNode.parentKeyNode);
+      node.parentKey &&
+        this.expandParents(
+          this.workingNodes.get(node.parentKey),
+          keyNode.parentKeyNode
+        );
     } else {
       node.highlightedLabel = '';
       node.isExpanded = false;

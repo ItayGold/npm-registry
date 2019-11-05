@@ -7,7 +7,7 @@ import {
 
 /**
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/message-dialog</example-url>
+ * <example-url>https://npm-demo.goup.tech/message-dialog</example-url>
  */
 @Component({
   selector: 'app-message-dialog-demo',
@@ -22,7 +22,6 @@ export class ClickMessageDialogDemoComponent implements OnInit {
   isOpen: boolean;
   width: string;
   height: string;
-
 
   constructor() {
     this.errorDialogData.title = 'Error';
@@ -50,11 +49,11 @@ export class ClickMessageDialogDemoComponent implements OnInit {
     this.warningDialogData.buttonOptions = ButtonOptions.okCancel;
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   onErrorClick(): any {
     this.isOpen = true;
-    this.data = this.errorDialogData
+    this.data = this.errorDialogData;
     this.width = '550px';
     this.height = '235px';
   }

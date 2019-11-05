@@ -1,18 +1,25 @@
-import { Component, ElementRef, EventEmitter, HostBinding, Input, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
 /**
  * click/icon's based on angular bootstrap library
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/search-input</example-url>
+ * <example-url>https://npm-docs.goup.tech/search-input</example-url>
  */
 @Component({
   selector: 'click-search-input',
   templateUrl: './click-search-input.component.html',
-  styleUrls: ['./click-search-input.component.scss']
+  styleUrls: ['./click-search-input.component.scss'],
 })
 export class ClickSearchInputComponent {
-
   public hasValue: boolean = false;
 
   @Input() placeholder: string = 'Search...';
@@ -38,5 +45,4 @@ export class ClickSearchInputComponent {
     this.searchInput.nativeElement.value = '';
     this.searchInput.nativeElement.dispatchEvent(new Event('input'));
   }
-
 }

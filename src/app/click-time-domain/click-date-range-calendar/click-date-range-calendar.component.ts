@@ -1,4 +1,14 @@
-import { Component, ViewChild, AfterViewInit, EventEmitter, Output, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  AfterViewInit,
+  EventEmitter,
+  Output,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  ViewEncapsulation,
+} from '@angular/core';
 import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap';
 
 export const configFactory = (config: BsDaterangepickerConfig) => ({
@@ -11,21 +21,23 @@ export const configFactory = (config: BsDaterangepickerConfig) => ({
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-range-calendar</example-url>
+ * <example-url>https://npm-demo.goup.tech/date-range-calendar</example-url>
  */
 @Component({
   selector: 'click-date-range-calendar',
   templateUrl: './click-date-range-calendar.component.html',
   styleUrls: ['./click-date-range-calendar.component.scss'],
-  providers: [{
-    provide: BsDatepickerConfig,
-    useFactory: configFactory,
-    deps: [BsDaterangepickerConfig]
-  }],
-  encapsulation: ViewEncapsulation.None
+  providers: [
+    {
+      provide: BsDatepickerConfig,
+      useFactory: configFactory,
+      deps: [BsDaterangepickerConfig],
+    },
+  ],
+  encapsulation: ViewEncapsulation.None,
 })
-export class ClickDateRangeCalendarComponent implements AfterViewInit, OnChanges {
-
+export class ClickDateRangeCalendarComponent
+  implements AfterViewInit, OnChanges {
   private datePickerInitialized: boolean = false;
 
   @Input() value: Date[];
@@ -35,7 +47,9 @@ export class ClickDateRangeCalendarComponent implements AfterViewInit, OnChanges
   ngAfterViewInit(): void {
     this.datePickerInitialized = true;
     this.updateRange(this.value);
-    this.datePicker.valueChange.subscribe((values: Date[]) => this.valueChanged.next(values));
+    this.datePicker.valueChange.subscribe((values: Date[]) =>
+      this.valueChanged.next(values)
+    );
   }
 
   ngOnChanges(changes: SimpleChanges): void {

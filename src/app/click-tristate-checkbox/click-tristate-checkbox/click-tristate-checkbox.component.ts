@@ -5,7 +5,7 @@ import { ClickTristateCheckboxState } from '../enums';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tristate-checkbox</example-url>
+ * <example-url>https://npm-demo.goup.tech/tristate-checkbox</example-url>
  */
 @Component({
   selector: 'click-tristate-checkbox',
@@ -13,7 +13,6 @@ import { ClickTristateCheckboxState } from '../enums';
   styleUrls: ['./click-tristate-checkbox.component.scss'],
 })
 export class ClickTristateCheckboxComponent {
-
   public id: string;
   private valueInternal: ClickTristateCheckboxState;
 
@@ -32,7 +31,9 @@ export class ClickTristateCheckboxComponent {
   }
 
   @Output()
-  valueChanged: EventEmitter<ClickTristateCheckboxState> = new EventEmitter<ClickTristateCheckboxState>();
+  valueChanged: EventEmitter<ClickTristateCheckboxState> = new EventEmitter<
+    ClickTristateCheckboxState
+  >();
 
   constructor() {
     this.id = this.generateUniqueId();
@@ -40,11 +41,15 @@ export class ClickTristateCheckboxComponent {
   }
 
   private generateUniqueId(): string {
-    return `_${Math.random().toString(36).substr(2, 9)}`;
+    return `_${Math.random()
+      .toString(36)
+      .substr(2, 9)}`;
   }
 
   private calculateNextState(): ClickTristateCheckboxState {
-    return this.isUnchecked ? ClickTristateCheckboxState.Checked : ClickTristateCheckboxState.Unchecked;
+    return this.isUnchecked
+      ? ClickTristateCheckboxState.Checked
+      : ClickTristateCheckboxState.Unchecked;
   }
 
   onCheckboxChange(): void {

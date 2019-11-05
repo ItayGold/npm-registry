@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain</example-url>
+ * <example-url>https://npm-demo.goup.tech/time-domain</example-url>
  */
 @Component({
   selector: 'click-time-domain-demo',

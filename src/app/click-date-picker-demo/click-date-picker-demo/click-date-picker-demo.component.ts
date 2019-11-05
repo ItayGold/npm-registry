@@ -1,5 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { BsDaterangepickerDirective, BsLocaleService } from 'ngx-bootstrap/datepicker';
+import {
+  BsDaterangepickerDirective,
+  BsLocaleService,
+} from 'ngx-bootstrap/datepicker';
 import { ChangeDetectorRef } from '@angular/core';
 
 /**
@@ -7,7 +10,7 @@ import { ChangeDetectorRef } from '@angular/core';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker</example-url>
+ * <example-url>https://npm-demo.goup.tech/date-picker</example-url>
  */
 @Component({
   selector: 'click-date-picker-demo',
@@ -36,7 +39,6 @@ export class ClickDatePickerDemoComponent {
         window.alert(`Date's been updated @Store: ${dt}`);
       }
     }
-
   }
 
   updateMsgStore(status: boolean): void {

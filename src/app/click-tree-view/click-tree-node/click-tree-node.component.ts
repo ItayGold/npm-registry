@@ -1,16 +1,28 @@
-import { Component, EventEmitter, HostBinding, Input, OnInit, Optional, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostBinding,
+  Input,
+  OnInit,
+  Optional,
+  Output,
+} from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { ClickTristateCheckboxState as CheckboxState } from '../../click-tristate-checkbox/enums/click-tristate-checkbox-state';
 
-import { ClickTreeNode, ClickKeyNode, ClickTreeViewTranslations } from '../models';
+import {
+  ClickTreeNode,
+  ClickKeyNode,
+  ClickTreeViewTranslations,
+} from '../models';
 import { ClickTreeViewCalculationService } from '../services/click-tree-view-calculation.service';
 /**
  * click/icon's based on angular bootstrap library
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tree-view</example-url>
+ * <example-url>https://npm-demo.goup.tech/tree-view</example-url>
  */
 @Component({
   selector: 'click-tree-node',
@@ -18,7 +30,6 @@ import { ClickTreeViewCalculationService } from '../services/click-tree-view-cal
   styleUrls: ['./click-tree-node.component.scss'],
 })
 export class ClickTreeNodeComponent implements OnInit {
-
   @Input() node: ClickTreeNode;
   @Input() nodes: Map<number, ClickTreeNode>;
   @Input() keyNode: ClickKeyNode;
@@ -27,14 +38,17 @@ export class ClickTreeNodeComponent implements OnInit {
     NavigationTree_List_NoItemAvailable: 'No items available',
     NavigationTree_Search_InputPlaceholder: 'Search domain...',
   };
-  @Output() changed = new EventEmitter<{ node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }>();
+  @Output() changed = new EventEmitter<{
+    node: ClickTreeNode;
+    nodes: Map<number, ClickTreeNode>;
+  }>();
   @HostBinding('class') class: string = 'tree-item-node';
 
   constructor(
     private domSanitizer: DomSanitizer,
     private calculationService: ClickTreeViewCalculationService,
-    @Optional() private perfectScrollbarDirective: PerfectScrollbarDirective) {
-  }
+    @Optional() private perfectScrollbarDirective: PerfectScrollbarDirective
+  ) {}
 
   ngOnInit(): void {
     this.node = this.nodes.get(this.keyNode.key);
@@ -45,7 +59,10 @@ export class ClickTreeNodeComponent implements OnInit {
     this.updateScrollBar();
 
     if (this.keyNode.children.length === 0) {
-      const nextState = node.checkState === CheckboxState.Checked ? CheckboxState.Unchecked : CheckboxState.Checked;
+      const nextState =
+        node.checkState === CheckboxState.Checked
+          ? CheckboxState.Unchecked
+          : CheckboxState.Checked;
       this.onChecked(nextState, node);
       return;
     }
@@ -55,10 +72,16 @@ export class ClickTreeNodeComponent implements OnInit {
       return;
     }
 
-    node.selectedAmount = this.calculationService.getAmountOfSelectedSubNodes(this.keyNode, this.nodes);
+    node.selectedAmount = this.calculationService.getAmountOfSelectedSubNodes(
+      this.keyNode,
+      this.nodes
+    );
   }
 
-  onSubNodeChanged(event: { node: ClickTreeNode, nodes: Map<number, ClickTreeNode> }): void {
+  onSubNodeChanged(event: {
+    node: ClickTreeNode;
+    nodes: Map<number, ClickTreeNode>;
+  }): void {
     this.changed.emit(event);
   }
 
@@ -77,7 +100,9 @@ export class ClickTreeNodeComponent implements OnInit {
 
   getSelectedAmount(): string {
     const selectedString = this.translations.NavigationTree_List_Selected.toLowerCase();
-    return this.node.selectedAmount ? `(${this.node.selectedAmount} ${selectedString})` : '';
+    return this.node.selectedAmount
+      ? `(${this.node.selectedAmount} ${selectedString})`
+      : '';
   }
 
   getNodeStateClass(): string {
@@ -85,7 +110,10 @@ export class ClickTreeNodeComponent implements OnInit {
     const subNodes = children.map(x => this.nodes.get(x.key));
     const isChildrenVisible = subNodes.filter(x => x.isVisible).length > 0;
     const expandedState = this.node.isExpanded ? 'is-expanded' : 'is-collapsed';
-    const isLast = children && children.length > 0 && isChildrenVisible ? expandedState : 'is-last';
+    const isLast =
+      children && children.length > 0 && isChildrenVisible
+        ? expandedState
+        : 'is-last';
     return isLast;
   }
 
@@ -94,7 +122,9 @@ export class ClickTreeNodeComponent implements OnInit {
   }
 
   getLabelWithAmount(): SafeHtml {
-    const label = !!this.node.highlightedLabel ? this.node.highlightedLabel : this.node.label;
+    const label = !!this.node.highlightedLabel
+      ? this.node.highlightedLabel
+      : this.node.label;
     const htmlString = `${label} ${this.getSelectedAmount()}`;
     return this.domSanitizer.bypassSecurityTrustHtml(htmlString);
   }
@@ -117,15 +147,21 @@ export class ClickTreeNodeComponent implements OnInit {
 
     const parent = this.nodes.get(node.parentKey);
     const parentChildren = [];
-    this.nodes.forEach((x) => {
+    this.nodes.forEach(x => {
       if (x.parentKey === node.parentKey) {
         parentChildren.push(x);
       }
     });
 
-    const checked = parentChildren.filter(x => x.checkState === CheckboxState.Checked);
-    const intermediate = parentChildren.filter(x => x.checkState === CheckboxState.Intermediate);
-    const unchecked = parentChildren.filter(x => x.checkState === CheckboxState.Unchecked);
+    const checked = parentChildren.filter(
+      x => x.checkState === CheckboxState.Checked
+    );
+    const intermediate = parentChildren.filter(
+      x => x.checkState === CheckboxState.Intermediate
+    );
+    const unchecked = parentChildren.filter(
+      x => x.checkState === CheckboxState.Unchecked
+    );
 
     if (parentChildren.length > checked.length || intermediate.length > 0) {
       parent.checkState = CheckboxState.Intermediate;

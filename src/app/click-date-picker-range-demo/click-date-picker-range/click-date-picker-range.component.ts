@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
 
@@ -7,17 +14,18 @@ import { BsDaterangepickerDirective } from 'ngx-bootstrap/datepicker';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker-range</example-url>
+ * <example-url>https://npm-demo.goup.tech/date-picker-range</example-url>
  */
 @Component({
   selector: 'click-date-picker-range',
   templateUrl: `./click-date-picker-range.component.html`,
-  styles: [`./click-date-picker-range.component.scss`]
+  styles: [`./click-date-picker-range.component.scss`],
 })
 export class ClickDatepickerRangeComponent implements OnInit {
   @Input() placeholder: string;
   @Output() datePickerRangeEvent: EventEmitter<Date[]>;
-  @ViewChild(BsDaterangepickerDirective, { static: false }) datepicker: BsDaterangepickerDirective;
+  @ViewChild(BsDaterangepickerDirective, { static: false })
+  datepicker: BsDaterangepickerDirective;
   datePickerConfig: Partial<BsDatepickerConfig>;
   moduleStrings: any = {};
   minDate: Date;
@@ -34,14 +42,17 @@ export class ClickDatepickerRangeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.datePickerConfig = Object.assign({}, {
-      showWeekNumbers: false,
-      outsideEsc: true
-    });
+    this.datePickerConfig = Object.assign(
+      {},
+      {
+        showWeekNumbers: false,
+        outsideEsc: true,
+      }
+    );
   }
 
   getDatePickerRange(dtRange: Date[]): void {
-    dtRange.forEach((date) => {
+    dtRange.forEach(date => {
       date.setHours(0, 0, 0, 0);
     });
     this.datePickerRangeEvent.emit(dtRange);

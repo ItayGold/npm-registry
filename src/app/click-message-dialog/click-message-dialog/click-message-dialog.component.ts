@@ -1,4 +1,3 @@
-
 import { OnChanges, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { Component, Input } from '@angular/core';
@@ -9,24 +8,22 @@ import { Response } from '../models/click-message-dialog-response.model';
 export enum DialogType {
   warning,
   info,
-  error
+  error,
 }
 export enum ButtonOptions {
   ok,
-  okCancel
+  okCancel,
 }
 
 /**
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/message-dialog</example-url>
+ * <example-url>https://npm-demo.goup.tech/message-dialog</example-url>
  */
 @Component({
   selector: 'click-message-dialog',
-  template: ''
+  template: '',
 })
-
 export class ClickMessageDialogComponent implements OnChanges {
-
   moduleStrings: any = {};
 
   @Input() save: any;
@@ -50,11 +47,9 @@ export class ClickMessageDialogComponent implements OnChanges {
     }
   }
 
-  constructor(public dialog: MatDialog) {
-  };
+  constructor(public dialog: MatDialog) {}
 
   openMessageDialog() {
-
     const data = {
       title: this.title,
       message: this.message,
@@ -64,14 +59,13 @@ export class ClickMessageDialogComponent implements OnChanges {
       buttonOptions: this.buttonOptions,
       width: this.width,
       height: this.height,
-      save: this.save
+      save: this.save,
     };
 
-    const dialogRef = this.dialog.open(ClickMessageDialogInternalComponent,
-      {
-        panelClass: 'dialog_style',
-        data
-      });
+    const dialogRef = this.dialog.open(ClickMessageDialogInternalComponent, {
+      panelClass: 'dialog_style',
+      data,
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       this.isOpenChange.emit(false);
@@ -86,8 +80,6 @@ export class ClickMessageDialogComponent implements OnChanges {
       }
 
       this.okClick.emit();
-
     });
-  };
+  }
 }
-

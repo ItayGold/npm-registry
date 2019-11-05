@@ -9,13 +9,22 @@ import {
   EventEmitter,
   HostListener,
   ViewEncapsulation,
-  OnChanges
+  OnChanges,
 } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { validateDateMask } from '../helpers/w6-mask-helper';
-import { ClickTimeDomainState, ClickTimeDomainTranslations } from '../models/click-time-domain-models';
-import { format, toUtcDate, toLocalDate, diffDays, addDays } from '../helpers/w6-date-helper';
+import {
+  ClickTimeDomainState,
+  ClickTimeDomainTranslations,
+} from '../models/click-time-domain-models';
+import {
+  format,
+  toUtcDate,
+  toLocalDate,
+  diffDays,
+  addDays,
+} from '../helpers/w6-date-helper';
 import { ClickTimeDomainModalComponent } from '../click-time-domain-modal/click-time-domain-modal.component';
 
 const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
@@ -25,7 +34,7 @@ const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain</example-url>
+ * <example-url>https://npm-demo.goup.tech/time-domain</example-url>
  */
 @Component({
   selector: 'click-time-domain',
@@ -34,7 +43,6 @@ const MODAL_DIALOG_CLASS = 'time-domain-modal-dialog';
   encapsulation: ViewEncapsulation.None,
 })
 export class ClickTimeDomainComponent implements OnChanges {
-
   public differenceInDays: number;
   private offsetDays: number;
   private isRelative: boolean;
@@ -46,12 +54,18 @@ export class ClickTimeDomainComponent implements OnChanges {
   private daysFromCurrent: number = 0;
 
   private from: Date;
-  get fromFormatted() { return format(this.from, this.mask); }
+  get fromFormatted() {
+    return format(this.from, this.mask);
+  }
 
   private to: Date;
-  get toFormatted() { return format(this.to, this.mask); }
+  get toFormatted() {
+    return format(this.to, this.mask);
+  }
 
-  get modalWindow(): Element { return document.getElementsByClassName(MODAL_DIALOG_CLASS)[0]; }
+  get modalWindow(): Element {
+    return document.getElementsByClassName(MODAL_DIALOG_CLASS)[0];
+  }
 
   @Input() private customModalClass: string = '';
   @Input() calendarState: ClickTimeDomainState;
@@ -70,15 +84,22 @@ export class ClickTimeDomainComponent implements OnChanges {
 
   private _mask: string = validateDateMask(null);
   @Input('mask')
-  get mask() { return this._mask; }
-  set mask(value: string) { this._mask = validateDateMask(value); }
+  get mask() {
+    return this._mask;
+  }
+  set mask(value: string) {
+    this._mask = validateDateMask(value);
+  }
 
   @Output() datesSaved = new EventEmitter<ClickTimeDomainState>();
   @ViewChild('divider', { static: false }) divider: ElementRef;
   @ViewChild('datesWrapper', { static: false }) datesWrapper: ElementRef;
   @HostBinding('class') class = 'time-domain';
 
-  constructor(private renderer: Renderer2, private modalService: BsModalService) {
+  constructor(
+    private renderer: Renderer2,
+    private modalService: BsModalService
+  ) {
     this.updateTimeDomainState();
   }
 
@@ -87,10 +108,10 @@ export class ClickTimeDomainComponent implements OnChanges {
       const { isRelative, from, to, currentDate } = calendarState.currentValue;
 
       if (
-        to && this.to !== to ||
-        from && this.from !== from ||
-        isRelative && this.isRelative !== isRelative ||
-        currentDate && this.currentDate !== currentDate
+        (to && this.to !== to) ||
+        (from && this.from !== from) ||
+        (isRelative && this.isRelative !== isRelative) ||
+        (currentDate && this.currentDate !== currentDate)
       ) {
         this.updateTimeDomainState(calendarState.currentValue);
       }
@@ -102,14 +123,21 @@ export class ClickTimeDomainComponent implements OnChanges {
     if (!calendarState) {
       this.dateRangeValue = [today, today];
     } else {
-      this.offsetTimezone = diffDays(new Date(), toUtcDate(calendarState.currentDate));
+      this.offsetTimezone = diffDays(
+        new Date(),
+        toUtcDate(calendarState.currentDate)
+      );
       this.offsetDays = diffDays(today, toUtcDate(calendarState.currentDate));
       this.isRelative = calendarState.isRelative || false;
       this.currentDate = calendarState.currentDate || new Date();
-      this.daysFromCurrent = calendarState.isRelative ? (this.offsetTimezone ? this.offsetTimezone : this.offsetDays) : 0;
+      this.daysFromCurrent = calendarState.isRelative
+        ? this.offsetTimezone
+          ? this.offsetTimezone
+          : this.offsetDays
+        : 0;
       this.dateRangeValue = [
         addDays(toUtcDate(calendarState.from), this.daysFromCurrent),
-        addDays(toUtcDate(calendarState.to), this.daysFromCurrent)
+        addDays(toUtcDate(calendarState.to), this.daysFromCurrent),
       ];
     }
     this.from = this.dateRangeValue[0];
@@ -127,10 +155,18 @@ export class ClickTimeDomainComponent implements OnChanges {
       dateInputWidth: this.dateInputWidth,
       offsetTimezone: this.offsetTimezone,
     };
-    this.bsModalRef = this.modalService.show(ClickTimeDomainModalComponent, { initialState, class: `${MODAL_DIALOG_CLASS} ${this.customModalClass}` });
+    this.bsModalRef = this.modalService.show(ClickTimeDomainModalComponent, {
+      initialState,
+      class: `${MODAL_DIALOG_CLASS} ${this.customModalClass}`,
+    });
 
     this.bsModalRef.content.closed.subscribe(() => {
-      const { dateRangeChanged, isRelative, currentDate, isRelativeTouched } = this.bsModalRef.content;
+      const {
+        dateRangeChanged,
+        isRelative,
+        currentDate,
+        isRelativeTouched,
+      } = this.bsModalRef.content;
       let from = dateRangeChanged[0];
       let to = dateRangeChanged[1];
       if (!isRelativeTouched || this.offsetTimezone) {
@@ -168,7 +204,7 @@ export class ClickTimeDomainComponent implements OnChanges {
         isRelative,
         currentDate,
         to: toLocalDate(to),
-        from: toLocalDate(from)
+        from: toLocalDate(from),
       });
     });
 
@@ -184,8 +220,16 @@ export class ClickTimeDomainComponent implements OnChanges {
   @HostListener('window:resize')
   adjustModalWindowOffset(): void {
     if (this.modalWindow) {
-      this.renderer.setStyle(this.modalWindow, 'left', this.calculateModalWindowOffsetX());
-      this.renderer.setStyle(this.modalWindow, 'top', this.calculateModalWindowOffsetY());
+      this.renderer.setStyle(
+        this.modalWindow,
+        'left',
+        this.calculateModalWindowOffsetX()
+      );
+      this.renderer.setStyle(
+        this.modalWindow,
+        'top',
+        this.calculateModalWindowOffsetY()
+      );
     }
   }
 
