@@ -1,4 +1,4 @@
-# Click Reusable Components
+# Reusable Components
 
 ## Work less - develop more
 
