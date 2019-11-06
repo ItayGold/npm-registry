@@ -12,7 +12,7 @@ import {
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * <example-url>https://npm-docs.goup.tech/search-input</example-url>
+ * <example-url>https://npm-demo.goup.tech/search-input</example-url>
  */
 @Component({
   selector: 'click-search-input',
