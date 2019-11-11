@@ -2,7 +2,7 @@
   "name": "@itay.gold/npm-registry",
   "version": "1.5.2",
   "bin": {
-    "click": "./click-cli.js"
+    "click": "./itay-gold-cli.js"
   },
   "browserslist": [
     "> 1%",
