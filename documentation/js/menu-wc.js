@@ -16,7 +16,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">@click/npm-registry documentation</a>
+                    <a href="index.html" data-type="index-link">@itay.gold/npm-registry documentation</a>
                 </li>
 
                 <li class="divider"></li>
@@ -228,13 +228,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/ClickTimeDomainModule.html" data-type="entity-link">ClickTimeDomainModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-ClickTimeDomainModule-3a343cf578b853a1264f361fc8a8831b"' : 'data-target="#xs-components-links-module-ClickTimeDomainModule-3a343cf578b853a1264f361fc8a8831b"' }>
+                                            'data-target="#components-links-module-ClickTimeDomainModule-e42b91f5796d12b50b8c0c725453a403"' : 'data-target="#xs-components-links-module-ClickTimeDomainModule-e42b91f5796d12b50b8c0c725453a403"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickTimeDomainModule-3a343cf578b853a1264f361fc8a8831b"' :
-                                            'id="xs-components-links-module-ClickTimeDomainModule-3a343cf578b853a1264f361fc8a8831b"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-ClickTimeDomainModule-e42b91f5796d12b50b8c0c725453a403"' :
+                                            'id="xs-components-links-module-ClickTimeDomainModule-e42b91f5796d12b50b8c0c725453a403"' }>
                                             <li class="link">
                                                 <a href="components/ClickDateRangeCalendarComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ClickDateRangeCalendarComponent</a>

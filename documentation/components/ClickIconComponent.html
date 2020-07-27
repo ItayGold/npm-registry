@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@click/npm-registry documentation</title>
+        <title>@itay.gold/npm-registry documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <a href="../" class="navbar-brand">@itay.gold/npm-registry documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -91,7 +91,7 @@ for date range picker use another component</p>
     </p>
     <div class="io-description">
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon&lt;/example-url&gt;</code></pre>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;https://npm-demo.goup.tech/icon&lt;/example-url&gt;</code></pre>
                 </div>
     </div>
 
@@ -503,8 +503,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:41</a></div>
                 </td>
             </tr>
 
@@ -573,8 +573,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/click-icon-demo/click-icon/click-icon.component.ts:46</a></div>
                 </td>
             </tr>
 
@@ -647,7 +647,7 @@ const DEF_ICON_CLASSES &#x3D; &#x60;calendar-icon w6 w6-calendar2 &#x60;;
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon&lt;/example-url&gt;
+ * &lt;example-url&gt;https://npm-demo.goup.tech/icon&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-icon&#x27;,
@@ -673,9 +673,10 @@ export class ClickIconComponent implements OnInit {
   ngOnInit() {
     this.withArrows &#x3D; this.withArrows || false;
 
-    this.cssClasses &#x3D; this.cssClasses &amp;&amp; this.cssClasses.length
-      ? DEF_ICON_CLASSES + this.cssClasses
-      : DEF_ICON_CLASSES;
+    this.cssClasses &#x3D;
+      this.cssClasses &amp;&amp; this.cssClasses.length
+        ? DEF_ICON_CLASSES + this.cssClasses
+        : DEF_ICON_CLASSES;
   }
 
   onClickHandler(event: any): void | boolean {
@@ -803,7 +804,7 @@ TODO: fix the typo at automation tests and the component --&gt;
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/icon">
+            <iframe class="exampleContainer" src="https://npm-demo.goup.tech/icon">
                 <p>no-iframes</p>
             </iframe>
     </div>
@@ -853,6 +854,7 @@ TODO: fix the typo at automation tests and the component --&gt;
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'ClickIconComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

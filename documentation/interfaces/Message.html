@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@click/npm-registry documentation</title>
+        <title>@itay.gold/npm-registry documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <a href="../" class="navbar-brand">@itay.gold/npm-registry documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -204,12 +204,12 @@
   Output,
   EventEmitter,
   ChangeDetectorRef,
-  OnInit
+  OnInit,
 } from &#x27;@angular/core&#x27;;
 import {
   BsDatepickerConfig,
   BsDaterangepickerDirective,
-  BsLocaleService
+  BsLocaleService,
 } from &#x27;ngx-bootstrap/datepicker&#x27;;
 
 import * as locales from &#x27;ngx-bootstrap/locale&#x27;;
@@ -226,7 +226,7 @@ export interface Message {
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/date-picker&lt;/example-url&gt;
+ * &lt;example-url&gt;https://npm-demo.goup.tech/date-picker&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-date-picker&#x27;,
@@ -248,7 +248,10 @@ export class ClickDatePickerComponent implements OnInit {
   moduleStrings: any &#x3D; {};
   localeExists &#x3D; false;
 
-  constructor(private cdRef: ChangeDetectorRef, private localeService: BsLocaleService) { }
+  constructor(
+    private cdRef: ChangeDetectorRef,
+    private localeService: BsLocaleService
+  ) {}
 
   ngOnInit(): void {
     this.datePickerConfig &#x3D; Object.assign(
@@ -269,10 +272,10 @@ export class ClickDatePickerComponent implements OnInit {
 
     if (!this.localeExists) {
       this.localeService.use(&#x27;en&#x27;);
-     }
+    }
   }
 
-  setLocale(localeAbbr, locale){
+  setLocale(localeAbbr, locale) {
     defineLocale(localeAbbr, locale);
     this.localeService.use(this.locale);
     this.localeExists &#x3D; true;
@@ -365,6 +368,7 @@ export class ClickDatePickerComponent implements OnInit {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
             var COMPODOC_CURRENT_PAGE_URL = 'Message.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

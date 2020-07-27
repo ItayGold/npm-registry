@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@click/npm-registry documentation</title>
+        <title>@itay.gold/npm-registry documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <a href="../" class="navbar-brand">@itay.gold/npm-registry documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -267,8 +267,8 @@ import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 
 import { NgxMaskModule } from &#x27;ngx-mask&#x27;;
-import { TooltipModule } from &#x27;ngx-bootstrap&#x27;;
-import { ModalModule } from &#x27;ngx-bootstrap&#x27;;
+import { TooltipModule } from &#x27;ngx-bootstrap/tooltip&#x27;;
+import { ModalModule } from &#x27;ngx-bootstrap/modal&#x27;;
 import { BsDropdownModule } from &#x27;ngx-bootstrap/dropdown&#x27;;
 import { BsDatepickerModule } from &#x27;ngx-bootstrap/datepicker&#x27;;
 
@@ -298,14 +298,10 @@ import { ClickTristateCheckboxModule } from &#x27;../click-tristate-checkbox/cli
     ClickTimeDomainRoutingModule,
     ClickTristateCheckboxModule,
   ],
-  exports: [
-    ClickTimeDomainComponent,
-  ],
-  entryComponents: [
-    ClickTimeDomainModalComponent
-  ],
+  exports: [ClickTimeDomainComponent],
+  entryComponents: [ClickTimeDomainModalComponent],
 })
-export class ClickTimeDomainModule { }
+export class ClickTimeDomainModule {}
 </code></pre>
     </div>
 </div>
@@ -342,6 +338,7 @@ export class ClickTimeDomainModule { }
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
             var COMPODOC_CURRENT_PAGE_URL = 'ClickTimeDomainModule.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { NgxMaskModule } from 'ngx-mask';
-import { TooltipModule } from 'ngx-bootstrap';
-import { ModalModule } from 'ngx-bootstrap';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
@@ -34,11 +34,7 @@ import { ClickTristateCheckboxModule } from '../click-tristate-checkbox/click-tr
     ClickTimeDomainRoutingModule,
     ClickTristateCheckboxModule,
   ],
-  exports: [
-    ClickTimeDomainComponent,
-  ],
-  entryComponents: [
-    ClickTimeDomainModalComponent
-  ],
+  exports: [ClickTimeDomainComponent],
+  entryComponents: [ClickTimeDomainModalComponent],
 })
-export class ClickTimeDomainModule { }
+export class ClickTimeDomainModule {}

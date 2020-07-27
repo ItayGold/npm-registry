@@ -1,29 +1,31 @@
-<div>
-  <h2>Icon</h2>
+<div class="card">
+  <div class="card-body">
+    <h4>Icon</h4>
 
-  <div class="click-icon-demo">
-    <div>
-      <h4>With the arrows</h4>
-      <click-icon
-        [withArrows]="true"
-        (click)="onClickIcon($event)"
-        (messageEvent)="getIconName('With the arrows')"
-        (prev)="onPrevClicked($event)"
-        (next)="onNextClicked($event)"
-        [title]="tooltip"
-      ></click-icon>
-    </div>
+    <div class="click-icon-demo">
+      <div>
+        <h4>With the arrows</h4>
+        <click-icon
+          [withArrows]="true"
+          (click)="onClickIcon($event)"
+          (messageEvent)="getIconName('With the arrows')"
+          (prev)="onPrevClicked($event)"
+          (next)="onNextClicked($event)"
+          [title]="tooltip"
+        ></click-icon>
+      </div>
 
-    <div>
-      <h4>Without the arrows</h4>
-      <click-icon
-        [withArrows]="false"
-        (click)="onClickIcon($event)"
-        (messageEvent)="getIconName('Without arrows')"
-        (prev)="onPrevClicked($event)"
-        (next)="onNextClicked($event)"
-        [title]="tooltip"
-      ></click-icon>
+      <div>
+        <h4>Without the arrows</h4>
+        <click-icon
+          [withArrows]="false"
+          (click)="onClickIcon($event)"
+          (messageEvent)="getIconName('Without arrows')"
+          (prev)="onPrevClicked($event)"
+          (next)="onNextClicked($event)"
+          [title]="tooltip"
+        ></click-icon>
+      </div>
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@click/npm-registry documentation</title>
+        <title>@itay.gold/npm-registry documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <a href="../" class="navbar-brand">@itay.gold/npm-registry documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -91,7 +91,7 @@ for date range picker use another component</p>
     </p>
     <div class="io-description">
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain&lt;/example-url&gt;</code></pre>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;https://npm-demo.goup.tech/time-domain&lt;/example-url&gt;</code></pre>
                 </div>
     </div>
 
@@ -513,7 +513,7 @@ for date range picker use another component</p>
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain&lt;/example-url&gt;
+ * &lt;example-url&gt;https://npm-demo.goup.tech/time-domain&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-time-domain-demo&#x27;,
@@ -599,64 +599,72 @@ export class ClickTimeDomainDemoComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;demo-container item-column&quot;&gt;
-  &lt;h3&gt;&amp;lt;click-time-domain&amp;gt;&lt;/h3&gt;
+  &lt;div class&#x3D;&quot;card&quot;&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;h4&gt;&amp;lt;click-time-domain&amp;gt;&lt;/h4&gt;
 
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;empty time domain component&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain&gt;&lt;/click-time-domain&gt;
-      &lt;code&gt;{{ codes[0] }}&lt;/code&gt;
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;empty time domain component&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain&gt;&lt;/click-time-domain&gt;
+          &lt;code&gt;{{ codes[0] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;custom class for modal&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain
+            customModalClass&#x3D;&quot;all-text-red-custom-class&quot;
+          &gt;&lt;/click-time-domain&gt;
+          &lt;code&gt;{{ codes[1] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;custom mask&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain mask&#x3D;&quot;D-M-YY&quot;&gt;&lt;/click-time-domain&gt;
+          &lt;code&gt;{{ codes[2] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;set dates&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain [calendarState]&#x3D;&quot;dates&quot;&gt;&lt;/click-time-domain&gt;
+          &lt;pre&gt;&lt;code&gt;{{ codes[3] }}&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;relative state moves dates forward&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain [calendarState]&#x3D;&quot;state&quot;&gt;&lt;/click-time-domain&gt;
+          &lt;pre&gt;&lt;code&gt;{{ codes[4] }}&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;save event&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain
+            [calendarState]&#x3D;&quot;state&quot;
+            (datesSaved)&#x3D;&quot;onDatesSaved($event)&quot;
+          &gt;&lt;/click-time-domain&gt;
+          &lt;pre&gt;&lt;code&gt;{{ codes[5] }}&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;demo-item&quot;&gt;
+        &lt;h4&gt;localization time domain&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;demo-content&quot;&gt;
+          &lt;click-time-domain [translations]&#x3D;&quot;translations&quot;&gt;&lt;/click-time-domain&gt;
+          &lt;pre&gt;&lt;code&gt;{{ codes[6] }}&lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;custom class for modal&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain customModalClass&#x3D;&quot;all-text-red-custom-class&quot;&gt;&lt;/click-time-domain&gt;
-      &lt;code&gt;{{ codes[1] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;custom mask&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain mask&#x3D;&quot;D-M-YY&quot;&gt;&lt;/click-time-domain&gt;
-      &lt;code&gt;{{ codes[2] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;set dates&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain [calendarState]&#x3D;&quot;dates&quot;&gt;&lt;/click-time-domain&gt;
-      &lt;pre&gt;&lt;code&gt;{{ codes[3] }}&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;relative state moves dates forward&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain [calendarState]&#x3D;&quot;state&quot;&gt;&lt;/click-time-domain&gt;
-      &lt;pre&gt;&lt;code&gt;{{ codes[4] }}&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;save event&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain [calendarState]&#x3D;&quot;state&quot; (datesSaved)&#x3D;&quot;onDatesSaved($event)&quot;&gt;&lt;/click-time-domain&gt;
-      &lt;pre&gt;&lt;code&gt;{{ codes[5] }}&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;demo-item&quot;&gt;
-    &lt;h4&gt;localization time domain&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;demo-content&quot;&gt;
-      &lt;click-time-domain [translations]&#x3D;&quot;translations&quot;&gt;&lt;/click-time-domain&gt;
-      &lt;pre&gt;&lt;code&gt;{{ codes[6] }}&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -687,7 +695,7 @@ export class ClickTimeDomainDemoComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/time-domain">
+            <iframe class="exampleContainer" src="https://npm-demo.goup.tech/time-domain">
                 <p>no-iframes</p>
             </iframe>
     </div>
@@ -698,7 +706,7 @@ export class ClickTimeDomainDemoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="demo-container item-column">  <h3>&lt;click-time-domain&gt;</h3>  <div class="demo-item">    <h4>empty time domain component</h4>    <div class="demo-content">      <click-time-domain></click-time-domain>      <code>{{ codes[0] }}</code>    </div>  </div>  <div class="demo-item">    <h4>custom class for modal</h4>    <div class="demo-content">      <click-time-domain customModalClass="all-text-red-custom-class"></click-time-domain>      <code>{{ codes[1] }}</code>    </div>  </div>  <div class="demo-item">    <h4>custom mask</h4>    <div class="demo-content">      <click-time-domain mask="D-M-YY"></click-time-domain>      <code>{{ codes[2] }}</code>    </div>  </div>  <div class="demo-item">    <h4>set dates</h4>    <div class="demo-content">      <click-time-domain [calendarState]="dates"></click-time-domain>      <pre><code>{{ codes[3] }}</code></pre>    </div>  </div>  <div class="demo-item">    <h4>relative state moves dates forward</h4>    <div class="demo-content">      <click-time-domain [calendarState]="state"></click-time-domain>      <pre><code>{{ codes[4] }}</code></pre>    </div>  </div>  <div class="demo-item">    <h4>save event</h4>    <div class="demo-content">      <click-time-domain [calendarState]="state" (datesSaved)="onDatesSaved($event)"></click-time-domain>      <pre><code>{{ codes[5] }}</code></pre>    </div>  </div>  <div class="demo-item">    <h4>localization time domain</h4>    <div class="demo-content">      <click-time-domain [translations]="translations"></click-time-domain>      <pre><code>{{ codes[6] }}</code></pre>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="demo-container item-column">  <div class="card">    <div class="card-body">      <h4>&lt;click-time-domain&gt;</h4>      <div class="demo-item">        <h4>empty time domain component</h4>        <div class="demo-content">          <click-time-domain></click-time-domain>          <code>{{ codes[0] }}</code>        </div>      </div>      <div class="demo-item">        <h4>custom class for modal</h4>        <div class="demo-content">          <click-time-domain            customModalClass="all-text-red-custom-class"          ></click-time-domain>          <code>{{ codes[1] }}</code>        </div>      </div>      <div class="demo-item">        <h4>custom mask</h4>        <div class="demo-content">          <click-time-domain mask="D-M-YY"></click-time-domain>          <code>{{ codes[2] }}</code>        </div>      </div>      <div class="demo-item">        <h4>set dates</h4>        <div class="demo-content">          <click-time-domain [calendarState]="dates"></click-time-domain>          <pre><code>{{ codes[3] }}</code></pre>        </div>      </div>      <div class="demo-item">        <h4>relative state moves dates forward</h4>        <div class="demo-content">          <click-time-domain [calendarState]="state"></click-time-domain>          <pre><code>{{ codes[4] }}</code></pre>        </div>      </div>      <div class="demo-item">        <h4>save event</h4>        <div class="demo-content">          <click-time-domain            [calendarState]="state"            (datesSaved)="onDatesSaved($event)"          ></click-time-domain>          <pre><code>{{ codes[5] }}</code></pre>        </div>      </div>      <div class="demo-item">        <h4>localization time domain</h4>        <div class="demo-content">          <click-time-domain [translations]="translations"></click-time-domain>          <pre><code>{{ codes[6] }}</code></pre>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickMessageDialogInternalComponent', 'selector': 'click-message-dialog-internal'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickTimeDomainDemoComponent'};
@@ -737,6 +745,7 @@ export class ClickTimeDomainDemoComponent implements OnInit {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'ClickTimeDomainDemoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

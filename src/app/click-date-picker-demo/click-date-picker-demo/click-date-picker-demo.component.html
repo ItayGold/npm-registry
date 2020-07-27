@@ -1,22 +1,24 @@
-<div>
-  <h2>Date picker</h2>
-  <click-icon
-    [withArrows]="true"
-    (click)="dp.click()"
-    (prev)="onPrevClicked($event)"
-    (next)="onNextClicked($event)"
-  ></click-icon>
-  <click-date-picker
-    #dp
-    class="dp"
-    [isOpen]="isOpen"
-    [todayDate]="todayDate"
-    [selectedDate]="selectedDate"
-    [todayButtonText]="todayButtonText"
-    [showWeekNumbers]="showWeekNumbers"
-    [locale]="locale"
-    (updateDateStore)="updateDateStore($event)"
-    (updateMsgStore)="updateMsgStore($event)"
-  >
-  </click-date-picker>
+<div class="card">
+  <div class="card-body">
+    <h4>Date picker</h4>
+    <click-icon
+      [withArrows]="true"
+      (click)="dp.click()"
+      (prev)="onPrevClicked($event)"
+      (next)="onNextClicked($event)"
+    ></click-icon>
+    <click-date-picker
+      #dp
+      class="dp"
+      [isOpen]="isOpen"
+      [todayDate]="todayDate"
+      [selectedDate]="selectedDate"
+      [todayButtonText]="todayButtonText"
+      [showWeekNumbers]="showWeekNumbers"
+      [locale]="locale"
+      (updateDateStore)="updateDateStore($event)"
+      (updateMsgStore)="updateMsgStore($event)"
+    >
+    </click-date-picker>
+  </div>
 </div>

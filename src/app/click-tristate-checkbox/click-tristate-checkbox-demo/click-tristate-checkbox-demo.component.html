@@ -1,60 +1,69 @@
-<div class=click-tristate-checkbox-demo-container>
-  <h3>Click Tristate Checbox</h3>
+<div class="click-tristate-checkbox-demo-container">
+  <div class="card">
+    <div class="card-body">
+      <h4>Click Tristate Checbox</h4>
 
-  <div class="click-tristate-checkbox-demo">
-    <h4>empty checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox></click-tristate-checkbox>
-      <code>{{ codes[0] }}</code>
+      <div class="click-tristate-checkbox-demo">
+        <h4>empty checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox></click-tristate-checkbox>
+          <code>{{ codes[0] }}</code>
+        </div>
+      </div>
+
+      <div class="click-tristate-checkbox-demo">
+        <h4>labeled checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox
+            checkboxLabel="checkbox demo label"
+          ></click-tristate-checkbox>
+          <code>{{ codes[1] }}</code>
+        </div>
+      </div>
+
+      <div class="click-tristate-checkbox-demo">
+        <h4>error checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox
+            errorLabel="checkbox demo label"
+          ></click-tristate-checkbox>
+          <code>{{ codes[2] }}</code>
+        </div>
+      </div>
+
+      <div class="click-tristate-checkbox-demo">
+        <h4>disabled checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox [disabled]="true"></click-tristate-checkbox>
+          <code>{{ codes[3] }}</code>
+        </div>
+      </div>
+
+      <div class="click-tristate-checkbox-demo">
+        <h4>checked checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox [value]="1"></click-tristate-checkbox>
+          <code>{{ codes[4] }}</code>
+        </div>
+      </div>
+
+      <div class="click-tristate-checkbox-demo">
+        <h4>indetermined checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox [value]="2"></click-tristate-checkbox>
+          <code>{{ codes[5] }}</code>
+        </div>
+      </div>
+
+      <div class="click-tristate-checkbox-demo">
+        <h4>changed event checkbox</h4>
+        <div class="click-tristate-checkbox-demo-content">
+          <click-tristate-checkbox
+            (valueChanged)="onClickCheckbox($event)"
+          ></click-tristate-checkbox>
+          <code>{{ codes[6] }}</code>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="click-tristate-checkbox-demo">
-    <h4>labeled checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox checkboxLabel="checkbox demo label"></click-tristate-checkbox>
-      <code>{{ codes[1] }}</code>
-    </div>
-  </div>
-
-  <div class="click-tristate-checkbox-demo">
-    <h4>error checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox errorLabel="checkbox demo label"></click-tristate-checkbox>
-      <code>{{ codes[2] }}</code>
-    </div>
-  </div>
-
-  <div class="click-tristate-checkbox-demo">
-    <h4>disabled checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox [disabled]="true"></click-tristate-checkbox>
-      <code>{{ codes[3] }}</code>
-    </div>
-  </div>
-  
-  <div class="click-tristate-checkbox-demo">
-    <h4>checked checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox [value]="1"></click-tristate-checkbox>
-      <code>{{ codes[4] }}</code>
-    </div>
-  </div>
-
-  <div class="click-tristate-checkbox-demo">
-    <h4>indetermined checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox [value]="2"></click-tristate-checkbox>
-      <code>{{ codes[5] }}</code>
-    </div>
-  </div>
-
-  <div class="click-tristate-checkbox-demo">
-    <h4>changed event checkbox</h4>
-    <div class="click-tristate-checkbox-demo-content">
-      <click-tristate-checkbox (valueChanged)="onClickCheckbox($event)"></click-tristate-checkbox>
-      <code>{{ codes[6] }}</code>
-    </div>
-  </div>
-
 </div>

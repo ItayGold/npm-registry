@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@click/npm-registry documentation</title>
+        <title>@itay.gold/npm-registry documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <a href="../" class="navbar-brand">@itay.gold/npm-registry documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -136,9 +136,11 @@ export class AppComponent {}
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;npm-registry-container&quot;&gt;
-  &lt;h1&gt;@click packages&lt;/h1&gt;
-  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;npm-registry-container&quot;&gt;
+    &lt;h2 class&#x3D;&quot;title&quot;&gt;NPM packages&lt;/h2&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -185,6 +187,10 @@ body {
   @extend .icon;
   margin: 12px;
 }
+
+.title {
+  padding-top: 50px;
+}
 </code></pre>
     </div>
 
@@ -213,7 +219,7 @@ body {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="npm-registry-container">  <h1>@click packages</h1>  <router-outlet></router-outlet></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="npm-registry-container">    <h2 class="title">NPM packages</h2>    <router-outlet></router-outlet>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickMessageDialogInternalComponent', 'selector': 'click-message-dialog-internal'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
@@ -252,6 +258,7 @@ body {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

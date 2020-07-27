@@ -9,7 +9,10 @@ import {
   SimpleChanges,
   ViewEncapsulation,
 } from '@angular/core';
-import { BsDatepickerConfig, BsDaterangepickerConfig } from 'ngx-bootstrap';
+import {
+  BsDatepickerConfig,
+  BsDaterangepickerConfig,
+} from 'ngx-bootstrap/datepicker';
 
 export const configFactory = (config: BsDaterangepickerConfig) => ({
   ...config,

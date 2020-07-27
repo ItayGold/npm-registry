@@ -1,60 +1,68 @@
 <div class="demo-container item-column">
-  <h3>&lt;click-time-domain&gt;</h3>
+  <div class="card">
+    <div class="card-body">
+      <h4>&lt;click-time-domain&gt;</h4>
 
-  <div class="demo-item">
-    <h4>empty time domain component</h4>
-    <div class="demo-content">
-      <click-time-domain></click-time-domain>
-      <code>{{ codes[0] }}</code>
+      <div class="demo-item">
+        <h4>empty time domain component</h4>
+        <div class="demo-content">
+          <click-time-domain></click-time-domain>
+          <code>{{ codes[0] }}</code>
+        </div>
+      </div>
+
+      <div class="demo-item">
+        <h4>custom class for modal</h4>
+        <div class="demo-content">
+          <click-time-domain
+            customModalClass="all-text-red-custom-class"
+          ></click-time-domain>
+          <code>{{ codes[1] }}</code>
+        </div>
+      </div>
+
+      <div class="demo-item">
+        <h4>custom mask</h4>
+        <div class="demo-content">
+          <click-time-domain mask="D-M-YY"></click-time-domain>
+          <code>{{ codes[2] }}</code>
+        </div>
+      </div>
+
+      <div class="demo-item">
+        <h4>set dates</h4>
+        <div class="demo-content">
+          <click-time-domain [calendarState]="dates"></click-time-domain>
+          <pre><code>{{ codes[3] }}</code></pre>
+        </div>
+      </div>
+
+      <div class="demo-item">
+        <h4>relative state moves dates forward</h4>
+        <div class="demo-content">
+          <click-time-domain [calendarState]="state"></click-time-domain>
+          <pre><code>{{ codes[4] }}</code></pre>
+        </div>
+      </div>
+
+      <div class="demo-item">
+        <h4>save event</h4>
+        <div class="demo-content">
+          <click-time-domain
+            [calendarState]="state"
+            (datesSaved)="onDatesSaved($event)"
+          ></click-time-domain>
+          <pre><code>{{ codes[5] }}</code></pre>
+        </div>
+      </div>
+
+      <div class="demo-item">
+        <h4>localization time domain</h4>
+        <div class="demo-content">
+          <click-time-domain [translations]="translations"></click-time-domain>
+          <pre><code>{{ codes[6] }}</code></pre>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="demo-item">
-    <h4>custom class for modal</h4>
-    <div class="demo-content">
-      <click-time-domain customModalClass="all-text-red-custom-class"></click-time-domain>
-      <code>{{ codes[1] }}</code>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <h4>custom mask</h4>
-    <div class="demo-content">
-      <click-time-domain mask="D-M-YY"></click-time-domain>
-      <code>{{ codes[2] }}</code>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <h4>set dates</h4>
-    <div class="demo-content">
-      <click-time-domain [calendarState]="dates"></click-time-domain>
-      <pre><code>{{ codes[3] }}</code></pre>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <h4>relative state moves dates forward</h4>
-    <div class="demo-content">
-      <click-time-domain [calendarState]="state"></click-time-domain>
-      <pre><code>{{ codes[4] }}</code></pre>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <h4>save event</h4>
-    <div class="demo-content">
-      <click-time-domain [calendarState]="state" (datesSaved)="onDatesSaved($event)"></click-time-domain>
-      <pre><code>{{ codes[5] }}</code></pre>
-    </div>
-  </div>
-
-  <div class="demo-item">
-    <h4>localization time domain</h4>
-    <div class="demo-content">
-      <click-time-domain [translations]="translations"></click-time-domain>
-      <pre><code>{{ codes[6] }}</code></pre>
-    </div>
-  </div>
-
 </div>

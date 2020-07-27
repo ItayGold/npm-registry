@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@click/npm-registry documentation</title>
+        <title>@itay.gold/npm-registry documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">@click/npm-registry documentation</a>
+            <a href="../" class="navbar-brand">@itay.gold/npm-registry documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -85,7 +85,7 @@ for date range picker use another component</p>
     </p>
     <div class="io-description">
                 <div>
-                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tristate-checkbox&lt;/example-url&gt;</code></pre>
+                    <pre class="line-numbers"><code class="language-html">&lt;example-url&gt;https://npm-demo.goup.tech/tristate-checkbox&lt;/example-url&gt;</code></pre>
                 </div>
     </div>
 
@@ -206,8 +206,8 @@ for date range picker use another component</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox-demo/click-tristate-checkbox-demo.component.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox-demo/click-tristate-checkbox-demo.component.ts:27</a></div>
                 </td>
             </tr>
 
@@ -290,7 +290,7 @@ for date range picker use another component</p>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox-demo/click-tristate-checkbox-demo.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/click-tristate-checkbox/click-tristate-checkbox-demo/click-tristate-checkbox-demo.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -310,7 +310,7 @@ import { ClickTristateCheckboxState } from &#x27;../enums&#x27;;
  * ngx-bootstrap
  * for date range picker use another component
  * @example
- * &lt;example-url&gt;http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tristate-checkbox&lt;/example-url&gt;
+ * &lt;example-url&gt;https://npm-demo.goup.tech/tristate-checkbox&lt;/example-url&gt;
  */
 @Component({
   selector: &#x27;click-tristate-checkbox-demo&#x27;,
@@ -318,7 +318,6 @@ import { ClickTristateCheckboxState } from &#x27;../enums&#x27;;
   styleUrls: [&#x27;./click-tristate-checkbox-demo.component.scss&#x27;],
 })
 export class ClickTristateCheckboxDemoComponent {
-
   codes &#x3D; [
     &#x60;&lt;click-tristate-checkbox&gt;&lt;/click-tristate-checkbox&gt;&#x60;,
     &#x60;&lt;click-tristate-checkbox checkboxLabel&#x3D;&quot;checkbox demo label&quot;&gt;&lt;/click-tristate-checkbox&gt;&#x60;,
@@ -334,72 +333,81 @@ export class ClickTristateCheckboxDemoComponent {
     window.alert(&#x60;checkbox changed event: ${event}&#x60;);
     return false;
   }
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;click-tristate-checkbox-demo-container&gt;
-  &lt;h3&gt;Click Tristate Checbox&lt;/h3&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;click-tristate-checkbox-demo-container&quot;&gt;
+  &lt;div class&#x3D;&quot;card&quot;&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;h4&gt;Click Tristate Checbox&lt;/h4&gt;
 
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;empty checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[0] }}&lt;/code&gt;
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;empty checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox&gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[0] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;labeled checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox
+            checkboxLabel&#x3D;&quot;checkbox demo label&quot;
+          &gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[1] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;error checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox
+            errorLabel&#x3D;&quot;checkbox demo label&quot;
+          &gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[2] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;disabled checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox [disabled]&#x3D;&quot;true&quot;&gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[3] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;checked checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox [value]&#x3D;&quot;1&quot;&gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[4] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;indetermined checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox [value]&#x3D;&quot;2&quot;&gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[5] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
+        &lt;h4&gt;changed event checkbox&lt;/h4&gt;
+        &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
+          &lt;click-tristate-checkbox
+            (valueChanged)&#x3D;&quot;onClickCheckbox($event)&quot;
+          &gt;&lt;/click-tristate-checkbox&gt;
+          &lt;code&gt;{{ codes[6] }}&lt;/code&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;labeled checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox checkboxLabel&#x3D;&quot;checkbox demo label&quot;&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[1] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;error checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox errorLabel&#x3D;&quot;checkbox demo label&quot;&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[2] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;disabled checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox [disabled]&#x3D;&quot;true&quot;&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[3] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;checked checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox [value]&#x3D;&quot;1&quot;&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[4] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;indetermined checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox [value]&#x3D;&quot;2&quot;&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[5] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class&#x3D;&quot;click-tristate-checkbox-demo&quot;&gt;
-    &lt;h4&gt;changed event checkbox&lt;/h4&gt;
-    &lt;div class&#x3D;&quot;click-tristate-checkbox-demo-content&quot;&gt;
-      &lt;click-tristate-checkbox (valueChanged)&#x3D;&quot;onClickCheckbox($event)&quot;&gt;&lt;/click-tristate-checkbox&gt;
-      &lt;code&gt;{{ codes[6] }}&lt;/code&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -445,7 +453,7 @@ export class ClickTristateCheckboxDemoComponent {
     </div>
 
     <div class="tab-pane fade " id="c-example">
-            <iframe class="exampleContainer" src="http://npm-docs-demo.s3-website.eu-central-1.amazonaws.com/tristate-checkbox">
+            <iframe class="exampleContainer" src="https://npm-demo.goup.tech/tristate-checkbox">
                 <p>no-iframes</p>
             </iframe>
     </div>
@@ -456,7 +464,7 @@ export class ClickTristateCheckboxDemoComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class=click-tristate-checkbox-demo-container>  <h3>Click Tristate Checbox</h3>  <div class="click-tristate-checkbox-demo">    <h4>empty checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox></click-tristate-checkbox>      <code>{{ codes[0] }}</code>    </div>  </div>  <div class="click-tristate-checkbox-demo">    <h4>labeled checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox checkboxLabel="checkbox demo label"></click-tristate-checkbox>      <code>{{ codes[1] }}</code>    </div>  </div>  <div class="click-tristate-checkbox-demo">    <h4>error checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox errorLabel="checkbox demo label"></click-tristate-checkbox>      <code>{{ codes[2] }}</code>    </div>  </div>  <div class="click-tristate-checkbox-demo">    <h4>disabled checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox [disabled]="true"></click-tristate-checkbox>      <code>{{ codes[3] }}</code>    </div>  </div>    <div class="click-tristate-checkbox-demo">    <h4>checked checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox [value]="1"></click-tristate-checkbox>      <code>{{ codes[4] }}</code>    </div>  </div>  <div class="click-tristate-checkbox-demo">    <h4>indetermined checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox [value]="2"></click-tristate-checkbox>      <code>{{ codes[5] }}</code>    </div>  </div>  <div class="click-tristate-checkbox-demo">    <h4>changed event checkbox</h4>    <div class="click-tristate-checkbox-demo-content">      <click-tristate-checkbox (valueChanged)="onClickCheckbox($event)"></click-tristate-checkbox>      <code>{{ codes[6] }}</code>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="click-tristate-checkbox-demo-container">  <div class="card">    <div class="card-body">      <h4>Click Tristate Checbox</h4>      <div class="click-tristate-checkbox-demo">        <h4>empty checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox></click-tristate-checkbox>          <code>{{ codes[0] }}</code>        </div>      </div>      <div class="click-tristate-checkbox-demo">        <h4>labeled checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox            checkboxLabel="checkbox demo label"          ></click-tristate-checkbox>          <code>{{ codes[1] }}</code>        </div>      </div>      <div class="click-tristate-checkbox-demo">        <h4>error checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox            errorLabel="checkbox demo label"          ></click-tristate-checkbox>          <code>{{ codes[2] }}</code>        </div>      </div>      <div class="click-tristate-checkbox-demo">        <h4>disabled checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox [disabled]="true"></click-tristate-checkbox>          <code>{{ codes[3] }}</code>        </div>      </div>      <div class="click-tristate-checkbox-demo">        <h4>checked checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox [value]="1"></click-tristate-checkbox>          <code>{{ codes[4] }}</code>        </div>      </div>      <div class="click-tristate-checkbox-demo">        <h4>indetermined checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox [value]="2"></click-tristate-checkbox>          <code>{{ codes[5] }}</code>        </div>      </div>      <div class="click-tristate-checkbox-demo">        <h4>changed event checkbox</h4>        <div class="click-tristate-checkbox-demo-content">          <click-tristate-checkbox            (valueChanged)="onClickCheckbox($event)"          ></click-tristate-checkbox>          <code>{{ codes[6] }}</code>        </div>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClickDatePickerComponent', 'selector': 'click-date-picker'},{'name': 'ClickDatePickerDemoComponent', 'selector': 'click-date-picker-demo'},{'name': 'ClickDatepickerRangeComponent', 'selector': 'click-date-picker-range'},{'name': 'ClickDatePickerRangeDemoComponent', 'selector': 'app-click-date-picker-range-demo'},{'name': 'ClickDateRangeCalendarComponent', 'selector': 'click-date-range-calendar'},{'name': 'ClickIconComponent', 'selector': 'click-icon'},{'name': 'ClickIconDemoComponent', 'selector': 'app-click-icon-demo'},{'name': 'ClickMessageDialogComponent', 'selector': 'click-message-dialog'},{'name': 'ClickMessageDialogDemoComponent', 'selector': 'app-message-dialog-demo'},{'name': 'ClickMessageDialogInternalComponent', 'selector': 'click-message-dialog-internal'},{'name': 'ClickSearchInputComponent', 'selector': 'click-search-input'},{'name': 'ClickSearchInputDemoComponent', 'selector': 'click-search-input-demo'},{'name': 'ClickTimeDomainComponent', 'selector': 'click-time-domain'},{'name': 'ClickTimeDomainDemoComponent', 'selector': 'click-time-domain-demo'},{'name': 'ClickTimeDomainModalComponent', 'selector': 'click-time-domain-modal'},{'name': 'ClickTreeNodeComponent', 'selector': 'click-tree-node'},{'name': 'ClickTreeViewComponent', 'selector': 'click-tree-view'},{'name': 'ClickTreeViewDemoComponent', 'selector': 'click-tree-view-demo'},{'name': 'ClickTristateCheckboxComponent', 'selector': 'click-tristate-checkbox'},{'name': 'ClickTristateCheckboxDemoComponent', 'selector': 'click-tristate-checkbox-demo'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ClickTristateCheckboxDemoComponent'};
@@ -495,6 +503,7 @@ export class ClickTristateCheckboxDemoComponent {
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
             var COMPODOC_CURRENT_PAGE_URL = 'ClickTristateCheckboxDemoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
