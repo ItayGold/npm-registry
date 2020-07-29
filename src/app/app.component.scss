@@ -2,13 +2,16 @@ html,
 body {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border: 1px solid red;
 }
 
 ::ng-deep .npm-registry-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
+  padding: 50px;
 }
 
 .dp {
@@ -35,8 +38,4 @@ body {
 .calendar-icon {
   @extend .icon;
   margin: 12px;
-}
-
-.title {
-  padding-top: 50px;
 }

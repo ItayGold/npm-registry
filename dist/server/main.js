@@ -1728,7 +1728,7 @@ exports.styles = styles;
  * tslint:disable
  */ 
 Object.defineProperty(exports, "__esModule", { value: true });
-var styles = ["body[_ngcontent-%COMP%], html[_ngcontent-%COMP%]{width:100%;height:100%}  .npm-registry-container{width:100%;height:100vh;text-align:center;overflow:hidden}.dp[_ngcontent-%COMP%]{position:relative;right:77px;top:5px;visibility:hidden}.calendar-icon[_ngcontent-%COMP%], .icon[_ngcontent-%COMP%]{font-size:20px;margin:20px 10px 20px 20px;color:#a7a7a7;cursor:pointer}.calendar-icon[_ngcontent-%COMP%]:hover, .icon[_ngcontent-%COMP%]:hover{color:#1174be}.calendar-icon[_ngcontent-%COMP%]:focus, .icon[_ngcontent-%COMP%]:focus{outline:0;color:#1174be}.calendar-icon[_ngcontent-%COMP%]{margin:12px}.title[_ngcontent-%COMP%]{padding-top:50px}"];
+var styles = ["body[_ngcontent-%COMP%], html[_ngcontent-%COMP%]{width:100%;height:100%;overflow:hidden;border:1px solid red}  .npm-registry-container{width:100%;height:100%;text-align:center;overflow:auto;padding:50px}.dp[_ngcontent-%COMP%]{position:relative;right:77px;top:5px;visibility:hidden}.calendar-icon[_ngcontent-%COMP%], .icon[_ngcontent-%COMP%]{font-size:20px;margin:20px 10px 20px 20px;color:#a7a7a7;cursor:pointer}.calendar-icon[_ngcontent-%COMP%]:hover, .icon[_ngcontent-%COMP%]:hover{color:#1174be}.calendar-icon[_ngcontent-%COMP%]:focus, .icon[_ngcontent-%COMP%]:focus{outline:0;color:#1174be}.calendar-icon[_ngcontent-%COMP%]{margin:12px}"];
 exports.styles = styles;
 
 
@@ -5221,7 +5221,7 @@ var i3 = __webpack_require__("Sy1n");
 var styles_AppComponent = [i0.styles];
 var RenderType_AppComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_AppComponent, data: {} });
 exports.RenderType_AppComponent = RenderType_AppComponent;
-function View_AppComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 5, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "div", [["class", "npm-registry-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 1, "h2", [["class", "title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["NPM packages"])), (_l()(), i1.ɵeld(4, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(5, 212992, null, 0, i2.RouterOutlet, [i2.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { _ck(_v, 5, 0); }, null); }
+function View_AppComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 5, "div", [["class", "npm-registry-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["NPM packages"])), (_l()(), i1.ɵeld(4, 16777216, null, null, 1, "router-outlet", [], null, null, null, null, null)), i1.ɵdid(5, 212992, null, 0, i2.RouterOutlet, [i2.ChildrenOutletContexts, i1.ViewContainerRef, i1.ComponentFactoryResolver, [8, null], i1.ChangeDetectorRef], null, null)], function (_ck, _v) { _ck(_v, 5, 0); }, null); }
 exports.View_AppComponent_0 = View_AppComponent_0;
 function View_AppComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-root", [], null, null, null, View_AppComponent_0, RenderType_AppComponent)), i1.ɵdid(1, 49152, null, 0, i3.AppComponent, [], null, null)], null, null); }
 exports.View_AppComponent_Host_0 = View_AppComponent_Host_0;
