@@ -106,3 +106,7 @@ input {
 ::ng-deep .bs-calendar-container button {
   font: 200 14px system-ui;
 }
+
+::ng-deep .date {
+  width: 230px;
+}

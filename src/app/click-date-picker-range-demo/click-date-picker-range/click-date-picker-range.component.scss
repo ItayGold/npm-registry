@@ -123,3 +123,7 @@
   span:after {
   background-color: #0875bf !important;
 }
+
+::ng-deep .date {
+  width: 230px;
+}
